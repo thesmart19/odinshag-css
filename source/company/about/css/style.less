@@ -1,0 +1,330 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.no-svg
+{
+	.box .features .feature span.icon { background-image: url(@imageIconsBigPNG); }
+}
+
+.box
+{
+    h3
+    {
+        padding-left: 0px;
+        margin: 0px auto 0px auto;
+        width: 550px;
+        text-align: center;
+        font-weight: normal;
+        font-size: @fontSizeH3;
+        line-height: @lineHeightH3;
+    }
+	.text
+	{
+		margin:0px 0px 0px 0px;
+		padding: 14px 24px 18px 24px;
+        color: @colorLightBlack;
+        font-size: @fontSizeBasketTotal;
+		line-height: @lineHeightH2;
+		background-color: @colorLightGrey;
+        .media.image
+        {
+            position: relative;
+            margin: 0px 0px 12px 0px;
+            height: 348px;
+            .ground, .man, .house
+            {
+                position: absolute;
+            }
+            .man, .house
+            {
+                bottom: 8px;
+                background-image: url(@imageCompanyAbout);
+                background-repeat: no-repeat;
+            }
+            .ground
+            {
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                width: auto;
+                height: 9px;
+                background-color: @colorGround;
+            }
+            .man
+            {
+                left: 57px;
+                width: 102px;
+                height: 93px;
+                background-position: 0px 0px;
+                .text
+                {
+                    .mixin-box-shadow;
+                    position: absolute;
+                    top: -154px;
+                    left: -55px;
+                    margin: 0px;
+                    padding: 16px 15px 0px 15px;
+                    width: 198px;
+                    height: 106px;
+                    background-color: @colorWhite;
+                }
+                .text:after
+                {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    bottom: -31px;
+                    left: 57px;
+                    width: 48px;
+                    height: 31px;
+                    background-image: url(@imageCompanyAbout);
+                    background-repeat: no-repeat;
+                    background-position: 0px -93px;
+                }
+            }
+            .house
+            {
+                left: 312px;
+                width: 369px;
+                height: 339px;
+                background-position: -102px 0px;
+                .counter, .text
+                {
+                    position: absolute;
+                }
+                .counter
+                {
+                    left: 126px;
+                    top: 180px;
+                    padding: 6px 0px 0px 4px;
+                    width: 117px;
+                    height: 21px;
+                    color: @colorWhite;
+                    font-size: @fontSizeIconArrow;
+                    font-weight: bold;
+                    line-height: @lineHeightDefault;
+                    text-align: left;
+                    letter-spacing: 9.5px;
+                }
+                .counter:after
+                {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    left: 1px;
+                    top: 50%;
+                    right: 1px;
+                    margin-top: -1px;
+                    width: auto;
+                    height: 1px;
+                    font-size: 0px;
+                    line-height: 0px;
+                    background-color: @colorLighterGrey;
+                    overflow: hidden;
+                }
+                .text
+                {
+                    margin: 0px;
+                    padding: 9px 12px 12px 12px;
+                    background-color: @colorWhite;
+                    border: 2px solid @colorRed;
+                    .line
+                    {
+                        position: absolute;
+                        span
+                        {
+                            display: block;
+                            position: absolute;
+                            background-color: @colorRed;
+                        }
+                    }
+                    .line:before, .line:after
+                    {
+                        content: " ";
+                        display: block;
+                        position: absolute;
+                        background-color: @colorRed;
+                    }
+                }
+                .text.age
+                {
+                    left: -310px;
+                    top: 0px;
+                    width: 200px;
+                    .line
+                    {
+                        right: -151px;
+                        top: 37px;
+                        width: 149px;
+                        height: 215px;
+                        span
+                        {
+                            left: 41px;
+                            top: 0px;
+                            bottom: 0px;
+                            width: 2px;
+                            height: auto;
+                        }
+                    }
+                    .line:before, .line:after
+                    {
+                        height: 2px;
+                    }
+                    .line:before
+                    {
+                        left: 0px;
+                        top: 0px;
+                        width: 41px;
+                    }
+                    .line:after
+                    {
+                        right: 0px;
+                        bottom: 0px;
+                        width: 106px;
+                    }
+                }
+                .text.clients
+                {
+                    right: -231px;
+                    top: 87px;
+                    width: 180px;
+                    .line
+                    {
+                        left: -140px;
+                        bottom: -31px;
+                        width: 244px;
+                        height: 29px;
+                        span
+                        {
+                            left: 0px;
+                            right: 0px;
+                            bottom: 0px;
+                            width: auto;
+                            height: 2px;
+                        }
+                    }
+                    .line:before
+                    {
+                        right: 0px;
+                        top: 0px;
+                        bottom: 0px;
+                        width: 2px;
+                        height: auto;
+                    }
+                    .line:after
+                    {
+                        display: none;
+                    }
+                }
+            }
+        }
+	}
+	.features
+	{
+		position: relative;
+		height: 803px;
+		margin: 0px 0px 18px 0px;
+		border:0px;
+		border-bottom: 1px solid @colorDrakerGrey;
+        h2
+        {
+            margin: 24px 0px 12px 0px;
+        }
+		.feature
+		{
+			position: absolute;
+			width: 33%;
+			span.icon
+			{
+				display: block;
+				position: relative;
+				margin: 36px auto 0px auto;
+				height: 74px;
+				z-index: 2;
+				background-image: url(@imageIconsBigSVG);
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+			}
+            span.icon.new
+            {
+                width: 66px;
+                background-position: -557px -24px;
+            }
+            span.icon.action
+            {
+                width: 66px;
+                background-position: -634px -24px;
+            }
+            span.icon.moneybox
+            {
+                width: 66px;
+                background-position: -713px -24px;
+            }
+            span.icon.man
+            {
+                width: 66px;
+                background-position: -792px -24px;
+            }
+            span.icon.hands
+            {
+                width: 66px;
+                background-position: -871px -24px;
+            }
+            span.icon.delivery
+            {
+                width: 66px;
+                background-position: -954px -24px;
+            }
+            span.icon.hands-money
+            {
+                width: 66px;
+                background-position: -1026px -24px;
+            }
+            span.icon.call-back
+            {
+                width: 66px;
+                background-position: -1102px -24px;
+            }
+            span.icon.help
+            {
+                width: 66px;
+                background-position: -1176px -24px;
+            }
+			p.text
+			{
+				display: block;
+				position: absolute;
+				left:0px;
+				top:0px;
+				right:12px;
+				bottom:12px;
+				margin: 0px;
+				padding: 128px 24px 0px 24px;
+				font-size: @fontSizeOrder;
+				line-height: @lineHeightPrice;
+				color: @colorLighterBlack;
+				background-color: @colorLightGrey;
+				border:0px;
+				overflow: hidden;
+				z-index: 1;
+				span
+				{
+					color: @colorDarkBlue;
+				}
+			}
+		}
+		.feature.one,     .feature.three, .feature.four,  .feature.six, .feature.seven, .feature.nine	{	p.text { right:0px; }	}
+		.feature.two,     .feature.five,  .feature.eight  { width: 34%; p.text { left:12px; }	}
+		.feature.one,     .feature.two,   .feature.three  {	height: 246px;	}
+		.feature.four,    .feature.five,  .feature.six    {	height: 257px;	}
+		.feature.seven,   .feature.eight, .feature.nine   {	height: 258px;	}
+        .feature.one,     .feature.two,   .feature.three  { top: 30px; }
+        .feature.four,    .feature.five,  .feature.six    { top: 276px; }
+        .feature.seven,   .feature.eight, .feature.nine   { top: 533px; }
+        .feature.one,     .feature.four,  .feature.seven  { left: 0px; }
+        .feature.two,     .feature.five,  .feature.eight  { left: 33%; }
+		.feature.three,   .feature.six,   .feature.nine   { right: 0px; }
+	}
+}

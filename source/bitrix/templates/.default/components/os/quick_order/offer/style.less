@@ -1,0 +1,174 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.quick_order_offer
+{
+    .title
+    {
+        position: relative;
+        height: 48px;
+        a
+        {
+            display: block;
+            position: relative;
+            height: 48px;
+            background-color: @colorLightGrey;
+            .eaist-logo, .text, .icon
+            {
+                position: absolute;
+            }
+            .eaist-logo
+            {
+                display: block;
+                left: 12px;
+                top: 6px;
+                width: 35px;
+                height: 35px;
+            }
+            .text
+            {
+                top: 6px;
+                left: 55px;
+                right: 55px;
+                margin: 0px;
+                padding: 0px;
+                width: auto;
+                height: 35px;
+                color: @colorLighterBlack;
+                font-size: @fontSizeOrder;
+                line-height: @lineHeightPrice;
+                overflow: hidden;
+            }
+            .icon
+            {
+                .mixin-icon;
+                .mixin-arrow-small;
+                .mixin-arrow-grey-small-down;
+                right: 16px;
+                top: 50%;
+                margin-top: -4px;
+            }
+        }
+        
+        /*
+        .eaist-logo, .button, .text
+        {
+            position: absolute;
+            top: 6px;
+        }
+
+        .text
+        {
+            left: 47px;
+            right: 133px;
+
+            width: auto;
+            height: 29px;
+            font-size: @fontSizeDefault;
+            line-height: @lineHeightSmall;
+            overflow: hidden;
+        }
+        .button
+        {
+            padding-right: 27px !important;
+            right: 12px;
+            width: 88px;
+            height: 29px;
+            font-size: @fontSizeDefault;
+            line-height: @lineHeightBasketTitle !important;
+            .icon
+            {
+                display: block;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                width: 27px;
+                height: 29px;
+                background-color: @colorDarkGreen;
+            }
+            .icon:after
+            {
+                .mixin-icon;
+                .mixin-arrow-small;
+                .mixin-arrow-small-down;
+                content: " ";
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin: -4px 0px 0px -6px;
+            }
+        }
+        .button:hover
+        {
+            .icon { background-color: @colorDarkGreenHover; }
+        }
+        */
+    }
+    .content
+    {
+        display: none;
+        form
+        {
+            padding: 12px 12px 6px 12px;
+            border-top: 1px solid @colorDrakerGrey;
+            .input-wrap
+            {
+                position: relative;
+                margin-bottom: 6px;
+                height: 27px;
+                input
+                {
+                    position: absolute;
+                    padding: 0px 10px 0px 10px;
+                    width: 155px;
+                    height: 25px;
+                    font-size: @fontSizeSlider;
+                }
+                input[name="name"], input[name="email"], input[name="city"]
+                {
+                    left: 0px;
+                }
+                input[name="phone"], input[name="company_name"]
+                {
+                    right: 0px;
+                }
+                input[type="submit"]
+                {
+                    left: 182px;
+                    width: 85px;
+                    height: 27px;
+                    color: @colorBrown;
+                }
+                input[type="submit"]:hover
+                {
+                    color: @colorBrown !important;
+                }
+            }
+        }
+        form.message
+        {
+            .info-message
+            {
+                margin: 0px !important;
+                padding: 0px !important;
+                background-color: @colorBackground !important;
+            }
+        }
+    }
+}
+.quick_order_offer.open
+{
+    .title
+    {
+        a
+        {
+            .icon
+            {
+                .mixin-arrow-grey-small-up;
+            }
+        }
+    }
+}

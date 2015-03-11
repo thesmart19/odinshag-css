@@ -1,0 +1,75 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+
+.quick_order_wrapper
+{
+	position: relative;
+	margin: 12px 0px 0px 0px;
+	width: auto;
+	height: 141px;
+	border: 1px dashed @colorDrakerGrey;
+	background: @colorWhite;
+	.qiuck_order_part
+	{
+		position: relative;
+		padding: 12px;
+	}
+	form
+	{
+		display: block;
+		margin: 0px 12px 0px 12px;
+		height: 27px;
+		input
+		{
+			display: block;
+			position: relative;
+			float: left;
+			margin: 0px 12px 0px 0px;
+			padding: 0 10px;
+			width: 111px;
+			height: 25px;
+			border: 1px solid @colorDrakerGrey;
+			color: @colorLighterBlack;
+			font-size: @fontSizeSlider;
+			border-radius: 0px;
+			-webkit-appearance: none !important;
+			-moz-appearance: none !important;
+		}
+		input.error
+		{
+			color: @colorRed;
+			border: 1px solid @colorRed;
+		}
+		input.quick_order_submit
+		{
+			margin: 0px;
+			padding: 0px;
+			width: 68px;
+			height: 27px;
+			line-height: @lineHeightButton;
+			text-align: center;
+			text-decoration: none;	
+			outline: none;
+			cursor: pointer;
+			border: 0px;
+			text-shadow: none;
+			box-shadow: none;
+		}
+		input.green_button
+		{
+			color: @colorWhite;
+			background-color: @colorGreen;
+			background-image: none;
+			background-repeat: repeat;
+			background-attachment: scroll;
+			background-position: 0% 0%;
+			filter: none;
+		}
+		input.green_button:hover
+		{
+			color: @colorWhite;
+			background: @colorGreenHover;
+		}
+	}
+}

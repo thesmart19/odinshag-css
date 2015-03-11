@@ -1,0 +1,57 @@
+// out: ../../output/quick_order-out_of_store/style.css, compress: true
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.quick-order
+{
+	margin: 12px 0px 12px 0px;
+	padding: 12px 12px 12px 12px;
+	border: 1px solid @colorGreen;
+	background-color: @colorWhite;
+	p { margin: 0px; }
+	p.response { display: none; }
+	form
+	{
+		margin: 15px 0px 0px 0px;
+		color: @colorLighterBlack;
+		input.quick_order_name, input.quick_order_contact, textarea
+		{
+			color: @colorLightBlack;
+			font-size:@fontSizeDefault;
+		}
+		input.quick_order_name.error, input.quick_order_contact.error, textarea.error
+		{
+			color: @colorRed;
+		}
+		input.quick_order_name, input.quick_order_contact
+		{
+			position: relative;
+			float: left;
+			margin: 0px 12px 0px 0px;
+			padding: 0px 10px 0px 10px;
+			width: 151px;
+			height: 25px;
+		}
+		input.quick_order_contact { margin-right: 0px; }
+		textarea
+		{
+			margin: 39px 0px 0px 0px;
+			padding: 0px 10px 0px 10px;
+			width: 336px;
+			height: 52px;
+		}
+		textarea.error
+		{
+			border:1px solid @colorRed;
+		}
+		.button
+		{
+			position: relative;
+			float: right;
+			margin: 12px 0px 0px 0px;
+			width: 93px;
+			height: 29px;
+		}
+	}
+}

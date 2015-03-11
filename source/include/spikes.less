@@ -1,0 +1,121 @@
+﻿/* скрываем все iframe */
+body > iframe
+{
+	position: absolute !important;
+	margin: 0px !important;
+	padding: 0px !important;
+	height: 0px !important;
+	font-size: 0px !important;
+	line-height: 0px !important;
+	overflow: hidden !important;
+}
+/* / скрываем все iframe */
+
+/* исправление верстки select в браузерах IE8/9 --- */
+.bx-ie8, .bx-ie9
+{
+	.box .personal-content .user-data .block label.select select { padding-right: 6px; }
+}
+/* / исправление верстки select в браузерах IE8/9 --- */
+
+/* --- костыли для исправления верстки старых страниц --- */
+body #total_wrapper
+{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+}
+
+body #main_wrapper
+{
+	position: relative;
+	margin: 0 auto;
+	padding: 0px;
+	width: @pageWrapWidth;
+	height: auto;
+	min-height: 100%;
+}
+
+body #main_wrapper:after
+{
+	content: " ";
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 222px;
+}
+
+/* изменение расположения блок в списке категорий */
+.box
+{
+	.catalog_section_list
+	{
+		padding:0px;
+		.catalog_section_item
+		{
+			margin-right:10px;
+		}
+	}
+}
+/* / изменение расположения блок в списке категорий */
+
+/* Красный цвет для текста */
+.red
+{
+	color: @colorRed;
+	b { color: @colorRed; }
+}
+/* / Красный цвет для текста */
+
+/* / --- костыли для исправления верстки старых страниц --- */
+
+/* костыли для исправления стилей Bitrix */
+body
+{
+	.popup-window, .bx-calendar-top-month, .bx-calendar-top-year, .bx-calendar-year-number, .bx-calendar-month, .bx-calendar-year-input, .bx-calendar-month-input
+	{
+		border-radius: 0px;
+	}
+	.popup-window
+	{
+		.mixin-box-shadow;
+	}
+}
+/* / костыли для исправления стилей Bitrix */
+
+/* текст на страницах личного кабинета */
+/* ul.benifit { margin-bottom: 24px; } */
+/* / текст на страницах личного кабинета */
+
+/* списки на страницах брендов */
+/*
+.brand_text
+{
+	ul { margin: 12px 0px 12px 0px; }
+}
+*/
+/* / списки на страницах брендов */
+
+/* футер */
+/*
+#footer
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: auto;
+	bottom: 29px;
+	padding: 15px 40px 0px 40px;
+	height: 55px;
+	border-top: 1px dashed #BCBCBC;
+	clear:both;
+	font:12px Arial;
+	line-height:1.5em;
+	.clear { display: none; }
+}
+*/
+/* / футер */

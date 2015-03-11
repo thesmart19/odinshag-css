@@ -1,0 +1,68 @@
+// out: ../../output/quick_order-stihl_viking_order/style.css, compress: true
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.quick_order
+{
+	position: relative; 
+	margin: 12px 0px 0px 0px;
+	width:auto;
+	height: auto;
+	background: @colorWhite;
+	border: 1px solid @colorGreen;
+	.title, .comment
+	{
+		position: relative;
+		padding: 12px;
+		font-size: @fontSizeOrder;
+		color: @colorLightBlack;
+	}
+	form
+	{
+		margin: 0px 12px 0px 12px;
+		input
+		{
+			position: absolute;
+			top: 0px;
+			padding: 0 10px;
+			width: 155px;
+			height: 25px;
+			color: @colorLighterBlack;
+			font-size: @fontSizeSlider;
+			border: 1px solid @colorDrakerGrey;
+			border-radius:0px;
+			outline:none;
+			-webkit-appearance: none !important;
+			-moz-appearance: none !important;
+		}
+        input#quick_order_name_input
+        {
+            left: 0px;
+        }
+        input#quick_order_contact_input
+        {
+            right: 0px;
+        }
+		input.button
+		{
+			left: 182px;
+			width: 85px;
+			height: 27px;
+			border: 0px;
+			font-size: @fontSizeSlider;
+			letter-spacing: 0px;
+		}
+		input.error
+		{
+            color: @colorRed;
+            border: 1px solid @colorRed;
+		}
+        .input-wrap
+        {
+            position: relative;
+            margin-bottom: 6px;
+            height: 27px;
+        }
+	}
+}

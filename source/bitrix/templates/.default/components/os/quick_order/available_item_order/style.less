@@ -1,0 +1,168 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.no-svg
+{
+	.quick_order form label .icon { background-image: @imageIconsPNG; }
+}
+
+.quick_order_error { display: none; }
+
+.quick_order
+{
+	position: relative; 
+	margin: 12px 0px 0px 0px;
+	padding: 0px 0px 6px 0px;
+	width:auto;
+	height: auto; /* 85px */
+	background: @colorWhite;
+	border: 1px solid @colorGreen;
+	form
+	{
+		margin: 0px 12px 0px 12px;
+		label
+		{
+			display: block;
+			position: relative;
+			margin: 33px 0px 0px 0px;
+			height: 18px;
+			input[type="checkbox"]
+			{
+				margin: 0px 12px 0px 0px;
+				padding: 0px;
+				width: auto;
+				height: auto;
+				opacity: 0;
+			}
+			.icon
+			{
+				.mixin-icon;
+				cursor: pointer;
+				display: block;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 19px;
+				height: 18px;
+				background-position: -225px -23px;
+			}
+			.icon.active { background-position: -225px 0; }
+		}
+		input
+		{
+			position: absolute;
+			top: 0px;
+			padding: 0 10px;
+			width: 155px;
+			height: 25px;
+			color: @colorLighterBlack;
+			font-size: @fontSizeSlider;
+			border: 1px solid @colorDrakerGrey;
+			border-radius:0px;
+			outline:none;
+		}
+        input#quick_order_name_input
+        {
+            left: 0px;
+        }
+        input#quick_order_contact_input
+        {
+            right: 0px;
+        }
+		input.button
+		{
+            left: 182px;
+			width: 85px;
+			height: 27px;
+			border: 0px;
+			font-size: @fontSizeSlider;
+			letter-spacing: 0px;
+			-webkit-appearance: none !important;
+			-moz-appearance: none !important;
+			appearance: none !important;
+		}
+		input.error
+		{
+			color: @colorRed;
+			border: 1px solid @colorRed;
+		}
+        .input-wrap
+        {
+            position: relative;
+            margin-bottom: 6px;
+            height: 27px;
+        }
+	}
+	.title
+	{
+		position: relative;
+		padding: 12px;
+		font-size: @fontSizeSlider;
+		color: @colorLightBlack;
+		span.name
+        {
+            font-size: @fontSizeBasketTotal;
+            font-weight: bold;
+        }
+        span.name.response { font-weight: normal; }
+	}
+	.bonus
+	{
+		display: none;
+		.title
+		{
+			padding-left: 0px;
+			padding-right: 0px;
+			font-size: @fontSizeOrder;
+		}
+	}
+}
+.quick_order.karcher
+{
+	margin: 0px 0px 20px 0px;
+	border-top: 0px;
+	border-right: 1px solid @colorDrakerGrey;
+	border-bottom: 1px solid @colorDrakerGrey;
+	border-left: 1px solid @colorDrakerGrey;
+	form
+	{
+		display: block;
+		input
+		{
+			margin: 0px;
+			width: 155px;
+		}
+		input.karcher-text-name	{ float: left; }
+		input.karcher-text-email	{ float: right; }
+		input.karcher-submit
+		{
+			cursor: pointer;
+			width:105px;
+			color: @colorWhite;
+			background: @colorGreen;	
+			border:0px;
+		}
+		input.karcher-submit:hover
+		{
+			color: @colorWhite;
+			background: @colorGreenHover;
+		}
+		label.available
+		{
+			.mixin-available;
+			position:relative;
+			float:left;
+		}
+		label.available.yes			{ .mixin-available-yes; }
+		label.available.discontinued	{ .mixin-available-no; }
+		label.available.no			{ .mixin-available-no; }
+		label.available.order			{ .mixin-available-order;}
+	}
+	.title
+	{
+		padding:12px;
+		font-size:@fontSizeOrder;
+	}
+}

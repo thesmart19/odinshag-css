@@ -1,0 +1,16 @@
+{
+  "name": "odinshag-css",
+  "version": "1.0.0",
+  "description": "This is repository of CSS and Less CSS source code for odinshag.ru web project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandr Skoblov",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-less": "^1.0.0"
+  }
+}

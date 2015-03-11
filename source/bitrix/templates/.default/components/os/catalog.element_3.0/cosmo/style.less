@@ -1,0 +1,1356 @@
+// out: null
+
+
+
+
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+    #Карточка товара
+\*---------------------------------------------------------------------------*/
+.card-product
+{
+	font-size: @fontSizeOrder;
+	h1
+	{
+		padding: 4px 0px 10px 0px;
+		font-weight: normal;
+		font-size: 30px;
+	}
+	.card-product-details
+	{
+		position: relative;
+	}
+	.card-product-image
+	{
+		position: relative;
+		float: left;
+		width: 561px;
+		margin: 0px;
+		.card-actions-block
+		{
+			padding: 4px 10px 5px 10px;
+			height: 32px;
+			font-size:12px;
+			background: @colorBackground;
+			border-top: 1px solid @colorDrakerGrey;
+			border-left: 1px solid @colorDrakerGrey;
+			border-right: 1px solid @colorDrakerGrey;
+			overflow: hidden;
+			.day-item, .sell-hit, .guarantee, .discount, .gift, .new, .free-shipping, .action, .waste-item
+			{
+				position: relative;
+				float: left;
+				margin: 4px 8px 4px 0px;
+				padding: 4px 0px 4px 30px;
+				span.icon
+				{
+					display: block;
+					position: absolute;
+					left:0px;
+					top: 0px;
+					width: 0px;
+					height: 0px;
+					background-image: url(@imageIconsSVG);
+					background-repeat: no-repeat;
+					background-position: 0px 0px;
+				}
+			}
+			.day-item
+			{
+				padding-left: 27px;
+				span.icon
+				{
+					top:1px;
+					width: 20px;
+					height: 21px;
+					background-position: -245px 0px;
+				}
+			}
+			.sell-hit
+			{
+				padding-left: 25px;
+				/*background-position: -3px -39px;*/
+			}
+			.discount
+			{
+				padding-left: 37px;
+				span.icon
+				{
+					top: 3px;
+					width: 29px;
+					height: 17px;
+					background-position: -882px 0px;
+				}
+			}
+			.gift
+			{
+				padding-left: 30px;
+				/*background-position: 0px -542px;*/
+				span.icon
+				{
+					top: 1px;
+					width: 22px;
+					height: 22px;
+					background-position: -312px 0px;
+				}
+			}
+			.new
+			{
+				padding-left: 37px;
+				padding-bottom: 3px;
+				/*background-position: 0px -564px;*/
+				span.icon
+				{
+					top:3px;
+					width: 30px;
+					height: 17px;
+					background-position: -335px 0px;
+				}
+			}
+			.free-shipping
+			{
+				padding-left: 38px;
+				/*background-position: 0px -742px;*/
+			}
+			.guarantee
+			{
+				float: right;
+				margin-right:0px;
+				padding-left: 21px;
+				/*background-position: -1px -76px;*/
+				span.icon
+				{
+					top: 3px;
+					width: 14px;
+					height: 18px;
+					background-position: -366px 0px;
+				}
+			}
+			.action
+			{
+				float: right;
+				margin-right:0px;
+				margin-left:5px;
+				padding-left: 20px;
+				/*background-position: -7px -586px;*/
+			}
+			.waste-item
+			{
+				padding-left: 30px;
+				/*background-position: 0px -514px;*/
+				span.icon
+				{
+					top: 1px;
+					width: 22px;
+					height: 22px;
+					background-position: -289px 0px;
+				}
+			}
+		}
+	}
+	.card-product-desc
+	{
+		position: relative;
+		float: right;
+		margin: 0px;
+		width: 385px;
+		.article
+		{
+			position: relative;
+			padding: 0px;
+			height:27px;
+			line-height:27px;
+			background-color: @colorDarkGrey;
+			border: 1px solid @colorDrakerGrey;
+			span, b
+			{
+				font-size: 12px;
+				line-height:29px;
+			}
+			span { color: @colorLighterBlack; }
+			.article, .code
+			{
+				input
+				{
+					display: inline;
+					width: auto;
+					font-size: @fontSizeSlider;
+					font-weight: bold;
+					background-color: transparent;
+					border:0px;
+				}
+			}
+			.article
+			{
+				position: absolute;
+				left:12px;
+				top:0px;
+				padding: 0px;
+				max-width: 220px;
+				height: 27px;
+				background: none;
+				border: 0px;
+				overflow:hidden;
+				white-space: nowrap;
+			}
+			.code
+			{
+				position: absolute;
+				right:12px;
+				top:0px;
+				max-width: 140px;
+				height: 27px;
+				background: none;
+				border: 0px;
+				text-align: right;
+				overflow:hidden;
+				white-space: nowrap;
+			}
+			.available-pickup, .available-pickup-today, .order, .not-available
+			{
+				.mixin-available;
+				top: 0px;
+				left: 0px;
+				border-right: 1px solid @colorDrakerGrey;
+			}
+			.available-pickup 							{ .mixin-available-yes; }
+            .available-pickup-today 				    { .mixin-available-pick-up-today; }
+			.not-available								{ .mixin-available-no; }
+			.order										{ .mixin-available-order; }
+		}
+		.product
+		{
+			position: relative;
+			margin: 0px;
+			padding: 0px;
+			/*height: 138px;*/
+			border-top: 0px;
+			border-right: 1px solid @colorDrakerGrey;
+			border-bottom: 0px;
+			border-left: 1px solid @colorDrakerGrey;
+			.actions
+			{
+				position: relative;
+				margin: 0px;
+				height: 52px;
+				background-color: @colorWhite;
+				overflow: hidden;
+				.price, .number-items, .button
+				{
+					position: absolute;
+				}
+				.price
+				{
+					left: 12px;
+					top: 12px;
+					width: 162px;
+					height: 40px;
+					overflow: hidden;
+                    i { font-style: normal; }
+					span, del
+					{
+						display: block;
+						margin: 0px;
+					}
+					del
+					{
+                        padding: 0px 0px 0px 39px;
+						height: 13px;
+						line-height: 11px;
+						color: @colorLighterBlack;
+						text-decoration: none;
+						i
+						{
+                            display: inline-block;
+                            position: relative;
+							font-style: normal;
+							text-decoration: none;
+						}
+                        i:after
+                        {
+                            content: " ";
+                            display: block;
+                            position: absolute;
+                            left: 0px;
+                            right: 0px;
+                            top: 50%;
+                            margin-top: -1px;
+                            width: auto;
+                            height: 0px;
+                            font-size: 0px;
+                            line-height: 0px;
+                            border: 0px;
+                            border-top: 1px solid @colorRed;
+                        }
+					}
+					span
+					{
+						height: 22px;
+						color: @colorRed;
+						font-size: @fontSizePrice;
+						line-height: @lineHeightOrder;
+                        white-space: nowrap;
+                        span.price-text, span.price-value
+                        {
+                            display: inline;
+                        }
+                        span.price-text
+                        {
+                            width: 39px;
+                            color: @colorLighterBlack;
+                            font-size: @fontSizeBasketTotal;
+                        }
+                        span.price-value
+                        {
+                            font-size: @fontSizePrice;
+                        }
+					}
+				}
+				.number-items
+				{
+					left: 186px;
+					top: 18px;
+					width: 80px;
+					height: 29px;
+					ul
+					{
+						display: block;
+                        position: relative;
+						margin: 0px;
+						padding: 0px;
+						height:29px;
+						li
+						{
+							display: block;
+							position: absolute;
+							top: 0px;
+                            left: 24px;
+                            right: 24px;
+                            width: auto;
+							a
+							{
+								display: block;
+								width: 23px;
+								height: 27px;
+								text-decoration: none;
+								color: @colorLighterBlack;
+							}
+							a:hover { color: @colorLighterBlack !important; }
+							input
+							{
+								width: 32px;
+								text-align: center;
+								margin: 0;
+								padding-top:1px;
+								padding-bottom:1px;
+								border-top: 1px solid @colorDrakerGrey;
+								border-bottom: 1px solid @colorDrakerGrey;
+								border-left: none;
+								border-right: none;
+								height: 25px;
+								color: @colorLightBlack;
+							}
+						}
+						li.minus, li.plus
+						{
+							width: 22px;
+							height: 27px;
+							color: @colorLighterBlack;
+							font-size: @fontSizeB;
+							line-height: @lineHeightH1;
+							text-align: center;
+							background-color: @colorDarkGrey;
+							border: 1px solid @colorDrakerGrey;
+						}
+						li.minus:hover, li.plus:hover { background-color: @colorGreyHover; }
+                        li.minus
+                        {
+                            left: 0px;
+                            right: auto;
+                        }
+                        li.plus
+                        {
+                            left: auto;
+                            right: 0px;
+                        }
+					}
+				}
+				.button
+				{
+					top: 18px;
+					right: 12px;
+					width: 93px;
+					height: 29px;
+					font-size: @fontSizeDefault;
+					line-height: @lineHeightBasketTitle !important;
+				}
+                .button.goto-order
+                {
+                    display: none !important;
+                    width: 140px;
+                    span.icon
+                    {  
+                        .mixin-icon;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        margin: -6px 0px 0px 0px;
+                        width: 14px;
+                        height: 12px;
+                        background-position: -62px -106px;
+                    }
+                }
+			}
+			.residue
+			{
+				padding: 8px 0px 8px 12px;
+				color: @colorRed;
+				font-size: @fontSizeDefault;
+				line-height: @lineHeightDefault;
+				background-color: @colorWhite;
+				overflow: hidden;
+				border-bottom: 1px solid @colorDrakerGrey;
+				span { font-weight: bold; }
+			}
+			.bonus
+			{
+				position: relative;
+				height: 37px;
+				border-top: 0px solid @colorDrakerGrey;
+				border-bottom: 1px solid @colorDrakerGrey;
+				background-color: @colorLightBlue;
+				.count, .more
+				{
+					display: block;
+					position: absolute;
+					top: 9px;
+				}
+				.count
+				{
+					left: 12px;
+					height: 24px;
+					span
+					{
+						display: block;
+						position: relative;
+						float: left;
+					}
+					span.text, span.bonus { margin: 0px 6px 0px 0px; }
+					span.text
+					{
+                        padding: 0px;
+						height: 22px;
+						font-size: @fontSizeDefault;
+						line-height: @lineHeightAdditional; /* @lineHeightDefault */
+					}
+					span.icon { .mixin-icon; }
+					span.bonus
+					{
+						.mixin-icon-bonus;
+						top: -2px;
+						border:0px;
+					}
+					span.question
+					{
+						.mixin-icon-question;
+						margin: 3px 0px 0px 0px;
+						background-image: none;
+						.fixed-wrap, .message { background-image: none !important; cursor: default; }
+						.message
+						{
+							.mixin-message;
+							left: 50%;
+							top: 25px;
+						}
+					}
+					span.question:hover, span.question.active { .mixin-icon-question-hover; }
+					span.question:after { .mixin-icon-question-after; }
+				}
+				.more
+				{
+					left: 184px;
+					line-height: @lineHeightBig;
+				}
+				.more:hover { span.triangle.to-right { border-color: transparent transparent transparent @colorRed; } }
+			}
+			/*
+			.bonus.for-client
+			{
+				.count
+				{
+					left: 224px;
+				}
+				.price-for-client
+				{
+					position: absolute;
+					left: 0px;
+					top: 0px;
+					bottom: 0px;
+					padding: 5px 0px 0px 12px;
+					width: 179px;
+					font-size: @fontSizeDefault;
+					line-height: @lineHeightOrder;
+					border:0px;
+					border-right: 1px solid @colorDrakerGrey;
+					background-color: @colorBackground;
+					b
+					{
+						font-size: @fontSizeOrder;
+					}
+					span.icon
+					{
+						.mixin-icon-question;
+						display: inline-block;
+						position: relative;
+						vertical-align: bottom;
+						cursor: pointer;
+						.fixed-wrap, .message { background-image: none !important; cursor: default; }
+						.message
+						{
+							.mixin-message;
+							top: 25px;
+							left: 50%;
+						}
+					}
+					span.icon:hover { .mixin-icon-question-hover; }
+					span.icon:after { .mixin-icon-question-after; }
+				}
+			}
+			*/
+			.delivery
+			{
+				position: relative;
+				padding: 0px 0px 0px 0px;
+				height: auto; /*52px*/
+                background-color: @colorWhite;
+                border-bottom: 1px solid @colorDrakerGrey;
+				/*
+				.available-pickup, .order, .not-available, .date
+				{
+					position: absolute;
+				}
+				.available-pickup, .order, .not-available	{ .mixin-available; }
+				.available-pickup 							{ .mixin-available-yes; }
+				.not-available								{ .mixin-available-no; }
+				.order										{ .mixin-available-order }
+				*/
+				.date
+				{
+					position: relative;
+					padding: 11px 12px 9px 12px;
+					font-size: @fontSizeBasketTotal;
+					line-height: @lineHeightDefault;
+                    white-space: nowrap;
+                    span
+                    {
+                        display: inline;
+                        margin-right: 5px;
+                        white-space: normal;
+                        /* color: @colorRed; */
+                    }
+					span.icon
+					{
+						.mixin-icon-question;
+                        display: inline-block;
+						vertical-align: middle;
+						position: relative;
+                        margin: 0px;
+						cursor: pointer;
+						.fixed-wrap, .message
+						{
+							cursor: default;
+							background-image: none !important;
+						}
+						.message
+						{
+							.mixin-message;
+							left: 50%;
+							top: 25px;
+						}
+					}
+					span.icon:hover, span.icon:active { .mixin-icon-question-hover; }
+					span.icon:after { .mixin-icon-question-after; }
+					/*font-size: 0px;
+					line-height: 0px;
+					white-space:nowrap;
+					span.helper, span.text
+					{
+						display: inline-block;
+						vertical-align: middle;
+					}
+					span.helper
+					{
+						width: 0px;
+						height: 100%;
+						font-size: 0px;
+						line-height: 0px;
+					}
+					span.text
+					{
+						font-size: @fontSizeDefault;
+						line-height: @lineHeightDefault;
+						white-space: normal;
+						span { color: @colorRed; }
+						span.icon
+						{
+							.mixin-icon;
+							.mixin-icon-question;
+							display: inline-block;
+							vertical-align: middle;
+							position: relative;
+							cursor: pointer;
+							.fixed-wrap, .message
+							{
+								cursor: default;
+								background-image: none !important;
+							}
+							.message
+							{
+								.mixin-message;
+								left: 50%;
+								top: 25px;
+							}
+						}
+						span.icon:hover { .mixin-icon-question-hover; }
+					}*/
+				}
+				.date.border-top { border-top:1px solid @colorDrakerGrey; }
+			}
+			.delivery.out-of-store
+			{
+				padding: 12px 0px 12px 0px;
+				.price
+				{
+					position: relative;
+					margin: 0px 0px 0px 12px;
+					/*left: 12px;
+					top: 12px;
+					bottom: 12px;*/
+					width: 150px;
+					color: @colorRed;
+					font-size: @fontSizePrice;
+					line-height: @lineHeightButtonPrint;
+					overflow: hidden;
+                    i, em { font-style: normal; }
+					span
+					{
+						display: block;
+						margin: 0px;
+						height: 22px;
+						color: @colorRed;
+						font-size: @fontSizePrice;
+						line-height: @lineHeightOrder;
+                        white-space: nowrap;
+                        span.price-text, span.price-value
+                        {
+                            display: inline;
+                        }
+                        span.price-text
+                        {
+                            color: @colorLighterBlack;
+                            font-size: @fontSizeBasketTotal;
+                        }
+                        span.price-value
+                        {
+                            font-size: @fontSizePrice;
+                        }
+					}
+				}
+				/*.not-available, .order
+				{
+					left: auto;
+					right: 12px;
+				}*/
+			}
+		}
+		.discontinued
+		{
+			margin:12px 0px 0px 0px;
+			height:87px;
+			border:1px solid @colorDrakerGrey;
+			img
+			{
+				display: block;
+				margin: 0px auto 0px auto;
+				width: 383px;
+				height: 87px;
+			}
+		}
+		.banner
+		{
+			margin: 12px 0px 0px 0px;
+			padding: 12px;
+			border:1px solid @colorDrakerGrey;
+			.buttons
+			{	
+				margin: 0px auto 0px auto;
+				width: 292px;
+				height: 29px;
+				.button, .count
+				{
+					display: block;
+					position: relative;
+					float:left;
+					font-size: @fontSizeDefault;
+				}
+				.button
+				{
+					margin: 0px;
+					width: 140px;
+					height: 29px;
+					color: @colorBrown;
+					line-height: @lineHeightH1 !important;
+					span
+					{
+						display: inline-block;
+						vertical-align: middle;
+						margin: 0px;
+					}
+					span.icon
+					{
+						.mixin-icon;
+						margin-right: 12px;
+					}
+				}
+				.button:hover { color: @colorBrown !important; }
+				.button.active { span { color: @colorBrown !important; } }
+				.button.compare
+				{
+					margin-right:6px;
+					span.icon
+					{
+						.mixin-icon-compare;
+						.mixin-icon-compare-grey;
+						width: 10px;
+						height: 8px;
+					}
+				}
+				.button.compare.active
+                {
+                    span.icon
+                    {
+                        .mixin-icon-compare-goto;
+                    }
+                }
+				.button.favorites
+				{
+					margin-left:6px;
+					span.icon
+					{
+						.mixin-icon-star-small;
+						.mixin-icon-star-small-grey;
+						width: 12px;
+						height: 11px;
+					}
+				}
+				.button.favorites.active
+                {
+                    span.icon
+                    {
+                        .mixin-icon-favorites-goto;
+                    }
+                }
+				.count
+				{
+					margin-left: 12px;
+					padding: 7px 12px 0px 12px;
+					width: auto;
+					height: 20px;
+					color: @colorLightBlack;
+					line-height: @lineHeightSmall;
+					border:1px solid @colorRed;
+					span.arrow
+					{
+						display: block;
+						position: absolute;
+						left: -7px;
+						top: 50%;
+						margin-top: -6px;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 6px 7px 6px 0;
+						border-color: transparent @colorRed transparent transparent;
+					}
+					span.arrow:before
+					{
+						content: " ";
+						display: block;
+						position: absolute;
+						left: 1px;
+						top: -5px;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 5px 6px 5px 0;
+						border-color: transparent @colorWhite transparent transparent;
+					}
+				}
+			}
+		}
+		.banner.red-border
+		{
+			position: relative;
+			height: 29px;
+			border:1px solid @colorRed;
+			span.text
+			{
+				display: inline-block;
+				height: 29px;
+				color: @colorLightBlack;
+				font-size: @fontSizeDefault;
+				line-height: @lineHeightH1;
+				white-space: nowrap;
+				span.actual
+				{
+					color: @colorRed;
+					font-size: @fontSizeB;
+				}
+			}
+			.button
+			{
+				position: absolute;
+				top: 12px;
+				right: 12px;
+				width: 125px;
+				height: 29px;
+				line-height: @lineHeightBasketTitle !important;
+				font-size: @fontSizeDefault;
+			}
+			.button.discount
+			{
+				width: 110px;
+			}
+			.button.grey
+			{
+				color: @colorLighterBlack !important;
+			}
+		}
+		a.banner
+		{
+			display: block;
+			margin: 12px 0px 0px 0px;
+			padding: 0px;
+			height: auto;
+			border: 0px;
+			img
+			{
+				display: block;
+				width: 100%;
+				height:auto;
+			}
+		}
+		.info-message { margin-top: 0px !important; }
+		.collective-buying
+		{
+			display: block;
+			position: relative;
+			margin: 12px 0px 0px 0px;
+			padding: 12px 24px 0px 60px;
+			height: 28px;
+			text-align: center;
+			font-size: @fontSizeDefault;
+			color: @colorLighterBlack !important;
+			background-color: @colorGreyOneMore2;
+			.image, .icon
+			{
+				display: block;
+				position: absolute;
+			}
+			.image
+			{
+				top: 0px;
+				left: 0px;
+				bottom: 0px;
+				width: 57px;
+				background-color: @colorDarkGrey;
+			}
+			.image:after
+			{
+				.mixin-icon;
+				content: " ";
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -11px 0px 0px -14.5px;
+				width: 29px;
+				height: 22px;
+				background-position: -4px -24px;
+			}
+			.icon
+			{
+				.mixin-icon;
+				right: 13px;
+				top: 50%;
+				margin-top: -6px;
+				width: 8px;
+				height: 12px;
+				background-position: -955px -75px;
+			}
+		}
+		.collective-buying:hover { background-color: @colorGreyHover; }        
+        .offer
+        {
+            margin: 12px 0px 0px 0px;
+            border: 1px solid @colorDrakerGrey;
+            .exist
+            {
+                position: relative;
+                height: 48px;
+                .eaist-logo, .text
+                {
+                    position: absolute;
+                }
+                .eaist-logo
+                {
+                    display: block;
+                    left: 12px;
+                    top: 6px;
+                    width: 35px;
+                    height: 35px;
+                }
+                .text
+                {
+                    top: 6px;
+                    left: 55px;
+                    right: 12px;
+                    margin: 0;
+                    padding: 0;
+                    width: auto;
+                    height: 35px;
+                    color: @colorLighterBlack;
+                    font-size: @fontSizeOrder;
+                    line-height: @lineHeightPrice;
+                    overflow: hidden;
+                }
+            }
+        }        
+        .card-product-offer
+        {
+            padding: 12px;
+            background-color: @colorWhite;
+            border-top: 0px;
+            border-left: 1px solid @colorDrakerGrey;
+            border-bottom: 1px solid @colorDrakerGrey;
+            border-right: 1px solid @colorDrakerGrey;
+            .price-list, .extra
+            {
+                position: relative;
+                height: 29px;
+            }
+            .price-list
+            {
+                margin: 0px 0px 6px 0px;
+                .button, .number-items, .price
+                {
+                    position: absolute;
+                    top: 0px;
+                    height: 29px;
+                }
+                .button
+                {
+                    right: 0px;
+                    width: 102px;
+                    font-size: @fontSizeDefault;
+                    line-height: @lineHeightBasketTitle !important;
+                }
+				.number-items
+				{
+					right: 108px;
+					width: 80px;
+					ul
+					{
+						display: block;
+                        position: relative;
+						margin: 0px;
+						padding: 0px;
+						height:29px;
+						li
+						{
+							display: block;
+							position: absolute;
+							top: 0px;
+                            left: 24px;
+                            right: 24px;
+                            width: auto;
+							a
+							{
+								display: block;
+								width: 23px;
+								height: 27px;
+								text-decoration: none;
+								color: @colorLighterBlack;
+							}
+							a:hover { color: @colorLighterBlack !important; }
+							input
+							{
+								width: 32px;
+								text-align: center;
+								margin: 0;
+								padding-top:1px;
+								padding-bottom:1px;
+								border-top: 1px solid @colorDrakerGrey;
+								border-bottom: 1px solid @colorDrakerGrey;
+								border-left: none;
+								border-right: none;
+								height: 25px;
+								color: @colorLightBlack;
+							}
+						}
+						li.minus, li.plus
+						{
+							width: 22px;
+							height: 27px;
+							color: @colorLighterBlack;
+							font-size: @fontSizeB;
+							line-height: @lineHeightH1;
+							text-align: center;
+							background-color: @colorDarkGrey;
+							border: 1px solid @colorDrakerGrey;
+						}
+						li.minus:hover, li.plus:hover { background-color: @colorGreyHover; }
+                        li.minus
+                        {
+                            left: 0px;
+                            right: auto;
+                        }
+                        li.plus
+                        {
+                            left: auto;
+                            right: 0px;
+                        }
+					}
+				}
+                .price
+                {
+                    left: 0px;
+                    top: 0px;
+                    color: @colorRed;
+                    font-size: @fontSizePrice;
+                    line-height: @lineHeightButtonPrint;
+                    del
+                    {
+                        color: @colorLighterBlack;
+                        font-size: @fontSizeOrder;
+                    }
+                    span
+                    {
+                    }
+                }
+            }
+            .extra
+            {
+                height: auto;
+                min-height: 29px;
+                .bonus, .residue
+                {
+                    position: absolute;
+                    top: 0px;
+                    height: 29px;
+                    z-index: 2;
+                }
+                .bonus
+                {
+                    font-size: @fontSizeDefault;
+                    span.text, span.question
+                    {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    span.text
+                    {
+                        margin: 0px;
+                        padding: 0px;
+                        line-height: @lineHeightBasketTitle;
+                    }
+					span.question
+					{
+						.mixin-icon-question;
+						.fixed-wrap, .message { background-image: none !important; cursor: default; }
+						.message
+						{
+							.mixin-message;
+							left: 50%;
+							top: 25px;
+						}
+					}
+					span.question:hover, span.question.active { .mixin-icon-question-hover; }
+					span.question:after { .mixin-icon-question-after; }
+                }
+                .residue
+                {
+                    width: 160px;
+                    color: @colorRed;
+                    font-size: @fontSizeBasketTotal;
+                    line-height: @lineHeightSmall;
+                    span
+                    {
+                        font-weight: bold;
+                    }
+                }
+                .quick-order-block
+                {
+                    position: relative;
+                    z-index: 1;
+                    .title
+                    {
+                        position: relative;
+                        height: 29px;
+                        z-index: 2;
+                        a, span
+                        {
+                            display: block;
+                            position: absolute;
+                        }
+                        a
+                        {
+                            top: 0px;
+                            right: 33px;
+                            padding: 0px 0px 0px 15px;
+                            width: 140px;
+                            height: 29px;
+                            color: @colorWhite;
+                            line-height: @lineHeightBasketTitle;
+                            background-color: @colorGreen;
+                            span.icon
+                            {
+                                display: block;
+                                position: absolute;
+                                right: 0px;
+                                top: 0px;
+                                width: 27px;
+                                height: 29px;
+                                background-color: @colorDarkGreen;
+                            }
+                            span.icon:after
+                            {
+                                .mixin-icon;
+                                content: " ";
+                                display: block;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                margin: -4px 0px 0px -7px;
+                                width: 14px;
+                                height: 8px;
+                                background-position: -952px -93px;
+                            }
+                            span.icon.close:after { background-position: -952px -108px; }
+                        }
+                        a:hover
+                        {
+                            color: @colorWhite !important;
+                            background-color: @colorGreenHover;
+                            span.icon
+                            {
+                                background-color: @colorDarkGreenHover;
+                            }
+                        }
+                        span.icon
+                        {
+                            .mixin-icon-question;
+                            position: absolute;
+                            top: 7px;
+                            right: 12px;
+                            .fixed-wrap, .message { cursor: default; background-image: none !important; }
+                            .message
+                            {
+                                .mixin-message;
+                                left: 50%;
+                                top: 25px;
+                            }
+                        }
+                        span.icon:hover, span.icon.active { .mixin-icon-question-hover; }
+                        span.icon:after { .mixin-icon-question-after; }
+                    }
+                    .content
+                    {
+                        display: none;
+                        overflow: hidden;
+                        z-index: 1;
+                        form
+                        {
+                            padding: 12px;
+                            border:1px solid @colorDarkGreen;
+                            label
+                            {
+                                display: block;
+                                margin: 0px 0px 12px 0px;
+                                font-size: @fontSizeDefault;
+                                line-height: @lineHeightSmallest;
+                            }
+                            input
+                            {
+                                position: relative;
+                                float: left;
+                                margin: 0px;
+                                padding: 0px;
+                                line-height: normal;
+                            }
+                            input[type="text"]
+                            {
+                                margin: 0px 6px 6px 0px;
+                                padding: 0px 10px 0px 10px;
+                                width: 140px;
+                                height: 25px;
+                            }
+                            input[type="text"]:nth-child(3)
+                            {
+                                margin-right: 0px;
+                            }
+                            input[type="submit"]
+                            {
+                                width: 89px;
+                                height: 27px;
+                            }
+                        }
+                        .frame
+                        {
+                            padding: 12px;
+                            border:1px solid @colorDarkGreen;
+                            span
+                            {
+                                display: block;
+                                margin: 0px 0px 12px 0px;
+                            }
+                            span:last-child { margin-bottom: 0px; }   
+                        }
+                    }
+                }
+            }
+        }
+	}
+	.card-product-desc.absolute
+	{
+		position: absolute;
+		right:0px;
+	}
+    .item_desc_part
+    {
+        margin-bottom: 12px;
+    }
+}
+/*---------------------------------------------------------------------------*\
+    /Карточка товара
+\*---------------------------------------------------------------------------*/
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+    #Загрузки
+\*---------------------------------------------------------------------------*/
+.downloads
+{
+	position: relative;
+	margin: 15px 0px 15px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 12px;
+	line-height: 14px;
+	height: 38px;
+	.format
+	{
+		position: relative;
+		float: left;
+		margin:0px 20px 13px 0px;
+		height: 38px;
+		a.icon
+		{
+			display: block;
+			position: absolute;
+			top:0px;
+			left:0px;
+			width: 36px;
+			height: 36px;
+			text-decoration: none;
+			background-color: @colorWhite;
+			border:1px solid @colorDarkGrey;
+			background: @colorWhite url("/images/cosmo/sprite2.png") no-repeat 0px 0px;
+		}
+		span.text
+		{
+			display: block;
+			position: relative;
+			margin:0px 0px 0px 50px;
+			padding: 15px 0px 0px 0px;
+			height: 23px;
+			a { color: @colorDarkBlue; }
+		}
+	}
+	.doc
+	{
+		a.icon { background-position: -2px -645px; }
+	}
+}
+/*---------------------------------------------------------------------------*\
+    /Загрузки
+\*---------------------------------------------------------------------------*/
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+    #Show more
+\*---------------------------------------------------------------------------*/
+.show-more
+{
+	a.more
+	{
+		display: block;
+		position:relative;
+		padding:12px 0px 0px 0px;
+		color:@colorLighterBlack;
+		height:24px;
+		font-weight:bold;
+		text-decoration: none;
+		font-size:12px;
+		line-height:12px;
+		text-align:center;
+		border-top:1px solid @colorDrakerGrey;
+		border-right:0px;
+		border-bottom:1px solid @colorDrakerGrey;
+		border-left:0px;
+		span
+		{
+			display: inline-block;
+			position: relative;
+			padding:0px 20px 0px 0px;
+			span.arrow
+			{
+				display: block;
+				position: absolute;
+				right:0px;
+				top:3px;
+				padding:0px;
+				width: 12px;
+				height: 7px;
+				background: url(/images/cosmo/card_sprite.png) no-repeat -9px -176px;
+			}
+			span.arrow.close { background-position: -9px -183px; }
+		}
+	}
+	a.more:hover
+	{
+		.border { display: block; }
+	}
+	.content
+	{
+		position: relative;
+		overflow: hidden;
+		.border { bottom: 0px; }
+	}
+}
+/*---------------------------------------------------------------------------*\
+    /Show more
+\*---------------------------------------------------------------------------*/
