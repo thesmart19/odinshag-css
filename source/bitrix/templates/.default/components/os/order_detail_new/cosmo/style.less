@@ -1,0 +1,460 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.box
+{
+	h3
+	{
+		margin: 12px 0px 0px 0px;
+		text-align: center;
+	}
+}
+
+.mailing-social
+{
+	margin: 30px 0px 0px 0px;
+	font-size: @fontSizeBasketTotal;
+	line-height: 14px;
+    background-color: @colorWhite;
+	border: 1px solid #cccccc;
+	h3
+	{
+		margin: 0px;
+		padding: 15px 0px 0px 45px;
+		height: 29px;
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: bold;
+		text-align: left;
+		background: @colorBackground url("/images/cosmo/letter.png") no-repeat 10px 15px;
+		border: 0px;
+		border-bottom: 1px solid #cccccc;
+		overflow: hidden;
+	}
+	.text
+	{
+        margin: 0px;
+        padding: 0px;
+		color: @colorLighterBlack;
+        a:after
+        {
+            content: " ";
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            right: auto;
+            top: auto;
+            margin-left: 3px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 4px 0 4px 5px;
+            border-color: transparent transparent transparent @colorDarkBlue;
+        }
+        a:hover:after { border-color: transparent transparent transparent @colorRed; }
+		p
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+		ul
+		{
+			margin: 0px 0px 0px 17px;
+			padding: 0px;
+			font-size: 18px;
+			list-style-type: disc;
+            color: @colorRed;
+			li
+			{
+				margin: 0px 0px 0px 0px;
+				span
+				{
+					font-size: 14px;
+                    color: @colorLighterBlack;
+				}
+				span.red { color: #f24942; }
+				span.blue { color: #4590fe; }
+			}
+		}
+	}
+    .mailing, .social
+    {
+        margin: 12px 10px 0px 10px;
+        padding: 0px 12px 12px 12px;
+    }
+    .mailing
+    {
+        border: 0px;
+        border-bottom: 1px solid #cccccc;
+        .subscription
+        {
+            position: relative;
+            margin: 12px 0px 12px 0px;
+            height: 30px;
+            a:after
+            {
+                content: " ";
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                right: auto;
+                top: auto;
+                margin-left: 3px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 4px 0 4px 5px;
+                border-color: transparent transparent transparent @colorDarkBlue;
+            }
+            a:hover:after { border-color: transparent transparent transparent @colorRed; }
+            .button, span
+            {
+                display: block;
+                position: absolute;
+                top: 0px;
+                height: 30px;
+            }
+            .button
+            {
+                left: 19px;
+                width: 100px;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            span
+            {
+                padding: 5px 0px 0px 0px;
+                height: 25px;
+                left: 140px;
+                font-style: italic;
+                line-height: 20px;
+                color: @colorLighterBlack;
+            }
+        }
+    }
+    .social
+    {
+        padding-top: 4px;
+        padding-bottom: 12px;
+        .links
+        {
+            margin: 8px 0px 12px 0px;
+            height: 37px;
+            a
+            {
+                .mixin-icon;
+                display: block;
+                position: relative;
+                float: left;
+                margin: 0px 5px 0px 0px;
+                width: 37px;
+                height: 37px;
+                text-decoration: none;
+            }
+            a.vk		{ background-position: -547px 0; }
+            a.vk:hover	{ background-position: -547px -39px; }
+            a.fb		{ background-position: -664px 0; }
+            a.fb:hover	{ background-position: -664px -39px; }
+            a.tw		{ background-position: -625px 0; }
+            a.tw:hover	{ background-position: -625px -39px; }
+            a.ok		{ background-position: -586px 0; }
+            a.ok:hover	{ background-position: -586px -39px; }
+        }
+        .text
+        {
+            ul
+            {
+                margin-top: 6px;
+            }
+        }
+    }
+}
+.success
+{
+    margin: 24px 0px 24px 0px;
+    padding: 0px;
+    font-size: @fontSizeBasketTotal;
+    line-height: @lineHeightH3;
+    border:1px solid @colorDrakerGrey;
+    background-color: @colorWhite;
+    h3
+    {
+        margin: 0px 0px 6px 0px;
+        padding: 13px 0px 0px 45px;
+        height: 32px;
+        text-align: left;
+        border-bottom: 1px solid @colorDrakerGrey;
+        background: @colorBackground url("/images/cosmo/sprite2.png") no-repeat -218px -651px;
+    }
+    p
+    {
+        padding: 0px 24px 0px 24px;
+        a:after
+        {
+            content: " ";
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            right: auto;
+            top: auto;
+            margin-left: 3px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 4px 0 4px 5px;
+            border-color: transparent transparent transparent @colorDarkBlue;
+        }
+        a:hover:after { border-color: transparent transparent transparent @colorRed; }
+    }
+}
+
+
+
+/*
+.box .banner
+{
+	display: block;
+	margin: 30px 0px 0px 0px;
+	width: 950px;
+	height:60px;
+}
+.box .banner img
+{
+	display: block;
+	width: 950px;
+	height:60px;
+}
+*/
+/*
+.order
+{
+	position: relative;
+	border-top: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 0px;
+	border-bottom: 5px solid @colorRed;
+	border-left: 1px solid #cccccc;
+	h2
+	{
+		display: block;
+		margin: 0px;
+		padding: 0px;
+		height: 45px;
+		line-height: 16px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #333333;
+		background: url("/images/cosmo/sprite2.png") no-repeat -220px -651px;
+		a
+		{
+			display: block;
+			position: relative;
+			padding: 16px 0px 0px 40px;
+			height: 28px;
+			color: #333333;
+			text-decoration: none;
+			span
+			{
+				display: block;
+				position: absolute;
+				right: 15px;
+				top: 17px;
+				width: 20px;
+				height: 11px;
+				background: url("/images/cosmo/sprite2.png") no-repeat -44px -682px;
+			}
+			span.close { background-position: -44px -660px; }
+		}
+		a:hover
+		{
+			span { background-position: -193px -682px; }
+			span.close { background-position: -193px -660px; }
+		}
+	}
+	.invoice
+	{
+		font-size: 14px;
+		line-height: 14px;
+		text-align: center;
+		border: 0px;
+		border-top: 1px solid #cccccc;
+		overflow: hidden;
+	}
+	.border
+	{
+		display: block;
+		position: absolute;
+		left: -1px;
+		right: -1px;
+		bottom: 0px;
+		height: 0px;
+		margin: 0px;
+		padding: 0px;
+		line-height: 0px;
+		font-size: 0px;
+		border: 0px;
+		border-bottom: 5px solid #f24942;
+		overflow: hidden;
+	}
+}
+*/
+
+/*
+.box .order .invoice .title {
+  position: relative;
+  height: 44px;
+  font-weight: bold;
+  background-color: #e7e7e7;
+  border: 0px;
+  border-bottom: 1px solid #cccccc;
+}
+.box .order .invoice .title div {
+  position: absolute;
+  top: 10px;
+  padding: 4px 10px 0px 10px;
+  height: 30px;
+  border: 0px;
+  border-right: 1px solid #cccccc;
+  overflow: hidden;
+}
+.box .order .invoice .title .name {
+  left: 0px;
+  width: 339px;
+}
+.box .order .invoice .title .price {
+  left: 360px;
+  width: 194px;
+}
+.box .order .invoice .title .count {
+  left: 575px;
+  width: 149px;
+}
+.box .order .invoice .title .total {
+  right: 0px;
+  width: 183px;
+  border-right: 0px;
+}
+.box .order .invoice .row {
+  position: relative;
+  border: 0px;
+  border-bottom: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+.box .order .invoice .row div {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  padding: 14px 10px 14px 10px;
+  border: 0px;
+  border-right: 1px solid #cccccc;
+  overflow: hidden;
+}
+.box .order .invoice .row .name {
+  position: relative;
+  width: 339px;
+}
+.box .order .invoice .row .price {
+  left: 360px;
+  width: 194px;
+}
+.box .order .invoice .row .count {
+  left: 575px;
+  width: 149px;
+}
+.box .order .invoice .row .total {
+  right: 0px;
+  width: 183px;
+  border-right: 0px;
+}
+.box .order .invoice .footer
+{
+	position: relative;
+	text-align: left;
+	left: auto;
+	right: auto;
+	top: auto;
+	bottom: auto;
+	height: auto;
+	background-color: transparent;
+}
+.box .order .invoice .footer .details {
+  position: relative;
+  float: left;
+  padding: 30px 40px 0px 40px;
+  width: 494px;
+  border: 0px;
+  border-right: 1px solid #cccccc;
+}
+.box .order .invoice .footer .details .detail {
+  margin: 0px 0px 25px 0px;
+}
+.box .order .invoice .footer .details .detail div {
+  position: relative;
+  float: left;
+}
+.box .order .invoice .footer .details .detail .type {
+  padding: 0px 10px 0px 0px;
+  width: 165px;
+  font-weight: bold;
+}
+.box .order .invoice .footer .details .detail .description {
+  width: 315px;
+}
+.box .order .invoice .footer .details .detail .description p {
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+.box .order .invoice .footer .details .detail .description p span {
+  color: #808080;
+}
+.box .order .invoice .footer .total {
+  position: relative;
+  float: left;
+  width: 372px;
+}
+.box .order .invoice .footer .total .cost,
+.box .order .invoice .footer .total .submit {
+  padding: 30px 0px 0px 0px;
+}
+.box .order .invoice .footer .total .cost {
+  border: 0px;
+  border-bottom: 1px solid #cccccc;
+}
+.box .order .invoice .footer .total .cost .goods,
+.box .order .invoice .footer .total .cost .shipping {
+  margin: 0px 0px 25px 0px;
+}
+.box .order .invoice .footer .total .submit .total-cost {
+  margin: 0px 0px 25px 0px;
+}
+.box .order .invoice .footer .total .submit .button {
+  margin: 0px auto 0px auto;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 30px !important;
+}
+.box .order .invoice .footer .total .submit .amount {
+  font-weight: bold;
+  font-size: 20px;
+}
+.box .order .invoice .footer .total .submit .type {
+  font-weight: bold;
+}
+.box .order .invoice .footer .total .type,
+.box .order .invoice .footer .total .amount {
+  position: relative;
+  float: left;
+}
+.box .order .invoice .footer .total .type {
+  width: 170px;
+  text-align: right;
+}
+.box .order .invoice .footer .total .amount {
+  width: 200px;
+  text-align: center;
+}
+*/

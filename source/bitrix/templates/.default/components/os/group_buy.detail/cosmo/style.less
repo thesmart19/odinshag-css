@@ -1,0 +1,394 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.card-product
+{
+	.card-product-details
+	{
+		position: relative;
+		margin: 0px 0px 24px 0px;
+		.card-product-image
+		{
+			position: relative;
+			float: left;
+			width: 561px;
+			margin: 0px;
+			.card-actions-block
+			{
+				padding: 13px 0px 0px 12px;
+				height: 28px;
+				font-size: @fontSizeBasketTotal;
+				line-height: @lineHeightDefault;
+				background: @colorBackground;
+				border-top: 1px solid @colorDrakerGrey;
+				border-left: 1px solid @colorDrakerGrey;
+				border-right: 1px solid @colorDrakerGrey;
+				overflow: hidden;
+				a
+				{
+					span.icon
+					{
+						display: inline-block;
+						vertical-align: middle;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 4.5px 0 4.5px 5px;
+						border-color: transparent transparent transparent @colorDarkBlue;
+					}
+				}
+				a:hover { span.icon { border-color: transparent transparent transparent @colorRed; } }
+			}
+		}
+		.card-product-desc
+		{
+			position: relative;
+			float: right;
+			margin: 0px;
+			width: 385px;
+			.time
+			{
+				position: relative;
+				padding: 14px 0px 0px 45px;
+				height: 27px;
+				font-size: @fontSizeH3; /* @fontSizeIconArrow */
+				color: @colorLighterBlack;
+				background-color: @colorDarkGrey;
+				border: 1px solid @colorDrakerGrey;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				span.icon
+				{
+					.mixin-icon;
+					display: block;
+					position: absolute;
+					left: 12px;
+					top: 50%;
+					margin-top: -10px;
+					width: 22px;
+					height: 20px;
+					background-position: -1308px -100px;
+				}
+			}
+			.time.finish
+			{
+				color: @colorRed;
+				span.icon
+				{
+					background-position: -1308px -124px;
+				}
+			}
+			.price, .voting-rating-likes
+			{
+				position: relative;
+				font-size: @fontSizeBasketTotal;
+				line-height: @lineHeightAdditional;
+				border-top: 0px;
+				border-right: 1px solid @colorDrakerGrey;
+				border-bottom: 1px solid @colorDrakerGrey;
+				border-left: 1px solid @colorDrakerGrey;
+			}
+			.price
+			{
+				height: 59px;
+				span.old, span.actual
+				{
+					display: block;
+					position: absolute;
+					top: 0px;
+					bottom: 0px;
+					padding: 5px 0px 0px 12px;
+					span
+					{
+						font-size: @fontSizeIconArrow;
+					}
+				}
+				span.old
+				{
+					left: 0px;
+					width: 178px;
+					border-right: 1px solid @colorDrakerGrey;
+					del
+					{
+						display: inline-block;
+						position: relative;
+						padding: 0 2px 0 2px;
+						text-decoration: none;
+					}
+					del:after
+					{
+						content: " ";
+						display: block;
+						position: absolute;
+						left: 0;
+						right: 0;
+						top: 12px;
+						height: 2px;
+						background-color: @colorRed;
+					}
+				}
+				span.actual
+				{
+					right: 0px;
+					width: 180px;
+					background-color: @colorLightBlue;
+					span
+					{
+						color: @colorRed;
+					}
+				}
+			}
+			.voting-rating-likes
+			{
+				padding: 7px 12px 0px 12px;
+				height: 43px;
+				.count, .number-items, .button
+				{
+					position: absolute;
+					top: 0px;
+					bottom: 0px;
+				}
+				.count
+				{
+					left: 0px;
+					padding: 7px 0px 0px 12px;
+					width: 178px;
+					height: auto;
+					color: @colorLighterBlack;
+					font-size: @fontSizeBasketTotal;
+					line-height: @lineHeightOrder;
+					border: 0px;
+				}
+				.number-items
+				{
+					left: 191px;
+					top: 11px;
+					width: 80px;
+					height: 29px;
+					ul
+					{
+						display: block;
+						margin: 0px;
+						padding: 0px;
+						height:29px;
+						li
+						{
+							display: block;
+							position: relative;
+							float: left;
+							a
+							{
+								display: block;
+								width: 23px;
+								height: 27px;
+								text-decoration: none;
+								color: @colorLighterBlack;
+							}
+							a:hover { color: @colorLighterBlack !important; }
+							input
+							{
+								width: 32px;
+								text-align: center;
+								margin: 0;
+								padding-top:1px;
+								padding-bottom:1px;
+								border-top: 1px solid @colorDrakerGrey;
+								border-bottom: 1px solid @colorDrakerGrey;
+								border-left: none;
+								border-right: none;
+								height: 25px;
+								color: @colorLightBlack;
+							}
+						}
+						li.item-minus, li.item-plus
+						{
+							width: 22px;
+							height: 27px;
+							color: @colorLighterBlack;
+							font-size: @fontSizeB;
+							line-height: @lineHeightH1;
+							text-align: center;
+							background-color: @colorDarkGrey;
+							border: 1px solid @colorDrakerGrey;
+						}
+						li.item-minus:hover, li.item-plus:hover { background-color: @colorGreyHover; }
+					}
+				}
+				.button
+				{
+					right: 11px;
+					top: 11px;
+					width: 89px;
+					height: 29px;
+					font-size: @fontSizeBasketTotal;
+					line-height: @lineHeightH1 !important;
+				}
+				.message
+				{
+					.options
+					{
+						.button
+						{
+							position: relative;
+							right: auto;
+							top: auto;
+							float: left;
+							margin: 0 12px 0 0;
+							height: 27px;
+							font-size: 15px;
+							font-weight: normal;
+							line-height: 25px !important;
+						}
+						.button.registration
+						{
+							width: 115px;
+						}
+						.button.login
+						{
+							margin-right: 0px;
+							width: 59px;
+						}
+					}
+				}
+			}
+			.special-price
+			{
+				margin: 12px 0px 0px 0px;
+				padding: 12px;
+				border:1px solid @colorRed;
+				.price, .text
+				{
+					position: relative;
+					float: left;
+					height: auto;
+					border: 0px;
+				}
+				.price
+				{
+					width: 90px;
+					color: @colorRed;
+					font-size: @fontSizeIconArrow;
+				}
+				.text
+				{
+					width: 269px;
+					.icon
+					{
+						.mixin-icon;
+						.mixin-icon-question;
+						display: inline-block;
+						background-image: none;
+						.message, .fixed-wrap { background-image: none !important; cursor: default; }
+						.message
+						{
+							.mixin-message;
+							top: 26px;
+							left: 50%;
+						}
+					}
+					.icon:after { .mixin-icon-question-after; }
+					.icon.active, .icon:hover { .mixin-icon-question-hover; }
+				}
+				.buttons
+				{
+					position: relative;
+					margin: 8px 0px 0px 0px;
+					height: 37px;
+					.button
+					{
+						position: absolute;
+						top: 0px;
+						height: 37px;
+						font-size: @fontSizeBasketTotal;
+						line-height: @lineHeightShowMore !important;
+					}
+					.button.grey { color: @colorLighterBlack !important; }
+					.copy
+					{
+						left: 0px;
+						width: 160px;
+					}
+					.social
+					{
+						.mixin-icon;
+						width: 37px;
+						background-color: transparent;
+						a, div, iframe, span
+						{
+							display: block !important;
+							position: absolute;
+							left: 0px;
+							top: 0px;
+							width: 37px !important;
+							height: 37px !important;
+							opacity: 0;
+						}
+					}
+					.fb
+					{
+						right: 0px;
+						background-position: -664px 0;
+					}
+					.fb:hover { background-position: -664px -39px; }
+					.tw
+					{
+						right: 43px;
+						background-position: -625px 0;
+					}
+					.tw:hover { background-position: -625px -39px; }
+					.ok
+					{
+						right: 86px;
+						background-position: -586px 0;
+					}
+					.ok:hover { background-position: -586px -39px; }
+					.vk
+					{
+						right: 129px;
+						background-position: -547px 0;
+					}
+					.vk:hover { background-position: -547px -39px; }
+					span.done
+					{
+						display: block;
+						position: absolute;
+						left: 0px;
+						top: 0px;
+						height: 37px;
+						width: 160px;
+					} 
+					span.done.hide { display: none; }
+				}
+				.buttons:after
+				{
+					content: " ";
+					display: block;
+					position: absolute;
+					left: 50%;
+					top: 0px;
+					bottom: 0px;
+					width: 1px;
+					background-color: @colorRed;
+				}
+			}
+		}
+	}
+	.conditions
+	{
+		margin: 0px 0px 0px 0px;
+		padding: 16px 12px 24px 12px;
+		border: 1px solid @colorDrakerGrey;
+		h2
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+		.text
+		{
+			margin: 15px 0px 0px 0px;
+		}
+	}
+}

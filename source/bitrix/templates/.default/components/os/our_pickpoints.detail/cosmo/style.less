@@ -1,0 +1,466 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.pickpoints
+{
+	.tabs
+	{
+		margin-top:0px;
+		color: @colorLightBlack;
+		.titles
+		{
+			a { width:50%; }
+			a.two
+			{
+				left: auto;
+				right:0px;
+			}
+		}
+		.pages
+		{
+			position: relative;
+			.text
+			{
+				padding: 12px;
+				font-size: 14px;
+				p
+				{
+					margin: 6px 0px 12px 0px;
+					line-height: @lineHeightOrder;
+				}
+			}
+			.notice
+			{
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				margin: 0px 12px 0px 12px;
+				padding:12px 0px 0px 48px;
+				height: 74px;
+				font-size: @fontSizeOrder;
+				line-height: @lineHeightOrder;
+				border-top: 1px solid @colorDrakerGrey;
+				overflow: hidden;
+				p { margin: 0px; }
+				span.icon
+				{
+					.mixin-icon;
+					display: block;
+					position: absolute;
+					left: 0px;
+					top: 24px;
+					width: 31px;
+					height: 30px;
+					background-position: -492px 0px;
+				}
+			}
+		}
+	}
+	.tabs.one
+	{
+		/*margin: 0px 12px 0px 0px;*/
+		width: 383px;
+		float: left;
+		.pages
+		{
+			.page
+			{
+				min-height: 495px;
+			}
+			.page.one
+			{
+				padding-bottom: 87px;
+				min-height: 408px;
+			}
+		}
+	}
+	.tabs.two
+	{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        /*margin-left: 397px;*/
+		width: 561px;
+		/*float: left;*/
+		.pages
+		{
+			.page
+			{
+                height: auto;
+				.map
+				{
+					width: 561px;
+					height: 495px;
+				}
+			}
+            .page.two
+            {
+                height: 495px;
+            }
+		}
+	}
+}
+.banner
+{
+	margin: 12px 0px 0px 0px;
+	a
+	{
+		display: block;
+		width: 960px;
+		img
+		{
+			display: block;
+			width: 960px;
+		}
+	}
+}
+/* ************************************************** */
+
+/* старые стили ---> */
+
+.contact-box ul {
+	border-left:1px solid #cccccc;
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	height:294px;
+	width:960px;
+	color:#303030;
+	font-size:15px;
+	background:#ffffff;
+}	
+.contact-box ul li {
+	width:320px;
+	height:294px;
+	float:left;
+	border-right:1px solid #cccccc;
+}
+.contact-box ul li:first-child  {
+	width:318px;
+}	
+.contact-box ul li:last-child  {
+	width:319px;
+}
+.contact-box ul li .item {
+	padding: 20px 15px 20px 15px;
+}	
+.contact-box ul li .item .icon  {
+	width: 75px;
+	height: 84px;
+	margin: 12px auto 28px;
+	background: url("img/contact-icons.png") no-repeat;
+}
+.contact-box ul li .item .icon.icon2   {
+	background-position: -88px 0;
+}
+.contact-box ul li .item .icon.icon3   {
+	background-position: -175px 0;
+}
+.contact-box ul li .item b {
+	display:block;
+}
+.contact-box ul li .item a, .terms-delivery a {
+	color:#4769a0;
+}
+.terms-delivery {
+	font-size:15px;
+	position: relative;	
+}
+.terms-delivery p{
+	padding:0 10px 10px;
+}
+.terms-delivery p b{
+	color:#ff4740;
+}
+.terms-delivery .select-city, .pickpoint-item .select-city {
+	width: 350px;
+	border: 1px solid #cccccc;
+	line-height: 48px;
+	padding: 0 15px;
+	margin: 15px 0 35px;
+	cursor:pointer;	
+	position: relative;	
+	background:#ffffff;
+}
+.terms-delivery .select-city:hover .border, .pickpoint-item .select-city:hover .border {
+	display:block;
+}
+.terms-delivery .select-city:hover,
+.terms-delivery .select-city:hover b, 
+.pickpoint-item .select-city:hover  b{
+	color: #FF4740;
+}
+.terms-delivery .select-city .icon, .pickpoint-item .select-city .icon {
+	background: url("img/menu_arrow.png") no-repeat 0 -124px;
+	width: 28px;
+	height: 18px;
+	position: absolute;
+	top: 16px;
+	right: 8px;
+}
+.terms-delivery .select-city:hover .icon, .pickpoint-item .select-city:hover .icon {
+	background-position:0 -96px;
+}
+.terms-delivery .select-city .locations {
+	line-height: 22px;
+	margin: 0 -15px;
+}
+.terms-delivery .select-city .locations  ul {
+	margin:0;
+}
+.terms-delivery .select-city .locations  li {
+	border-top: 1px solid #cccccc;
+}
+.terms-delivery .select-city .locations  li a{
+	padding: 7px 22px 7px 94px;
+	display:block;
+}
+.terms-delivery .select-city .locations  li a:hover{
+	color: #FFF!important;
+	background: #F24942;
+	margin: 0 -1px;
+}
+.terms-delivery .has_notification {
+	top: 131px;
+	right: 548px;
+	position:absolute;
+}
+.terms-delivery h2 {
+	margin: 22px 0 0 0;
+	padding: 0;
+}
+.terms-delivery table {
+	width: 100%;
+	border: 1px solid #cccccc;	
+	background:#ffffff;
+	margin:20px 0;	
+	border-collapse: collapse;
+	color:#303030;
+}
+.terms-delivery th {
+	padding: 12px;
+	font-size: 15px;
+	background: #e8e8e8;
+	font-weight: normal;
+	border-left: 1px solid #cccccc;	
+	border-bottom: 1px solid #cccccc;
+	width:33.3%;	
+}
+.terms-delivery td {
+	height: 45px;
+	font-size: 13px;
+	border-left: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	padding: 0 20px;
+	line-height: 14px;
+}
+.terms-delivery .hint {
+	color:#666666;
+	font-size: 13px;	
+	margin:15px;
+	line-height: 16px;	
+}
+.our-partners .icon {
+	width: 125px;
+	height: 155px;
+	background: url("img/our-partners.png") no-repeat 2px 1px;
+	float: left;
+}	
+.our-partners .description {
+	padding: 0;
+}		
+.our-partners .text {
+	padding:13px 15px 0 0;
+	font-size:15px;
+}		
+.our-partners .partners-list {
+	border: 1px solid #cccccc;
+	background:#ffffff;
+	font-size:15px;	
+}			
+.our-partners .partners-list .item {
+	border-bottom: 1px solid #cccccc;
+	margin: 0 12px;
+	padding-bottom: 20px;
+}						
+.our-partners .partners-list .item:last-child {
+	border-bottom: none;
+}			
+.our-partners .partners-list .item h2{
+	margin: 11px 0 10px 0;
+	padding:0;
+}			
+.our-partners .partners-list .photo {
+	float: left;
+	padding: 24px 35px 0 14px;
+}			
+.our-partners .partners-list .text {
+	float: left;
+	width: 690px;
+}		
+.our-partners .partners-list .text a {
+	text-decoration:underline;
+}
+/*
+.pickpoints 	h1  {
+	line-height: 44px;
+	padding: 0;
+	margin: 24px 0 0 0;
+}		
+.pickpoints 	h1 .icon {
+	background: url("img/pickpoint.png") no-repeat -3px -58px;
+	width: 40px;
+	height: 40px;
+	float: left;
+}	
+.pickpoints 	.tabs {
+	font-size:15px;	
+	line-height: 18px;
+	color: #333333;
+	background:#ffffff;
+	margin-top: 10px;
+}	
+.pickpoints 	.tabs.one .titles a {
+	width:190px;	
+}	
+.pickpoints 	.tabs.two .titles a {
+	width:280px;	
+}	
+.pickpoints 	.tabs .titles a.two {
+	left: 50%;
+}	
+.pickpoints 	.tabs .text {
+	padding: 5px;
+	border-bottom: 1px solid #cccccc;
+	margin: 15px;
+	height: 340px;	
+}
+.pickpoints 	.tabs .text b {
+	padding-bottom: 2px;
+	display: block;
+}	
+.pickpoints 	.tabs .notice {
+	width: 305px;
+	padding: 0 0 42px 59px;
+	line-height: 18px;
+	position: relative;
+}		
+.pickpoints 	.tabs .notice .icon{
+	background: url("img/pickpoint.png") no-repeat 3px 4px;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 6px;
+	left: 14px
+}	
+.pickpoints 	.photo-slider {
+	position: relative;
+}
+.pickpoints 	.photo-slider .items {
+	margin: 50px 0 20px;
+	padding: 0;
+	border-bottom: 1px solid #cccccc;
+	height: 315px;
+	list-style: none;
+	text-align: center;
+}	
+.pickpoints 	.photo-slider .items img {
+	width: 480px;
+}		
+.pickpoints 	.photo-slider .thumbnails  {
+	width: 332px;
+	margin: 20px auto;
+	padding: 0;
+	position: relative;
+}		
+.pickpoints 	.photo-slider .thumbnails li {
+	width: 69px;
+	height: 69px;
+	float:left;
+	list-style:none;
+	border:1px solid #cccccc;
+	margin-right: 12px;
+	cursor:pointer;
+	position: relative;	
+}			
+.pickpoints 	.photo-slider .thumbnails li div.active {
+	border: 2px solid #F24942;
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	width: 67px;
+	height: 67px;
+}	
+.photo-slider ul.thumbnails li a div.hover {
+	display: none;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	width: 69px;
+	height: 69px;
+	background: url("img/opacity40.png");
+	border: 1px solid #666;
+	opacity: 1;
+}		
+.photo-slider ul.thumbnails li:hover > a div.hover {
+	display: block;
+}
+.pickpoints 	.photo-slider .prev, .pickpoints  .photo-slider .next {
+	position: absolute;
+	top: 172px;
+	left: 8px;
+	width: 28px;
+	height: 50px;
+	background: url("img/card_sprite.png") no-repeat;	
+}				
+.pickpoints 	.photo-slider .prev {
+	background-position: 0 -395px;	
+}			
+.pickpoints 	.photo-slider .prev:hover {
+	background-position: -3px -333px;	
+}
+.pickpoints 	.photo-slider .next {
+	background-position: -4px -459px;	
+	left: 526px;
+}	
+.pickpoints 	.photo-slider .next:hover  {
+	background-position: -2px -267px;	
+}
+*/
+.pickpoints 	.delivery  {
+	padding: 12px 0 0 58px;
+	margin: 16px 0;
+	height: 29px;
+	color: #333;
+	font-size: 15px;
+	line-height: 15px;
+	border: 1px solid #CCC;
+	background: url("img/pickpoint.png") no-repeat 16px -105px;
+	position: relative;
+}			
+.pickpoints 	.delivery  .icon {
+	background: url("img/menu_arrow.png") no-repeat -1px -153px;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 8px;
+	top: 9px;
+	cursor:pointer;
+}
+.pickpoints 	.delivery  .icon:hover {
+	background-position: 0 -189px;
+}
+.pickpoint-item  .pickpoints-list  {
+	width: 395px;
+	float: left;
+}
+.pickpoint-item  .select-city  {
+	margin:-1px 0 0 0;
+}
+.pickpoint-item li {
+	list-style:none;
+}
+.pickpoint-item .map {
+	float:left;
+}

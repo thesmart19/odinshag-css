@@ -27,11 +27,29 @@ module.exports = function (grunt) {
                     "build/bitrix/templates/.default/components/os/quick_order/out_of_store/style.css": "source/bitrix/templates/.default/components/os/quick_order/out_of_store/style.less",
                     "build/bitrix/templates/.default/components/os/quick_order/stihl_viking_order/style.css": "source/bitrix/templates/.default/components/os/quick_order/stihl_viking_order/style.less",
                     
+                    /* сравнение */
+                    "build/bitrix/templates/.default/components/os/compare.result/cosmo/style.css": "source/bitrix/templates/.default/components/os/compare.result/cosmo/style.less",
+                    
                     /* страница товара */
                     "build/bitrix/templates/.default/components/os/catalog.element_3.0/cosmo/style.css": "source/bitrix/templates/.default/components/os/catalog.element_3.0/cosmo/style.less",
                     
+                    /* совместная покупка */
+                    "build/bitrix/templates/.default/components/os/group_buy.detail/cosmo/style.css": "source/bitrix/templates/.default/components/os/group_buy.detail/cosmo/style.less",
+                    
                     /* Об интернет-магазине OdinShag.ru */
-                    "build/company/about/css/style.css": "source/company/about/css/style.less"
+                    "build/company/about/css/style.css": "source/company/about/css/style.less",
+                    
+                    /* бонусная программа */
+                    "build/discounts/bonus/css/style.css": "source/discounts/bonus/css/style.less",
+                    
+                    /* лендинг сервис объявлений */
+                    "build/add-ads/css/style.css": "source/add-ads/css/style.less",
+                    
+                    /* страница благодарности о заказе */
+                    "build/bitrix/templates/.default/components/os/order_detail_new/cosmo/style.css": "source/bitrix/templates/.default/components/os/order_detail_new/cosmo/style.less",
+                    
+                    /* страница пункта выдачи */
+                    "build/bitrix/templates/.default/components/os/our_pickpoints.detail/cosmo/style.css": "source/bitrix/templates/.default/components/os/our_pickpoints.detail/cosmo/style.less",
                 }
             }
         },
