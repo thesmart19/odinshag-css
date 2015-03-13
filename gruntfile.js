@@ -30,11 +30,17 @@ module.exports = function (grunt) {
                     /* сравнение */
                     "build/bitrix/templates/.default/components/os/compare.result/cosmo/style.css": "source/bitrix/templates/.default/components/os/compare.result/cosmo/style.less",
                     
+                    /* просмотренные и избранное */
+                    "build/bitrix/templates/.default/components/os/user.custom_items_list/cosmo/style.css": "source/bitrix/templates/.default/components/os/user.custom_items_list/cosmo/style.less",
+                    
                     /* страница товара */
                     "build/bitrix/templates/.default/components/os/catalog.element_3.0/cosmo/style.css": "source/bitrix/templates/.default/components/os/catalog.element_3.0/cosmo/style.less",
                     
                     /* совместная покупка */
                     "build/bitrix/templates/.default/components/os/group_buy.detail/cosmo/style.css": "source/bitrix/templates/.default/components/os/group_buy.detail/cosmo/style.less",
+                    
+                    /* страница оформления заказа */
+                    "build/bitrix/components/os/sale.order/templates/test/style.css": "source/bitrix/components/os/sale.order/templates/test/style.less",
                     
                     /* Об интернет-магазине OdinShag.ru */
                     "build/company/about/css/style.css": "source/company/about/css/style.less",
@@ -50,6 +56,18 @@ module.exports = function (grunt) {
                     
                     /* страница пункта выдачи */
                     "build/bitrix/templates/.default/components/os/our_pickpoints.detail/cosmo/style.css": "source/bitrix/templates/.default/components/os/our_pickpoints.detail/cosmo/style.less",
+                    
+                    /* шаблоны оплаты для ПСКБ */
+                    "build/pscb/style.css": "source/pscb/style.less",
+                    
+                    /* условия доставки */
+                    "build/services/delivery/css/style.css": "source/services/delivery/css/style.less",
+                    
+                    /* сотрудничество с магазинами */
+                    "build/services/partnership/css/style.css": "source/services/partnership/css/style.less",
+                    
+                    /* способы оплаты */
+                    "build/services/payment/css/style.css": "source/services/payment/css/style.less",
                 }
             }
         },

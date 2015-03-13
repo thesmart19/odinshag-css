@@ -1,0 +1,278 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial;
+	color: @colorLightBlack;
+	background-color: @colorBackground;
+}
+
+a
+{
+	color: @colorDarkBlue;
+	text-decoration: none;
+	outline: none;
+}
+a:hover { color: @colorRed; }
+
+img
+{
+	border:0px;
+	outline: none;
+}
+
+var
+{
+	color: @colorLighterBlack;
+	font-style: normal;
+}
+
+form
+{
+	display: block;
+	margin: 27px auto 37px auto;
+	width: 800px;
+	input, select
+	{
+		margin: 0px;
+		padding: 0px;
+		font-size: @fontSizeBasketTotal;
+		outline: none;
+	}
+	input
+	{
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-o-appearance: none;
+		appearance: none;
+	}
+	input[type="text"], input[type="password"]
+	{
+		padding: 0px 10px 0px 10px;
+		height: 30px;
+		color: @colorLightBlack;
+		border: 1px solid @colorDrakerGrey;
+	}
+	input[type="submit"]
+	{
+		cursor: pointer;
+		height: 30px;
+		width: 150px;
+		color: @colorWhite;
+		border: 0px;
+		border-radius: 0px;
+		background-color: @colorRed;
+	}
+	input[type="submit"]:hover { background-color: @colorDarkRed; }
+	select
+	{
+		height: 30px;
+		border: 1px solid @colorDrakerGrey !important;
+	}
+	table.info
+	{
+		margin: 0px 0px 24px 0px;
+		background-color: @colorLightBlue;
+		tr
+		{
+			td.head
+			{
+				position: relative;
+				margin: 0px;
+				padding: 0px;
+				padding-top: 6px;
+				padding-bottom: 6px;
+				padding-left: 40px;
+				color: @colorLighterBlack;
+				font-size: @fontSizeOrder;
+				font-weight: normal;
+				border:0px;
+			}
+			td.head:before
+			{
+				content: "!";
+				display: block;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 29px;
+				height: 29px;
+				color: @colorBlueInfoMessageIconSign;
+				font-size: @fontSizeH1Thin;
+				font-weight: bold;
+				text-align: center;
+				background-color: @colorBlueInfoMessageIconBg;
+			}
+		}
+	}
+	table.data
+	{
+		background-color: @colorWhite;
+		border:1px solid @colorDrakerGrey;
+		tr
+		{
+			td.main
+			{
+				table
+				{
+					margin: 12px;
+					width: 750px;
+					color: @colorLighterBlack;
+					font-size: @fontSizeBasketTotal;
+					tr
+					{
+
+						height: 30px;
+						td
+						{
+							padding: 0px;
+						}
+						td.dataleft
+						{
+							padding-right: 30px;
+							width: 130px;
+							white-space: nowrap;
+						}
+						td.datacenter
+						{
+							width: 183px;
+							white-space: nowrap;
+							input, select
+							{
+								margin: 0px 0px 12px 0px;
+							}
+							input
+							{
+								width: 183px;
+							}
+							input[type="submit"]
+							{
+								margin-top: 24px;
+								width: 150px;
+							}
+						}
+						td.dataright
+						{
+							padding-left: 30px;
+							width: 370px;
+							white-space: nowrap;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+table
+{
+	width: 800px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	tr
+	{
+		td
+		{
+			padding: 0px 12px 0px 12px;
+		}
+	}
+}
+table.info
+{
+	tr
+	{
+		td.head
+		{
+			font-size: @fontSizeH1;
+			font-weight: bold;
+			border:0px;
+		}
+		td.main
+		{
+			font-size: @fontSizeOrder;
+			line-height: 22px;
+			color: @colorLighterBlack;
+			p
+			{
+				margin: 0px 0px 22px 0px;
+			}
+		}
+	}
+}
+table.data
+{
+	tr
+	{
+		td.main
+		{
+			padding-top: 12px;
+			font-size: @fontSizeBasketTotal;
+			line-height: @lineHeightDetails;
+		}
+	}
+}
+table.data.redirect
+{
+	margin: 24px 0px 0px 0px;
+	font-size: @fontSizeOrder;
+	color: @colorLighterBlack;
+	background-color: @colorGreyOneMore3;
+	tr
+	{
+		td.main
+		{
+			padding: 12px 72px 0px 72px;
+			font-size: @fontSizeOrder;
+			line-height: @lineHeightDetails;
+		}
+		td.progress
+		{
+			padding: 0px 60px 0px 60px;
+			height: 15px;
+			.bar
+			{
+				margin: 22px 0px 29px 0px;
+				height: 15px;
+				background-image: url("../img/loader.gif");
+				background-repeat: repeat-x;
+				background-position: 0px 0px;
+			}
+		}
+	}
+}
+table.data.payment-status
+{
+	margin: 17px 0px 18px 0px;
+	font-size: @fontSizeBasketTotal;
+	background-color: @colorWhite;
+	border: 1px solid @colorDrakerGrey;
+	tr
+	{
+		td.main
+		{
+			padding: 28px 30px 36px 30px;
+			table
+			{
+				tr
+				{
+					td
+					{
+						padding: 0px 60px 0px 0px;
+						height: 22px;
+						font-size: @fontSizeBasketTotal;
+					}
+				}
+			}
+		}
+	}
+}
+table.transparent
+{
+	width: auto;
+}

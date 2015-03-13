@@ -1,0 +1,171 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.no-svg
+{
+	.box .payment-methods .method .icon span { background-image: url(@imageIconsBigPNG); }
+}
+
+.box
+{
+	p
+	{
+		display: block;
+		margin:0px 0px 18px 0px;
+		padding: 5px 10px 0px 10px;
+		line-height: @lineHeightOrder;
+	}
+	ul
+	{
+		margin: 17px 0px 0px 0px;
+		padding: 0px 0px 0px 20px;
+		list-style-type: disc;
+		font-size: @fontSizeB;
+		li
+		{
+			margin: 0px 0px 17px 0px;
+			padding: 0px 0px 0px 0px;
+			color: @colorRed;
+			span
+			{
+				color: @colorLighterBlack;
+				font-size: @fontSizeOrder;
+				line-height: @lineHeightDefault;
+			}
+		}
+	}
+	.payment-methods
+	{
+		margin: 18px 0px 27px 0px;
+		.method
+		{
+			position: relative;
+			margin: 0px 0px 12px 0px;
+			padding: 0px 24px 0px 100px;
+			min-height: 95px;
+            background-color: @colorLightGrey;
+			.icon
+			{
+				position: absolute;
+				left: 12px;
+				top: 12px;
+				bottom: 0px;
+				width: 62px;
+				height: 70px;
+				span
+				{
+					display: block;
+					position: relative;
+					margin:0px 0px 0px 0px;
+					width: 62px;
+					height: 70px;
+					background-image: url(@imageIconsBigSVG);
+					background-repeat: no-repeat;
+				}
+			}
+			.text
+			{
+                margin: 0px 0px 0px 0px;
+                padding: 16px 0px 13px 0px;
+				h2
+				{
+                    padding: 0px 0px 0px 0px;
+					margin:0px 0px 8px 0px;
+				}
+				p
+				{
+                    padding: 0px 0px 0px 0px;
+					margin:0px;
+                    font-size: @fontSizeBasketTotal;
+				}
+                .info-message
+                {
+                    span.icon
+                    {
+                        left: 0px;
+                        top: 0px;
+                        width: 29px;
+                        height: 29px;
+                        bottom: auto;
+                    }
+                }
+			}
+		}
+		.method.cash          { .icon { span { background-position: -1124px -227px; } } }
+        .method.card          { .icon { span { background-position: -1046px -227px; } } }
+		.method.bank-transfer { .icon { span { background-position: -971px -227px; } } }
+        .method.card-online   { .icon { span { background-position: -1202px -227px; } } }
+	}
+	.conditions
+	{
+		position: relative;
+		margin: 34px 0px 0px 0px;
+		height: 244px;
+		.condition
+		{
+			position: absolute;
+			top:0px;
+			bottom: 0px;
+			width: 33%;
+			height: auto;
+			.number
+			{
+				display: block;
+				position: absolute;
+				left: 0px;
+				top: 15px;
+				width: 45px;
+				color: @colorRed;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: @fontSizeH1;
+				line-height: @lineHeightH1;
+				font-weight: bold;
+				text-align: center;
+				z-index: 2;
+			}
+			.text
+			{
+				display: block;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				margin: 0px 0px 0px 0px;
+				padding: 10px 20px 10px 45px;
+				height: auto;
+				font-size: @fontSizeBasketTotal;
+				line-height: @lineHeightOrder;
+				color: @colorLighterBlack;
+				background-color: @colorLightGrey;
+				white-space: normal;
+				overflow: hidden;
+				z-index: 1;
+			}
+		}
+		.condition.one
+		{
+			left:0px;
+		}
+		.condition.two
+		{
+			width:34%;
+			left:33%;
+			width:34%;
+			.number
+			{
+				left:12px;
+			}
+			.text
+			{
+				margin: 0px 12px 0px 12px;
+			}
+		}
+		.condition.three
+		{
+			right:0px;
+		}
+	}
+}

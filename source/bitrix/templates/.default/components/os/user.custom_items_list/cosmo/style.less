@@ -1,0 +1,176 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+
+.box
+{
+	form
+	{
+		label.radio
+		{
+			display: block;
+			margin:0px 0px 12px 0px;
+			line-height: @lineHeightSmall;
+			span
+			{
+				display: block;
+				position: relative;
+				float: left;
+			}
+			span.icon
+			{
+				margin:1px 12px 1px 0px;
+				width: 14px;
+				height: 13px;
+				background-image: url(@imageIconsSVG);
+				background-repeat: no-repeat;
+				background-position: -210px -28px;
+				input
+				{
+					opacity:0;
+				}
+			}
+			span.icon.active { background-position: -210px -5px; }
+			span.name { height: 15px; }
+		}
+	}
+	form.characteristic
+	{
+		padding: 20px 24px 7px 24px;
+		color: @colorLightBlack;
+		border:0px;
+	}
+	.content
+	{
+		position: relative;
+		margin:0px 0px 72px 0px;
+	}
+	.column.left
+	{
+		width: 245px;
+		margin: 0px 12px 0px 0px;
+		padding:0px 0px 15px 0px;
+		border-right: 1px solid @colorDrakerGrey;
+		z-index:1;
+        /*
+		.button
+		{
+			margin: 12px 0px 12px 24px;
+			width: 190px;
+			height: 35px;
+			line-height: @lineHeightButtonDelete !important;
+			.icon
+			{
+				display:inline-block;
+				vertical-align: middle;
+				margin: 0px 0px 0px 12px;
+				width: 11px;
+				height: 10px;
+				background-image: url(@imageIconsSVG);
+				background-repeat: no-repeat;
+				background-position: -199px -6px;
+			}
+		}
+        */
+	}
+	.column.left.wide
+	{
+		width: 253px;
+		margin: 0px;
+		padding: 0px;
+		border-right: 0px;
+		.categories
+		{
+			.cover { width: 235px; }
+			ul
+			{
+				li
+				{
+					padding-right: 40px;
+					width: 178px;
+				}
+			}
+		}
+	}
+	.column.right
+	{
+		/*float: left;*/
+		width: 704px;
+		min-height:277px;
+		z-index:1;
+	}
+	.product-total-count
+	{
+		padding: 13px 24px 0px 24px;
+		height: 29px;
+		white-space: nowrap;
+		span
+		{
+			display: inline-block;
+			padding: 0px;
+			height: 20px;
+		}
+		span.count
+		{
+			padding-right: 8px;
+		}
+		span.total
+		{
+			padding-left: 12px;
+			border-left: 1px solid @colorDrakerGrey;
+			a { color: @colorLightBlack; }
+			a:hover { color: @colorRed; }
+		}
+	}
+	.characteristics
+	{
+		position: relative;
+		border-bottom:1px solid @colorDrakerGrey;
+		z-index: auto;
+		.title
+		{
+			position: relative;
+			padding: 10px 24px 0px 24px;
+			height: 24px;
+			line-height: @lineHeightSmallest;
+			color: @colorLightBlack;
+			font-weight: bold;
+			background-color: @colorDarkGrey;
+			border-top: 0px;
+			border-right: 0px;
+			border-bottom: 1px solid @colorDrakerGrey;
+			border-left: 0px;
+			z-index: auto;
+		}
+		.parameter
+		{
+			position: relative;
+			height: 20px;
+			font-size: @fontSizeDefault;
+			border:0px;
+			border-bottom:1px solid @colorDrakerGrey;
+			overflow: hidden;
+			z-index: auto;
+			a
+			{
+				color: @colorDarkBlue;
+				text-decoration: none;
+			}
+			a:hover { text-decoration: underline; }
+			a:after { content: " \25B6"; }
+			.type, .amount
+			{
+				color: @colorLightBlack;
+				span
+				{
+					display: block;
+					line-height: @lineHeightBig;
+					margin: 0px 0px 0px 12px;
+				}
+			}
+			.type { background-color: @colorWhite; }
+		}
+		.parameter:last-child { border-bottom:0px; }
+	}
+	.characteristics:last-child { border-bottom: 0px; }
+}

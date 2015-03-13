@@ -1,0 +1,1803 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+
+
+
+
+/* Локальные переменные */
+@viewportMaxWidth:  570px;
+
+
+
+
+
+.header.catalog-search
+{
+    display: none;
+}
+
+.box
+{
+	form
+	{
+		input[type="submit"]
+		{
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			width: 178px;
+			height: 38px;
+			font-size: @fontSizeBasketTotal;
+			line-height: @lineHeightProductPreview !important; /*@lineHeightGoToBasket*/
+		}
+	}
+	.section
+	{
+		position: relative;
+		margin: 36px 0px 0px 0px;
+		border-bottom: 1px solid @colorDrakerGrey;
+        /* фон внутри блоков оформления заказа */
+        .background
+        {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            width: auto;
+            height: auto;
+            background-color: @colorWhite;
+            z-index: 0;
+        }
+		.form
+		{
+			position: relative;
+			margin: 24px 0px 24px 0px;
+			padding: 0px 0px 0px 36px;
+			z-index:1;
+		}
+		label, .text, textarea, div.columns, .delivery-address
+		{
+			position: relative;
+			margin: 0px 0px 12px 0px;
+			padding: 0px;
+			font-size: @fontSizeB;
+			color: @colorLightBlack;
+			line-height: @lineHeightDefault;
+			/*z-index: 1;*/
+			a { text-decoration: underline; }
+			input, span.icon
+			{
+				display: inline-block;
+			}
+			span.icon
+			{
+				.mixin-icon-question;
+			}
+			span.icon:hover, span.icon.active { .mixin-icon-question-hover }
+			span.icon:after { .mixin-icon-question-after; }
+		}
+		label, div.columns, .delivery-address
+		{
+			display: block;
+			input, textarea
+			{
+				margin: 0px 12px 0px 0px;
+				padding: 0px 10px 0px 10px;
+				width: 269px;
+				font-size: @fontSizeDefault;
+				color: @colorLightBlack; /*@colorGreyOneMore4*/
+			}
+			input.focus, textarea.focus { color: @colorLightBlack; }
+			input.error, textarea.error { color: @colorRed; }
+			input
+			{
+				height: 28px;
+			}
+			input[type="checkbox"]
+			{
+				margin: 0px;
+				padding: 0px;
+				width: auto;
+				height: auto;
+				opacity: 0;
+			}
+			textarea
+			{
+				height: 46px;
+			}
+			.message
+			{
+				.mixin-message;
+				top: 27px;
+				left: 229px;
+			}
+		}
+		label:last-child { /*margin-bottom: 0px;*/ }
+		label.checkbox
+		{
+			margin-bottom: 17px;
+			height: 18px;
+			line-height: @lineHeightBig;
+			font-size: @fontSizeDefault;
+			input { margin-right: 12px; }
+			span.icon
+			{
+				.mixin-icon;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 19px;
+				height: 18px;
+				background-position: -225px -23px;
+				background-color: transparent;
+			}
+			span.icon.active { background-position: -225px 0px; }
+			span.icon:after { display: none; }
+			span.icon.question
+			{
+				.mixin-icon-question;
+				position: relative;
+				vertical-align: middle;
+				left: auto;
+				top: auto;
+				background-image: none;
+				.fixed-wrap, .message { cursor: default; background-image: none !important; }
+				.message
+				{
+					position: relative;
+					left: 50%;
+				}
+			}
+			span.icon.question:hover { .mixin-icon-question-hover; }
+			span.icon.question:after { .mixin-icon-question-after; }
+		}
+		label.select
+		{
+			.mixin-input-select;
+			margin: 0px 0px 6px 0px;
+			padding: 0px 0px 0px 0px;
+			width: 501px;
+		}
+        .delivery-address
+        {
+            height: 30px;
+            input
+            {
+                display: block;
+                float: left;
+            }
+            input[name="ADDRESS_HOUSE"]
+            {
+                width: 53px;
+            }
+            input[name="ADDRESS_HOUSING"]
+            {
+                width: 53px;
+            }
+            input[name="ADDRESS_APARTMENT"]
+            {
+                margin: 0px;
+                width: 95px;
+            }
+        }
+		div.columns
+		{
+			input
+			{
+				position: relative;
+				float: left;
+				width: 156px;
+			}
+			input:last-child { margin: 0px; }
+		}
+		/*div.columns:last-child { margin-bottom: 0px; }*/
+		.text
+		{
+			margin-bottom: 21px;
+			.message
+			{
+				.mixin-message;
+				top: 25px;
+				right: -12px;
+			}
+			.button.grey
+			{
+				width: 95px;
+				height: 34px;
+				color: @colorLighterBlack !important;
+				font-size: @fontSizeSlider;
+				line-height: @lineHeightGoToBasket !important;
+				text-decoration: none;
+			}
+			.button.grey:hover { color: @colorLighterBlack !important; }
+			.column.left, .column.right
+			{
+				margin: 0px;
+				width: auto;
+				border: 0px;
+			}
+			.column.left
+			{
+				margin-right: 12px;
+				width: 788px;
+                color: @colorLighterBlack;
+                font-size: @fontSizeOrder;
+			}
+			.column.right
+			{
+				float: left;
+				width: 124px;
+                overflow: visible;
+			}
+			.floating
+			{
+				display: block !important;
+				position: relative;
+				float: left;
+			}
+			.icon
+			{
+				.fixed-wrap, .message
+				{
+					cursor: default;
+					background-image: none !important;
+				}
+				.message
+				{
+					.mixin-message;
+					right: auto;
+					left: 50%;
+					top: 25px;
+					margin-left: -87px;
+				}
+			}
+			.icon.floating
+			{
+				margin: 9px 0px 0px 12px;
+			}
+		}
+		.title
+		{
+			position: relative;
+			padding: 0px 0px 0px 10px;
+			font-size: @fontSizeH1;
+			line-height: @lineHeightBig;
+			font-weight: bold;
+			color: @colorLightBlack;
+			z-index:1;
+			span
+			{
+				margin: 0px 6px 0px 0px;
+				color: @colorRed;
+			}
+		}
+		.invoice
+		{
+			position: relative;
+			margin: 20px 0px 0px 0px;
+			font-size: @fontSizeBasketTotal;
+			line-height: @lineHeightSmall;
+			text-align: center;
+			border-top:1px solid @colorDrakerGrey;
+			border-right:1px solid @colorDrakerGrey;
+			border-bottom:0px;
+			border-left:1px solid @colorDrakerGrey;
+			overflow: hidden;
+			z-index:1;
+			.title
+			{	
+				position: relative;
+				height: 45px;
+				font-size: @fontSizeBasketTotal;
+				line-height: @lineHeightSmall;
+				font-weight: normal;
+				background-color: @colorDarkGrey;
+				border: 0px;
+				border-bottom: 1px solid @colorDrakerGrey;
+				div
+				{
+					position: absolute;
+					top: 0px;
+					bottom:0px;
+					padding: 14px 0px 0px 0px;
+					border: 0px;
+					border-right: 1px solid @colorDrakerGrey;
+					overflow: hidden;
+				}
+				.name
+				{
+					left: 0px;
+					width: 407px;
+				}
+				.count
+				{
+					left: 408px;
+					width: 166px;
+				}
+				.price
+				{
+					left: 575px;
+					width: 131px;
+				}
+				.total
+				{
+					left: 707px;
+					width: 142px;
+                    height: 31px;
+                    background-color: @colorDarkGrey;
+				}
+				.delete
+				{
+					right: 0px;
+					width: 108px;
+					border-right: 0px;
+				}
+			}
+			.row
+			{
+				position: relative;
+				border: 0px;
+				border-bottom: 1px solid @colorDrakerGrey;
+				background-color: @colorWhite;
+				div
+				{
+					position: absolute;
+					top:0px;
+					bottom: 0px;
+					border: 0px;
+					border-right: 1px solid @colorDrakerGrey;
+					overflow: hidden;
+				}
+				.name
+				{
+					position: relative;
+					width: 407px;
+					min-height: 96px;
+					a.img
+					{
+						display: block;
+						position: absolute;
+						left: 16px;
+						top: 3px;
+						width: 90px;
+						height: 90px;
+						white-space: nowrap;
+						text-align: left;
+						font-size: 0px;
+						line-height: 0px;
+						span.helper, img
+						{
+							display: inline-block;
+							vertical-align: middle;
+						}
+						img
+						{
+							width: auto;
+							height: auto;
+							max-width: 90px;
+							max-height: 90px;
+						}
+						span.helper
+						{
+							width: 0px;
+							height: 100%;
+						}
+					}
+					.parameters
+					{
+						position: relative;
+						margin: 12px 12px 20px 122px;
+						border:0px;
+						.name, .article
+						{
+							text-align: left;
+							min-height: 0px;
+							border:0px;
+						}
+						.name
+						{
+							width: auto;
+							height: auto;
+							line-height: @lineHeightOrder;
+						}
+						.article
+						{
+							position: relative;
+							margin: 9px 0px 0px 0px;
+							height: 15px;
+							color: @colorLightBlack;
+							font-weight: bold;
+							span { font-weight: normal; }
+						}
+					}
+				}
+				.count
+				{
+					left: 408px;
+					width: 166px;
+					.counter
+					{
+						position: relative;
+						margin: 27px auto 0px auto;
+						width: 78px;
+						height: 27px;
+						border: 1px solid @colorDrakerGrey;
+						a, input
+						{
+							display: block;
+							position: absolute;
+							top: 0px;
+							bottom:0px;
+							height: 27px;
+							text-align: center;
+							color: @colorLighterBlack;
+						}
+						a
+						{
+							width: 22px;
+							font-size: @fontSizeB;
+							background-color: @colorDarkGrey;
+							z-index:2;
+						}
+						a:hover
+						{
+							color: @colorLighterBlack !important;
+							background-color: @colorGreyHover;
+						}
+						a.minus
+						{
+							left: 0px;
+							line-height: @lineHeightH3;
+							border-right: 1px solid @colorDrakerGrey;
+						}
+						a.plus
+						{
+							right: 0px;
+							line-height: @lineHeightH1;
+							border-left: 1px solid @colorDrakerGrey;
+						}
+						a.inactive { cursor: default; }
+						a.inactive:hover { background-color: @colorDarkGrey; }
+						input
+						{
+							left: 23px;
+							right: 23px;
+							width: 32px;
+							border:0px !important;
+							z-index:1;
+						}
+					}
+				}
+				.price, .total
+				{
+					padding: 34px 0px 0px 0px;
+					color: @colorLightBlack;
+				}
+				.price
+				{
+					left: 575px;
+					width: 131px;
+				}
+				.total
+				{
+					left: 707px;
+					width: 142px;
+					height: auto;
+					font-weight: bold;
+                    background-color: @colorWhite;
+				}
+				.delete
+				{
+					right: 0px;
+					width: 108px;
+					border-right: 0px;
+					a
+					{
+						display: block;
+						margin: 31px auto 0px auto;
+						width: 17px;
+						height: 18px;
+						background-image: url(@imageIconsSVG);
+						background-repeat: no-repeat;
+						background-position: -1285px 0px;
+					}
+					a:hover { background-position: -1285px -20px; }
+				}
+			}
+			.row.new
+			{
+				background-color: @colorRowNewBg;
+                .total
+                {
+                    background-color: @colorRowNewBg;
+                }
+			}
+			.total
+			{
+				position: relative;
+				height: 45px;
+				color: @colorLightBlack;
+				font-weight: bold;
+				border-bottom: 1px solid @colorDrakerGrey;
+                background-color: @colorBackground;
+				.text, .price, .info-message
+				{
+					position: absolute;
+					top: 0px;
+					bottom: 0px;
+				}
+				.text
+				{
+					left: 0px;
+					right: 112px;
+					margin:0px;
+					padding: 16px 18px 0px 0px;
+					text-align: right;
+					font-size: @fontSizeBasketTotal;
+					line-height: @lineHeightSmallest;
+					border:0px;
+					/*border-right: 1px solid @colorDrakerGrey;*/
+				}
+				.price
+				{
+					right: 0px;
+					padding: 16px 0px 0px 0px;
+					width: 108px;
+					font-size: @fontSizeBasketTotal;
+                    line-height: @lineHeightSmallest;
+				}
+				.info-message
+				{
+					left: 8px;
+					bottom: auto;
+					margin: 8px 0px 8px 0px !important;
+                    padding-top: 3px !important;
+                    padding-bottom: 3px !important;
+					width: 425px !important;
+					height: 23px !important;
+					p.text
+					{
+						position: relative;
+						left: auto;
+						right: auto;
+						padding: 0px;
+						text-align: left;
+						font-size: @fontSizeDefault !important;
+						font-weight: normal;
+						line-height: @lineHeightH3 !important;
+						border:0px;
+					}
+				}
+			}
+		}
+		.city
+		{
+			position: relative;
+			float:none;
+			margin: 24px 0px 36px 0px;
+			height: 34px;
+			z-index:1;
+			.current, .change
+			{
+				display: block;
+				position: relative;
+				float: left;
+				padding: 8px 12px 0px 12px;
+				height: 26px;
+				color: @colorLighterBlack;
+			}
+			.current
+			{
+				font-size: @fontSizeB;
+				span
+				{
+					font-size: @fontSizeB;
+					color: @colorLightBlack;
+				}
+			}
+			.change
+			{
+				width: 95px;
+				height: 34px;
+				line-height: @lineHeightGoToBasket !important;
+			}
+			.change:hover { color: @colorLighterBlack !important; }
+		}
+		.cover
+		{
+			display: none;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			z-index: 2;
+		}
+		.cover.white
+		{
+			background-color: @colorWhite;
+			opacity: 0.38;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=38)";
+		}
+		.loader
+		{
+			display: none;
+			position: absolute;
+			left: 50%;
+			top: auto;
+			bottom: 75px;
+			margin-left: -128px;
+			padding: 12px;
+			width: 156px;
+			height: 42px;
+			background-color:@colorWhite;
+			border: 1px solid @colorRed;
+			z-index: 3;
+			.text, .bar
+			{
+				position: absolute;
+				margin:0px;
+				left: 12px;
+				right: 12px;
+				height: 15px;
+			}
+			.text
+			{
+				top: 12px;
+				text-align: center;
+				font-size: @fontSizeDefault;
+				line-height: @lineHeightDefault;
+			}
+			.bar
+			{
+				
+				bottom: 12px;
+				background-image: url(@imageLoaderPNG);
+				background-repeat: repeat-x;
+				background-position: 0px 0px;
+			}
+		}
+		.select
+		{
+			position: relative;
+			margin: 0px 0px 6px 0px;
+			font-size: @fontSizeDefault;
+            .comment, .error, .calendar
+            {
+				display: none;
+				position: relative;
+            }
+			.comment, .error
+			{
+                padding: 0px 0px 0px 0px;
+				height: auto; /* 18px */
+				color: @colorLighterBlack;
+                font-size: @fontSizeOrder;
+                line-height: @lineHeightDetails;
+				span
+				{
+					color: @colorRed;
+					b { color: @colorRed; }
+				}
+                span.free
+                {
+                    display: inline-block;
+                    margin-top: -5px;
+                    padding: 4px 12px 4px 12px;
+                    color: @colorWhite;
+                    line-height: @lineHeightDefault;
+                    background-color: @colorGreen;
+                }
+			}
+            .comment
+            {
+                margin: 0px 0px 0px 36px;
+                span.icon
+                {
+                    .mixin-icon-question;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-top: -4px;
+                    .fixed-wrap, .message { cursor: default; }
+                    .message
+                    {
+                        .mixin-message;
+                        left: 50%;
+                        top: 27px;
+                        line-height: @lineHeightDefault;
+                    }
+                }
+                span.icon:hover { .mixin-icon-question-hover; }
+                span.icon:after { .mixin-icon-question-after; }
+            }
+            .comment.date-unavailable
+            {
+                margin-left: 0px;
+            }
+			.error
+			{
+				color: @colorRed;
+			}
+            .check
+            {
+                .mixin-icon;
+                display: none;
+                position: absolute;
+                top: 9px;
+                left: 515px;
+                width: 15px;
+                height: 12px;
+                background-position: -1266px -5px;
+            }
+            .calendar
+            {
+                .mixin-icon;
+                position: relative;
+                float: left;                
+                width: 22px;
+                height: 23px;
+                background-position: -224px -50px;
+                overflow: hidden;
+                span.icon
+                {
+                    .mixin-icon;
+                    cursor: pointer;
+                    display: block;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 22px;
+                    height: 23px;
+                    background-color: @colorBackground;
+                    background-position: -224px -50px;
+                }
+                span.icon.active
+                {
+                    background-position: -224px -76px;
+                }
+                input
+                {   
+                    width: 22px;
+                    height: 23px;
+                    border: 0px;
+                }
+                input.hasDatepicker.focus
+                {
+                    outline: none;
+                    border: 0px !important;
+                    box-shadow: none;
+                }
+                /*
+                img.calendar-icon
+                {
+                    .mixin-icon;
+                    display: block;
+                    position: relative;
+                    margin: 0px;
+                    padding: 23px 22px 0 0;
+                    width: 0;
+                    height: 0;
+                    background-position: -224px -50px;
+                }
+                img.calendar-icon.calendar-icon-hover
+                {
+                    border: 0px;
+                    background-color: transparent;
+                    background-position: -224px -76px;
+                }
+                */
+            }
+            .calendar.margin-top
+            {
+                margin-top: 22px;
+            }
+		}
+        /*
+		.select.person
+		{
+			.error
+			{
+				left: 0px;
+				top: 30px;
+			}
+		}
+        */
+        .pickup-details
+        {
+            list-style-type: none;
+            padding: 0px;
+            font-size: @fontSizeOrder;
+            color: @colorLighterBlack;
+            li
+            {
+                display: none;
+                padding: 0px 0px 0px 12px;
+                a:after
+                {
+                    content: " ";
+                    display: inline-block;
+                    margin-left: 6px;
+                    width: 0;
+                    height: 0;
+                    vertical-align: middle;
+                    border-style: solid;
+                    border-width: 3.5px 0 3.5px 7px;
+                    border-color: transparent transparent transparent @colorDarkBlue;
+                }
+                a:hover:after { border-color: transparent transparent transparent @colorRed; }
+                p
+                {
+                    margin-bottom: 12px;
+                    line-height: @lineHeightOrder;
+                }
+            }
+            li.active
+            {
+                display: block;
+            }
+        }
+		.bonus
+		{
+			position: relative;
+			width: 640px;
+			margin: 12px 0px 36px 0px;
+            padding: 0px 0px 0px 10px;
+            z-index: 1;
+			/*left: 0px;
+			right: 321px;
+			top: 0px;
+			bottom: 0px;*/
+			.info-message
+			{
+				margin: 12px 90px 0px 0px !important;
+				padding: 17px 28px 17px 64px !important;
+				min-height: 28px;
+				white-space: nowrap;
+				.icon
+				{
+					.mixin-icon;
+					top: 14px;
+					left: 14px;
+					width: 31px;
+					height: 34px;
+					background-position: -492px -37px;
+					background-color: transparent;
+				}
+				.icon:before, .icon:after { display: none;}
+				p.text
+				{
+					display: inline-block;
+					vertical-align: middle;
+					font-size: @fontSizeBasketTotal;
+					margin-bottom: 0px;
+					white-space: normal;
+					input
+					{
+						margin-top: 10px;
+						margin-left: 10px;
+						padding-left: 5px;
+						padding-right: 5px;
+						width: 66px;
+						height: 23px;
+					}
+					.button
+					{
+						margin-top: 16px;
+						width: 149px;
+						height: 32px;
+						line-height: @lineHeightBasketTitle !important;
+						text-decoration: none;
+					}
+				}
+			}
+			.info-message:before
+			{
+				content: " ";
+				display: inline-block;
+				vertical-align: middle;
+				width: 0px;
+				height: 28px;
+			}
+		}
+        .cashless-type
+        {
+            .card-offline, .card-online, .bank-transfer
+            {
+                display: none;
+            }
+        }
+        
+	}
+	.section.first
+    {
+        margin-top: 0px;
+        padding: 17px 0px 24px 0px;
+        border-bottom: 0px;
+    }
+    .section.last
+    {
+        border-bottom: 1px solid @colorRed;
+    }
+	.section.total
+	{
+		position: relative;
+		margin-top: 0px;
+		min-height: 96px;
+		border-bottom: 0px;
+		/* z-index: 1; */
+        .content, .formula, .confirmation
+        {
+            position: absolute;
+            top: 0px;
+        }
+		.content
+		{
+			right: 0px;
+			bottom: 0px;
+			padding: 25px 0px 0px 0px;
+			width: 178px;
+			height: auto;
+			color: @colorLightBlack;
+            z-index:1;
+			.bonus, .delivery, .total, .discount
+			{
+				position: relative;
+				margin: 0px 0px 20px 0px;
+				width: auto;
+				height: 17px;
+				font-size: @fontSizeBasketTotal;
+				line-height: @lineHeightDefault;
+				span
+				{
+					display: block;
+					position: absolute;
+					left: auto;
+					right: 0px;
+					top: 0px;
+					height: 17px;
+					font-size: @fontSizeH3;
+					text-align: center;
+					line-height: @lineHeightSmall;
+				}
+			}
+            .bonus
+            {
+                padding: 0px;
+            }
+			.total
+			{
+				b { line-height: @lineHeightDetails; }
+				span
+				{
+					color: @colorRed;
+					font-size: @fontSizeBig;
+                    line-height: @lineHeightPrice;
+				}
+			}
+			/*
+			.button
+			{
+				position: absolute;
+				right: 0px;
+				bottom: 0px;
+				width: 178px;
+				height: 38px;
+				font-size: @fontSizeBasketTotal;
+				line-height: @lineHeightGoToBasket !important;
+			}
+			*/
+		}
+        .formula
+        {
+            left: 0px;
+            padding: 0px 0px 0px 10px;
+            height: 46px;
+            .cart, .delivery, .bonus
+            {
+                position: relative;
+                float: left;
+                padding: 23px 0px 0px 0px;
+                height: 23px;
+                .sign, .icon, .price, .text
+                {
+                    position: relative;
+                    float: left;
+                    height: 23px;
+                    font-size: @fontSizeBasketTotal;
+                    line-height: @lineHeightH1;
+                }
+                .sign
+                {
+                    margin: 0px 6px 0px 12px;
+                }
+                .icon
+                {
+                    .mixin-icon;
+                    margin: 0px 6px 0px 6px;
+                    height: 23px;
+                }
+                .price { }
+                .text
+                {
+                    margin: 0px 0px 0px 6px;
+                }
+            }
+            .cart
+            {
+                .sign { display: none; }
+                .icon
+                {
+                    width: 26px;
+                    background-size: 2000px;
+                    background-position: -93px -97px;
+                }
+            }
+            .delivery
+            {
+                .icon
+                {
+                    width: 34px;
+                    background-position: -1223px 5px;
+                }
+            }
+            .bonus
+            {
+                margin: 0px;
+                width: auto;
+                .icon
+                {
+                    width: 22px;
+                    background-position: -524px 0px;
+                }
+            }
+        }
+        .confirmation
+        {
+            top: auto;
+            left: 10px;
+            bottom: 11px;
+            label
+            {
+                margin: 0px;
+                font-size: @fontSizeBasketTotal;
+            }
+        }
+	}
+	.accordion
+	{
+		position: relative;
+        margin: 12px 0px 0px 0px;
+		border-top:1px solid @colorDrakerGrey;
+		z-index:1;
+		.title
+		{
+			padding: 0px;
+			height: 36px;
+			font-size: @fontSizeOrder;
+			line-height: @lineHeightSmallest2;
+			font-weight: normal;
+			color: @colorLightBlack;
+			border-top: 0px;
+			border-right: 1px solid @colorDrakerGrey;
+			border-bottom: 1px solid @colorDrakerGrey;
+			border-left: 1px solid @colorDrakerGrey;
+			a
+			{
+				display: block;
+				padding: 12px 0px 0px 0px;
+				height: 24px;
+				background-color: @colorDarkGrey;
+				span
+				{
+					display: block;
+					position: relative;
+					margin: 0px;
+					padding: 0px 36px 0px 36px;
+					height: 24px;
+					color: @colorLightBlack;
+					span
+					{
+						position: absolute;
+						left: 10px;
+						top: 0px;
+						padding:0px;
+						width: 17px;
+						height: 15px;
+						background-image: url(@imageIconsSVG);
+						background-repeat: no-repeat;
+						background-position: -60px -87px;
+					}
+					span.icon
+					{
+						left:auto;
+						top: 2px;
+						right: 18px;
+						padding:0px;
+						width: 12px;
+						height: 8px;
+						background-position: -952px -27px;
+					}
+					span.icon.close { background-position: -952px -18px; }
+				}
+			}
+			a:hover { background-color: @colorGreyHover; }
+		}
+		.title.no-icon
+		{
+			a
+			{
+				span
+				{
+					padding-left: 20px;
+				}
+			}
+		}
+		.content
+		{
+			position: relative;
+			border-top: 0px;
+			border-right: 1px solid @colorDrakerGrey;
+			border-bottom: 0px;
+			border-left: 1px solid @colorDrakerGrey;
+			overflow: hidden;
+			.title
+			{
+				padding: 12px 0px 0px 0px;
+				height: 24px;
+				text-align: center;
+				font-weight: bold;
+				border: 0px;
+			}
+            .tabs { margin: 0px; }
+			.product-carousel
+			{
+				border: 0px;
+				border-bottom: 1px solid @colorDrakerGrey;
+			}
+		}
+		.content:after
+		{
+			content: " ";
+			display: block;
+			position: absolute;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			height:0px;
+			border-top: 1px solid @colorDrakerGrey;
+			border-right: 0px;
+			border-bottom: 0px;
+			border-left: 0px;
+		}
+	}
+	.accordion.pickpoints
+	{
+		width: 385px;
+		.content
+		{
+			ul
+			{
+				display: block;
+				list-style-type: none;
+				margin: 0px 0px 6px 0px;
+				padding: 0px;
+				li
+				{
+					display: block;
+					a
+					{
+						display: block;
+						position: relative;
+						padding: 5px 12px 5px 37px;
+						color: @colorLightBlack;
+						font-size: @fontSizeDefault;
+						span.icon
+						{
+							display: block;
+							position: absolute;
+							left: 17px;
+							top: 6px;
+							width: 15px;
+							height: 15px;
+							text-align: center;
+							text-transform: uppercase;
+							font-size: @fontSizeLiveTex;
+							color: @colorWhite;
+							background-color: @colorWhite;
+						}
+					}
+					a:hover, a.active
+					{
+						color: @colorWhite !important;
+						background-color: @colorRed;
+						b { color: @colorWhite; }
+					}
+				}
+				li.metro
+				{
+					a
+					{
+						span.icon { border-radius: 8px; }
+					}
+					a:hover, a.active
+					{
+						span.icon
+						{
+							color: @colorRed;
+							background-color: @colorWhite !important;
+						}
+					}
+				}
+				li.metro.lilac-branch
+				{
+					a
+					{
+						span.icon { background-color: #8e58a3; }
+					}
+				}
+				li.metro.blue-branch
+				{
+					a
+					{
+						span.icon { background-color: @colorBlue; }
+					}
+				}
+				li.metro.red-branch
+				{
+					a
+					{
+						span.icon { background-color: @colorRed; }
+					}
+				}
+				li.metro.green-branch
+				{
+					a
+					{
+						span.icon { background-color: @colorGreen; }
+					}
+				}
+				li.metro.yellow-branch
+				{
+					a
+					{
+						span.icon { background-color: #ffa239; }
+					}
+				}
+				li.metro.town
+				{
+					a
+					{
+						span.icon
+						{
+							width: 16px;
+							border-radius: 0px;
+							background-color: transparent !important;
+						}
+						span.icon:before, span.icon:after
+						{
+							display: block;
+							position: absolute;
+						}
+						span.icon:before
+						{
+							content: " ";
+							left: 0px;
+							top: 0px;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 0 8px 6px 8px;
+							border-color: transparent transparent @colorLighterBlack transparent;
+						}
+						span.icon:after
+						{
+							content: " ";
+							left: 2px;
+							bottom: 0px;
+							width: 12px;
+							height: 9px;
+							background-color: @colorLighterBlack;
+						}
+					}
+					a:hover, a.active
+					{
+						span.icon { background-color: @colorRed; }
+						span.icon:before { border-color: transparent transparent @colorWhite transparent !important; }
+						span.icon:after { background-color: @colorWhite !important; }
+					}
+				}
+			}
+		}
+		.today
+		{
+			background-color: @colorWhite;
+		}
+		.later
+		{
+			border-top: 1px solid @colorDrakerGrey;
+			background-color: @colorBackground;
+		}
+		.error
+		{
+			display: none;
+			position: absolute;
+			top: 0px;
+			left: 400px;
+			padding: 10px 0px 0px 0px;
+			width: 350px;
+			height: 20px;
+			color: @colorRed;
+			font-size: @fontSizeDefault;
+		}
+	}
+}
+
+/* tabs.floating.images */
+.tabs.floating.images
+{
+	position: relative;
+	margin: 36px 0px 0px 0px;
+    padding: 0px 0px 0px 10px;
+	z-index:1;
+	.titles
+	{
+		margin: 0px 0px 24px 0px;
+		height: 47px;
+		border: 0px;
+        overflow: visible;
+		a
+		{
+			margin: 0px 12px 0px 0px;
+			padding: 14px 24px 0px 72px;
+			width: auto;
+			height: 31px;
+			min-width: 0px;
+			font-size: @fontSizeBasketTotal;
+			font-weight: normal;
+            text-align: left;
+			background-color: @colorBackground;
+			border:1px solid @colorDrakerGrey;
+			span.icon
+			{
+				display: none;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				width: auto;
+				height: auto;
+				background-image: url(@imageIconsSVG);
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+			}
+			/*span.icon.new
+			{
+				display: block;
+				right: -1px;
+				top: -18px;
+				width: 29px;
+				height: 17px;
+                background-size: auto;
+				background-position: -335px 0px;
+			}*/
+			span.image
+			{
+				display: block;
+				position: absolute;
+				left: 15px;
+				top: 50%;
+				background-image: url(@imageIconsSVG);
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+			}
+		}
+		a:hover { background-color: @colorGreyOneMoreOneMore; }
+		a.active
+		{
+			font-weight: bold;
+			border:1px solid @colorRed;
+			span.icon
+			{
+				display: block;
+				top: 4px;
+				right: 7px;
+				width: 15px;
+				height: 12px;
+				background-position: -1266px -5px;
+			}
+		}
+		a.active:hover { background-color: @colorWhite; }
+		a#delivery
+		{
+            padding-left: 63px;
+            padding-right: 30px;
+            width: 69px;
+			span.image
+			{
+                left: 12px;
+                margin-top: -8px;
+				width: 39px;
+				height: 19px;
+				background-position: -1053px -12px;
+			}
+		}
+        a#delivery.free
+        {
+            border:1px solid @colorGreen;
+        }
+        /*
+		a#delivery:hover { span.image { background-position: -1208px -126px; } }
+		a#delivery.active { span.image { background-position: -1053px -12px; } }
+		a#delivery.free { span.image { background-position: -1208px -84px; } }
+        */
+		a#pickup
+		{
+            padding-left: 38px;
+            padding-right: 29px;
+            width: 86px;
+			span.image
+			{
+                left: 12px;
+				margin-top: -15px;
+				width: 14px;
+				height: 30px;
+				background-position: -1101px -3px;
+			}
+		}
+		/*
+        a#pickup:hover { span.image { background-position: -1156px -112px; } }
+		a#pickup.active { span.image { background-position: -1156px -42px; } }
+        */
+		a#cash
+		{
+            width: 135px;
+			span.image
+			{
+				margin-top: -11px;
+				width: 39px;
+				height: 23px;
+				background-position: -1128px -9px;
+			}
+		}
+        /*
+		a#cash:hover { span.image { background-position: -1035px -114px; } }
+		a#cash.active { span.image { background-position: -1035px -44px; } }
+        */
+		a#cashless
+		{
+            width: 160px;
+			span.image
+			{
+                left: 18px;
+				margin-top: -12px;
+				width: 33px;
+				height: 24px;
+				background-position: -1056px -64px;
+			}
+		}
+        /*
+		a#cashless:hover { span.image { background-position: -1075px -119px; } }
+		a#cashless.active { span.image { background-position: -1075px -50px; } }
+        */
+		a#electromoney
+		{
+            width: 190px;
+			span.image
+			{
+				margin-top: -16px;
+				width: 38px;
+				height: 32px;
+				background-position: -1096px -60px;
+			}
+		}
+        /*
+		a#electromoney:hover { span.image { background-position: -1114px -116px; } }
+		a#electromoney.active { span.image { background-position: -1115px -46px; } }
+        */
+	}
+	.pages
+	{
+		.page
+		{
+			padding: 0px 0px 29px 0px;
+			font-size: @fontSizeOrder;
+			color: @colorLighterBlack;
+            background-color: @colorBackground;
+			.text
+			{	
+				margin: 14px 0px 15px 0px;
+				padding: 0px;
+				font-size: @fontSizeBasketTotal;
+				line-height: @lineHeightDefault;
+				font-weight: normal;
+				.icon
+				{
+                    vertical-align: bottom;
+					.message
+                    {
+						line-height: @lineHeightDefault;
+						z-index: 999;
+						a { text-decoration: none; }
+					}
+				}
+			}
+			.column
+			{
+				.text
+				{
+					margin: 0px 0px 18px 0px;
+					padding: 0px;
+					line-height: @lineHeightBig;
+				}
+			}
+			.column.left, .column.right
+			{
+				margin: 0px;
+				padding: 0px;
+			}
+			.column.left
+			{
+				width: 323px;
+			}
+			.column.right
+			{
+				float: left;
+                padding-left: 24px;
+				width: 368px;
+                height: auto;
+                min-height: 324px;
+				border-top: 0px;
+				border-right: 0px;
+				border-bottom: 0px;
+				border-left: 1px solid @colorDrakerGrey;
+                .text
+                {
+                    margin: 6px 0px 15px 0px;
+                    font-weight: bold;
+                }
+			}
+			.info-message
+			{
+				p.text
+				{
+					span.icon
+					{
+						display: inline-block;
+						position: relative;
+						.message
+						{
+							color: @colorBlack !important;
+						}
+					}
+					span.icon:before { display: none; }
+					span.icon:after { background-color: transparent; }
+				}
+			}
+		}
+        .page.two
+        {
+            .select
+            {
+                /* принудительно скрываем календарь для самовывоза */
+                .calendar
+                {
+                    display: none !important;
+                }
+                .comment
+                {
+                    margin-left: 0px;
+                    span.icon
+                    {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+	}
+}
+.tabs.floating.images.small
+{
+	margin: 17px 0px 0px 0px;
+	.titles
+	{
+		height: 70px;
+		a
+		{
+			margin: 0px 15px 0px 0px;
+			padding: 0px;
+			width: 129px;
+			height: 68px;
+			span.image
+			{
+				top: 50%;
+				margin-top: -20px;
+				margin-left: -40px;
+				width: 80px;
+				height: 40px;
+				background-image: url(@imageEPaymentSystems);
+				background-position: 0px 0px;
+			}
+		}
+		a#webmoney	{ span.image { background-position: 0px 0px; } }
+		a#qiwi		{ span.image { background-position: -80px 0px; } }
+		a#yandex	{ span.image { background-position: -160px 0px; } }
+	}
+}
+#DELIVERY_TYPE
+{
+    .titles
+    {
+        margin-bottom: 12px;
+    }
+    .pages
+    {
+        .page.two
+        {
+            .select
+            {
+                /*
+                label.select { width: 624px; }
+                .check { left: 635px; }
+                */
+            }
+        }
+    }
+}
+/* / tabs.floating.images */
+
+/* # jQuery UI Datepicker */
+.ui-datepicker
+{
+    .mixin-box-shadow;
+    display: none;
+    width: 212px;
+    height: 216px;
+    font-size: @fontSizeB;
+    background-color: @colorWhite;
+    border: 1px solid @colorDrakerGrey;
+    select { font-size: @fontSizeB; }
+    .ui-datepicker-header
+    {
+        position: relative;
+        height: 38px;
+        .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-title
+        {
+            display: block;
+            position: absolute;
+            top: 0px;
+            height: 38px;
+        }
+        .ui-datepicker-prev, .ui-datepicker-next
+        {
+            cursor: pointer;
+            width: 24px;
+            .ui-icon
+            {
+                display: block;
+                position: absolute;
+                top: 50%;
+                margin-top: -4px;
+                font-size: 0px;
+                line-height: 0px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+            }
+        }
+        .ui-datepicker-prev
+        {
+            left: 0px;
+            .ui-icon
+            {
+                left: 12px;
+                border-width: 4px 5px 4px 0px;
+                border-color: transparent @colorLightBlack transparent transparent;
+            }
+        }
+        .ui-datepicker-prev.ui-state-disabled
+        {
+            cursor: default;
+            .ui-icon { border-color: transparent @colorDrakerGrey transparent transparent; }
+        }
+        .ui-datepicker-next
+        {
+            right: 0px;
+            .ui-icon
+            {
+                right: 12px;
+                border-width: 4px 0 4px 5px;
+                border-color: transparent transparent transparent @colorLightBlack;
+            }
+        }
+        .ui-datepicker-next.ui-state-disabled
+        {
+            cursor: default;
+            .ui-icon { border-color: transparent transparent transparent @colorDrakerGrey; }
+        }
+        .ui-datepicker-title
+        {
+            top: 0px;
+            left: 36px;
+            width: 140px;
+            .ui-datepicker-month, .ui-datepicker-year
+            {
+                display: block;
+                position: absolute;
+                top: 0px;
+                height: 38px;
+                line-height: @lineHeightCalendarTitle;
+            }
+            .ui-datepicker-month
+            {
+                left: 0px;
+            }
+            .ui-datepicker-year
+            {
+                right: 0px;
+            }
+        }
+    }
+    .ui-datepicker-calendar
+    {
+        width: 100%;
+        thead
+        {
+            height: 12px;
+            color: @colorGreyOneMore4;
+            font-size: @fontSizeSmall;
+            line-height: @lineHeightSmallest;
+            text-align: center;
+            background-color: @colorGreyHover2;
+        }
+        tbody
+        {
+            text-align: center;
+            tr
+            {
+                height: 26px;
+                border-bottom: 1px solid @colorLightGrey;
+                td
+                {
+                    a
+                    {
+                        display: block;
+                        margin: 1px;
+                        height: 24px;
+                        line-height: @lineHeightH3;
+                        color: @colorLightBlack;
+                    }
+                    a.ui-state-active
+                    {
+                        color: @colorWhite !important;
+                        background-color: @colorRed;
+                    }
+                }
+                .ui-datepicker-other-month, .ui-datepicker-week-end.ui-datepicker-other-month
+                {
+                    a { color: @colorDrakerGrey; }
+                }
+                .ui-datepicker-week-end
+                {
+                    a { color: @colorRed; }
+                }
+                .ui-datepicker-unselectable
+                {
+                    span { color: @colorDrakerGrey; }
+                }
+            }
+            tr:last-child
+            {
+                border-bottom: 0px;
+            }
+        }
+    }
+}
+/* / jQuery UI Datepicker */
+
+@media screen and (max-width: @viewportMaxWidth)
+{
+    .header .column.right .menu .items-aggregator { display: none; }
+}

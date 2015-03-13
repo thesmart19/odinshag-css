@@ -32,6 +32,9 @@ source/company/about/css/style.less
 сравнение
 source/bitrix/templates/.default/components/os/compare.result/cosmo/style.less
 
+просмотренные и избранное
+source/bitrix/templates/.default/components/os/user.custom_items_list/cosmo/style.less
+
 бонусная программа
 source/discounts/bonus/css/style.css
 
@@ -43,3 +46,18 @@ source/add-ads/css/style.css
 
 страница благодарности о заказе
 source/bitrix/templates/.default/components/os/order_detail_new/cosmo/style.less
+
+шаблоны оплаты для ПСКБ
+source/pscb/style.less
+
+страница оформления заказа
+source/bitrix/components/os/sale.order/templates/test/style.less
+
+условия доставки
+source/services/delivery/css/style.css
+
+сотрудничество с магазинами
+source/services/partnership/css/style.less
+
+способы оплаты
+source/services/payment/css/style.less

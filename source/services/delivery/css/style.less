@@ -1,0 +1,72 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.box
+{
+	h2
+	{
+		margin: 24px 0px 24px 0px;
+	}
+	p
+	{
+		padding: 0px 0px 0px 10px;
+		font-size: @fontSizeBasketTotal;
+		line-height: @lineHeightOrder;
+	}
+	/*table, tr, td { display: block; }*/
+	table
+	{
+		position: relative;
+		margin: 24px 0px 24px 0px;
+		width: 100%;
+		font-size: @fontSizeBasketTotal;
+		line-height: @lineHeightSmall;
+		text-align: center;
+		vertical-align: middle;
+		color: @colorLightBlack;
+		background-color: @colorDrakerGrey;
+		border:0px;
+		border-collapse: separate;
+		border-spacing: 1px 1px;
+		table-layout:fixed;
+		z-index:1;
+		tr
+		{
+			position: relative;
+			font-size: @fontSizeDefault;
+			line-height: @lineHeightOrder;
+			background-color: @colorWhite;
+			td
+			{
+				padding: 12px 0px 12px 0px;
+			}
+		}
+        tr:first-child
+        {
+            td { background-color: @colorDarkGrey; }
+        }
+        /*
+		tr.title
+		{	
+			position: relative;
+			height: 44px;
+			font-size: @fontSizeBasketTotal;
+			line-height: @lineHeightSmall;
+			font-weight: normal;
+			background-color: @colorDarkGrey;
+		}
+        */
+	}
+	th, td
+	{
+		padding: 0px 0px 0px 0px;
+		overflow: hidden;
+	}
+	ul
+	{
+		margin: 0px 0px 12px 0px;
+		padding: 0px 0px 0px 10px;
+	}
+}

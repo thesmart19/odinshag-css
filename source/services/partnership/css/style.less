@@ -1,0 +1,207 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.no-svg
+{
+	.box .capabilities .ability span.icon { background-image: url(@imageIconsBigPNG); }
+}
+
+#main-inner .box .questions ul.list { padding: 0px 0px 0px 25px; }
+
+#main-inner .box .expectations ul.list { padding: 0px 27% 0px 27%; }
+
+.box
+{
+	ul
+	{
+        list-style-type: disc;
+		margin: 0px 0px 0px 0px;
+		padding: 0px 0px 0px 26px;
+		font-size: @fontSizeOrder;
+		li
+		{
+			margin: 0px 0px 12px 0px;
+			padding: 0px 0px 0px 0px;
+			color: @colorRed;
+			span { color: @colorLighterBlack; }
+		}
+	}
+	.capabilities, .questions, .technology, .expectations
+	{
+		position: relative;
+		margin: 0px 0px 48px 0px;
+	}
+	.capabilities
+	{
+		height: 565px;
+		border: 0px;
+		border-bottom: 1px solid @colorDrakerGrey;
+		.ability
+		{
+			position: absolute;
+			width: 33%;
+			height: 240px;
+			span.icon
+			{
+				display: block;
+				position: relative;
+				margin: 15px auto 0px auto;
+                width: 66px;
+				height: 75px;
+				z-index: 2;
+				background-image: url(@imageIconsBigSVG);
+				background-repeat: no-repeat;
+			}
+			span.site        { background-position: -818px -225px; }
+			span.call-center { background-position: -742px -224px; }
+			span.delivery    { background-position: -954px -24px; }
+			span.order       { background-position: -658px -224px; }
+			span.payment     { background-position: -896px -224px; }
+			span.reward      { background-position: -1026px -24px; }
+			p.text
+			{
+				display: block;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				right: 12px;
+				bottom: 12px;
+				margin: 0px;
+				padding: 110px 45px 0px 45px;
+				font-size: @fontSizeOrder;
+				line-height: @lineHeightBig;
+				color: @colorLighterBlack;
+				background-color: @colorLightGrey;
+				overflow: hidden;
+				z-index: 1;
+			}
+		}
+		.two, .five
+		{
+			width: 34%;
+			p.text { left: 12px; }
+		}
+		.one, .three, .four , .six 
+		{
+			p.text { right: 0px; }
+		}
+		.four, .five, .six	{ height: 220px; }
+		.one, .two, .three	{ top: 53px; }
+		.four, .five, .six	{ top: 293px; }
+		.one				{ left: 0px; }
+		.two				{ left: 33%; }
+		.three				{ left: 67%; }
+		.four				{ left: 0px; }
+		.five				{ left: 33%; }
+		.six				{ left: 67%; }
+		.comments
+		{
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			margin: 24px 0px 24px 0px;
+			width: 100%;
+			font-size: @fontSizeDefault;
+			color: @colorLighterBlack;
+			span { color: @colorRed; }
+		}
+	}
+	.technology
+	{
+		height: 323px;
+		.step
+		{
+			position: absolute;
+			width: 25%;
+			height: 85px;
+			span.number
+			{
+				display: block;
+				position: absolute;
+				left: 0px;
+				top: 15px;
+				width: 45px;
+				color: @colorRed;
+				font-size: @fontSizeH1;
+				line-height: @lineHeightH1;
+				font-weight: bold;
+				text-align: center;
+				z-index: 2;
+			}
+			p.text
+			{
+				display: block;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				right: 12px;
+				bottom: 12px;
+				margin: 0px;
+				padding: 10px 20px 0px 45px;
+				font-size: @fontSizeOrder;
+				line-height: @lineHeightOrder;
+				color: @colorLighterBlack;
+				background-color: @colorLightGrey;
+				overflow: hidden;
+				z-index: 1;
+			}
+		}
+		.one, .two, .three, .four	{ top: 30px; }
+		.five, .six, .seven, .eight	{ top: 115px; }
+		.nine, .ten, .eleven
+		{
+			top: 225px;
+			height: 110px;
+		}
+		.five, .six, .seven, .eight	{ height: 110px; }
+		.one						{ left: 0px; }
+		.two						{ left: 25%; }
+		.three						{ left: 50%; }
+		.four
+		{
+			left: 75%;
+			p.text { right: 0px; }
+		}
+		.five	{ left: 0px; }
+		.six	{ left: 25%; }
+		.seven	{ left: 50%; }
+		.eight
+		{
+			left: 75%;
+			p.text { right: 0px; }
+		}
+		.nine	{ left: 0px; }
+		.ten	{ left: 25%; }
+		.eleven	{ left: 50%; }
+	}
+	.expectations
+	{
+		margin-bottom: 24px;
+		padding: 0px 0px 48px 0px;
+		background-color: @colorLightGrey;
+		border: 0px;
+		border-top: 1px solid @colorDrakerGrey;
+		h2
+		{
+			margin-top: 24px;
+			padding: 0px;
+			text-align: center;
+		}
+	}
+	.contacts
+	{
+		padding: 0px 7% 0px 7%;
+		font-size: @fontSizeOrder;
+		line-height: @lineHeightOrder;
+		color: @colorLighterBlack;
+		a { color: @colorDarkBlue; }
+		b
+		{
+			color: @colorLightBlack;
+			font-size: @fontSizeB;
+		}
+	}
+}
