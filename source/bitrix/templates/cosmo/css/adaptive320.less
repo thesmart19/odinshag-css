@@ -1146,7 +1146,75 @@
             font-weight: normal;
         }
         img { max-width: 100%; }
+        ul.watering
+        {
+            padding: 0px 10px 0px 10px;
+            li
+            {
+                float: none;
+                width: auto;
+                .bg
+                {
+                    left: 0px;
+                    right: 0px;
+                }
+            }
+        }
+        ul.watering.advantage
+        {
+            li
+            {
+                height: auto;
+                min-height: 100px;
+                .text
+                {
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                }
+            }
+        }
+        ul.watering.important
+        {
+            li
+            {
+                height: auto;
+                .text
+                {
+                    margin: 0px;
+                    padding: 12px;
+                }
+            }
+        }
 		.banner, .banner-ext { display: none; }
+        .description.watering
+        {
+            margin-left: 10px;
+            margin-right: 10px;
+            min-height: 0px;
+            .image
+            {
+                position: relative;
+                left: auto;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                width: auto;
+                height: 185px;
+                border-right: 0px;
+                border-bottom: 2px solid @colorGreen;
+            }
+            .text
+            {
+                margin: 0px;
+                padding: 10px 10px 0px 10px;
+                p
+                {
+                    margin-bottom: 12px;
+                }
+            }
+        }
 		.content
 		{
             .column.left
