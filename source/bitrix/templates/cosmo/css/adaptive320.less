@@ -1146,7 +1146,7 @@
             font-weight: normal;
         }
         img { max-width: 100%; }
-        ul.watering
+        ul.watering, ul.hooch
         {
             padding: 0px 10px 0px 10px;
             li
@@ -1160,11 +1160,11 @@
                 }
             }
         }
-        ul.watering.advantage
+        ul.watering.advantage, ul.hooch.advantage
         {
             li
             {
-                height: auto;
+                height: auto !important;
                 min-height: 100px;
                 .text
                 {
@@ -1174,8 +1174,8 @@
                     padding-bottom: 12px;
                 }
             }
-        }
-        ul.watering.important
+        }       
+        ul.watering.important, ul.hooch.important
         {
             li
             {
@@ -1188,7 +1188,7 @@
             }
         }
 		.banner, .banner-ext { display: none; }
-        .description.watering
+        .description.watering, .description.hooch
         {
             margin-left: 10px;
             margin-right: 10px;
@@ -1213,6 +1213,13 @@
                 {
                     margin-bottom: 12px;
                 }
+            }
+        }
+        .description.hooch
+        {
+            .image
+            {
+                border-bottom: 2px solid @colorRed;
             }
         }
 		.content
@@ -2289,6 +2296,10 @@
                     }
                 }
             }
+        }
+        .newsletter.product-select.search
+        {
+            h3 { font-weight: normal; }
         }
 		/*------------------------------------*/
 		/* # Заказать звонок */
