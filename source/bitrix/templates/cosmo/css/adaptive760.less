@@ -589,18 +589,18 @@
 		{
 			display: block;
 			margin: 0px;
-			width: 255px;
+			width: 249px;
 			.block
 			{
 				display: block;
-                width: 256px;
+                width: 249px;
 			}
 		}
 		.column.right
 		{
-			margin: 0px;
+			margin: 0px 0px 0px 10px;
 			float: left;
-			width: 505px;
+			width: 501px;
 		}
 		/*------------------------------------*/
 		/* # Список товаров - вертикальный */
@@ -609,10 +609,10 @@
 		{
 			li.item
 			{
-				width: 167px;
+				width: 161px; /* 167px */
 				a.img
 				{
-					width: 167px;
+					width: 161px; /* 167px */
 					height: 136px;
 					img
 					{
@@ -622,23 +622,27 @@
 				}
 				.parameters
 				{
-					.rating		{ display: none; }
-					.available	{ left: 6px; }
-					.price		{ left: 6px; }
+					.available, .name, .price, .buttons
+                    {
+                        margin-left: 6px;
+                    }
+                    /*
+                    .available
+                    {
+                        max-width: 90px;
+                    }
+                    */
 					.name
 					{
-						left: 6px;
-						right: 6px;
+                        margin-right: 6px;
 					}
 				}
 				.buttons
 				{
-					left: 6px;
-					right: 6px;
 					.button
 					{
 						margin-right: 5px;
-						width: 85px;
+						width: 79px;
 					}
 					.button.compare, .button.favorites
 					{
@@ -654,6 +658,11 @@
                         }
                     }
 				}
+                .delivery
+                {
+                    right: 0px;
+                    padding: 0px;
+                }
 			}
 		}
 		/*------------------------------------*/
@@ -1766,13 +1775,17 @@
 		{
 			.content
 			{
+                /*
 				.column.left
 				{
 					margin-right: 12px;
 				}
+                */
 				.column.right
 				{
-					width: 491px;
+                    float: none;
+                    margin-left: 273px;
+					width: 487px;
 				}
 			}
 		}

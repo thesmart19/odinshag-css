@@ -4970,8 +4970,8 @@ iframe[name="google_conversion_frame"]
 	}
 	.categories.subcats
 	{
-		height: 371px;
-		ul { height: 371px; }
+		height: 388px;
+		ul { height: 388px; }
 	}
     .section_subcats
     {
@@ -6573,6 +6573,7 @@ iframe[name="google_conversion_frame"]
         }
         .column.left
         {
+            margin: 0px;
             border-right: 0px;
             .block
             {
@@ -6587,7 +6588,7 @@ iframe[name="google_conversion_frame"]
                 {
                     border-top: 0px;
                     border-right: 1px solid @colorDrakerGrey;
-                    border-bottom: 1px solid @colorDrakerGrey;
+                    border-bottom: 0px;
                     border-left: 1px solid @colorDrakerGrey;
                 }
             }
@@ -6601,7 +6602,7 @@ iframe[name="google_conversion_frame"]
         }
         .column.right
         {
-            width: 706px;
+            width: 699px;
             ul.product-list
             {
                 .scroll-bar
@@ -6628,7 +6629,7 @@ iframe[name="google_conversion_frame"]
     {
         .column.left
         {
-            width: 254px;
+            width: 249px;
             .block
             {
                 right: -1px;
@@ -6638,11 +6639,7 @@ iframe[name="google_conversion_frame"]
         {
             ul.product-list
             {
-                li.item.first-row
-                {
-                    border-top: 0px;
-                }
-                li.item.last-row
+                li.item
                 {
                     border-bottom: 1px solid @colorDrakerGrey;
                 }
@@ -6685,9 +6682,9 @@ iframe[name="google_conversion_frame"]
     }
     .categories
     {
-        height: 371px;
+        height: 389px;
         border-bottom: 1px solid @colorDrakerGrey;
-        ul { height: 371px; }
+        ul { height: 389px; }
     }
 }
 .box.personal.compare
@@ -6701,8 +6698,24 @@ iframe[name="google_conversion_frame"]
                 .categories.compare_sections
                 {
                     border-bottom: 0px;
+                    ul
+                    {
+                        li
+                        {
+                            width: auto;
+                        }
+                        li:after
+                        {
+                            display: none;
+                        }
+                    }
                 }
             }
+        }
+        .column.right
+        {
+            margin-left: 254px;
+            width: 706px;
         }
     }
 }
@@ -8202,7 +8215,7 @@ ul.product-list
 		.parameters
 		{
 			position: relative;
-			height: 169px;
+			/*height: 175px;*/
 			border-bottom: 1px solid @colorDrakerGrey;
 			z-index:2;
 			.available               { .mixin-available; }
@@ -8212,9 +8225,7 @@ ul.product-list
             .available.pick-up-today { .mixin-available-pick-up-today; }
 			.rating
 			{
-				top: 20px;
-				left: auto;
-				right: 12px;
+				display: none;
 			}
 			.name
 			{
@@ -8233,7 +8244,7 @@ ul.product-list
 			.price
 			{
 				position: absolute;
-				top: 104px;
+				top: 110px;
 				left: 12px;
 				height: 19px;
 				font-size: @fontSizeOrder;
@@ -8274,6 +8285,8 @@ ul.product-list
 					line-height: @lineHeightPrice;
 				}
 			}
+			.voting-rating-likes { display: none; }
+			/*
 			.article
 			{
 				position: absolute;
@@ -8293,8 +8306,7 @@ ul.product-list
 				overflow: hidden;
 				b { color: @colorLightBlack; }
 			}
-			.voting-rating-likes { display: none; }
-			/*.additional
+            .additional
 			{
 				.mixin-box-shadow;
 				display: none;
@@ -8314,7 +8326,8 @@ ul.product-list
 					border-top: 1px solid @colorDrakerGrey;
 				}
 				.button { line-height: @lineHeightButton !important; }
-			}*/
+			}
+            */
 		}
 		/*.layer
 		{
@@ -8593,7 +8606,13 @@ ul.product-list.vertical
 				left: 0px;
 				bottom: 0px;
 			}
-			.rating { display: none; }
+			.rating
+            {
+                top: auto;
+                left: 50%;
+                bottom: 6px;
+                margin-left: -35px;
+            }
 		}
 		.labels
 		{
@@ -8607,11 +8626,33 @@ ul.product-list.vertical
 		{
 			border-bottom: 1px solid @colorDrakerGrey;
 			.article, .delivery, .icon, .labels{ display: none; }
+            .available, .name, .price, .buttons
+            {
+                position: relative;
+                top: auto;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                margin-left: 12px;
+            }
+            .available
+            {
+                display: inline-block;
+                margin-top: 12px;
+            }
+			.name
+            {   
+                margin-top: 8px;
+                margin-right: 12px;
+            }
+            .price
+            {
+                margin-top: 10px;
+            }
 			.buttons
 			{
-				left: 12px;
-				bottom: 12px;
-				right: 12px;
+                margin-top: 8px;
+                margin-bottom: 12px;
 				.button
 				{
 					/*top: 131px;*/
@@ -8619,11 +8660,6 @@ ul.product-list.vertical
 					.icon { display: block; }
 				}
 			}
-			/*.additional
-			{
-				.button { display: block !important; }
-				.article { display: block; }
-			}*/
 		}
 		.icon
 		{
@@ -8700,10 +8736,12 @@ ul.product-list.vertical.scroll
 		display: inline-block;
 		position: relative;
 		float: none;
-		margin-bottom:0px;
+		margin: 0px;
+        width: 234px;
 		vertical-align: top;
         border-top: 0px;
 		border-bottom: 0px;
+        border-right: 0px;
 		z-index: auto;
 		a.img
 		{
@@ -8722,8 +8760,9 @@ ul.product-list.vertical.scroll
 		.parameters
 		{
 			height: 186px;
-			/*border:0px;
-			border-bottom: 1px solid @colorDrakerGrey;*/
+			/*
+            border:0px;
+			border-bottom: 1px solid @colorDrakerGrey;
 			.name
 			{
 				top: 49px;
@@ -8737,6 +8776,7 @@ ul.product-list.vertical.scroll
 				top: 12px;
 				left: 12px;
 			}
+            */
             .buttons
             {
                 .button
@@ -8789,6 +8829,10 @@ ul.product-list.vertical.scroll
             }
 		}
 	}
+    li.item:last-child
+    {
+        border-right: 1px solid @colorDrakerGrey;
+    }
 }
 /*---------------------------------------------------------------------------*\
     /Список товаров - вертикальный + скролл-бар
@@ -9227,7 +9271,7 @@ ul.product-list.horizontal.frame
 {
 	li.item
 	{	
-		margin-bottom: 6px;
+		margin: 0px 0px 6px 0px;
 		height: 91px;
 		border: 1px solid @colorDrakerGrey;
 		a.img
@@ -9637,6 +9681,13 @@ ul.product-list.horizontal.collective-buying
 \*---------------------------------------------------------------------------*/
 ul.product-list.one-page-products
 {
+    li.item
+    {
+        .parameters
+        {
+            border-bottom: 0px;
+        }
+    }
     li.item.last-row
     {
         border-bottom: 1px solid @colorDrakerGrey;
