@@ -35,14 +35,43 @@
 		margin: 0px;
 		.card-actions-block
 		{
-			padding: 4px 10px 5px 10px;
-			height: 32px;
-			font-size:12px;
+			padding: 8px 6px 8px 6px;
+			height: 25px;
+			font-size: @fontSizeDefault;
 			background: @colorBackground;
 			border-top: 1px solid @colorDrakerGrey;
 			border-left: 1px solid @colorDrakerGrey;
 			border-right: 1px solid @colorDrakerGrey;
 			overflow: hidden;
+            .delivery, .day-item, .waste-item, .discount, .new, .pickup
+            {
+				position: relative;
+				float: left;
+                padding: 0px 8px 0px 8px;
+                height: 23px;
+                line-height: @lineHeightDetails;
+            }
+            .delivery
+            {
+                color: @colorGreenProductState;
+                border: 1px solid @colorGreen;
+            }
+            .discount, .waste-item, .day-item
+            {
+                color: @colorRed;
+                border: 1px solid @colorRed;
+            }
+            .new
+            {
+                color: @colorYellowProductState;
+                border: 1px solid @colorYellowProductState;
+            }
+            .pickup
+            {
+                color: @colorGreened;
+                border: 1px solid @colorGreened;
+            }
+            /*
 			.day-item, .sell-hit, .guarantee, .discount, .gift, .new, .free-shipping, .action, .waste-item
 			{
 				position: relative;
@@ -76,7 +105,7 @@
 			.sell-hit
 			{
 				padding-left: 25px;
-				/*background-position: -3px -39px;*/
+                // background-position: -3px -39px;
 			}
 			.discount
 			{
@@ -92,7 +121,7 @@
 			.gift
 			{
 				padding-left: 30px;
-				/*background-position: 0px -542px;*/
+				// background-position: 0px -542px;
 				span.icon
 				{
 					top: 1px;
@@ -105,7 +134,7 @@
 			{
 				padding-left: 37px;
 				padding-bottom: 3px;
-				/*background-position: 0px -564px;*/
+				// background-position: 0px -564px;
 				span.icon
 				{
 					top:3px;
@@ -117,14 +146,14 @@
 			.free-shipping
 			{
 				padding-left: 38px;
-				/*background-position: 0px -742px;*/
+				// background-position: 0px -742px;
 			}
 			.guarantee
 			{
 				float: right;
 				margin-right:0px;
 				padding-left: 21px;
-				/*background-position: -1px -76px;*/
+				// background-position: -1px -76px;
 				span.icon
 				{
 					top: 3px;
@@ -139,12 +168,12 @@
 				margin-right:0px;
 				margin-left:5px;
 				padding-left: 20px;
-				/*background-position: -7px -586px;*/
+				// background-position: -7px -586px;
 			}
 			.waste-item
 			{
 				padding-left: 30px;
-				/*background-position: 0px -514px;*/
+				// background-position: 0px -514px;
 				span.icon
 				{
 					top: 1px;
@@ -153,6 +182,7 @@
 					background-position: -289px 0px;
 				}
 			}
+            */
 		}
 	}
 	.card-product-desc
@@ -167,7 +197,7 @@
 			padding: 0px;
 			height:27px;
 			line-height:27px;
-			background-color: @colorDarkGrey;
+			background-color: @colorWhite;
 			border: 1px solid @colorDrakerGrey;
 			span, b
 			{
@@ -205,7 +235,7 @@
 				position: absolute;
 				right:12px;
 				top:0px;
-				max-width: 140px;
+				max-width: 210px;
 				height: 27px;
 				background: none;
 				border: 0px;
@@ -219,6 +249,7 @@
 				top: 0px;
 				left: 0px;
 				border-right: 1px solid @colorDrakerGrey;
+                background-color: @colorWhite;
 			}
 			.available-pickup 							{ .mixin-available-yes; }
             .available-pickup-today 				    { .mixin-available-pick-up-today; }

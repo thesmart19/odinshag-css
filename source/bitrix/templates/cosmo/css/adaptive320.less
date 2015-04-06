@@ -1264,6 +1264,30 @@
 			{
 				right: 4px;
 			}
+            .pages
+            {
+                .button.grey
+                {
+                    width: 29px;
+                    font-size: 0.1px;
+                    line-height: 0.1px;
+                    text-indent: 1000px;
+                }
+                .button.grey:after
+                {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin: -6px 0px 0px -6px;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url(@imageIconsSVG);
+                    background-repeat: no-repeat;
+                    background-position: -200px -5px;
+                }
+            }
 		}
         .pager.pager-bottom
         {
@@ -1277,13 +1301,13 @@
 				li
 				{
 					padding: 9px 0px 11px 0px;
-					width: 100%;
+					width: auto;
 					a
 					{
-						padding-left: 21px;
+						padding-left: 12px;
 					}
 				}
-				li:after { left: 9px; }
+				/*li:after { left: 9px; }*/
 				.overview { width: 100%; }
 			}
 		}
@@ -2535,6 +2559,7 @@
             {
                 li.item
                 {
+                    margin-right: 0px;
                     margin-bottom: 3px;
                     height: 110px;
                     a.img
@@ -4124,6 +4149,7 @@
                                     font-size: 0px;
                                     line-height: 201px;
                                     white-space: nowrap;
+                                    /*
                                     img, span.labels
                                     {
                                         display: inline-block;
@@ -4143,11 +4169,12 @@
                                         height: 100%;
                                         width: 0px;
                                     }
+                                    */
                                 }
                                 .parameters
                                 {
                                     height: 159px;
-                                    .name { top: 46px; }
+                                    /*.name { top: 46px; }*/
                                     /*.button { top: 130px; }*/
                                     .price
                                     {

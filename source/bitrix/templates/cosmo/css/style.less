@@ -4299,23 +4299,11 @@ iframe[name="google_conversion_frame"]
             .button.grey
             {
                 float: right;
-                margin: -7px 0px 0px 6px;
+                margin: -6px 0px 0px 6px;
                 width: 83px;
-                height: 32px;
-                font-size: @fontSizeBasketTotal;
-                line-height: @lineHeightButtonClear !important;
-                /*
-                position: absolute !important;
-                right: -92px;
-                top: -7px;
-                width: 83px;
-                height: 32px !important;
-                color: #666;
-                font-size: 15px;
-                line-height: 32px !important;
-                letter-spacing: normal;
-                float: none !important;
-                */
+                height: 29px;
+                font-size: @fontSizeOrder;
+                line-height: @lineHeightButtonPrint !important;
             }
             .button.grey:hover
             {
@@ -4505,8 +4493,8 @@ iframe[name="google_conversion_frame"]
 			padding: 16px 24px 0px 24px;
 			height: 26px;
 			color: @colorLighterBlack;
-			font-size: @fontSizeBasketTotal;
-			line-height: @lineHeightDefault;
+			font-size: @fontSizeOrder;
+			line-height: @lineHeightOrder;
             border: 1px solid @colorDrakerGrey;
 		}
 		.title.narrow { padding-right: 88px; }
@@ -5245,6 +5233,7 @@ iframe[name="google_conversion_frame"]
         {
             display: none;
         }
+        /*
         ul.product-list.one-page-products
         {
             li.item.first-row
@@ -5252,6 +5241,7 @@ iframe[name="google_conversion_frame"]
                 border-top: 1px solid @colorDrakerGrey;
             }
         }
+        */
 		.catalog
 		{
 			margin:0px;
@@ -6279,6 +6269,14 @@ iframe[name="google_conversion_frame"]
 			border-right:1px solid @colorDrakerGrey;
 			border-bottom:0px solid @colorDrakerGrey;
 			border-left:1px solid @colorDrakerGrey;
+            .accordion, .accordion:first-child
+            {
+                padding-top: 0px;
+                .title
+                {
+                    border-top: 0px;
+                }
+            }
 		}
 		.bonus-offer
 		{
@@ -7465,28 +7463,46 @@ iframe[name="google_conversion_frame"]
 				border-bottom: 0px;
 				border-left: 0px;
 				overflow:hidden;
+                .labels, .delivery { display: none; }
 				a.img
 				{
 					display: block;
 					position: relative;
-					margin:0px 0px 0px 0px;
-					padding:0px 0px 0px 0px;
+					margin: 0px;
+					padding: 0px;
 					width: 168px !important;
 					height: 136px;
 					text-align:center;
 					text-decoration:none;
+                    font-size: 0px;
+                    line-height: 0px;
 					border:0px;
 					border-bottom: 1px solid @colorDrakerGrey;
+                    white-space: nowrap;
+                    img, .helper
+                    {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
 					img
 					{
-						display: inline-block;
-						margin:25px 0px 0px 0px;
+                        width: auto;
 						max-width: 150px;
+                        height: auto;
 						max-height: 85px;
 					}
+                    .helper
+                    {
+                        width: 0px;
+                        height: 100%;
+                    }
+                    span
+                    {
+                        display: block;
+                    }
+                    /*
 					span.labels
 					{
-						display: block;
 						position: absolute;
 						left: 18px;
 						top: 12px;
@@ -7545,9 +7561,11 @@ iframe[name="google_conversion_frame"]
 							background-position: -7px -586px;
 						}
 					}
+                    */
 					span.delivery
 					{
-						display: block;
+                        display: none;
+                        /*
 						position: absolute;
 						left: 0px;
 						bottom: 0px;
@@ -7555,29 +7573,54 @@ iframe[name="google_conversion_frame"]
 						padding: 0px 15px 0px 15px;
 						height: 19px;
 						font-size: @fontSizeDefault;
-						line-height: @lineHeightH2; /*@lineHeightDelivery*/
+						line-height: @lineHeightH2;
 						color:@colorWhite;
 						background-color: @colorGreen;
+                        */
 					}
+                    span.rating
+                    {
+                        position: absolute;
+                        top: auto;
+                        left: 50%;
+                        bottom: 6px;
+                        right: auto;
+                        margin: 0px 0px 0px -35px;
+                        width: 70px;
+                        height: 11px;
+                    }
 				}
 				.parameters
 				{
 					position: relative;
-					padding: 10px 18px 0px 18px;
-					height: 165px;
+					padding: 0px;
+					height: auto;
 					background-color: @colorWhite;
-					.available				{ .mixin-available; left: 6px; }
+                    .labels, .rating { display: none; }
+					.available
+                    {
+                        .mixin-available;
+                        display: inline-block;
+                        top: auto;
+                        bottom: auto;
+                        left: auto;
+                        right: auto;
+                        margin-top: 12px;
+                    }
 					.available.yes			{ .mixin-available-yes; }
 					.available.discontinued	{ .mixin-available-no; }
 					.available.no			{ .mixin-available-no; }
 					.available.order        { .mixin-available-order; }
                     .available.pick-up-today { .mixin-available-pick-up-today; }
+                    .available, .name, .price, .buttons
+                    {
+                        position: relative;
+                        margin-left: 6px;
+                    }
 					.name
 					{
-						position: absolute;
-						top: 48px;
-						left: 6px;
-						right: 6px;
+                        margin-top: 8px;
+                        margin-right: 6px;
 						width: auto;
 						height:48px;
 						color: @colorDarkBlue;
@@ -7593,9 +7636,7 @@ iframe[name="google_conversion_frame"]
 					}
 					.price
 					{
-						position: absolute;
-						top: 103px;
-						left: 6px;
+                        margin-top: 10px;
 						height: 18px;
 						overflow: hidden;
 						span
@@ -7622,10 +7663,8 @@ iframe[name="google_conversion_frame"]
 					}
                     .buttons
                     {
-                        position: absolute;
-						top: 133px;
-						left: 6px;
-                        right: 0px;
+                        margin-top: 8px;
+                        margin-bottom: 6px;
                         width: auto;
                         height: 27px;
                         .button
@@ -7716,6 +7755,7 @@ iframe[name="google_conversion_frame"]
                             }
                         }
                     }
+                    /*
 					.bonus-data
 					{
 						position: absolute;
@@ -7752,6 +7792,7 @@ iframe[name="google_conversion_frame"]
 					{
 						span { color: @colorGreen; }
 					}
+                    */
 				}
 			}
 		}
@@ -7815,7 +7856,27 @@ iframe[name="google_conversion_frame"]
 		}
 	}
 }
+.product-carousel.no-status
+{
+    height: 268px;
+    .items-block
+    {
+        height: 268px;
+        ul.items
+        {
+            li.item
+            {
+                height: 268px;
+            }
+        }
+    }
+    a.left-nav, a.right-nav
+    {
+        height: 268px;
+    }
+}
 /* стили для коллективной покупки */
+/*
 .group_pokupka
 {
 	.product-carousel
@@ -7835,6 +7896,7 @@ iframe[name="google_conversion_frame"]
 		}
 	}
 }
+*/
 /*---------------------------------------------------------------------------*\
     /Карусель товаров
 \*---------------------------------------------------------------------------*/
@@ -7906,6 +7968,7 @@ iframe[name="google_conversion_frame"]
 /*---------------------------------------------------------------------------*\
     #Карусель товаров - на детальной странице товара коллективной покупки
 \*---------------------------------------------------------------------------*/
+/*
 .tabs.floating.index-page.collective
 {
 	.product-carousel
@@ -8036,6 +8099,7 @@ iframe[name="google_conversion_frame"]
 		}
 	}
 }
+*/
 /*---------------------------------------------------------------------------*\
     /Карусель товаров - на детальной странице товара коллективной покупки
 \*---------------------------------------------------------------------------*/
@@ -8101,6 +8165,8 @@ ul.product-list
 		}
 		.labels
 		{
+            display: none;
+            /*
 			position: absolute;
 			left:auto;
 			right:auto;
@@ -8184,10 +8250,12 @@ ul.product-list
 				height: 21px;
 				background-position: -289px 0px;
 			}
+            */
 		}
 		.delivery
 		{
-			display: block;
+			display: none;
+            /*
 			position: absolute;
 			top: auto;
 			left: auto;
@@ -8198,6 +8266,7 @@ ul.product-list
 			line-height: @lineHeightDelivery;
 			color:@colorWhite;
 			background-color: @colorGreen;
+            */
 		}
 		.icon
 		{
@@ -8601,11 +8670,13 @@ ul.product-list.vertical
 				right: 9px;
 				top: 9px;
 			}
+            /*
 			.delivery
 			{
 				left: 0px;
 				bottom: 0px;
 			}
+            */
 			.rating
             {
                 top: auto;
@@ -8624,7 +8695,7 @@ ul.product-list.vertical
 		}
 		.parameters
 		{
-			border-bottom: 1px solid @colorDrakerGrey;
+			/*border-bottom: 1px solid @colorDrakerGrey;*/
 			.article, .delivery, .icon, .labels{ display: none; }
             .available, .name, .price, .buttons
             {
@@ -8957,8 +9028,8 @@ ul.product-list.horizontal
 			.rating
 			{
 				display: none;
-				/*left:50%;
-				margin:0px 0px 0px -35px;*/
+				/* left:50%; */
+				/* margin:0px 0px 0px -35px; */
 			}
 			.delivery, .icon { display: none; }
 		}
@@ -9008,7 +9079,7 @@ ul.product-list.horizontal
 			}
 			.price
 			{
-				left: auto; /*429px*/
+				left: auto; /* 429px */
 				right: 26px;
 				top: 9px;
 				width: 110px;
@@ -9055,27 +9126,33 @@ ul.product-list.horizontal
 				.button.add2basket, .button.green
 				{
 					margin-bottom: 6px;
-					/*right: 26px;
+					/*
+                    right: 26px;
 					top: 55px;
-					left: auto;*/
+					left: auto;
+                    */
 				}
 				.button.compare, .button.favorites
 				{
-					/*left: auto;
+					/*
+                    left: auto;
 					top: auto;
-					bottom: 12px;*/
+					bottom: 12px;
+                    */
 					width: 52px;
 				}
-				.button.compare		{ /*right: 84px;*/ }
-				.button.favorites	{ /*right: 26px;*/ }
+                /*
+				.button.compare		{ right: 84px; }
+				.button.favorites	{ right: 26px; }
+                */
 			}
 		}
 		.layer, .icon { display: none; }
 	}
-	/*li.item:last-child				{ border-bottom: 0px; }*/
+	/* li.item:last-child				{ border-bottom: 0px; } */
 	li.item.first-row:first-child	{ border-top:0px; }
 	li.item.last-row:last-child		{ margin: 0px; }
-	/*li.item.last-row:only-child		{ border-bottom: 1px solid @colorDrakerGrey; }*/
+	/* li.item.last-row:only-child		{ border-bottom: 1px solid @colorDrakerGrey; } */
 }
 /*---------------------------------------------------------------------------*\
     /Список товаров - горизонтальный
@@ -9398,6 +9475,7 @@ ul.product-list.horizontal.news
 {
 	.item
 	{
+        margin-right: 0px;
 		height: 139px;
 		border: 1px solid @colorDrakerGrey;
 		a.img
@@ -9557,7 +9635,7 @@ ul.product-list.horizontal.news
             */
 		}
 	}
-	.item:first-child	{ border-top:0px; }
+	/*.item:first-child	{ border-top:0px; }*/
     .item.hover
     {
         .mixin-box-shadow-inset-red-product-horizontal;
@@ -9679,6 +9757,7 @@ ul.product-list.horizontal.collective-buying
 /*---------------------------------------------------------------------------*\
     #Список товаров - всего 1 страница товаров
 \*---------------------------------------------------------------------------*/
+/*
 ul.product-list.one-page-products
 {
     li.item
@@ -9693,6 +9772,7 @@ ul.product-list.one-page-products
         border-bottom: 1px solid @colorDrakerGrey;
     }
 }
+*/
 /*---------------------------------------------------------------------------*\
     #Список товаров - всего 1 страница товаров
 \*---------------------------------------------------------------------------*/
@@ -9861,17 +9941,33 @@ ul.product-list.one-page-products
 				color: @colorLightBlack;
                 font-size: @fontSizeBasketTotal;
 				font-weight: bold;
-				/*background-color: @colorDarkGrey;*/
-				border-top: 0px; /* 1px solid @colorDrakerGrey */
-				border-right: 0px;
-				border-bottom: 1px solid @colorDrakerGrey;
-				border-left: 0px;
 			}
+            .guarantee
+            {
+                display: inline-block;
+                position: relative;
+                margin: 0px 0px 6px 6px;
+                padding: 12px 12px 0px 33px;
+                height: 26px;
+                border:1px solid @colorDrakerGrey;
+                span.icon
+                {
+                    display: block;
+                    position: absolute;
+                    left: 10px;
+                    top: 10px;
+                    width: 14px;
+                    height: 18px;
+                    background-image: url(@imageIconsSVG);
+                    background-repeat: no-repeat;
+                    background-position: -366px 0px;
+                }
+            }
 			.parameter
 			{
 				position: relative;
 				border:0px;
-				border-bottom:1px solid @colorDrakerGrey;
+				border-top:1px solid @colorDrakerGrey;
 				a
 				{
 					color: @colorDarkBlue;
@@ -9914,7 +10010,7 @@ ul.product-list.one-page-products
 					}
 				}
 			}
-			.parameter:last-child { border-bottom:0px; }
+			/*.parameter:last-child { border-bottom:0px; }*/
 		}
 		.note
 		{
