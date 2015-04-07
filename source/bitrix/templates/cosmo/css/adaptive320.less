@@ -241,7 +241,7 @@
 				position: absolute;
 				top: 54px;
 				left: 50%;
-				margin: 0px 0px 0px -89px;
+				margin: 0px 0px 0px -84px;
 			}
 			/*------------------------------------*/
 			/* # Меню каталога товаров */
@@ -981,22 +981,6 @@
                 .block.frame.brands
                 {
                     display: none;
-                    /*
-                    .content
-                    {
-                        text-align: center;
-                        font-size: 0.1px;
-                        line-height: 0px;
-                        a
-                        {
-                            display: inline-block;
-                            float: none;
-                            margin-left: 0px;
-                            margin-right: 0px;
-                            width: 150px;
-                        }
-                    }
-                    */
                 }
             }
             .column.right
@@ -1015,7 +999,7 @@
                                 {
                                     li.item
                                     {
-                                        width: 124px;
+                                        width: 125px;
                                         a
                                         {
                                             margin-right: 0px;
@@ -1934,29 +1918,20 @@
                 }
                 .product-carousel
                 {
+                    margin: 0px;
                     width: 318px;
                     .items-block
                     {
-                        width: 234px;
+                        width: 225px;
                         ul.items
                         {
                             li.item
                             {
-                                width: 234px;
-                                a.img
+                                width: 225px;
+                                a.img, .parameters
                                 {
-                                    width: 234px !important;
-                                }
-                                .parameters
-                                {
-                                    .available, .name, .price, .button
-                                    {
-                                        left: 12px;
-                                    }
-                                    .name
-                                    {
-                                        right: 12px;
-                                    }
+                                    margin: 0px;
+                                    width: 224px;
                                 }
                             }
                         }
@@ -1969,30 +1944,19 @@
                 .product-carousel
                 {
                     margin: 0px;
-                    /*margin: 0px auto 0px auto;*/
                     width: 318px;
                     .items-block
                     {
-                        width: 234px;
+                        width: 225px;
                         ul.items
                         {
                             li.item
                             {
-                                width: 234px;
-                                a.img
+                                width: 225px;
+                                a.img, .parameters
                                 {
-                                    width: 234px !important;
-                                }
-                                .parameters
-                                {
-                                    .available, .name, .price, .button
-                                    {
-                                        left: 12px;
-                                    }
-                                    .name
-                                    {
-                                        right: 12px;
-                                    }
+                                    margin: 0px;
+                                    width: 224px;
                                 }
                             }
                         }
@@ -2413,37 +2377,24 @@
             }
             .product-carousel
             {
+                margin: 0px;
                 width: 318px;
+                border-right: 1px solid @colorDrakerGrey;
                 .items-block
                 {
-                    left: 41px;
-                    width: 234px;
+                    width: 225px;
                     ul.items
                     {
                         li.item
                         {
-                            width: 234px;
-                            a.img
+                            width: 225px;
+                            a.img, .parameters
                             {
-                                width: 234px !important;
-                            }
-                            .parameters
-                            {
-                                .available, .name, .price, .button
-                                {
-                                    left: 12px;
-                                }
-                                .name
-                                {
-                                    right: 12px;
-                                }
+                                margin: 0px;
+                                width: 224px;
                             }
                         }
                     }
-                }
-                a.left-nav, a.right-nav
-                {
-                    width: 41px;
                 }
             }
         }
@@ -4130,67 +4081,21 @@
                 {
                     margin: 0px auto 0px auto;
                     width: 318px;
-                    height: 371px;
                     .items-block
                     {
-                        left: 42px;
-                        width: 234px;
-                        height: 371px;
+                        width: 225px;
                         ul.items
                         {
                             li.item
                             {
-                                width: 234px;
-                                height: 371px;
-                                a.img
+                                width: 225px;
+                                a.img, .parameters
                                 {
-                                    width: 234px !important;
-                                    height: 201px;
-                                    font-size: 0px;
-                                    line-height: 201px;
-                                    white-space: nowrap;
-                                    /*
-                                    img, span.labels
-                                    {
-                                        display: inline-block;
-                                        vertical-align: middle;
-                                    }
-                                    img
-                                    {
-                                        margin: 0px;
-                                        max-width: 200px;
-                                        max-height: 180px;
-                                    }
-                                    span.labels
-                                    {
-                                        left: auto;
-                                        right: auto;
-                                        top: auto;
-                                        height: 100%;
-                                        width: 0px;
-                                    }
-                                    */
-                                }
-                                .parameters
-                                {
-                                    height: 159px;
-                                    /*.name { top: 46px; }*/
-                                    /*.button { top: 130px; }*/
-                                    .price
-                                    {
-                                        span.actual
-                                        {
-                                            font-size: @fontSizeIconArrow;
-                                        }
-                                    }
+                                    margin: 0px;
+                                    width: 224px;
                                 }
                             }
                         }
-                    }
-                    a.left-nav, a.right-nav
-                    {
-                        width: 41px;
-                        height: 371px;
                     }
                 }
                 .form
@@ -4648,7 +4553,7 @@
                                 {
                                     li.item
                                     {
-                                        width: 151px;
+                                        width: 152px;
                                         a
                                         {
                                             margin-right: 1px;
@@ -4663,6 +4568,7 @@
             }
         }
     }
+    /*
     body #total_wrapper #main_wrapper .category.box.main_content
     {
         .not-found
@@ -4695,6 +4601,7 @@
             }
         }
     }
+    */
 }
 
 
@@ -4727,7 +4634,7 @@
                                 {
                                     li.item
                                     {
-                                        width: 137px;
+                                        width: 138px;
                                         a
                                         {
                                             margin-right: 0px;
@@ -4785,7 +4692,7 @@
                                 {
                                     li.item
                                     {
-                                        width: 124px;
+                                        width: 125px;
                                         a
                                         {
                                             margin-right: 1px;

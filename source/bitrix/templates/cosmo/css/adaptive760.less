@@ -404,6 +404,7 @@
 						}
 					}
 				}
+                /*
 				.index-page-product-carousel > .product-carousel
 				{
 					.items-block { left: 42px; }
@@ -413,6 +414,7 @@
 					}
 					a.right-nav { width: 42px; }
 				}
+                */
 				.bottom-block
 				{
 					width: @pageWrapWidth760;
@@ -810,15 +812,25 @@
 			{
 				.product-carousel
 				{
-					.items-block
-					{
-						left: 42px;
-						width: 675px;
-					}
-					a.left-nav, a.right-nav
-					{
-						width: 41px;
-					}
+                    .items-block
+                    {
+                        left: 46px;
+                        width: 666px;
+                        ul.items
+                        {
+                            li.item
+                            {
+                                a.img
+                                {
+                                    img { max-width: 210px; }
+                                }
+                            }
+                        }
+                    }
+                    a.left-nav, a.right-nav
+                    {
+                        width: 46px;
+                    }
 				}
 			}
 		}
@@ -1030,15 +1042,25 @@
 			}
             .product-carousel
             {
-                .items-block
-                {
-                    left: 42px;
-                    width: 675px;
-                }
-                a.left-nav, a.right-nav
-                {
-                    width: 41px;
-                }
+                    .items-block
+                    {
+                        left: 46px;
+                        width: 666px;
+                        ul.items
+                        {
+                            li.item
+                            {
+                                a.img
+                                {
+                                    img { max-width: 210px; }
+                                }
+                            }
+                        }
+                    }
+                    a.left-nav, a.right-nav
+                    {
+                        width: 46px;
+                    }
             }
 			.text
 			{
@@ -1215,6 +1237,7 @@
 		/*------------------------------------*/
 		/* # Скидки дня */
 		/*------------------------------------*/
+        /*
 		.tabs.floating.schedule
 		{
             .titles
@@ -1255,6 +1278,7 @@
 				}
 			}
 		}
+        */
 		/*------------------------------------*/
 		/* # Страница благодарности за заказ */
 		/*------------------------------------*/
@@ -1545,6 +1569,7 @@
 		/*------------------------------------*/
 		/* # Retail Rocket */
 		/*------------------------------------*/
+        /*
         .retail-rocket
         {
             .product-carousel
@@ -1560,6 +1585,7 @@
                 }
             }
         }
+        */
 		/*------------------------------------*/
 		/* # Страница 404 */
 		/*------------------------------------*/
@@ -1611,6 +1637,7 @@
                 {
                     float: none;
                     margin-left: 240px;
+                    padding: 0px;
                     width: 518px;
                 }
             }
@@ -1618,22 +1645,22 @@
             {
                 .items-block
                 {
-                    width: 644px;
+                    left: 46px;
+                    width: 666px;
                     ul.items
                     {
                         li.item
                         {
-                            width: 160px;
                             a.img
                             {
-                                width: 160px !important;
-                                img
-                                {
-                                    max-width: 150px;
-                                }
+                                img { max-width: 210px; }
                             }
                         }
                     }
+                }
+                a.left-nav, a.right-nav
+                {
+                    width: 46px;
                 }
             }
         }
