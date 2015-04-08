@@ -1,0 +1,89 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+/* Стили для адаптивного дизайна */
+
+@media screen and (max-width: 1194px)
+{
+	body
+	{
+		min-width: 0px !important;
+		#main_wrapper
+		{
+			width: 100%;
+			min-width: 100%;
+		}
+	}
+    
+	/*------------------------------------*/
+	/* # Фиксированная шапка */
+	/*------------------------------------*/
+	.header.fixed
+	{
+		width: 100%;
+		.wrap
+		{
+			width: auto;
+        }
+    }
+    
+	/*------------------------------------*/
+	/* # Фиксированный футер */
+	/*------------------------------------*/
+	.footer.fixed
+	{
+		width: 100%;
+		.wrap
+		{
+			width: auto;
+        }
+    }
+    
+	/*------------------------------------*/
+	/* # Шапка сайта */
+	/*------------------------------------*/
+    /*
+	.header
+    {
+        .column.left
+        {
+            width: auto;
+            max-width: 259px;
+            min-width: 205px;
+        }
+    }
+    */
+}
+
+@media screen and (max-width: 990px)
+{
+    .header
+    {
+        form.authorization
+        {
+            input
+            {
+                width: 189px;
+            }
+        }
+    }
+    .header.fixed
+    {
+        .wrap
+        {
+            .user
+            {
+                width: 240px;                
+            }
+            .user.authorized
+            {
+                a.title
+                {
+                    width: 191px;
+                }
+            }
+        }
+    }
+}

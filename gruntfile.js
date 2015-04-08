@@ -16,6 +16,7 @@ module.exports = function (grunt) {
                     
                     /* стили для адаптивного дизайна */
                     /* подготовка стилей для планшета и телефона */
+                    "build/bitrix/templates/cosmo/css/___adaptive960.css": "source/bitrix/templates/cosmo/css/adaptive960.less",
                     "build/bitrix/templates/cosmo/css/___adaptive760.css": "source/bitrix/templates/cosmo/css/adaptive760.less",
                     "build/bitrix/templates/cosmo/css/___adaptive320.css": "source/bitrix/templates/cosmo/css/adaptive320.less",
                     "build/bitrix/templates/cosmo/css/adaptive.css": "source/bitrix/templates/cosmo/css/adaptive.less",
