@@ -111,7 +111,7 @@
 						width: 318px;
 						li.item
 						{
-							width: 318px !important;
+							width: 318px;
 							a.delete
 							{
 								right: 17px;
@@ -4516,6 +4516,48 @@
         .category.box.main_content.personal.registration
         {
             .min-symbols { display: none; }
+        }
+        /*------------------------------------*/
+        /* # Просмотренные и Избранное */
+        /*------------------------------------*/
+        .category.box.personal.views, .category.box.personal.favorites
+        {
+            .column.left
+            {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                top: auto;
+                .block
+                {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    right: auto;
+                    bottom: auto;
+                    .categories
+                    {
+                        position: relative;
+                        left: auto;
+                        top: auto;
+                        right: auto;
+                        bottom: auto;
+                        ul
+                        {
+                            position: relative;
+                            left: auto;
+                            top: auto;
+                            right: auto;
+                            bottom: auto;
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+            .column.right
+            {
+                margin-left: 0px;
+            }
         }
 	} 
 }

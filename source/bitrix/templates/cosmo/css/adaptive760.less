@@ -582,11 +582,6 @@
 			height: 241px;
 			ul { height: 241px; }
 		}
-        .categories.compare_sections
-        {
-            height: 198px;
-            ul { height: 198px; }
-        }
 		.column.left
 		{
 			display: block;
@@ -1824,10 +1819,22 @@
     {
         .category.box.personal.views, .category.box.personal.favorites
         {
-            .categories
+            .column.left
             {
-                height: 306px;
-                ul { height: 306px; }
+                .block:last-child
+                {
+                    max-height: 282px;
+                }
+                .categories
+                {
+                    height: auto;
+                    ul { height: auto; }
+                }
+            }
+            .column.right
+            {
+                float: none;
+                margin-left: 259px;
             }
         }
     }
