@@ -151,6 +151,7 @@
 					.phone
 					{
 						.span { white-space: nowrap; }
+                        /*
 						div.icon
 						{
 							.message
@@ -166,21 +167,26 @@
 								}
 							}
 						}
+                        */
 					}
 				}
 			}
 		}
 		form.search
 		{
-			margin-left: 217px;
-			padding-right: 52px;
+            left: 217px;
+			padding-right: 51px;
+            min-width: 0px;
 			input.button
 			{
+                padding: 0px !important;
 				width: 51px;
+                text-indent: 1000px;
+                text-overflow: clip;
 			}
 			label.icon
 			{
-				right: 16px;
+				right: 15px;
 			}
 			.search-suggestions
 			{

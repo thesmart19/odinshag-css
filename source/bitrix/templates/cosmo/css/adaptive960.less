@@ -5,6 +5,40 @@
 
 /* Стили для адаптивного дизайна */
 
+@media screen and (max-width: 1360px)
+{
+    .header
+    {
+        .column.right
+        {
+            .menu
+            {
+                .item.new.info
+                {
+                    .phone
+                    {
+                        div.icon
+                        {
+                            .message
+                            {
+                                left: auto;
+                                right: 0px;
+                                margin-left: 0px;
+                                span.arrow
+                                {
+                                    left: auto;
+                                    right: 3px;
+                                    margin-left: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1194px)
 {
 	body
@@ -44,17 +78,102 @@
 	/*------------------------------------*/
 	/* # Шапка сайта */
 	/*------------------------------------*/
-    /*
 	.header
     {
-        .column.left
+        form.search
         {
-            width: auto;
-            max-width: 259px;
-            min-width: 205px;
+            right: 0px;
+        }
+        .column.right
+        {
+            .button.feedback
+            {
+                display: none !important;
+            }
         }
     }
-    */
+    .box
+    {
+        .banner.index-page
+        {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1140px)
+{
+    .header
+    {
+        .column.right
+        {
+            .menu
+            {
+                .item.wholesale
+                {
+                    width: 17%;
+                    a.title
+                    {
+                        span
+                        {
+                            padding-left: 4.5%;
+                            padding-right: 4.5%;
+                        }
+                        span.name
+                        {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px)
+{
+    .header
+    {
+        .column.right
+        {
+            .menu
+            {
+                .item.wholesale
+                {
+                    width: 12%;
+                    a.title
+                    {
+                        span
+                        {
+                            padding-top: 2px;
+                            padding-left: 5%;
+                            padding-right: 5%;
+                            height: 34px;
+                        }
+                        span.name
+                        {
+                            text-align: center;
+                            white-space: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1045px)
+{
+    .header
+    {
+        .column.right
+        {
+            .menu
+            {
+                .item.wholesale { display: none; }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 990px)
@@ -84,6 +203,31 @@
                     width: 191px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 960px)
+{
+	/*------------------------------------*/
+	/* # Шапка сайта */
+	/*------------------------------------*/
+	.header
+    {
+        .column.left
+        {
+            width: 205px;
+        }
+        .column.right
+        {
+            width: 755px;
+        }
+    }
+	.box
+    {
+        .column.left
+        {
+            width: 205px;
         }
     }
 }
