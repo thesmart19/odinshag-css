@@ -86,17 +86,91 @@
         }
         .column.right
         {
-            .button.feedback
+            .button.feedback { display: none !important; }
+            .menu
             {
-                display: none !important;
+                .item.new.info
+                {
+                    .feedback { display: inline-block; }
+                }
             }
         }
     }
+    
+	/*------------------------------------*/
+	/* # Футер */
+	/*------------------------------------*/
+	.footer
+	{
+        .wrap
+        {
+            width: auto;
+            .block.social
+            {
+                .wrap
+                {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+    
     .box
     {
         .banner.index-page
         {
             display: none;
+        }
+    }
+	/*------------------------------------*/
+	/* # Главная страница */
+	/*------------------------------------*/
+    .slider
+    {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        left: 0px;
+        width: auto;
+        overflow: hidden;
+        .wrap
+        {
+            margin: 0px auto 0px auto;
+            width: 741px;
+            overflow: visible;
+        }
+        .wrap:before, .wrap:after
+        {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 90px;
+            opacity: 0.72;
+            z-index: 2;
+        }
+        .wrap:before
+        {
+            left: -90px;
+            background-color: @colorWhite;
+        }
+        .wrap:after
+        {
+            right: -90px;
+            background-color: @colorWhite;
+        }
+    }
+    .box
+    {
+        .content.index-page
+        {
+            .column.left
+            {
+            }
+            .column.right
+            {
+            }
         }
     }
 }
@@ -109,22 +183,24 @@
         {
             .menu
             {
-                .item.wholesale
-                {
-                    width: 17%;
-                    a.title
-                    {
-                        span
-                        {
-                            padding-left: 4.5%;
-                            padding-right: 4.5%;
-                        }
-                        span.name
-                        {
-                            white-space: nowrap;
-                        }
-                    }
-                }
+                .item.wholesale { display: none; }
+            }
+        }
+    }
+	/*------------------------------------*/
+	/* # Главная страница */
+	/*------------------------------------*/
+    .box
+    {
+        .content.index-page
+        {
+            .column.left
+            {
+                width: 43%;
+            }
+            .column.right
+            {
+                width: 57%;
             }
         }
     }
@@ -132,31 +208,20 @@
 
 @media screen and (max-width: 1100px)
 {
-    .header
+	/*------------------------------------*/
+	/* # Главная страница */
+	/*------------------------------------*/
+    .box
     {
-        .column.right
+        .content.index-page
         {
-            .menu
+            .column.left
             {
-                .item.wholesale
-                {
-                    width: 12%;
-                    a.title
-                    {
-                        span
-                        {
-                            padding-top: 2px;
-                            padding-left: 5%;
-                            padding-right: 5%;
-                            height: 34px;
-                        }
-                        span.name
-                        {
-                            text-align: center;
-                            white-space: normal;
-                        }
-                    }
-                }
+                width: 46%;
+            }
+            .column.right
+            {
+                width: 54%;
             }
         }
     }
@@ -164,16 +229,27 @@
 
 @media screen and (max-width: 1045px)
 {
-    .header
+	/*------------------------------------*/
+	/* # Главная страница */
+	/*------------------------------------*/
+    .box
     {
-        .column.right
+        .content.index-page
         {
-            .menu
+            .column.left
             {
-                .item.wholesale { display: none; }
+                width: 48%;
+            }
+            .column.right
+            {
+                width: 52%;
             }
         }
     }
+}
+
+@media screen and (max-width: 1030px)
+{
 }
 
 @media screen and (max-width: 990px)
@@ -205,6 +281,23 @@
             }
         }
     }
+	/*------------------------------------*/
+	/* # Главная страница */
+	/*------------------------------------*/
+    .box
+    {
+        .content.index-page
+        {
+            .column.left
+            {
+                width: 50%;
+            }
+            .column.right
+            {
+                width: 50%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 960px)
@@ -229,5 +322,16 @@
         {
             width: 205px;
         }
+    }
+	/*------------------------------------*/
+	/* # Главная страница */
+	/*------------------------------------*/
+    .slider
+    {
+        position: relative;
+        right: auto;
+        top: auto;
+        left: auto;
+        width: auto;
     }
 }
