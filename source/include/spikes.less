@@ -1,4 +1,4 @@
-﻿/* скрываем все iframe */
+/* скрываем все iframe */
 body > iframe
 {
 	position: absolute !important;
@@ -27,6 +27,107 @@ body #total_wrapper
 	width: 100%;
 	height: auto;
 	min-height: 100%;
+}
+
+/* костыль для выделения главной страницы от остальных */
+body .index-page#total_wrapper
+{
+    #main_wrapper
+    {
+        width: @pageWrapWidth1195;
+        .header
+        {
+            .column.right
+            {
+                .button.feedback
+                {
+                    display: block !important;
+                }
+                .menu
+                {
+                    .item.new.info
+                    {
+                        .feedback
+                        {
+                            display: none;
+                        }
+                    }
+                    .item.new.wholesale
+                    {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .header.fixed
+        {
+            .wrap { width: @pageWrapWidth1195; }
+        }
+        .catalog
+        {
+            .content
+            {
+                .item
+                {
+                    a.title
+                    {
+                        width: 100%;
+                        span
+                        {
+                            span.name
+                            {
+                                width: 85%;
+                            }
+                        }
+                    }
+                    .level.second
+                    {
+                        left: auto;
+                        right: -254px;
+                        .item
+                        {
+                            a.title
+                            {
+                                width: 253px;
+                                span
+                                {
+                                    span.name
+                                    {
+                                        width: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .item:hover
+                {
+                    a.title
+                    {
+                        width: 100.5%;
+                    }
+                    .level.second
+                    {
+                        .item
+                        {
+                            a.title
+                            {
+                                width: 252px;
+                            }
+                            a.title:hover
+                            {
+                                width: 253px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer
+    {
+        .wrap { width: @pageWrapWidth1195; }
+    }
 }
 
 body #main_wrapper

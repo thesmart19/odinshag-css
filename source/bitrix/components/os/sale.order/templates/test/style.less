@@ -231,6 +231,7 @@
 			{
 				float: left;
 				width: 124px;
+                min-width: 0px;
                 overflow: visible;
 			}
 			.floating
@@ -1157,6 +1158,22 @@
 			{
 				border: 0px;
 				border-bottom: 1px solid @colorDrakerGrey;
+                .items-block
+                {
+                    ul.items
+                    {
+                        li.item
+                        {
+                            .parameters
+                            {
+                                .buttons
+                                {
+                                    overflow: hidden;
+                                }
+                            }
+                        }
+                    }
+                }
 			}
 		}
 		.content:after

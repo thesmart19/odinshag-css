@@ -12,9 +12,20 @@
 /*---------------------------------------------------------------------------*/
 @media screen and (max-width: 959px)
 {
+    body #main_wrapper
+    {
+        width: auto;
+    }
 	/*------------------------------------*/
 	/* # Фиксированная шапка */
 	/*------------------------------------*/
+    body #total_wrapper.index-page #main_wrapper .header.fixed
+    {
+		.wrap
+		{
+			width: @pageWrapWidth760;
+        }
+    }
 	.header.fixed
 	{
 		width: 100%;
@@ -55,6 +66,13 @@
 	/*------------------------------------*/
 	/* # Шапка сайта */
 	/*------------------------------------*/
+    body #total_wrapper.index-page #main_wrapper .header
+    {
+        .column.right
+        {
+            width: auto;
+        }
+    }
 	.header
 	{
 		margin: 0px auto 0px auto;
@@ -151,23 +169,6 @@
 					.phone
 					{
 						.span { white-space: nowrap; }
-                        /*
-						div.icon
-						{
-							.message
-							{
-								left: auto;
-								right: 0px;
-								margin-left: 0px;
-								span.arrow
-								{
-									left: auto;
-									right: 0px;
-									margin-left: 0px;
-								}
-							}
-						}
-                        */
 					}
 				}
 			}
@@ -175,6 +176,7 @@
 		form.search
 		{
             left: 217px;
+            right: 0px;
 			padding-right: 51px;
             min-width: 0px;
 			input.button
@@ -218,9 +220,15 @@
 	/*------------------------------------*/
 	/* # Фиксированный футер */
 	/*------------------------------------*/
+    body #total_wrapper.index-page #main_wrapper .footer.fixed
+    {
+		.wrap
+		{
+			width: @pageWrapWidth760;
+        }
+    }
 	.footer.fixed
 	{
-		/*display: none;*/
 		width: 100%;
 		.wrap
 		{
@@ -240,14 +248,22 @@
 	/*------------------------------------*/
 	/* # Футер */
 	/*------------------------------------*/
+    body #total_wrapper.index-page .footer
+    {
+        .wrap
+        {
+            width: @pageWrapWidth760;
+        }
+    }
 	.footer
-	{
+	{   
 		margin: 0px auto 0px auto;
-		width: @pageWrapWidth760; /* было auto  */
+		width: auto; /* @pageWrapWidth760  */
 		font-size: @fontSizeDefault;
 		line-height: @lineHeightDefault;
 		.wrap
 		{
+            margin: 0px auto 0px auto;
 			width: @pageWrapWidth760; /* пока не резиновая - было auto */
 			.block
 			{
@@ -317,20 +333,6 @@
 				.level.third
 				{
 					display: none !important;
-					/*
-					width: 308px;
-					ul
-					{
-						float: none;
-						padding: 0px;
-						width: auto;
-						li
-						{
-							margin-bottom: 0px;
-							background-color: @colorWhite;
-						}
-					}
-					*/
 				}
 			}
 		}
@@ -464,6 +466,7 @@
             {
                 float: left;
                 margin: 0px;
+                /*
                 .block.frame.categories
                 {
                     .product-carousel
@@ -485,6 +488,7 @@
                         }
                     }
                 }
+                */
             }
         }
         .offer-banner.index-page
@@ -512,7 +516,7 @@
 		width: @pageWrapWidth760 - 2; /* пока не резиновая - было auto */
 	}
 	body #total_wrapper #main_wrapper .category.box.main_content 
-	{
+	{   
 		width: @pageWrapWidth760;
         /* все картинки */
         img
@@ -598,6 +602,7 @@
 			margin: 0px 0px 0px 10px;
 			float: left;
 			width: 501px;
+            min-width: 501px;
 		}
 		/*------------------------------------*/
 		/* # Список товаров - вертикальный */
@@ -817,7 +822,14 @@
                             {
                                 a.img
                                 {
-                                    img { max-width: 210px; }
+                                    img { max-width: 159px; }
+                                }
+                                .parameters
+                                {
+                                    .buttons
+                                    {
+                                        overflow: hidden;
+                                    }
                                 }
                             }
                         }
@@ -957,6 +969,11 @@
 					}
 				}
 			}
+            .bonus-history
+            {
+                border-right: 0px;
+                border-left: 0px;
+            }
 		}
 		/*------------------------------------*/
 		/* # Страница оформления заказа */
@@ -1060,7 +1077,11 @@
 			.text
 			{
 				.column.left { width: 575px; }
-				.column.right { width: auto; }
+				.column.right
+                {
+                    width: auto;
+                    min-width: 0px;
+                }
 				.icon
 				{
 					.message
@@ -1492,6 +1513,7 @@
 			.column.left, .column.right
 			{
 				width: 50%;
+                min-width: 0px;
 			}
 			.column.left
 			{
@@ -1504,6 +1526,7 @@
 			}
 			.column.right
 			{
+                margin: 0px;
 				.social
 				{
 					padding: 12px 180px 12px 12px;
@@ -1675,6 +1698,7 @@
 			{
 				margin-left: 12px;
 				width: 178px;
+                min-width: 0px;
 			}
 			.content.with-border
 			{
@@ -1797,17 +1821,22 @@
 		{
 			.content
 			{
-                /*
 				.column.left
 				{
-					margin-right: 12px;
+					.block
+                    {
+                        .categories
+                        {
+                            height: 198px;
+                        }
+                    }
 				}
-                */
 				.column.right
 				{
                     float: none;
                     margin-left: 273px;
 					width: 487px;
+                    min-width: 487px;
 				}
 			}
 		}

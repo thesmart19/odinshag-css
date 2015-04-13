@@ -7,28 +7,34 @@
 
 @media screen and (max-width: 1360px)
 {
-    .header
+    body .index-page#total_wrapper
     {
-        .column.right
+        #main_wrapper
         {
-            .menu
+            .header
             {
-                .item.new.info
+                .column.right
                 {
-                    .phone
+                    .menu
                     {
-                        div.icon
+                        .item.new.info
                         {
-                            .message
+                            .phone
                             {
-                                left: auto;
-                                right: 0px;
-                                margin-left: 0px;
-                                span.arrow
+                                div.icon
                                 {
-                                    left: auto;
-                                    right: 3px;
-                                    margin-left: 0px;
+                                    .message
+                                    {
+                                        left: auto;
+                                        right: 0px;
+                                        margin-left: 0px;
+                                        span.arrow
+                                        {
+                                            left: auto;
+                                            right: 3px;
+                                            margin-left: 0px;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -41,134 +47,136 @@
 
 @media screen and (max-width: 1194px)
 {
-	body
-	{
-		min-width: 0px !important;
+    body
+    {
+        min-width: 0px !important;
+    }
+    body .index-page#total_wrapper
+    {
 		#main_wrapper
 		{
 			width: 100%;
 			min-width: 100%;
-		}
-	}
-    
-	/*------------------------------------*/
-	/* # Фиксированная шапка */
-	/*------------------------------------*/
-	.header.fixed
-	{
-		width: 100%;
-		.wrap
-		{
-			width: auto;
-        }
-    }
-    
-	/*------------------------------------*/
-	/* # Фиксированный футер */
-	/*------------------------------------*/
-	.footer.fixed
-	{
-		width: 100%;
-		.wrap
-		{
-			width: auto;
-        }
-    }
-    
-	/*------------------------------------*/
-	/* # Шапка сайта */
-	/*------------------------------------*/
-	.header
-    {
-        form.search
-        {
-            right: 0px;
-        }
-        .column.right
-        {
-            .button.feedback { display: none !important; }
-            .menu
+            
+            /*------------------------------------*/
+            /* # Фиксированная шапка */
+            /*------------------------------------*/
+            .header.fixed
             {
-                .item.new.info
-                {
-                    .feedback { display: inline-block; }
-                }
-            }
-        }
-    }
-    
-	/*------------------------------------*/
-	/* # Футер */
-	/*------------------------------------*/
-	.footer
-	{
-        .wrap
-        {
-            width: auto;
-            .block.social
-            {
+                width: 100%;
                 .wrap
                 {
-                    padding-left: 0px;
+                    width: auto;
                 }
             }
-        }
-    }
-    
-    .box
-    {
-        .banner.index-page
-        {
-            display: none;
-        }
-    }
-	/*------------------------------------*/
-	/* # Главная страница */
-	/*------------------------------------*/
-    .slider
-    {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        left: 0px;
-        width: auto;
-        overflow: hidden;
-        .wrap
-        {
-            margin: 0px auto 0px auto;
-            width: 741px;
-            overflow: visible;
-        }
-        .wrap:before, .wrap:after
-        {
-            content: " ";
-            display: block;
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            width: 90px;
-            background-color: @colorBackground;
-            opacity: 1;
-            z-index: 2;
-        }
-        .wrap:before
-        {
-            left: -90px;
-        }
-        .wrap:after
-        {
-            right: -90px;
-        }
-    }
-    .box
-    {
-        .content.index-page
-        {
-            .column.left
+
+            /*------------------------------------*/
+            /* # Шапка сайта */
+            /*------------------------------------*/
+            .header
             {
+                form.search
+                {
+                    right: 0px;
+                }
+                .column.right
+                {
+                    .button.feedback { display: none !important; }
+                    .menu
+                    {
+                        .item.new.info
+                        {
+                            .feedback { display: inline-block; }
+                        }
+                    }
+                }
             }
-            .column.right
+
+            .box
             {
+                .banner.index-page
+                {
+                    display: none;
+                }
+            }
+
+            /*------------------------------------*/
+            /* # Главная страница */
+            /*------------------------------------*/
+            .slider
+            {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                left: 0px;
+                width: auto;
+                overflow: hidden;
+                .wrap
+                {
+                    margin: 0px auto 0px auto;
+                    width: 741px;
+                    overflow: visible;
+                }
+                .wrap:before, .wrap:after
+                {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    top: 0px;
+                    bottom: 0px;
+                    width: 90px;
+                    background-color: @colorBackground;
+                    opacity: 1;
+                    z-index: 2;
+                }
+                .wrap:before
+                {
+                    left: -90px;
+                }
+                .wrap:after
+                {
+                    right: -90px;
+                }
+            }
+            .box
+            {
+                .content.index-page
+                {
+                    .column.left
+                    {
+                    }
+                    .column.right
+                    {
+                    }
+                }
+            }
+		}
+        /*------------------------------------*/
+        /* # Фиксированный футер */
+        /*------------------------------------*/
+        .footer.fixed
+        {
+            width: 100%;
+            .wrap
+            {
+                width: auto;
+            }
+        }
+        /*------------------------------------*/
+        /* # Футер */
+        /*------------------------------------*/
+        .footer
+        {
+            .wrap
+            {
+                width: auto;
+                .block.social
+                {
+                    .wrap
+                    {
+                        padding-left: 0px;
+                    }
+                }
             }
         }
     }
@@ -176,30 +184,36 @@
 
 @media screen and (max-width: 1140px)
 {
-    .header
+    body .index-page#total_wrapper
     {
-        .column.right
+        #main_wrapper
         {
-            .menu
+            .header
             {
-                .item.wholesale { display: none; }
+                .column.right
+                {
+                    .menu
+                    {
+                        .item.new.wholesale { display: none; }
+                    }
+                }
             }
-        }
-    }
-	/*------------------------------------*/
-	/* # Главная страница */
-	/*------------------------------------*/
-    .box
-    {
-        .content.index-page
-        {
-            .column.left
+            /*------------------------------------*/
+            /* # Главная страница */
+            /*------------------------------------*/
+            .box
             {
-                width: 43%;
-            }
-            .column.right
-            {
-                width: 57%;
+                .content.index-page
+                {
+                    .column.left
+                    {
+                        width: 43%;
+                    }
+                    .column.right
+                    {
+                        width: 57%;
+                    }
+                }
             }
         }
     }
@@ -207,20 +221,26 @@
 
 @media screen and (max-width: 1100px)
 {
-	/*------------------------------------*/
-	/* # Главная страница */
-	/*------------------------------------*/
-    .box
+    body .index-page#total_wrapper
     {
-        .content.index-page
+        #main_wrapper
         {
-            .column.left
+            /*------------------------------------*/
+            /* # Главная страница */
+            /*------------------------------------*/
+            .box
             {
-                width: 46%;
-            }
-            .column.right
-            {
-                width: 54%;
+                .content.index-page
+                {
+                    .column.left
+                    {
+                        width: 46%;
+                    }
+                    .column.right
+                    {
+                        width: 54%;
+                    }
+                }
             }
         }
     }
@@ -228,20 +248,26 @@
 
 @media screen and (max-width: 1045px)
 {
-	/*------------------------------------*/
-	/* # Главная страница */
-	/*------------------------------------*/
-    .box
+    body .index-page#total_wrapper
     {
-        .content.index-page
+        #main_wrapper
         {
-            .column.left
+            /*------------------------------------*/
+            /* # Главная страница */
+            /*------------------------------------*/
+            .box
             {
-                width: 48%;
-            }
-            .column.right
-            {
-                width: 52%;
+                .content.index-page
+                {
+                    .column.left
+                    {
+                        width: 48%;
+                    }
+                    .column.right
+                    {
+                        width: 52%;
+                    }
+                }
             }
         }
     }
@@ -253,47 +279,62 @@
 
 @media screen and (max-width: 990px)
 {
-    .header
+    body .index-page#total_wrapper
     {
-        form.authorization
+        #main_wrapper
         {
-            input
+            .header
             {
-                width: 189px;
-            }
-        }
-    }
-    .header.fixed
-    {
-        .wrap
-        {
-            .user
-            {
-                width: 240px;                
-            }
-            .user.authorized
-            {
-                a.title
+                form.authorization
                 {
-                    width: 191px;
+                    input
+                    {
+                        width: 189px;
+                    }
+                    .submit-wrap
+                    {
+                        .button
+                        {
+                            width: 93px;
+                        }
+                    }
                 }
             }
-        }
-    }
-	/*------------------------------------*/
-	/* # Главная страница */
-	/*------------------------------------*/
-    .box
-    {
-        .content.index-page
-        {
-            .column.left
+
+            .header.fixed
             {
-                width: 50%;
+                .wrap
+                {
+                    .user
+                    {
+                        width: 240px;                
+                    }
+                    .user.authorized
+                    {
+                        a.title
+                        {
+                            width: 191px;
+                        }
+                    }
+                }
             }
-            .column.right
+
+            /*------------------------------------*/
+            /* # Главная страница */
+            /*------------------------------------*/
+            .box
             {
-                width: 50%;
+                .content.index-page
+                {
+                    .column.left
+                    {
+                        width: 50%;
+                    }
+                    .column.right
+                    {
+                        width: 50%;
+                    }
+                }
             }
         }
     }
@@ -301,36 +342,43 @@
 
 @media screen and (max-width: 960px)
 {
-	/*------------------------------------*/
-	/* # Шапка сайта */
-	/*------------------------------------*/
-	.header
+    body .index-page#total_wrapper
     {
-        .column.left
+        #main_wrapper
         {
-            width: 205px;
+            /*------------------------------------*/
+            /* # Шапка сайта */
+            /*------------------------------------*/
+            .header
+            {
+                .column.left
+                {
+                    width: 205px;
+                }
+                .column.right
+                {
+                    width: 755px;
+                }
+            }
+            .box
+            {
+                .column.left
+                {
+                    width: 205px;
+                }
+            }
+
+            /*------------------------------------*/
+            /* # Главная страница */
+            /*------------------------------------*/
+            .slider
+            {
+                position: relative;
+                right: auto;
+                top: auto;
+                left: auto;
+                width: 741px;
+            }
         }
-        .column.right
-        {
-            width: 755px;
-        }
-    }
-	.box
-    {
-        .column.left
-        {
-            width: 205px;
-        }
-    }
-	/*------------------------------------*/
-	/* # Главная страница */
-	/*------------------------------------*/
-    .slider
-    {
-        position: relative;
-        right: auto;
-        top: auto;
-        left: auto;
-        width: auto;
     }
 }

@@ -626,6 +626,7 @@ iframe[name="google_conversion_frame"]
 			a.title
 			{
 				position: relative;
+                width: 206px;
 				height: 43.5px; /* 39px при 10 категориях */
 				color: @colorLightBlack !important;
 				font-size: @fontSizeBasketTotal;
@@ -730,7 +731,7 @@ iframe[name="google_conversion_frame"]
 			}
 			.level.second
 			{
-				left: 257px;
+				left: 206px;
 				width: 252px;
 				border: 1px solid @colorRed;
 				.item
@@ -746,7 +747,13 @@ iframe[name="google_conversion_frame"]
                             vertical-align: baseline;
 							padding: 6px 29px 6px 24px;
                             width: auto;
-							span.name, span.icon { padding: 0px; }
+							span.name, span.icon
+                            {
+                                margin-left: 0px;
+                                margin-right: 0px;
+                                padding: 0px
+                            }
+                            span.name { width: auto; }
 							span.icon { right: 20px; }
 						}
 					}
@@ -877,7 +884,7 @@ iframe[name="google_conversion_frame"]
 			{
 				top:-1px;
 				left:-1px;
-                width: 100.2%;
+                width: 207px;
 				color: @colorRed !important;
 				border-top: 1px solid @colorRed;
 				border-bottom: 1px solid @colorRed;
@@ -928,7 +935,6 @@ iframe[name="google_conversion_frame"]
 				}
 			}
 		}
-		.item:last-child { }
 		.item:last-child:hover
 		{
 			.level { bottom:1px; }
@@ -2131,7 +2137,7 @@ iframe[name="google_conversion_frame"]
 					{
 						top: 33px;
 						left: auto;
-						right: -2px;
+						right: -4px;
 						width: 485px;
 						border-top: 1px solid @colorDrakerGrey;
 						a:before { display: none; }
@@ -2222,7 +2228,6 @@ iframe[name="google_conversion_frame"]
 				}
 				.feedback
 				{
-					display: none;
                     float: right;
 					margin-top: 5px;
                     padding: 0px;
@@ -2233,9 +2238,8 @@ iframe[name="google_conversion_frame"]
 					{
 						display: inline-block;
 						vertical-align: middle;
-						position: relative;
-						right: auto;
-						top: auto;
+                        font-size: 0px;
+                        line-height: 0px;
 						width: 0;
 						height: 0;
 						border-style: solid;
@@ -2248,9 +2252,14 @@ iframe[name="google_conversion_frame"]
 					span.icon { border-color: transparent transparent transparent @colorRed; }
 				}
 			}
+            .item.new.wholesale
+            {
+                display: none;
+            }
 		}
         .button.feedback
         {
+            display: none !important;
             position: absolute;
             right: 0px;
             top: 0px;
@@ -2285,7 +2294,13 @@ iframe[name="google_conversion_frame"]
         .button.feedback:hover
         {
             color: @colorWhite !important;
-            background-color: @colorBlueCallback;
+            background-color: @colorBlueCallbackHover;
+            /*
+            span.icon
+            {
+                background-color: @colorBlueCallback;
+            }
+            */
         }
 	}
 }
@@ -3214,7 +3229,7 @@ iframe[name="google_conversion_frame"]
 				margin: 0px;
 				padding-top: 21px;
 				padding-left: 15px;
-				width: auto;
+				width: auto !important;
 				height: auto;
 			}
 		}
@@ -6805,6 +6820,7 @@ iframe[name="google_conversion_frame"]
 		float: none;
 		margin-left: 261px;
 		width: 699px;
+        min-width: 699px;
         /* clearing bug fix */
         overflow: hidden;
 	}
@@ -6914,6 +6930,7 @@ iframe[name="google_conversion_frame"]
 			margin-left: 0px;
 			float: left;
 			width: 445px;
+            min-width: 0px;
 			border: 0px;
 			.social
 			{
@@ -7058,6 +7075,7 @@ iframe[name="google_conversion_frame"]
 			bottom: auto;
             margin: 0px;
 			width: 178px;
+            min-width: 0px;
             border-bottom: 0px;
             /*
 			margin: 0px 0px 0px 780px;
@@ -7479,9 +7497,9 @@ iframe[name="google_conversion_frame"]
 	{
 		position: absolute;
 		top: 0px;
-		left: 35px;
+		left: 36px;
 		margin: 0px;
-		width: 889px;
+		width: 888px;
 		height: 367px;
 		border-top: 0px;
 		border-right: 0px solid @colorDrakerGrey;
@@ -7805,14 +7823,14 @@ iframe[name="google_conversion_frame"]
 	a.left-nav
 	{	
 		left: 0px;
-        width: 35px;
+        width: 36px;
 		border-right:1px solid @colorDrakerGrey;
 		span { background-position: -28px 0px; }
 	}
 	a.right-nav
 	{
 		right: 0px;
-        width: 33px;
+        width: 40px;
 		border-left:1px solid @colorDrakerGrey;
 		span { background-position: -42px 0px; }
 	}
