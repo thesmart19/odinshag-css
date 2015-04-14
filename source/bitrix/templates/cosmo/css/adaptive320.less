@@ -768,6 +768,10 @@
                     width: 42px;
                     background-color: @colorDarkGrey;
                 }
+                span.icon:after
+                {
+                    .mixin-icon-callback-grey-svg;
+                }
             }
             .button.feedback:hover
             {
@@ -775,6 +779,22 @@
             }
 		}
 	}
+    .no-svg
+    {
+        .header
+        {
+            .column.right
+            {
+                .button.feedback
+                {
+                    span.icon:after
+                    {
+                        .mixin-icon-callback-grey-png;
+                    }
+                }
+            }
+        }
+    }
 	.header.catalog-search
 	{
 		z-index: 3;
@@ -1273,6 +1293,20 @@
             }
         }
 		.banner, .banner-ext { display: none; }
+        .description.landing, .description.landing.for-watering, .description.landing.for-hooch
+        {
+            .content
+            {
+                height: auto;
+            }
+        }
+        .description.for-watering, .description.for-hooch
+        {
+            .content
+            {
+                height: 189px;
+            }
+        }
         .description.watering, .description.hooch
         {
             margin-left: 10px;
@@ -2406,6 +2440,19 @@
                 margin: 0px;
                 width: auto;
             }
+            .column.left
+            {
+                .catalog
+                {
+                    .content
+                    {
+                        .item
+                        {
+                            a.title { width: auto; }
+                        }
+                    }
+                }
+            }
             .column.right
             {
                 .description
@@ -2443,20 +2490,19 @@
             .product-carousel
             {
                 margin: 0px;
-                width: 318px;
+                width: auto;
                 border-right: 1px solid @colorDrakerGrey;
                 .items-block
                 {
-                    width: 225px;
+                    right: 46px;
+                    width: auto;
                     ul.items
                     {
                         li.item
                         {
-                            width: 225px;
-                            a.img, .parameters
+                            a.img
                             {
-                                margin: 0px;
-                                width: 224px;
+                                img { max-width: 125px; }
                             }
                         }
                     }

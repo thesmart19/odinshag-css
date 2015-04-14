@@ -12,7 +12,6 @@ module.exports = function (grunt) {
                     /* главный файл стилей */
                     /* подготовка стилей для jQuery Scrollbar */
                     "build/bitrix/templates/cosmo/css/___jquery.custom-scrollbar.css": "source/bitrix/templates/cosmo/css/jquery.custom-scrollbar.less",
-                    "build/bitrix/templates/cosmo/css/___icons.css": "source/bitrix/templates/cosmo/css/icons.less",
                     "build/bitrix/templates/cosmo/css/style.css": "source/bitrix/templates/cosmo/css/style.less",
                     
                     /* стили для адаптивного дизайна */

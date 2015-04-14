@@ -6,7 +6,6 @@
 @import (once)		"source/include/no-svg.less";
 @import (once)		"source/include/spikes.less";
 @import (inline)	"build/bitrix/templates/cosmo/css/___jquery.custom-scrollbar.css";
-@import (inline)	"build/bitrix/templates/cosmo/css/___icons.css";
 
 a
 {
@@ -793,7 +792,7 @@ iframe[name="google_conversion_frame"]
 				top: -1px;
 				left: 253px;
 				bottom: -1px;
-				width: 501px;
+				width: 498px;
 				border-top: 1px solid @colorDrakerGrey;
 				border-right: 1px solid @colorDrakerGrey;
 				border-bottom: 1px solid @colorDrakerGrey;
@@ -1231,11 +1230,10 @@ iframe[name="google_conversion_frame"]
 		position: absolute;
         left: 12px;
         top: 0px;
-        right: 182px;
+        right: 0px;
         margin: 0px 0px 0px 0px;
         padding: 0px 99px 0px 20px;
         width: auto;
-        min-width: 622px;
 		height: 41px;
 		background-color: @colorWhite;
 		border:1px solid @colorDrakerGrey;
@@ -1276,6 +1274,7 @@ iframe[name="google_conversion_frame"]
         }
 		label.icon
 		{
+            .mixin-icon-search-svg;
 			pointer-events: none;
 			position: absolute;
 			right: 64px;
@@ -1283,9 +1282,11 @@ iframe[name="google_conversion_frame"]
 			width: 19px;
 			height: 14px;
             margin-top: -7px;
+            /*
 			background-image: url(@imageIconsSVG);
 			background-repeat: no-repeat;
 			background-position: -1px -2px;
+            */
 			z-index:2;
 		}
 	}
@@ -1671,6 +1672,10 @@ iframe[name="google_conversion_frame"]
                         font-size: inherit;
                         /* span для эксперимента */
 					}
+                    span:hover
+                    {
+                        background-color: inherit;
+                    }
                     span:before { display: none; }
 					span.arrow
 					{
@@ -2281,6 +2286,7 @@ iframe[name="google_conversion_frame"]
             }
             span.icon:after
             {
+                .mixin-icon-callback-white-svg;
                 content: " ";
                 display: block;
                 position: absolute;
@@ -4068,8 +4074,29 @@ iframe[name="google_conversion_frame"]
             .bg { left: 6px; }
         }
     }
+    ul.watering.advantage
+    {
+        li
+        {
+            .icon-1 { .mixin-icon-watering-advantage-1-svg; }
+            .icon-2 { .mixin-icon-watering-advantage-2-svg; }
+            .icon-3 { .mixin-icon-watering-advantage-3-svg; }
+            .icon-4 { .mixin-icon-watering-advantage-4-svg; }
+            .icon-5 { .mixin-icon-watering-advantage-5-svg; }
+            .icon-6 { .mixin-icon-watering-advantage-6-svg; }
+        }
+    }
     ul.hooch.advantage
     {
+        li
+        {
+            .icon-1 { .mixin-icon-hooch-advantage-1-svg; }
+            .icon-2 { .mixin-icon-hooch-advantage-2-svg; }
+            .icon-3 { .mixin-icon-hooch-advantage-3-svg; }
+            .icon-4 { .mixin-icon-hooch-advantage-4-svg; }
+            .icon-5 { .mixin-icon-hooch-advantage-5-svg; }
+            .icon-6 { .mixin-icon-hooch-advantage-6-svg; }
+        }
         li:nth-child(5), li:nth-child(6)
         {
             height: 145px;
@@ -4895,11 +4922,14 @@ iframe[name="google_conversion_frame"]
 				color: @colorRed;
                 border: 0px;
                 border-bottom: 1px solid @colorDrakerGrey;
+                a, span
+                {
+                    font-size: @fontSizeOrder;
+                }
 				a
 				{
 					display: inline;
 					color: @colorLightBlack;
-                    font-size: @fontSizeBasketTotal;
 				}
 				span.icon
 				{
@@ -5120,6 +5150,39 @@ iframe[name="google_conversion_frame"]
         padding: 0px;
         max-width: 958px;
         border-bottom: 1px solid @colorDrakerGrey;
+    }
+    /* описание без фильтра */
+    .description.landing, .description.landing.for-watering, .description.landing.for-hooch
+    {
+        margin: 0px;
+        padding: 0px;
+        .content
+        {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            height: auto;
+            overflow: visible;
+        }
+        a.show-more { display: none !important; }
+    }
+    /* описание + фильтр */
+    .description.for-watering, .description.for-hooch
+    {
+        .content
+        {
+            display: block;
+            padding: 0px;
+            height: 193px;
+        }
+        .content.open
+        {
+            margin: 0px;
+            ul.important
+            {
+                margin-bottom: 0px;
+            }
+        }
     }
     .description.watering, .description.hooch
     {
@@ -7033,6 +7096,11 @@ iframe[name="google_conversion_frame"]
     {
         border: 1px solid @colorYellow;
         h3 { border-bottom: 1px solid @colorYellow; }
+    }
+    .newsletter.product-select.red
+    {
+        border: 1px solid @colorRed;
+        h3 { border-bottom: 1px solid @colorRed; }
     }
     .newsletter.product-select.search
     {
@@ -13523,6 +13591,15 @@ body
 									max-width: 132px;
 									word-wrap: break-word;
 								}
+                                td.type
+                                {
+                                    color: @colorLighterBlack;
+                                    /*font-weight: bold;*/
+                                }
+                                td.amount
+                                {
+                                    color: @colorLightBlack;
+                                }
 							}
 							tr:last-child { border-bottom: 0px; }
 						}
@@ -14212,6 +14289,7 @@ body
             margin-left: 290px;
             padding-right: 48px;
             width: 620px;
+            min-width: 0px;
             .title
             {
                 margin: 33px 0px 34px 0px;
@@ -14234,12 +14312,13 @@ body
     border: 0px;
     .column.left
     {
-        width: 205px;
+        width: 208px;
     }
     .column.right
     {
         margin-left: 217px;
         width: 743px;
+        min-width: 0px;
         .description
         {
             margin: 12px 0px 0px 0px;

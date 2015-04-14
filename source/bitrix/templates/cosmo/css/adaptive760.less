@@ -72,6 +72,10 @@
         {
             width: auto;
         }
+        form.search
+        {
+            min-width: 0px;
+        }
     }
 	.header
 	{
@@ -572,6 +576,13 @@
         .description.action > img
         {
             max-width: @pageWrapWidth760 - 2;
+        }
+        .description.for-watering, .description.for-hooch
+        {
+            .content
+            {
+                height: 236px;
+            }
         }
 		.subscections
 		{
@@ -1612,12 +1623,26 @@
             .column.left
             {
                 width: 205px;
+                .catalog
+                {
+                    .content
+                    {
+                        .item
+                        {
+                            a.title
+                            {
+                                width: 204px;
+                            }
+                        }
+                    }
+                }
             }
             .column.right
             {
                 float: none;
                 margin-left: 217px;
                 width: 543px;
+                min-width: 0px;
                 span.red
                 {
                     white-space: nowrap;
@@ -1671,7 +1696,14 @@
                         {
                             a.img
                             {
-                                img { max-width: 210px; }
+                                img { max-width: 155px; }
+                            }
+                            .parameters
+                            {
+                                .buttons
+                                {
+                                    overflow: hidden;
+                                }
                             }
                         }
                     }

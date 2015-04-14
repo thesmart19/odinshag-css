@@ -1,10 +1,11 @@
 // out: null
 
+@import (reference)	"mixins.less";
+
 .no-svg
 {
 	.odinshag-logo { background-image: url(@imageLogoPNG); }
-	.header form.search label.icon,
-		.header .column.left .catalog .button span.icon:after,
+    .header .column.left .catalog .button span.icon:after,
 		.header .column.left .catalog .button span.name:after,
 		.header .column.right .menu .item a.title span span.icon,
 		.header .column.right .menu .item .content a span.icon,
@@ -127,4 +128,8 @@
 	}
     /* костыли и исключения */
     .box ul.product-list li.item .parameters .available.pick-up-today span.icon { background-image: none; }
+    
+    /* CSS Sprite */
+    .header .column.right .button.feedback span.icon:after  { .mixin-icon-callback-white-png; }
+    .header form.search label.icon                          { .mixin-icon-search-png; }
 }
