@@ -51,7 +51,7 @@
 	/*------------------------------------*/
 	/* # Фиксированная шапка */
 	/*------------------------------------*/
-    body #total_wrapper.index-page #main_wrapper .header.fixed
+    body #total_wrapper.wide #main_wrapper .header.fixed
     {
         .wrap
         {
@@ -250,7 +250,7 @@
 	/*------------------------------------*/
 	/* # Шапка сайта */
 	/*------------------------------------*/
-    body #total_wrapper.index-page #main_wrapper .header
+    body #total_wrapper.wide #main_wrapper .header
     {
         .column.left
         {
@@ -821,7 +821,7 @@
 	/*------------------------------------*/
 	/* # Футер */
 	/*------------------------------------*/
-    body #total_wrapper.index-page .footer
+    body #total_wrapper.wide .footer
     {
 		.wrap
 		{
@@ -882,7 +882,7 @@
 	/*------------------------------------*/
 	/* # Меню каталога товаров */
 	/*------------------------------------*/
-    body #total_wrapper.index-page #main_wrapper
+    body #total_wrapper.wide #main_wrapper
     {
         .catalog
         {
@@ -1461,8 +1461,15 @@
                     word-spacing: normal;
                 }
 			}
-			.subsection.last-in-row { margin-right: 6px; }
-			.subsection:nth-child(2), .subsection:nth-child(6), .subsection:nth-child(10), .subsection:nth-child(14), .subsection:nth-child(18) { margin-right: 0px; }
+            /* по три блока в строке */
+            .subsection:nth-child(5), .subsection:nth-child(10), .subsection:nth-child(15), .subsection:nth-child(20), .subsection:nth-child(25), .subsection:nth-child(4), .subsection:nth-child(8), .subsection:nth-child(12), .subsection:nth-child(16), .subsection:nth-child(20), .subsection:nth-child(24)
+            {
+                margin-right: 6px;
+            }
+            .subsection:nth-child(3), .subsection:nth-child(6), .subsection:nth-child(9), .subsection:nth-child(12), .subsection:nth-child(15), .subsection:nth-child(18), .subsection:nth-child(21), .subsection:nth-child(24)
+            {
+                margin-right: 0px;
+            }
 		}
 		/* Фильтры каталога товаров */
 		.drop-down
@@ -4681,131 +4688,10 @@
 
 
 /*---------------------------------------------------------------------------*/
-/* # Ширина экрана >= 375 и <= viewportMaxWidth */
+/* # Ширина экрана <= 475
 /*---------------------------------------------------------------------------*/
-@media screen and (min-width: 375px) and (max-width: @viewportMaxWidth)
+@media screen and (max-width: 475px)
 {
-    /* Популярные категории на Главной странице */
-    /*
-	body #total_wrapper #main_wrapper .category.box
-	{
-        .content.index-page
-        {
-            .column.right
-            {
-                .block.frame.categories
-                {
-                    width: 373px;
-                    .content
-                    {
-                        .product-carousel
-                        {
-                            .items-block
-                            {
-                                width: 305px;
-                                ul.items
-                                {
-                                    li.item
-                                    {
-                                        width: 152px;
-                                        a
-                                        {
-                                            margin-right: 1px;
-                                            width: 148px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    */
-    /*
-    body #total_wrapper #main_wrapper .category.box.main_content
-    {
-        .not-found
-        {
-            .product-carousel
-            {
-                width: 373px;
-                .items-block
-                {
-                    width: 289px;
-                    ul.items
-                    {
-                        li.item
-                        {
-                            width: 144px;
-                            a.img
-                            {
-                                width: 144px !important;
-                            }
-                            .parameters
-                            {
-                                .buttons
-                                {
-                                    left: 0px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    */
-}
-
-
-
-
-
-/*---------------------------------------------------------------------------*/
-/* # Ширина экрана >= 485 и <= viewportMaxWidth */
-/*---------------------------------------------------------------------------*/
-@media screen and (min-width: 485px) and (max-width: @viewportMaxWidth)
-{
-    /* Популярные категории на Главной странице */
-    /*
-	body #total_wrapper #main_wrapper .category.box
-	{
-        .content.index-page
-        {
-            .column.right
-            {
-                .block.frame.categories
-                {
-                    width: 483px;
-                    .content
-                    {
-                        .product-carousel
-                        {
-                            .items-block
-                            {
-                                width: 415px;
-                                ul.items
-                                {
-                                    li.item
-                                    {
-                                        width: 138px;
-                                        a
-                                        {
-                                            margin-right: 0px;
-                                            width: 135px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    */
 	/*------------------------------------*/
 	/* # Остальные страницы */
 	/*------------------------------------*/
@@ -4813,102 +4699,16 @@
 	{
 		.subscections
 		{
-			.subsection:nth-child(2), .subsection:nth-child(4), .subsection:nth-child(8), .subsection:nth-child(10), .subsection:nth-child(14), .subsection:nth-child(16), .subsection:nth-child(20) { margin-right: 6px; }
-			.subsection:nth-child(3), .subsection:nth-child(9), .subsection:nth-child(12), .subsection:nth-child(15), .subsection:nth-child(18) { margin-right: 0px; }
+			.subsection:nth-child(3), .subsection:nth-child(6), .subsection:nth-child(9), .subsection:nth-child(12), .subsection:nth-child(15), .subsection:nth-child(18), .subsection:nth-child(21), .subsection:nth-child(24)
+            {
+                margin-right: 6px;
+            }
+            .subsection:nth-child(2), .subsection:nth-child(4), .subsection:nth-child(6), .subsection:nth-child(8), .subsection:nth-child(10), .subsection:nth-child(12), .subsection:nth-child(14), .subsection:nth-child(16), .subsection:nth-child(18), .subsection:nth-child(20), .subsection:nth-child(22), .subsection:nth-child(24)
+            {
+                margin-right: 0px;
+            }
 		}
 	}
-}
-
-
-
-
-
-/*---------------------------------------------------------------------------*/
-/* # Ширина экрана >= 550 и <= viewportMaxWidth */
-/*---------------------------------------------------------------------------*/
-@media screen and (min-width: 550px) and (max-width: @viewportMaxWidth)
-{
-    /* Популярные категории на Главной странице */
-    /*
-	body #total_wrapper #main_wrapper .category.box
-	{
-        .content.index-page
-        {
-            .column.right
-            {
-                .block.frame.categories
-                {
-                    width: 568px;
-                    .content
-                    {
-                        .product-carousel
-                        {
-                            .items-block
-                            {
-                                width: 500px;
-                                ul.items
-                                {
-                                    li.item
-                                    {
-                                        width: 125px;
-                                        a
-                                        {
-                                            margin-right: 1px;
-                                            width: 121px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    */
-}
-
-
-
-
-
-/*---------------------------------------------------------------------------*/
-/* # Ширина экрана <= viewportMaxWidth */
-/*---------------------------------------------------------------------------*/
-@media screen and (max-width: @viewportMaxWidth)
-{
-    body #total_wrapper #main_wrapper
-    {
-        /*------------------------------------*/
-        /* # Скидки дня */
-        /*------------------------------------*/
-        .category.box.main_content.skidki_dnya
-        {
-            /*
-            .tabs.schedule
-            {
-                .pages
-                {
-                    .product-carousel
-                    {
-                        width: 318px;
-                        .items-block
-                        {
-                            width: 234px;
-                        }
-                        .banner
-                        {
-                            background-image: url("/images/cosmo/discount-soon-small.jpg");
-                            background-repeat: no-repeat;
-                            background-position: center center;
-                            img { display: none; }
-                        }
-                    }
-                }
-            }
-            */
-        }
-    }
 }
 
 
@@ -4932,45 +4732,6 @@
             {
                 border-top: 1px solid @colorDrakerGrey;
             }
-            /*
-            li.item.last-row
-            {
-                margin-bottom: 3px;
-                .parameters
-                {
-                    border-bottom: 0px;
-                }
-            }
-            /*
-            li.item:nth-child(1), li.item:nth-child(2)
-            {
-                border-top: 0px;
-            }
-            li.item:nth-child(2), li.item:nth-child(4), li.item:nth-child(6), li.item:nth-child(8), li.item:nth-child(10), li.item:nth-child(12), li.item:nth-child(14), li.item:nth-child(16), li.item:nth-child(18)
-            {
-                border-right: 1px solid @colorDrakerGrey;
-            }
-            li.item:nth-child(3), li.item:nth-child(5), li.item:nth-child(9), li.item:nth-child(11), li.item:nth-child(15), li.item:nth-child(17)
-            {
-                border-left: 1px solid @colorDrakerGrey;
-            }
-            li.item:nth-child(4)
-            {
-                border-left: 0px;
-            }
-            li.item:nth-child(9), li.item:nth-child(15)
-            {
-                border-right: 0px;
-            }
-            li.item:nth-child(16)
-            {
-                border-bottom: 1px solid @colorDrakerGrey;
-            }
-            li.item:nth-child(17), li.item:nth-child(18)
-            {
-                margin-bottom: 0px;
-            }
-            */
         }
     }
 }
@@ -5094,16 +4855,6 @@
             {
                 margin-right: 0px;
             }
-            /*
-            li.item:nth-child(1), li.item:nth-child(3), li.item:nth-child(5), li.item:nth-child(7), li.item:nth-child(9), li.item:nth-child(11), li.item:nth-child(13), li.item:nth-child(15), li.item:nth-child(17)
-            {
-                border-left: 0px;
-            }
-            li.item:nth-child(2), li.item:nth-child(4), li.item:nth-child(6), li.item:nth-child(8), li.item:nth-child(10), li.item:nth-child(12), li.item:nth-child(14), li.item:nth-child(16), li.item:nth-child(18)
-            {
-                border-right: 0px;
-            }
-            */
         }
     }
 }

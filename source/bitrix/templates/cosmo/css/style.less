@@ -4174,11 +4174,11 @@ iframe[name="google_conversion_frame"]
 	{
 		display: block;
 		margin: 12px 0px 12px 0px;
-		width: @pageWrapWidth;
+		width: @pageWrapWidth1195; /* @pageWrapWidth */
 		height: auto;
 		img
 		{
-			width: @pageWrapWidth;
+			width: @pageWrapWidth1195; /* @pageWrapWidth */
 			height: auto;
 		}
 	}
@@ -5278,10 +5278,9 @@ iframe[name="google_conversion_frame"]
 			position: relative;
 			float: left;
 			margin: 0px 12px 12px 0px;
-			width: 180px; /* 182 */
-			height: 205px;
+			width: 189px;
+			height: 207px;
 			background-color: @colorWhite;
-			border:1px solid @colorLightGrey;
 			background-color: @colorLightGrey;
 			.subsection_img
 			{	
@@ -5316,7 +5315,10 @@ iframe[name="google_conversion_frame"]
 			}
 		}
 		.subsection:hover { background-color: @colorGreyHover2; }
-		.subsection.last-in-row { margin-right: 0px; }
+        .subsection:nth-child(6), .subsection:nth-child(12), .subsection:nth-child(18), .subsection:nth-child(24)
+        {
+            margin-right: 0px;
+        }
 	}
 	/* стили для списка товаров, размещенного в одином широком столбце*/
 	.wide-catalog
@@ -6882,8 +6884,8 @@ iframe[name="google_conversion_frame"]
 	{
 		float: none;
 		margin-left: 261px;
-		width: 699px;
-        min-width: 699px;
+		width: 934px;
+        min-width: 934px;
         /* clearing bug fix */
         overflow: hidden;
 	}

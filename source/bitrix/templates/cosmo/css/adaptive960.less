@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 1360px)
 {
-    body .index-page#total_wrapper
+    body #total_wrapper.wide
     {
         #main_wrapper
         {
@@ -51,7 +51,7 @@
     {
         min-width: 0px !important;
     }
-    body .index-page#total_wrapper
+    body #total_wrapper.wide
     {
 		#main_wrapper
 		{
@@ -150,7 +150,69 @@
                     }
                 }
             }
-		}
+            /*------------------------------------*/
+            /* # Сквозные баннеры */
+            /*------------------------------------*/
+            .banner-ext
+            {
+                width: 100%;
+                img
+                {
+                    width: 100%;
+                }
+            }
+            /*------------------------------------*/
+            /* # Остальные страницы */
+            /*------------------------------------*/
+            .box
+            {
+                .drop-down
+                {
+                    .content
+                    {
+                        .range
+                        {
+                            .slider
+                            {
+                                position: relative;
+                                top: auto;
+                                left: auto;
+                                right: auto;
+                                overflow: visible;
+                            }
+                        }
+                    }
+                }
+                .subscections
+                {
+                    .subsection
+                    {
+                        margin-right: 1.2%;
+                        width: 15.6%;
+                    }
+                    .subsection:nth-child(6), .subsection:nth-child(12), .subsection:nth-child(18), .subsection:nth-child(24)
+                    {
+                        margin-right: 0px;
+                    }
+                }
+            }
+            .main_content
+            {
+                .column.right
+                {
+                    margin-left: 22%;
+                    width: 78%;
+                    min-width: 0px;
+                }
+            }
+            ul.product-list.vertical
+            {
+                li.item, li.item:nth-child(4), li.item:nth-child(8), li.item:nth-child(12), li.item:nth-child(16), li.item:nth-child(20)
+                {
+                    margin-right: 6px;
+                }
+            }
+        }
         /*------------------------------------*/
         /* # Фиксированный футер */
         /*------------------------------------*/
@@ -182,9 +244,27 @@
     }
 }
 
+@media screen and (max-width: 1160px)
+{
+    body #total_wrapper.wide
+    {
+        #main_wrapper
+        {
+            .main_content
+            {
+                .column.right
+                {
+                    margin-left: 23%;
+                    width: 77%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1140px)
 {
-    body .index-page#total_wrapper
+    body #total_wrapper.wide
     {
         #main_wrapper
         {
@@ -219,9 +299,27 @@
     }
 }
 
+@media screen and (max-width: 1115px)
+{
+    body #total_wrapper.wide
+    {
+        #main_wrapper
+        {
+            .main_content
+            {
+                .column.right
+                {
+                    margin-left: 24%;
+                    width: 76%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1100px)
 {
-    body .index-page#total_wrapper
+    body #total_wrapper.wide
     {
         #main_wrapper
         {
@@ -246,9 +344,27 @@
     }
 }
 
+@media screen and (max-width: 1065px)
+{
+    body #total_wrapper.wide
+    {
+        #main_wrapper
+        {
+            .main_content
+            {
+                .column.right
+                {
+                    margin-left: 25%;
+                    width: 75%;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1045px)
 {
-    body .index-page#total_wrapper
+    body #total_wrapper.wide
     {
         #main_wrapper
         {
@@ -273,13 +389,27 @@
     }
 }
 
-@media screen and (max-width: 1030px)
+@media screen and (max-width: 1025px)
 {
+    body #total_wrapper.wide
+    {
+        #main_wrapper
+        {
+            .main_content
+            {
+                .column.right
+                {
+                    margin-left: 26%;
+                    width: 74%;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 990px)
 {
-    body .index-page#total_wrapper
+    body #total_wrapper.wide
     {
         #main_wrapper
         {
@@ -340,9 +470,44 @@
     }
 }
 
+@media screen and (max-width: 985px)
+{
+    body #total_wrapper.wide
+    {
+        #main_wrapper
+        {
+            .main_content
+            {
+                .column.right
+                {
+                    margin-left: 27%;
+                    width: 73%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 970px)
+{
+    body #total_wrapper.wide
+    {
+        #main_wrapper
+        {
+            ul.product-list.vertical
+            {
+                li.item:nth-child(3), li.item:nth-child(6), li.item:nth-child(9), li.item:nth-child(12), li.item:nth-child(15), li.item:nth-child(18), li.item:nth-child(21), li.item:nth-child(24)
+                {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 960px)
 {
-    body .index-page#total_wrapper
+    body #total_wrapper.wide
     {
         #main_wrapper
         {
@@ -378,6 +543,37 @@
                 top: auto;
                 left: auto;
                 width: 741px;
+            }
+            
+            /*------------------------------------*/
+            /* # Остальные страницы */
+            /*------------------------------------*/
+            .box
+            {
+                .subscections
+                {
+                    .subsection
+                    {
+                        margin-right: 12px;
+                        width: 182px;
+                    }
+                    .subsection:nth-child(6), .subsection:nth-child(12), .subsection:nth-child(18), .subsection:nth-child(24)
+                    {
+                        margin-right: 12px;
+                    }
+                    .subsection:nth-child(5), .subsection:nth-child(10), .subsection:nth-child(15), .subsection:nth-child(20), .subsection:nth-child(25)
+                    {
+                        margin-right: 0px;
+                    }
+                }
+            }
+            .main_content
+            {
+                .column.right
+                {
+                    margin-left: 261px;
+                    width: 699px;
+                }
             }
         }
     }

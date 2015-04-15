@@ -29,8 +29,8 @@ body #total_wrapper
 	min-height: 100%;
 }
 
-/* костыль для выделения главной страницы от остальных */
-body .index-page#total_wrapper
+/* костыль для выделения широкой версии от остальных */
+body #total_wrapper.wide
 {
     #main_wrapper
     {
@@ -130,6 +130,17 @@ body .index-page#total_wrapper
                         }
                     }
                 }
+            }
+        }
+        ul.product-list.vertical
+        {
+            li.item.no-border
+            {
+                margin-right: 6px;
+            }
+            li.item:nth-child(4), li.item:nth-child(8), li.item:nth-child(12), li.item:nth-child(16), li.item:nth-child(20)
+            {
+                margin-right: 0px;
             }
         }
     }

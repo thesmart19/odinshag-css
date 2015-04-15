@@ -19,7 +19,7 @@
 	/*------------------------------------*/
 	/* # Фиксированная шапка */
 	/*------------------------------------*/
-    body #total_wrapper.index-page #main_wrapper .header.fixed
+    body #total_wrapper.wide #main_wrapper .header.fixed
     {
 		.wrap
 		{
@@ -66,7 +66,7 @@
 	/*------------------------------------*/
 	/* # Шапка сайта */
 	/*------------------------------------*/
-    body #total_wrapper.index-page #main_wrapper .header
+    body #total_wrapper.wide #main_wrapper .header
     {
         .column.right
         {
@@ -224,7 +224,7 @@
 	/*------------------------------------*/
 	/* # Фиксированный футер */
 	/*------------------------------------*/
-    body #total_wrapper.index-page #main_wrapper .footer.fixed
+    body #total_wrapper.wide #main_wrapper .footer.fixed
     {
 		.wrap
 		{
@@ -252,7 +252,7 @@
 	/*------------------------------------*/
 	/* # Футер */
 	/*------------------------------------*/
-    body #total_wrapper.index-page .footer
+    body #total_wrapper.wide .footer
     {
         .wrap
         {
@@ -588,9 +588,18 @@
 		{
 			margin: 0px auto 0px auto;
 			width: @pageWrapWidth760;
-			.subsection { width: 179px; }
-			.subsection:nth-child(4), .subsection:nth-child(8), .subsection:nth-child(12), .subsection:nth-child(16), .subsection:nth-child(20) { margin-right: 0px; }
-			.subsection.last-in-row { margin-right: 12px; }
+			.subsection
+            {
+                width: 181px;
+            }
+            .subsection:nth-child(5), .subsection:nth-child(10), .subsection:nth-child(15), .subsection:nth-child(20), .subsection:nth-child(25)
+            {
+                margin-right: 12px;
+            }
+			.subsection:nth-child(4), .subsection:nth-child(8), .subsection:nth-child(12), .subsection:nth-child(16), .subsection:nth-child(20), .subsection:nth-child(24)
+            {
+                margin-right: 0px;
+            }
 		}
 		.categories
 		{
@@ -1711,6 +1720,19 @@
                 a.left-nav, a.right-nav
                 {
                     width: 46px;
+                }
+            }
+        }
+        .drop-down
+        {
+            .content
+            {
+                .range
+                {
+                    .slider
+                    {
+                        width: auto;
+                    }
                 }
             }
         }
