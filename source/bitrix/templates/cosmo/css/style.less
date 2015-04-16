@@ -806,17 +806,17 @@ iframe[name="google_conversion_frame"]
 					list-style: none;
 					margin: 0px;
 					padding: 9px 0px 7px 0px;
-					width: 250px;
+					width: 249px; /* 250px */
 					color:@colorRed;
 					z-index: 2;
 					li
 					{
 						display: list-item;
 						position: relative;
-						float: none; /*left*/
+						float: none;
 						margin: 0px 0px 1px 0px;
 						padding: 4px 12px 4px 31px;
-						width: auto; /*226*/
+						width: auto;
 						min-height: 18px;
 						a
 						{
@@ -1304,6 +1304,8 @@ iframe[name="google_conversion_frame"]
 				.mixin-box-shadow;
 				display: none;
 				position: absolute;
+                left: 0px;
+                right: 0px;
 				top: 43px;
 				/*border-top:0px;*/
 				background-color: @colorWhite;
@@ -4174,11 +4176,11 @@ iframe[name="google_conversion_frame"]
 	{
 		display: block;
 		margin: 12px 0px 12px 0px;
-		width: @pageWrapWidth1195; /* @pageWrapWidth */
+		width: auto;
 		height: auto;
 		img
 		{
-			width: @pageWrapWidth1195; /* @pageWrapWidth */
+			width: auto;
 			height: auto;
 		}
 	}
@@ -7568,8 +7570,9 @@ iframe[name="google_conversion_frame"]
 		position: absolute;
 		top: 0px;
 		left: 36px;
+        right: 36px;
 		margin: 0px;
-		width: 888px;
+		width: auto; /* 888px */
 		height: 367px;
 		border-top: 0px;
 		border-right: 0px solid @colorDrakerGrey;
@@ -11546,7 +11549,7 @@ body
 .photo-slider
 {
 	position: relative;
-	width: 561px;
+	width: auto; /* 561px */
 	a
 	{ 
 		display: block;
@@ -11556,7 +11559,7 @@ body
 	{
 		display: block;
 		position: relative;
-		width: 559px;
+		width: auto; /* 559px */
 		height: 408px;
 		text-align:center;
 		border: 1px solid @colorDrakerGrey;
@@ -11569,12 +11572,12 @@ body
 		li
 		{	
 			display: none;
-			width: 559px;
+			width: auto; /* 559px */
 			height: 408px;
 			a.zoom
 			{
 				position: relative;
-				width: 559px;
+				width: auto; /* 559px */
 				height: 408px;
                 img, span.helper
                 {
@@ -11598,19 +11601,31 @@ body
 					height:100%;
                     z-index: 1;
 				}
+                span.lens, span.full-size
+                {
+                    display: block;
+                    position: absolute;
+                    bottom: 12px;
+                    z-index: 3;
+                }
                 span.lens
                 {
                     .mixin-icon;
-                    position: absolute;
-                    left: 50%;
-                    top: 12px;
-                    right: auto;
-                    bottom: auto;
-                    margin: 0px 0px 0px -12px;
+                    right: 81px;
                     width: 23px;
                     height: 23px;
                     background-position: 0px -79px;
-                    z-index: 3;
+                }
+                span.full-size
+                {
+                    .mixin-icon-full-size-grey-svg;
+                    right: 46px;
+                    width: 23px;
+                    height: 19px;
+                }
+                span.full-size:hover
+                {
+                    .mixin-icon-full-size-red-svg
                 }
 			}
 			a.zoom:hover
