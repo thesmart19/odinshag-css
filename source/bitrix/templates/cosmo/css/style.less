@@ -5045,6 +5045,11 @@ iframe[name="google_conversion_frame"]
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             text-overflow: ellipsis;
+            h2, h3
+            {
+                margin-top: 24px;
+                margin-bottom: 6px;
+            }
             h3
             {
                 font-size: @fontSizeH3;
@@ -5131,6 +5136,7 @@ iframe[name="google_conversion_frame"]
         padding: 0px 0px 13px 0px;
         color: @colorLighterBlack !important;
         line-height: @lineHeightButton !important;
+        text-align: center;
         background-color: @colorWhite;
         border: 1px solid @colorDrakerGrey;
         br
@@ -5143,14 +5149,16 @@ iframe[name="google_conversion_frame"]
             padding: 0px 19px 0px 19px;
             color: @colorLighterBlack !important;
             line-height: @lineHeightButton !important;
+            text-align: left;
         }
     }
     .description.action > img
     {
         display: inline-block;
+        position: relative;
         margin: 0px 0px 11px 0px !important;
         padding: 0px;
-        max-width: 958px;
+        width: 100%;
         border-bottom: 1px solid @colorDrakerGrey;
     }
     /* описание без фильтра */
@@ -5325,33 +5333,28 @@ iframe[name="google_conversion_frame"]
 	/* стили для списка товаров, размещенного в одином широком столбце*/
 	.wide-catalog
 	{
-		/*border:1px solid @colorDrakerGrey;*/
         .pager.one-page-products
         {
             display: none;
         }
-        /*
-        ul.product-list.one-page-products
-        {
-            li.item.first-row
-            {
-                border-top: 1px solid @colorDrakerGrey;
-            }
-        }
-        */
 		.catalog
 		{
 			margin:0px;
 			ul.product-list.vertical
 			{
 				margin: 0px 8px 0px 9px;
-				li.item
-				{
-					border-left:1px solid @colorDrakerGrey;
-					border-right:0px;
-				}
-				li.item:last-child { border-right:1px solid @colorDrakerGrey; }
-				li.item.no-border { border-right:1px solid @colorDrakerGrey; }
+                li.item
+                {
+                    margin-right: 6px;
+                }
+                li.item:nth-child(4), li.item:nth-child(8), li.item:nth-child(12), li.item:nth-child(16), li.item:nth-child(20)
+                {
+                    margin-right: 6px;
+                }
+                li.item:nth-child(5), li.item:nth-child(10), li.item:nth-child(15), li.item:nth-child(20), li.item:nth-child(25)
+                {
+                    margin-right: 0px;
+                }
 			}
 		}
 	}
@@ -6697,7 +6700,6 @@ iframe[name="google_conversion_frame"]
         }
         .column.right
         {
-            width: 699px;
             ul.product-list
             {
                 .scroll-bar
@@ -6840,8 +6842,10 @@ iframe[name="google_conversion_frame"]
         }
         .column.right
         {
+            /*
             margin-left: 254px;
             width: 706px;
+            */
         }
     }
 }
@@ -7071,7 +7075,7 @@ iframe[name="google_conversion_frame"]
             {
                 margin: 0px 0px 12px 326px;
                 padding: 0px 10px 0px 10px;
-                width: 562px;
+                width: 797px;
                 height: 97px;
                 font-size: @fontSizeDefault;
             }
@@ -7105,6 +7109,17 @@ iframe[name="google_conversion_frame"]
     {
         border: 1px solid @colorRed;
         h3 { border-bottom: 1px solid @colorRed; }
+    }
+    /* костыль для страницы 404 */
+    .newsletter.product-select.viewed.red
+    {
+        form
+        {
+            textarea
+            {
+                width: 562px;
+            }
+        }
     }
     .newsletter.product-select.search
     {
@@ -8878,7 +8893,7 @@ ul.product-list.vertical.scroll
 		position: relative;
 		float: none;
 		margin: 0px;
-        width: 234px;
+        width: 232px;
 		vertical-align: top;
         border-top: 0px;
 		border-bottom: 0px;
@@ -9239,6 +9254,7 @@ ul.product-list.horizontal.actions
 {
 	li.item
 	{
+        margin-right: 0px;
 		height: 135px;
         border: 1px solid @colorDrakerGrey;
 		a.banner, .date, .announce
@@ -13648,10 +13664,14 @@ body
 					display: none;
 					margin: 24px 0px 0px 0px;
 					padding: 12px 0px 0px 0px;
+                    h2, h3
+                    {
+                        margin-top: 24px;
+                        margin-bottom: 6px;
+                    }
 					h3
 					{
 						padding-left: 10px;
-						margin-bottom: 24px;
 						font-size: @fontSizeIconArrow;
 						font-weight: normal;
 					}

@@ -1,0 +1,39 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.delivery
+{
+	padding: 12px 12px 48px 12px;
+	border:1px solid @colorDrakerGrey;
+	background-color: @colorWhite;
+	h3
+	{
+		margin:18px 0px 6px 0px;
+		color: @colorLightBlack;
+	}
+	p
+	{
+		margin: 12px 0px 12px 0px;
+		padding:0px;
+	}
+	ul
+	{
+		margin: 0px 0px 24px 0px;
+		padding: 0px 0px 0px 12px;
+		list-style: disc inside none;
+		li
+		{
+			margin: 0px 0px 12px 0px;
+			color: @colorRed;
+			span { color: @colorLighterBlack; }
+		}
+	}
+	.banner
+	{
+        display: block;
+        margin: 0px auto 0px auto;
+		width: 934px;
+	}
+}
