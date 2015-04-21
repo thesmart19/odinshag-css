@@ -1261,6 +1261,53 @@
                 }
             }
         }
+        .partners
+        {
+            position: relative;
+            margin: 12px 0px 0px 0px;
+            border: 1px solid @colorDrakerGrey;
+            background-color: @colorLightGrey;
+            .title
+            {
+                position: relative;
+                padding: 0px 0px 0px 38px;
+                height: 29px;
+                color: @colorLightBlack;
+                font-weight: bold;
+                line-height: @lineHeightProductPreview;
+                span.icon
+                {
+                    .mixin-icon-pin-svg;
+                    display: block;
+                    position: absolute;
+                    left: 12px;
+                    top: 0px;
+                    width: 22px;
+                    height: 29px;
+                }
+            }
+            .text
+            {
+                margin: 0px;
+                padding: 0px 12px 6px 12px;
+                line-height: @lineHeightDefault;
+            }
+        }
+        .partners:after
+        {
+            content: " ";
+            display: block;
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            right: auto;
+            bottom: -1px;
+            width: 3px;
+            height: auto;
+            font-size: 0px;
+            line-height: 0px;
+            background-color: @colorLightBlue2;
+        }
 	}
 	.card-product-desc.absolute
 	{

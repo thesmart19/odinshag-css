@@ -258,6 +258,25 @@
     /Открыть фото в новом окне
 \*---------------------------------------------------------------------------*/
 
+/*---------------------------------------------------------------------------*\
+    #Канцелярская кнопка на странице товара
+\*---------------------------------------------------------------------------*/
+.mixin-icon-pin-svg
+{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22%D0%A1%D0%BB%D0%BE%D0%B9_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20width%3D%2222px%22%20height%3D%2222px%22%20viewBox%3D%220%200%2022%2022%22%20enable-background%3D%22new%200%200%2022%2022%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20fill%3D%22%237ACCCE%22%20d%3D%22M15.423%2C1.362c-0.193%2C0.355-0.097%2C0.93%2C0.351%2C2.127c-0.35%2C0.273-0.704%2C0.551-1.06%2C0.827%20%20c-1.554%2C1.205-3.108%2C2.408-4.659%2C3.616c-0.103%2C0.08-0.173%2C0.096-0.297%2C0.04C9.031%2C7.648%2C8.279%2C7.409%2C7.476%2C7.386%20%20c-0.397-0.012-0.79%2C0.029-1.189%2C0.229c1.072%2C1.227%2C2.233%2C2.348%2C3.399%2C3.49c-0.001%2C0.001-0.002%2C0.003-0.004%2C0.004%20%20c0.631%2C0.644%2C0.821%2C0.91%2C1.47%2C1.545c1.184%2C1.142%2C2.348%2C2.265%2C3.538%2C3.413c0.172-0.302%2C0.222-0.574%2C0.24-0.854%20%20c0.061-0.912-0.204-1.757-0.562-2.579c-0.053-0.122-0.062-0.203%2C0.027-0.319c1.438-1.872%2C2.869-3.749%2C4.3-5.627%20%20c0.076-0.101%2C0.135-0.114%2C0.259-0.077c0.472%2C0.141%2C0.946%2C0.276%2C1.426%2C0.382c0.183%2C0.04%2C0.385-0.007%2C0.588-0.047%20%20C19.188%2C5.004%2C17.334%2C3.158%2C15.423%2C1.362z%22%2F%3E%20%3Cpath%20fill%3D%22%23B5B5B5%22%20d%3D%22M1.968%2C20.362c3.142-2.479%2C6.161-5.098%2C9.184-7.708c0.14%2C0.136-0.011%2C0.013%2C0%2C0%20%20c-0.648-0.636-0.839-0.901-1.47-1.545C7.046%2C14.146%2C4.406%2C17.17%2C1.968%2C20.362z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+}
+.mixin-icon-pin-png
+{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAfZJREFUOI3Nkz9oE3Ecxd/3LtcKt0QEM3QTBVGUQq6JRSktNMvlsJObKIJ0cXIRrw6CkFhMF0d1cC0Bp+YOAirYpdZ4J3TwXyXiolasgoND73LPoQRiczltWsE3fh/fD+/3+P6A/1HXnvmTICXOU3YCpgLT9vy718kuzo7AEfBRIBc3PP/+VniqH+CZalU9dOBgGcAVABDIucDzCfICRLg526bspZUMtGBeIONdJnmvPJKdBrZZhd14cRKpwIuDkngFyGH7uXcjMfFMw5+i4DSAVVXBgyiKioByC4AWk/S7tNRs6cTw+/aoJ/jq8vI+UVNPBHI08RkkoWCqnM0udI57VjGbz68HrXASwOtEsEhlKzQRDABz+fznjVYwAfJlfFgsrjbfzcR5amIaAIWhoZ9Geu/Itz2D6VBR0x3YNREW7hQKP+L2/ngVuVxuTkN0fnj9awtR9KEjbalsGJ967SWCHce5BOAyyS+qyNkw0k4BfLvpykTSbs+f57quSfI2yTcATNM0mwBgL62MQQseAcglgWMTO45zjOQ8gEUAo5ZlNdvezdHjawPgOESeJoG77rher+8Pw7AB4HEmk5k2DCNIAvwVuFqtDui6/pDkgmVZlX6Abf3Wsa7rJRGpFIvFroPvW7Vabcx13SO7BmzLdd3BXYf+C/0CVXy1IY/PxSEAAAAASUVORK5CYII=');
+}
+/*---------------------------------------------------------------------------*\
+    /Канцелярская кнопка на странице товара
+\*---------------------------------------------------------------------------*/
+
 
 
 

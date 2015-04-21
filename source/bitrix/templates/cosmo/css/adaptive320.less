@@ -2344,6 +2344,37 @@
             }
         }
 		/*------------------------------------*/
+		/* # Партнеры */
+		/*------------------------------------*/
+        .partners
+        {
+            .specification
+            {
+                .base
+                {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    width: auto;
+                }
+                .text
+                {
+                    .content
+                    {
+                        padding: 10px 10px 0px 10px;
+                        border-top: 0px;
+                        .preview-text
+                        {
+                            margin: 0px;
+                        }
+                    }
+                }
+            }
+        }
+		/*------------------------------------*/
+		/* / Партнеры */
+		/*------------------------------------*/
+		/*------------------------------------*/
 		/* # Блок подписки на рассылку в скидках дня */
 		/*------------------------------------*/
 		.newsletter
@@ -2418,6 +2449,44 @@
         .newsletter.product-select.search
         {
             h3 { font-weight: normal; }
+        }
+        .newsletter.list
+        {
+            table, tbody, tr, td
+            {
+                display: block;
+            }
+            table
+            {
+                tbody
+                {
+                }
+                tr
+                {
+                    width: 100%;
+                    height: auto;
+                    td
+                    {
+                        width: auto;
+                        label
+                        {
+                            border-right: 0px;
+                            border-bottom: 1px solid @colorDrakerGrey;
+                        }
+                    }
+                    td:last-child
+                    {
+                        label { border-bottom: 0px; }                        
+                    }
+                }
+            }
+            .block
+            {
+                input
+                {
+                    width: 92%;
+                }
+            }
         }
 		/*------------------------------------*/
 		/* # Заказать звонок */

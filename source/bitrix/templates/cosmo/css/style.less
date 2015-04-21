@@ -7148,6 +7148,170 @@ iframe[name="google_conversion_frame"]
             border-bottom: 1px solid @colorBlue;
         }
     }
+    .newsletter.list
+    {
+        border: 0px;
+        background-color: @colorBackground;
+        h2
+        {
+            margin: 0px;
+            padding: 13px 12px 11px 12px;
+            font-size: @fontSizeDiscounts;
+            background-color: @colorLightGrey;
+            border: 1px solid @colorDrakerGrey;
+        }
+        h3
+        {
+            padding: 11px 3px 13px 18px;
+            color: @colorLighterBlack;
+            line-height: @lineHeightPrice;
+            font-size: @fontSizeOrder;
+            font-weight: normal;
+            text-align: left;
+            border: 1px solid @colorGreen;
+        }
+        table
+        {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: 0;
+            tr
+            {
+                height: 42px;
+                border-top: 0px;
+                border-right: 1px solid @colorDrakerGrey;
+                border-bottom: 1px solid @colorDrakerGrey;
+                border-left: 1px solid @colorDrakerGrey;
+                td
+                {
+                    width: 50%;
+                    label
+                    {
+                        display: block;
+                        position: relative;
+                        height: 42px;
+                        border-right: 1px solid @colorDrakerGrey;
+                        input, span
+                        {
+                            display: block;
+                            position: absolute;
+                        }
+                        input
+                        {
+                            left: 0px;
+                            top: 0px;
+                            opacity: 0px;
+                        }
+                        span
+                        {
+                            top: 12px;
+                            height: 18px;
+                            font-size: @fontSizeBasketTotal;
+                            line-height: @lineHeightBig;
+                        }
+                        span.icon
+                        {
+                            .mixin-icon;
+                            left: 12px;
+                            width: 19px;
+                            background-position: -225px -23px;
+                        }
+                        span.icon.active { background-position: -225px 0px; }
+                        span.name
+                        {
+                            top: 0px;
+                            bottom: 0px;
+                            left: 42px;
+                            right: 100px;
+                            width: auto;
+                            height: auto;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            span
+                            {
+                                display: inline-block;
+                                position: relative;
+                                vertical-align: middle;
+                                white-space: normal;
+                                top: auto;
+                                height: auto;
+                            }
+                            span.helper
+                            {
+                                width: 0px;
+                                height: 100%;
+                                font-size: 0px;
+                                line-height: 0px;
+                            }
+                            sup
+                            {
+                                font-size: @fontSizeLiveTex;
+                                line-height: 0px;
+                            }
+                        }
+                        span.price
+                        {
+                            right: 12px;
+                            width: 88px;
+                            color: @colorLightBlack;
+                            font-weight: bold;
+                            text-align: right;
+                            white-space: normal;
+                        }
+                    }
+                }
+                td:last-child
+                {
+                    label
+                    {
+                        border-right: 0px;
+                    }
+                }
+            }
+            tr:last-child
+            {
+                border-bottom: 0px;
+            }
+        }
+        .block
+        {
+            padding: 12px 18px 12px 18px;
+            width: auto;
+            border-top: 0px;
+            border-right: 1px solid @colorGreen;
+            border-bottom: 0px;
+            border-left: 1px solid @colorGreen;
+            input
+            {
+                margin: 0px 0px 12px 0px;
+                padding: 0px 10px 0px 10px;
+                width: 290px;
+                height: 24px;
+                line-height: normal;
+            }
+            input:last-child
+            {
+                margin-bottom: 0px;
+            }
+        }
+        .submit-wrap
+        {
+            padding: 0px 18px 12px 18px;
+            border-top: 0px;
+            border-right: 1px solid @colorGreen;
+            border-bottom: 1px solid @colorGreen;
+            border-left: 1px solid @colorGreen;
+            input
+            {
+                width: 150px;
+                height: 30px;
+            }
+        }
+    }
 }
 /*---------------------------------------------------------------------------*\
     /Контент страниц, имеющих колонки
@@ -13742,6 +13906,103 @@ body
 }
 /*---------------------------------------------------------------------------*\
     /Бренды
+\*---------------------------------------------------------------------------*/
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+    #Партнеры
+\*---------------------------------------------------------------------------*/
+.partners
+{
+    .specification
+	{
+		position: relative;
+		margin: 0px 0px 24px 0px;
+		overflow: hidden;
+		.base
+		{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 300px;
+			height: 240px;
+			background-color: @colorWhite;
+			border: 1px solid @colorDrakerGrey;
+			z-index: 2;
+			overflow: hidden;
+			table
+			{
+                position: relative;
+				margin: 0px;
+				padding: 0px;
+				width: 100%;
+				height: 100%;
+				border-spacing: 0px;
+				border-collapse: collapse;
+				border: 0px;
+				tr
+				{
+                    position: relative;
+                    left: 0px;
+					width: 100%;
+				}
+				tr.logo
+				{
+					top: 0px;
+                    height: 100%;
+					vertical-align: top;
+                    background-color: @colorWhite;
+					td
+					{
+						font-size: 0px;
+						line-height: 0px;
+						text-align: center;
+						white-space: nowrap;
+						vertical-align: middle;
+						img, span.helper
+						{
+							display: inline-block;
+							vertical-align: middle;
+						}
+						span.helper
+						{
+							width: 0px;
+							height: 100%;
+						}
+						img
+						{
+							max-width: 290px;
+							max-height: 230px;
+						}
+					}
+				}
+            }
+        }
+		.text
+		{
+			position: relative;
+            margin: 0px;
+            padding: 0px;
+			z-index: 1;
+			.content
+			{
+				padding: 20px 24px 0px 24px;
+				min-height: 220px;
+				border: 1px solid @colorDrakerGrey;
+				.preview-text
+				{
+					margin-left: 300px;
+					line-height: @lineHeightOrder;
+				}
+            }
+        }
+    }
+}
+/*---------------------------------------------------------------------------*\
+    /Партнеры
 \*---------------------------------------------------------------------------*/
 
 
