@@ -2285,30 +2285,23 @@ iframe[name="google_conversion_frame"]
                 width: 37px;
                 height: 43px;
                 background-color: @colorBlueCallback;
-            }
-            span.icon:after
-            {
-                .mixin-icon-callback-white-svg;
-                content: " ";
-                display: block;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                margin: -8px 0px 0px -8px;
-                width: 16px;
-                height: 16px;
+                i
+                {
+                    .mixin-icon-callback-white-svg;
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin: -8px 0px 0px -8px;
+                    width: 16px;
+                    height: 16px;
+                }
             }
         }
         .button.feedback:hover
         {
             color: @colorWhite !important;
             background-color: @colorBlueCallbackHover;
-            /*
-            span.icon
-            {
-                background-color: @colorBlueCallback;
-            }
-            */
         }
 	}
 }
@@ -4826,6 +4819,7 @@ iframe[name="google_conversion_frame"]
                                 {
                                     display: block;
                                     margin: 6px 3px 6px 3px;
+                                    padding: 0px;
                                     width: auto;
                                     height: 172px;
                                     background-color: @colorLightGrey;
