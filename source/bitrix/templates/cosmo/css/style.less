@@ -583,30 +583,9 @@ iframe[name="google_conversion_frame"]
 	.button
 	{
 		position: relative;
-		margin:0px;
 		height: 43px;
 		font-size: @fontSizeBasketTotal;
 		line-height: @lineHeightSmall !important; /* @lineHeightDefault */
-		border-radius: 0px;
-		span.icon, span.name
-		{
-			display: block;
-			position: absolute;
-		}
-		span.icon
-		{
-			left: 0px;
-			top: 0px;
-			width: 37px;
-			height: 43px;
-		}
-		span.name
-		{
-			top: 15px;
-			left: 49px;
-			right: 14px;
-			text-align: left;
-		}
 	}
 	.content
 	{
@@ -955,20 +934,31 @@ iframe[name="google_conversion_frame"]
 }
 .catalog > .button
 {
-	span.icon { background-color: @colorRed2; }
-	span.icon:after
-	{
-		.mixin-icon;
-		content: " ";
-		display: block;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		margin: -7px 0px 0px -11px;
+    span.icon, span.name
+    {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -8px;
+        height: 15px;
+    }
+	span.icon
+    {
+        .mixin-icon;
+        margin-left: -78px;
 		width: 22px;
-		height: 15px;
-		background-position: -27px -3px;
-	}
+        background-position: -27px -3px;
+    }
+    span.name
+    {
+        .mixin-text-shadow-header;
+        margin-left: -47px;
+        width: 140px;
+        line-height: @lineHeightDefault;
+        font-weight: bold;
+        text-align: left;
+    }
 	span.name:after
 	{
 		.mixin-icon;
@@ -984,7 +974,7 @@ iframe[name="google_conversion_frame"]
 }
 .catalog > .button:hover
 {
-	span.icon { background-color: @colorDarkRed2; }
+	/*span.icon { background-color: @colorDarkRed2; }*/
 }
 .catalog > .button.open
 {
@@ -998,7 +988,7 @@ iframe[name="google_conversion_frame"]
 {
 	cursor: default;
 	background-color: @colorRed;
-	span.icon { background-color: @colorRed2; }
+	/*span.icon { background-color: @colorRed2; }*/
 }
 /*---------------------------------------------------------------------------*\
     /Выпадающее меню каталога товаров
@@ -1252,26 +1242,21 @@ iframe[name="google_conversion_frame"]
 		}
 		input.button
 		{
+            .mixin-text-shadow-header;
 			position: absolute;
 			margin:0px;
-			top:0px;
-			bottom: 0px;
+			top: -1px;
+			bottom: -1px;
 			left: auto;
-			right: 0px;
-            padding: 0px 18px 0px 0px !important;
-			width: 100px;
-			height: 41px;
-            color: @colorLighterBlack;
+			right: -1px;
+            padding: 0px 17px 0px 0px !important;
+			width: 96px;
+			height: auto;
             font-size: @fontSizeBasketTotal;
+            font-weight: bold;
             text-align: right;
-			border-left:1px solid @colorDrakerGrey !important;
-			border-radius:0px;
 			z-index:1;
 		}
-        input.button:hover
-        {
-            color: @colorLighterBlack !important;
-        }
 		label.icon
 		{
             .mixin-icon-search-svg;
@@ -1281,16 +1266,11 @@ iframe[name="google_conversion_frame"]
 			top: 50%;
 			width: 19px;
 			height: 14px;
-            margin-top: -7px;
-            /*
-			background-image: url(@imageIconsSVG);
-			background-repeat: no-repeat;
-			background-position: -1px -2px;
-            */
+            margin-top: -8px;
 			z-index:2;
 		}
 	}
-	form.search.focus { border: 1px solid @colorGreyInputFocus; }
+	form.search.focus { border: 1px solid @colorRed; /* @colorGreyInputFocus */ }
 	.column.left
 	{
 		width: 21.7%;
@@ -2266,36 +2246,29 @@ iframe[name="google_conversion_frame"]
 		}
         .button.feedback
         {
+            .mixin-text-shadow-header;
             display: none !important;
             position: absolute;
             right: 0px;
             top: 0px;
-            padding: 0px 6px 0px 43px !important;
-            width: 121px;
+            padding: 0px 0px 0px 40px !important;
+            width: 130px;
             height: 43px;
+            font-weight: bold;
             font-size: @fontSizeBasketTotal;
             line-height: @lineHeightButtonCallback !important;
+            text-align: left;
             white-space: nowrap;
             span.icon
             {
+                .mixin-icon-callback-white-svg;
                 display: block;
                 position: absolute;
-                left: 0px;
-                top: 0px;
-                width: 37px;
-                height: 43px;
-                background-color: @colorBlueCallback;
-                i
-                {
-                    .mixin-icon-callback-white-svg;
-                    display: block;
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    margin: -8px 0px 0px -8px;
-                    width: 16px;
-                    height: 16px;
-                }
+                left: 50%;
+                top: 50%;
+                margin: -8px 0px 0px -67px;
+                width: 16px;
+                height: 16px;
             }
         }
         .button.feedback:hover

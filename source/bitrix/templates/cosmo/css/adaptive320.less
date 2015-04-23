@@ -58,7 +58,7 @@
             width: auto;
             .user
             {
-                width: 41px;
+                width: 72px;
                 .message
                 {
 					form.authorization
@@ -170,7 +170,7 @@
 			}
 			.user
 			{
-				width: 41px;
+				width: 72px;
 				a.title
 				{
 					span
@@ -197,7 +197,7 @@
 					span.arrow
 					{
 						left: auto;
-						right: 15px;
+						right: 31px;
 					}
 					form.authorization
 					{
@@ -227,7 +227,7 @@
 				a.title
                 {
                     padding: 0px;
-					width: 41px !important;
+					width: 72px !important;
 					height: 43px;
                     span
                     {
@@ -568,7 +568,7 @@
                     display: block;
 					left: 0px;
 					top: 0px;
-                    margin: 0px 43px 0px 0px;
+                    margin: 0px 163px 0px 0px;
                     padding: 0px;
 					width: auto;
 					/*max-width: 100%;*/
@@ -587,7 +587,7 @@
 					.item.city
 					{
 						left: 0px;
-						width: 158px;
+						width: 30px; /* 158px */
 						border: 0px;
 						a.title
 						{
@@ -602,18 +602,21 @@
 								right: 6px;
 								margin-top: -8px;
 								height: 16px;
-								.baloon, .name, .icon
-								{
-									position: relative;
-									top: auto;
-									margin: 0px;
-								}
 								.baloon
 								{
+                                    position: relative;
+									top: auto;
+									margin: 0px;
 									.dot { margin: 0px; }
 								}
+                                .name, .icon
+                                {
+                                    display: none !important;
+                                }
+                                /*
 								.name
 								{
+                                    
 									height: 16px !important;
 									font-size: @fontSizeOrder;
 									line-height: @lineHeightDefault;
@@ -622,8 +625,13 @@
 								{
 									top: 7px;
 								}
+                                */
 							}
 						}
+                        a.title:hover
+                        {
+                            background-color: @colorGreyHover;
+                        }
 						.content
 						{
 							top: 0px;
@@ -692,8 +700,8 @@
 					}
 					.phone
 					{
-						right: 0px; /* 43px */
-						width: 118px;
+						left: 30px;
+						width: 126px;
 						font-size: @fontSizeOrder;
 						.span
 						{
@@ -760,10 +768,8 @@
             {
                 display: block !important;
                 top: -109px;
-                padding: 0px !important;
-                width: 42px;
-                background-color: @colorDarkGrey;
-                border-left: 1px solid @colorDrakerGrey !important;
+                width: 123px;
+                /*
                 span.icon
                 {
                     width: 42px;
@@ -773,11 +779,14 @@
                         .mixin-icon-callback-grey-svg;
                     }
                 }
+                */
             }
+            /*
             .button.feedback:hover
             {
                 background-color: @colorDarkGrey;
             }
+            */
 		}
 	}
     .no-svg
@@ -790,7 +799,7 @@
                 {
                     span.icon:after
                     {
-                        .mixin-icon-callback-grey-png;
+                        .mixin-icon-callback-white-png;
                     }
                 }
             }
@@ -991,6 +1000,7 @@
 			top: 14px;
 			left: 12px;
             right: auto;
+            margin: 0px;
 			width: 82px;
 			font-size: @fontSizeB;
             word-spacing: 12px;
@@ -4813,9 +4823,9 @@
 
 
 /*---------------------------------------------------------------------------*/
-/* # Ширина экрана <= 375 */
+/* # Ширина экрана <= 395 */
 /*---------------------------------------------------------------------------*/
-@media screen and (max-width: 375px)
+@media screen and (max-width: 395px)
 {
 	.header.fixed
 	{
@@ -4843,9 +4853,9 @@
 
 
 /*---------------------------------------------------------------------------*/
-/* # Ширина экрана <= 350 */
+/* # Ширина экрана <= 380 */
 /*---------------------------------------------------------------------------*/
-@media screen and (max-width: 350px)
+@media screen and (max-width: 380px)
 {
 	.header.fixed
 	{
@@ -4873,9 +4883,9 @@
 
 
 /*---------------------------------------------------------------------------*/
-/* # Ширина экрана <= 330 */
+/* # Ширина экрана <= 355 */
 /*---------------------------------------------------------------------------*/
-@media screen and (max-width: 330px)
+@media screen and (max-width: 355px)
 {
 	.header.fixed
 	{
@@ -4890,6 +4900,36 @@
 						span.name
 						{
 							max-width: 185px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*/
+/* # Ширина экрана <= 335 */
+/*---------------------------------------------------------------------------*/
+@media screen and (max-width: 335px)
+{
+	.header.fixed
+	{
+		.wrap
+		{
+			.basket
+			{
+				a.title
+				{
+					span
+					{
+						span.name
+						{
+							max-width: 155px;
                         }
                     }
                 }
