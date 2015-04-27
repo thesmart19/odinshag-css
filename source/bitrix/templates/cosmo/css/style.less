@@ -941,20 +941,24 @@ iframe[name="google_conversion_frame"]
         left: 50%;
         top: 50%;
         margin-top: -8px;
-        height: 15px;
     }
 	span.icon
     {
-        .mixin-icon;
+        .mixin-icon-catalog-button-svg;
         margin-left: -78px;
 		width: 22px;
+        height: 17px;
+        /*
+        .mixin-icon;
         background-position: -27px -3px;
+        */
     }
     span.name
     {
         .mixin-text-shadow-header;
         margin-left: -47px;
         width: 140px;
+        height: 15px;
         line-height: @lineHeightDefault;
         font-weight: bold;
         text-align: left;
@@ -2251,8 +2255,8 @@ iframe[name="google_conversion_frame"]
             position: absolute;
             right: 0px;
             top: 0px;
-            padding: 0px 0px 0px 40px !important;
-            width: 130px;
+            padding: 0px 0px 0px 36px !important;
+            width: 134px;
             height: 43px;
             font-weight: bold;
             font-size: @fontSizeBasketTotal;
@@ -2266,9 +2270,9 @@ iframe[name="google_conversion_frame"]
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                margin: -8px 0px 0px -67px;
-                width: 16px;
-                height: 16px;
+                margin: -8px 0px 0px -70px;
+                width: 18px;
+                height: 18px;
             }
         }
         .button.feedback:hover
@@ -2636,9 +2640,11 @@ iframe[name="google_conversion_frame"]
 					}
 					.button
 					{
+                        .mixin-text-shadow-header;
 						margin: 3px 3px 3px 3px!important;
 						height: 38px;
 						font-size: @fontSizeBasketTotal;
+                        font-weight: bold;
 						line-height: @lineHeightGoToBasket !important;
 					}
 					span.text
@@ -3180,9 +3186,9 @@ iframe[name="google_conversion_frame"]
 	bottom: 0px;
 	margin: 0px;
 	width: auto;
-	height: 174px;
+	height: 158px;
 	font-size: @fontSizeOrder;
-	line-height: @lineHeightOrder;
+	line-height: @lineHeightBig;
 	color: @colorLighterBlack;
 	background-color: @colorGreyOneMore2;
 	/*overflow: hidden;*/
@@ -3191,50 +3197,102 @@ iframe[name="google_conversion_frame"]
 		position: relative;
 		margin: 0px auto 0px auto;
 		width: @pageWrapWidth;
-		height: 175px;
-        background-color: @colorGreyOneMore2;
+		height: 158px;
 		.block
 		{
 			position: absolute;
-			top: 0px;
-			bottom: 0px;
+			top: 12px;
+			bottom: auto;
+            height: 87px;
 			.wrap
 			{
 				margin: 0px;
-				padding-top: 21px;
-				padding-left: 15px;
+                padding: 0px;
 				width: auto !important;
 				height: auto;
 			}
+            .wrap:before { display: none; }
 		}
 		.block.copyright
 		{
 			left: 0px;
-			width: 50%;
-			.wrap
-			{
-				
-			}
+			width: 33%;
+            .wrap
+            {
+                margin: 0px 12px 0px 12px;
+            }
 		}
 		.block.yandex
 		{
-			left: 50%;
-			right: 25%;
-			width: 25%;
-			/*font-size: @fontSizeDefault;*/
-			.wrap
-			{
-				/*padding-top: 25px;*/
-				padding-left: 0px;
-			}
+			right: 507px;
+			width: 135px;
+            border-left: 1px solid @colorDrakerGrey;
+            a
+            {
+                white-space: nowrap;
+            }
+            .wrap
+            {
+                margin: 0px 0px 0px 24px;
+            }
 			.market
 			{
 				display: block;
-				margin: 6px 0px 6px 0px;
-				width: 207px;
-				height: 31px; /*57*/
+                margin-bottom: 6px;
+				width: 88px;
+				height: 31px;
 			}
 		}
+        .block.feedback
+        {
+            right: 0px;
+            width: 469px; /* 49% */
+            .wrap
+            {
+                margin: 0px 6px 0px 24px;
+            }
+            form
+            {
+                margin: 6px 0px 0px 0px;
+                input, textarea
+                {
+                    position: relative;
+                    float: left;
+                }
+                input
+                {
+                    width: 89px; /* 20% */
+                    height: 27px;
+                    font-size: @fontSizeDefault;
+                    line-height: @lineHeightDetails !important;
+                    color: @colorLighterBlack;
+                    background-color: @colorGrey5;
+                }
+                input:hover
+                {
+                    background-color: @colorGreyHover3;
+                }
+                textarea
+                {
+                    margin: 0px 12px 0px 0px;
+                    padding: 0px 10px 0px 10px;
+                    width: 316px; /* 72% */
+                    height: 59px;
+                    font-size: @fontSizeSlider;
+                    line-height: @lineHeightAdditional;
+                }
+            }
+            form.message
+            {
+                .info-message
+                {
+                    margin: 0px !important;
+                    padding: 0px !important;
+                    background-color: transparent !important;
+                }
+            }
+        }
+        /*
 		.block.social
 		{
 			right: 0px;
@@ -3272,12 +3330,39 @@ iframe[name="google_conversion_frame"]
 				.icon.ok:hover	{ background-position: -586px -39px; }
 			}
 		}
+        */
 	}
+    .wrap:before
+    {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: auto;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 469px;
+        height: auto;
+        background-color: @colorGreyOneMore2;
+    }
 	.site-full-version
 	{
 		display: none !important;
 		background-image: none;
 	}
+}
+.footer:before
+{
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: auto;
+    width: 60%;
+    height: auto;
+    background-color: @colorAccordionTitle;
 }
 /*---------------------------------------------------------------------------*\
     /Футер сайта
@@ -3630,9 +3715,9 @@ iframe[name="google_conversion_frame"]
 				}
 				form
 				{
-					padding: 15px 12px 13px 12px;
+                    padding: 12px 10px 12px 10px;
 					line-height: @lineHeightDefault;
-					background-color: @colorFooterCategoryBg;
+                    background-color: @colorBackground;
 					label
 					{
 						display: block;
@@ -3655,30 +3740,42 @@ iframe[name="google_conversion_frame"]
 					}
 					input, textarea
 					{
-						padding: 0px 12px 0px 12px;
-						width: 258px;
+                        padding: 0px 7px 0px 7px;
+                        width: 296px;
+                        font-size: @fontSizeDefault;
 					}
 					input
 					{
-						margin-bottom: 6px;
-						height: 30px;
+                        margin-bottom: 13px;
+                        height: 24px;
 					}
 					textarea
 					{
-						padding-top: 8px;
-						height: 102px;
+                        margin-bottom: 0px;
+                        padding-top: 0px;
+                        height: 124px;
 					}
 					input.button
 					{
 						position: relative;
 						float:right;
-						margin-top: 17px;
+						margin-top: 12px;
 						margin-bottom:0px;
-						width: 114px;
-						height: 35px;
-						font-size: @fontSizeOrder;
+						width: 88px;
+						height: 27px;
+						font-size: @fontSizeDefault;
 					}
 				}
+                form.message
+                {
+                    background-color: @colorWhite;
+                    .info-message
+                    {
+                        margin: 0px !important;
+                        padding: 0px !important;
+                    }
+                }
+                /*
 				.tabs
 				{
 					margin: 0px;
@@ -3692,10 +3789,6 @@ iframe[name="google_conversion_frame"]
 							width: 50%;
 							font-size: @fontSizeDefault;
 						}
-						/*a.active
-						{
-							font-weight: normal;
-						}*/
 						a.two
 						{
 							left: auto;
@@ -3730,14 +3823,15 @@ iframe[name="google_conversion_frame"]
 								float:right;
 								margin-top: 12px;
 								margin-bottom:0px;
-								width: 88px; /*114*/
-								height: 27px; /*35*/
-								font-size: @fontSizeDefault; /* @fontSizeOrder */
+								width: 88px;
+								height: 27px;
+								font-size: @fontSizeDefault;
 							}
 						}
 						form.message { background-color: @colorWhite; }
 					}
 				}
+                */
 			}
 		}
 		.item:hover
@@ -3864,7 +3958,9 @@ iframe[name="google_conversion_frame"]
 			}
 		}
 	}
+    .wrap:before { display: none; }
 }
+.footer.fixed:before { display: none; }
 /*------------------------------------*\
     /Фиксированный футер сайта
 \*------------------------------------*/

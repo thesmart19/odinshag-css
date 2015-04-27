@@ -100,7 +100,7 @@
 				cursor: pointer;
 				background-color: @colorDarkRed;
 				span.name { border-right: 1px solid @colorDarkRed; }
-				span.icon { background-color: @colorDarkRed2; }
+				/*span.icon { background-color: @colorDarkRed2; }*/
 			}
 		}
 		.column.right
@@ -263,36 +263,39 @@
 	{   
 		margin: 0px auto 0px auto;
 		width: auto; /* @pageWrapWidth760  */
-		font-size: @fontSizeDefault;
+		font-size: @fontSizeSlider;
 		line-height: @lineHeightDefault;
 		.wrap
 		{
             margin: 0px auto 0px auto;
 			width: @pageWrapWidth760; /* пока не резиновая - было auto */
-			.block
-			{
-				.wrap
-				{
-					padding-top: 10px;
-					padding-left: 12px;
-				}
-			}
 			.block.copyright
 			{
-				width: 33.3%;
+				width: 30%;
 			}
 			.block.yandex
 			{
-				left: 33.3%;
-				right: 33.3%;
-				width: 33.3%;
-				.wrap { text-align: center; }
-				.market
-				{
-					margin-left: auto;
-					margin-right: auto;
-				}
+				right: 372px;
 			}
+            .block.feedback
+            {
+                width: 372px;
+                form
+                {
+                    textarea
+                    {
+                        width: 219px;
+                    }
+                }
+                form.message
+                {
+                    .info-message
+                    {
+                        font-size: @fontSizeSlider;
+                    }
+                }
+            }
+            /*
 			.block.social
 			{
 				right: 0px;
@@ -302,7 +305,12 @@
 					padding-left: 10%;
 				}
 			}
+            */
 		}
+        .wrap:before
+        {
+            width: 372px;
+        }
 	}
 	/*------------------------------------*/
 	/* # Live Tex */
