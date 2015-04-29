@@ -16,7 +16,17 @@
 
 .header.catalog-search
 {
-    display: none;
+    .column.left
+    {
+        display: none;
+    }
+    .column.right
+    {
+        form.search
+        {
+            display: none;
+        }
+    }
 }
 
 .box
@@ -1818,5 +1828,27 @@
 
 @media screen and (max-width: @viewportMaxWidth)
 {
-    .header .column.right .menu .items-aggregator { display: none; }
+    .header
+    {
+        .column.right
+        {
+            .menu
+            {
+                height: 100px;
+                .items-aggregator { display: none; }
+            }
+        }
+    }
+    .header.catalog-search
+    {
+        .column.right
+        {
+            .button.feedback
+            {
+                display: block !important;
+                top: -8px;
+                width: 128px;
+            }
+        }
+    }
 }

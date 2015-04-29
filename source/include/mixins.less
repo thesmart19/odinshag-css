@@ -588,4 +588,33 @@ background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3
 }
 /* / выбор города в контенте страниц */
 
+/* кнопка обратного звонка */
+.mixin-button-feedback
+{
+    .mixin-text-shadow-header;
+    display: none !important;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 0px 0px 0px 36px !important;
+    width: 134px;
+    height: 43px;
+    font-weight: bold;
+    font-size: @fontSizeBasketTotal;
+    line-height: @lineHeightButtonCallback !important;
+    text-align: left;
+    white-space: nowrap;
+    span.icon
+    {
+        .mixin-icon-callback-white-svg;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -8px 0px 0px -70px;
+        width: 18px;
+        height: 18px;
+    }
+}
+
 /* / ----- ----- ----- MIXINS ----- ----- ----- */

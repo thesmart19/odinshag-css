@@ -847,36 +847,20 @@
 		{
 			width: auto;
 			height: 156px;
-			.block.copyright, .block.yandex
+			.block.yandex, .block.feedback
 			{
 				display: none;
 			}
-            .block.feedback
+            .block.copyright
             {
                 left: 50%;
-                right: auto;
                 margin: 0px 0px 0px -160px;
                 width: 320px;
                 height: 77px;
                 text-align: center;
-                form
-                {
-                    margin-top: 3px;
-                    padding: 0px 12px 0px 12px;
-                    input
-                    {
-                        float: right;
-                    }
-                    textarea
-                    {
-                        margin: 0px;
-                        width: 173px;
-                        height: 56px;
-                    }
-                }
                 .wrap
                 {
-                    margin: 0px;
+                    margin: 0px 10px 0px 10px;
                 }
             }
             /*
@@ -918,6 +902,7 @@
 			background-color: @colorRed;
 		}
 	}
+    .footer:before { display: none; }
 	/*------------------------------------*/
 	/* # Live Tex */
 	/*------------------------------------*/
