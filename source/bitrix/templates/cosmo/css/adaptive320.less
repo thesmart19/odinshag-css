@@ -302,7 +302,7 @@
 			{
 				position: absolute;
 				top: -42px;
-				width: 104px;
+				width: 177px;
 				.content
 				{
 					top: 42px;
@@ -405,7 +405,7 @@
 					height: 0px;
 					a.title
 					{
-						min-width: 208px;
+						min-width: 190px;
 					}
 					.item.new
 					{
@@ -423,7 +423,7 @@
 				{
 					display: block;
 					position: absolute;
-					left: 110px;
+					left: 183px;
 					right: 0px;
 					top: 0px;
 					width: auto;
@@ -449,7 +449,7 @@
 							.mixin-icon;
 							position: absolute;
 							left: auto;
-							right: 6px;
+							right: 3px;
 							top: 19px;
 							float: none;
 							margin: 0px;
@@ -843,10 +843,16 @@
 		height: 156px;
 		width: auto;
         min-width: @pageWrapWidth320;
+        font-size: @fontSizeB;
+        line-height: @lineHeightOrder;
 		.wrap
 		{
 			width: auto;
 			height: 156px;
+            .block
+            {
+                top: 24px;
+            }
 			.block.yandex, .block.feedback
 			{
 				display: none;
@@ -1015,15 +1021,22 @@
 		span.icon { display: none; }
 		span.name
 		{
-			top: 14px;
-			left: 12px;
-            right: auto;
-            margin: 0px;
-			width: 82px;
-			font-size: @fontSizeB;
-            word-spacing: 12px;
+            left: 20px;
+            right: 11px;
+            margin-top: -7px;
+            margin-left: 0px;
+            padding: 0px 18px 0px 0px;
+            width: auto;
+            height: 17px;
 			white-space: nowrap;
 			overflow: hidden;
+            text-overflow: ellipsis;
+			/*
+            top: 14px;
+            width: 82px;
+			font-size: @fontSizeB;
+            word-spacing: 12px;
+            */
 		}
 		span.name:after { /*display: none;*/ }
 	}
@@ -4901,6 +4914,40 @@
 
 
 /*---------------------------------------------------------------------------*/
+/* # Ширина экрана <= 375 */
+/*---------------------------------------------------------------------------*/
+@media screen and (max-width: 375px)
+{
+    .header
+    {
+        .column.left
+        {
+            .catalog
+            {
+                left: 0px;
+                right: 198px;
+                width: auto;
+            }
+        }
+        .column.right
+        {
+            .menu
+            {
+                .items-aggregator > a.title
+                {
+                    left: auto;
+                    width: 192px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*/
 /* # Ширина экрана <= 355 */
 /*---------------------------------------------------------------------------*/
 @media screen and (max-width: 355px)
@@ -4922,6 +4969,13 @@
                     }
                 }
             }
+        }
+    }
+    .catalog > .button
+    {
+        span.name
+        {
+            left: 12px;
         }
     }
 }

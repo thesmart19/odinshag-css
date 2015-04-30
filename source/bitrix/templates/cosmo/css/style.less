@@ -1155,7 +1155,7 @@ iframe[name="google_conversion_frame"]
 	z-index: 3;
 	form.authorization
 	{
-		padding: 15px 14px 14px 14px;
+		padding: 15px 14px 19px 14px;
 		border-bottom:1px solid @colorDrakerGrey;
 		input
 		{
@@ -1174,19 +1174,19 @@ iframe[name="google_conversion_frame"]
 		.submit-wrap
 		{
 			position: relative;
-			height: 29px;
+			height: 32px;
 			a, .button
 			{
 				display: block;
 				position: absolute;
 				top: 0px;
-				height: 29px;
+				height: 32px;
 			}
 			a
 			{
 				left: 0px;
-				width: 100px;
-				line-height: @lineHeightSmall;
+				width: 130px;
+				line-height: @lineHeightProductPreview;
 				text-align: left;
 				color: @colorDarkBlue;
 				span
@@ -1212,9 +1212,12 @@ iframe[name="google_conversion_frame"]
 			}
 			.button
 			{
+                .mixin-text-shadow-header;
 				margin:0px;
 				right: 0px;
 				width: 93px;
+                font-size: @fontSizeOrder;
+                font-weight: bold;
 				border-radius:0px;
 			}
 		}
@@ -1703,17 +1706,24 @@ iframe[name="google_conversion_frame"]
 						position: relative;
 						margin: 10px auto 0px auto;
 						width: 124px;
-						height: 27px;
+						height: 29px;
 						.button
 						{
+                            .mixin-text-shadow-header;
 							position: absolute;
 							top: 0px;
 							width: 56px;
-							height: 27px;
-							font-weight: normal;
-							color: @colorWhite;
+							height: 29px;
+                            font-size: @fontSizeOrder;
+                            font-weight: bold;
+                            line-height: @lineHeight404 !important;
+                            color: @colorWhite;
 						}
-						.button:hover { background-color: @colorDarkRed; }
+						.button:hover
+                        {
+                            color: @colorWhite !important;
+                            background-color: @colorDarkRed;
+                        }
 						.button.yes	{ left:0px; }
 						.button.no	{ right:0px; }
 					}
@@ -2154,11 +2164,6 @@ iframe[name="google_conversion_frame"]
 						right: auto;
 						width: 243px;
 						border-top:1px solid @colorRed;
-						.options
-						{
-							a { font-size: @fontSizeOrder; }
-							a:hover { color: @colorWhite !important; }
-						}
 					}
 				}
 				.item.city.open
@@ -3098,7 +3103,7 @@ iframe[name="google_conversion_frame"]
 	}
 	.registration
 	{
-		padding: 9px 14px 16px 14px;
+		padding: 9px 14px 19px 14px;
 		color: @colorLightBlack;
 		font-size: @fontSizeDefault;
 		line-height: @lineHeightSmall;
@@ -3416,9 +3421,11 @@ iframe[name="google_conversion_frame"]
 		a.button.top:hover { color: @colorLightBlack !important; }
 		a.button.top.visible
 		{
+            .mixin-text-shadow-header;
 			color: @colorWhite;
 			background-color: @colorRed;
 			cursor: pointer;
+            font-weight: bold;
 			span { background-color: @colorRed2; }
 			span:after { background-position: -986px -74px; }
 		}
@@ -3736,13 +3743,15 @@ iframe[name="google_conversion_frame"]
 					}
 					input.button
 					{
+                        .mixin-text-shadow-header;
 						position: relative;
 						float:right;
 						margin-top: 12px;
 						margin-bottom:0px;
-						width: 88px;
-						height: 27px;
-						font-size: @fontSizeDefault;
+						width: 105px;
+						height: 29px;
+						font-size: @fontSizeOrder;
+                        font-weight: bold;
 					}
 				}
                 form.message

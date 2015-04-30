@@ -13,7 +13,11 @@
 
 
 
-
+.header.fixed
+{
+    form.authorization { border: 0px; }
+    .registration { display: none; }
+}
 .header.catalog-search
 {
     .column.left
@@ -22,6 +26,7 @@
     }
     .column.right
     {
+        height: 0px;
         form.search
         {
             display: none;
@@ -707,6 +712,11 @@
             .comment
             {
                 margin: 0px 0px 0px 36px;
+                /* временный костыль */
+                span:first-of-type
+                {
+                    display: none;
+                }
                 span.icon
                 {
                     .mixin-icon-question;
@@ -746,6 +756,9 @@
             }
             .calendar
             {
+                /* временный костыль */
+                display: none !important;
+                
                 .mixin-icon;
                 position: relative;
                 float: left;                
@@ -1848,6 +1861,71 @@
                 display: block !important;
                 top: -8px;
                 width: 128px;
+            }
+        }
+    }
+    .header.fixed
+    {
+        .wrap
+        {
+            .favorites { border: 0px; }
+            .user
+            {
+                width: 275px;
+                a.title
+                {
+                    span
+                    {
+                        padding-left: 5px;
+                        padding-right: 81px;
+                        span.name
+                        {
+                            display: inline;
+                            line-height: @lineHeightButtonCallback;
+                        }
+                        span.icon
+                        {
+                            display: inline-block;
+                            position: relative;
+                            left: auto;
+                            top: auto;
+                            float: right;
+                            margin: 18px 10px 0px 0px;
+                        }
+                    }
+                    span:after
+                    {
+                        display: block;
+                        top: 18px;
+                    }
+                }
+            }
+            .user.authorized
+            {
+                a.title
+                {
+                    padding: 0 0 0 12px;
+                    width: 263px !important;
+                    span
+                    {
+                        span.name
+                        {
+                            display: inline-block;
+                        }
+                        span.icon
+                        {
+                            display: inline-block;
+                            position: relative;
+                            left: auto;
+                            margin: -31px 6px 0px 0px;
+                        }
+                    }
+                }
+                a.logout
+                {
+                    display: block;
+                    height: 43px;
+                }
             }
         }
     }
