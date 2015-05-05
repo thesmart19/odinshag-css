@@ -3185,7 +3185,7 @@ iframe[name="google_conversion_frame"]
 			position: absolute;
 			top: 12px;
 			bottom: auto;
-            height: 87px;
+            height: 66px;
 			.wrap
 			{
 				margin: 0px;
@@ -3231,37 +3231,56 @@ iframe[name="google_conversion_frame"]
             width: 469px; /* 49% */
             .wrap
             {
+                position: relative;
                 margin: 0px 6px 0px 24px;
             }
             form
             {
-                margin: 6px 0px 0px 0px;
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 26px;
+                width: auto;
+                height: 73px;
                 input, textarea
                 {
-                    position: relative;
-                    float: left;
+                    position: absolute;
+                    font-size: @fontSizeDefault;
                 }
                 input
                 {
-                    width: 89px; /* 20% */
+                    bottom: 0px;
+                }
+                input.button
+                {
+                    right: 0px;
+                    width: 89px;
                     height: 27px;
                     font-size: @fontSizeDefault;
                     line-height: @lineHeightDetails !important;
                     color: @colorLighterBlack;
                     background-color: @colorGrey5;
                 }
-                input:hover
+                input[type="text"]
+                {
+                    left: 0px;
+                    padding: 0px 7px 0px 7px;
+                    width: 328px;
+                    height: 25px;
+                }
+                input.button:hover
                 {
                     background-color: @colorGreyHover3;
                 }
                 textarea
                 {
-                    margin: 0px 12px 0px 0px;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
                     padding: 0px 10px 0px 10px;
-                    width: 316px; /* 72% */
-                    height: 59px;
-                    font-size: @fontSizeSlider;
-                    line-height: @lineHeightAdditional;
+                    width: 95%; /* 316px */
+                    height: 38px; /* 59px */
+                    line-height: @lineHeightOrder;
                 }
             }
             form.message
@@ -8151,7 +8170,7 @@ iframe[name="google_conversion_frame"]
 	a.right-nav
 	{
 		right: 0px;
-        width: 39px;
+        width: 38px;
 		border-left:1px solid @colorDrakerGrey;
 		span { background-position: -42px 0px; }
 	}
