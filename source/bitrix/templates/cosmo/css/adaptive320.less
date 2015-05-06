@@ -288,6 +288,7 @@
 		{	
 			float: none;
 			width: 100%;
+            min-width: 0px;
 			.odinshag-logo
 			{
 				position: absolute;
@@ -811,7 +812,7 @@
 		.column.left
 		{
 			float: left;
-			width: 104px;
+			/*width: 104px;*/
             z-index: 1;
 		}
 		.column.right
@@ -2739,6 +2740,7 @@
             }
             ul.product-list.horizontal.news
             {
+                margin-bottom: 3px;
                 li.item
                 {
                     margin-right: 0px;
@@ -3610,26 +3612,61 @@
         /*------------------------------------*/
         .category.box.main_content.company.partners
         {
-            p, ul { padding: 0px; }
-            .cont
+            table, tr, td
             {
-                padding: 0px 10px 0px 10px;
-                table
+                display: block;
+            }
+            table
+            {
+                margin-left: 10px;
+                margin-right: 10px;
+                tr
                 {
-                    display: block;
-                    tr
+                    border: 0px;
+                    td
                     {
-                        display: block;
-                        td
+                        padding: 0px;
+                        width: auto;
+                        height: auto;
+                        p
                         {
-                            display: block;
-                            padding: 0px !important;
-                            img
-                            {
-                                display: block;
-                                margin: 0px auto 0px auto;
-                            }
+                            padding-bottom: 10px;
                         }
+                    }
+                    td:first-child
+                    {
+                        border-bottom: 0px;
+                    }
+                }
+            }
+            h2
+            {
+                margin-top: 10px;
+                padding-left: 10px;
+            }
+            p
+            {
+                margin: 0px;
+                padding: 0px 10px 0px 10px;
+            }
+            .desctiption
+            {
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 10px;
+                .icon
+                {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    margin: 0px auto 12px auto;
+                }
+                .text
+                {
+                    padding: 0px;
+                    p
+                    {
+                        padding: 0px;
                     }
                 }
             }

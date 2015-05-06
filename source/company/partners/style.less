@@ -1,0 +1,95 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+table
+{
+    margin-bottom: 24px;
+    tr
+    {
+        background-color: @colorWhite;
+        border: 1px solid @colorDrakerGrey;
+        td
+        {
+            border: 1px solid @colorDrakerGrey;
+            p
+            {
+                margin: 0px;
+                font-size: @fontSizeBasketTotal;
+            }
+        }
+        td:first-child
+        {
+            width: 220px;
+            height: 178px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        td:last-child
+        {
+            vertical-align: top;
+            padding: 24px 12px 0px 12px;
+            h2
+            {
+                padding: 0px;
+                margin: 0px 0px 8px 0px;
+            }
+        }
+    }
+    tr.empty
+    {
+        height: 6px;
+        background-color: @colorBackground;
+        border: 0px;
+        td
+        {
+            padding: 0px;
+            height: 6px;
+            font-size: 0px;
+            line-height: 0px;
+            border: 0px;
+        }
+    }
+}
+
+.desctiption
+{
+    position: relative;
+    margin: 0px 0px 24px 0px;
+    padding: 0px 12px 0px 110px;
+    background-color: @colorLightGrey;
+    .icon
+    {
+        position: absolute;
+        left: 21px;
+        top: 12px;
+        width: 66px;
+        height: 75px;
+        background-image: url(@imageIconsBigSVG);
+        background-repeat: no-repeat;
+        background-position: -871px -24px;
+    }
+    .text
+    {
+        margin: 0px;
+        padding: 9px 0px 12px 0px;
+        font-size: @fontSizeBasketTotal;
+        line-height: @lineHeightOrder;
+        p
+        {
+            margin: 0px;
+        }
+    }
+}
+
+.no-svg
+{
+    .desctiption
+    {
+        .icon
+        {
+            background-image: url(@imageIconsBigPNG);
+        }
+    }
+}

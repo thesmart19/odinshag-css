@@ -7146,8 +7146,8 @@ iframe[name="google_conversion_frame"]
 		border: 1px solid @colorLightBlue2;
         h3
         {
-            padding: 11px 24px 0px 24px;
-            height: 49px;
+            padding: 11px 24px 13px 24px;
+            height: auto;
             text-align: left;
             border-bottom: 1px solid @colorLightBlue2;
         }
@@ -7183,20 +7183,35 @@ iframe[name="google_conversion_frame"]
             }
         }
     }
-    .newsletter.product-select.viewed
+    .newsletter.product-select.narrow
     {
-        border: 1px solid @colorBlue;
-        h3 { border-bottom: 1px solid @colorBlue; }
-    }
-    .newsletter.product-select.favorites
-    {
-        border: 1px solid @colorYellow;
-        h3 { border-bottom: 1px solid @colorYellow; }
+        form
+        {
+            textarea
+            {
+                width: 562px;
+            }
+        }
     }
     .newsletter.product-select.red
     {
         border: 1px solid @colorRed;
         h3 { border-bottom: 1px solid @colorRed; }
+    }
+    .newsletter.product-select.blue
+    {
+        border: 1px solid @colorBlue;
+        h3 { border-bottom: 1px solid @colorBlue; }
+    }
+    .newsletter.product-select.light-blue
+    {
+        border: 1px solid @colorLightBlue2;
+        h3 { border-bottom: 1px solid @colorLightBlue2; }
+    }
+    .newsletter.product-select.yellow
+    {
+        border: 1px solid @colorYellow;
+        h3 { border-bottom: 1px solid @colorYellow; }
     }
     /* костыль для страницы 404 */
     .newsletter.product-select.viewed.red
@@ -7207,17 +7222,6 @@ iframe[name="google_conversion_frame"]
             {
                 width: 562px;
             }
-        }
-    }
-    .newsletter.product-select.search
-    {
-        border: 1px solid @colorBlue;
-        h3
-        {
-            padding-bottom: 13px;
-            height: auto;
-            font-weight: normal;
-            border-bottom: 1px solid @colorBlue;
         }
     }
     .newsletter.list
@@ -9815,6 +9819,7 @@ ul.product-list.horizontal.frame
 \*---------------------------------------------------------------------------*/
 ul.product-list.horizontal.news
 {
+    margin-bottom: 6px;
 	.item
 	{
         margin-right: 0px;

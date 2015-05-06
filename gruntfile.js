@@ -46,6 +46,9 @@ module.exports = function (grunt) {
                     /* Об интернет-магазине OdinShag.ru */
                     "build/company/about/css/style.css": "source/company/about/css/style.less",
                     
+                    /* Наши партнеры */
+                    "build/company/partners/style.css": "source/company/partners/style.less",
+                    
                     /* акция бесплатная доставка */
                     "build/discounts/actions/dostavka/css/style.css": "source/discounts/actions/dostavka/css/style.less",
                     
