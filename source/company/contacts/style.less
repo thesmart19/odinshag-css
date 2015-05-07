@@ -1,0 +1,172 @@
+// out: null
+
+@import (reference)	"source/include/variables.less";
+@import (reference)	"source/include/mixins.less";
+
+.contact-box
+{
+    h2
+    {
+        margin-bottom: 12px;
+        padding-left: 24px;
+    }
+	ul
+	{
+		height: auto;
+		width: auto;
+		color: @colorLightBlack;
+		font-size: @fontSizeOrder;
+        line-height: @lineHeightDefault;
+		li
+		{
+            display: block;
+            position: relative;
+            float: left;
+            margin: 0px 0px 12px 0px;
+			width: 50%;
+			height: auto;
+            .item
+            {
+                position: relative;
+                margin: 0px 12px 0px 0px;
+				padding: 18px 24px 0px 100px;
+                background-color: @colorLightGrey;
+                h2
+                {
+                    margin: 0px 0px 6px 0px;
+                    padding: 0px;
+                }
+                p
+                {
+                    margin: 0px;
+                }
+				.icon
+				{
+                    position: absolute;
+                    left: 24px;
+                    top: 12px;
+					width: 62px;
+					height: 70px;
+				}
+            }
+            .item.phone, .item.email
+            {
+                height: 170px;
+            }
+            .item.postal, .item.social
+            {
+                height: 120px;
+            }
+            .item.email, .item.social
+            {
+                margin: 0px;
+            }
+            .item.social
+            {
+                padding-right: 128px;
+            }
+            .item.phone
+            {
+                .icon
+                {
+                    .mixin-icon-big-phone-svg;
+                }
+            }
+            .item.email
+            {
+                .icon
+                {
+                    .mixin-icon-big-email-svg;
+                }
+            }
+            .item.postal
+            {
+                .icon
+                {
+                    .mixin-icon-big-postal-svg;
+                }
+            }
+            .item.social
+            {
+                .icon
+                {
+                    .mixin-icon-big-social-svg;
+                }
+                .social-media
+                {
+                    position: absolute;
+                    right: 18px;
+                    top: 19px;
+                    width: 86px;
+                    height: 86px;
+                    .icon
+                    {
+                        display: block;
+                        position: relative;
+                        left: auto;
+                        top: auto;
+                        float: left;
+                        margin: 0px 6px 6px 0px;
+                        width: 37px;
+                        height: 37px;
+                    }
+                    .icon.vk
+                    {
+                        .mixin-icon-vk-grey-svg;
+                    }
+                    .icon.vk:hover
+                    {
+                        .mixin-icon-vk-red-svg;
+                    }
+                    .icon.fb
+                    {
+                        .mixin-icon-fb-grey-svg;
+                    }
+                    .icon.fb:hover
+                    {
+                        .mixin-icon-fb-red-svg;
+                    }
+                    .icon.tw
+                    {
+                        .mixin-icon-tw-grey-svg;
+                    }
+                    .icon.tw:hover
+                    {
+                        .mixin-icon-tw-red-svg;
+                    }
+                    .icon.ok
+                    {
+                        .mixin-icon-ok-grey-svg;
+                    }
+                    .icon.ok:hover
+                    {
+                        .mixin-icon-ok-red-svg;
+                    }
+                }
+            }
+		}
+		li:last-child
+		{
+			margin: 0px;
+		}
+	}
+    .info-message
+    {
+        margin: 0px 0px 16px 0px !important;
+    }
+    .requisites
+    {
+        padding: 12px 24px 12px 24px;
+        line-height: @lineHeightDefault;
+        color: @colorLightBlack;
+        background-color: @colorLightGrey;
+        span
+        {
+            color: @colorLighterBlack;
+        }
+    }
+}
+.contact-box ul li .item a, .terms-delivery a
+{
+	color: @colorDarkBlue;
+}

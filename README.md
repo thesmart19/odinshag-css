@@ -29,6 +29,12 @@ source/bitrix/templates/.default/components/os/catalog.element_3.0/cosmo/style.l
 об интернет-магазине OdinShag.ru
 source/company/about/css/style.less
 
+Наши партнеры
+source/company/partners/style.less
+                    
+Контакты
+source/company/contacts/style.less
+
 сравнение
 source/bitrix/templates/.default/components/os/compare.result/cosmo/style.less
 

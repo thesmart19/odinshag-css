@@ -49,6 +49,9 @@ module.exports = function (grunt) {
                     /* Наши партнеры */
                     "build/company/partners/style.css": "source/company/partners/style.less",
                     
+                    /* Контакты */
+                    "build/company/contacts/style.css": "source/company/contacts/style.less",
+                    
                     /* акция бесплатная доставка */
                     "build/discounts/actions/dostavka/css/style.css": "source/discounts/actions/dostavka/css/style.less",
                     
