@@ -5,7 +5,7 @@
 
 .no-svg
 {
-	.box .features .feature span.icon { background-image: url(@imageIconsBigPNG); }
+    .box .text .media.image .house { .mixin-image-house-png; }
 }
 
 .box
@@ -86,13 +86,14 @@
             }
             .house
             {
+                .mixin-image-house-svg;
                 left: 312px;
                 width: 369px;
                 height: 339px;
-                background-position: -102px 0px;
-                .counter, .text
+                .counter, .counter-bg, .text
                 {
                     position: absolute;
+                    z-index: 1;
                 }
                 .counter
                 {
@@ -124,12 +125,24 @@
                     background-color: @colorLighterGrey;
                     overflow: hidden;
                 }
+                .counter-bg
+                {
+                    left: 118px;
+                    top: 176px;
+                    width: 138px;
+                    height: 36px;
+                    background-image: url(@imageCompanyAbout);
+                    background-repeat: no-repeat;
+                    background-position: -220px -176px;
+                }
+                .counter:after { display: none; }
                 .text
                 {
                     margin: 0px;
                     padding: 9px 12px 12px 12px;
                     background-color: @colorWhite;
                     border: 2px solid @colorRed;
+                    z-index: 2;
                     .line
                     {
                         position: absolute;
@@ -224,7 +237,6 @@
 	.features
 	{
 		position: relative;
-		height: 803px;
 		margin: 0px 0px 18px 0px;
 		border:0px;
 		border-bottom: 1px solid @colorDrakerGrey;
@@ -232,99 +244,5 @@
         {
             margin: 24px 0px 12px 0px;
         }
-		.feature
-		{
-			position: absolute;
-			width: 33%;
-			span.icon
-			{
-				display: block;
-				position: relative;
-				margin: 36px auto 0px auto;
-				height: 74px;
-				z-index: 2;
-				background-image: url(@imageIconsBigSVG);
-				background-repeat: no-repeat;
-				background-position: 0px 0px;
-			}
-            span.icon.new
-            {
-                width: 66px;
-                background-position: -557px -24px;
-            }
-            span.icon.action
-            {
-                width: 66px;
-                background-position: -634px -24px;
-            }
-            span.icon.moneybox
-            {
-                width: 66px;
-                background-position: -713px -24px;
-            }
-            span.icon.man
-            {
-                width: 66px;
-                background-position: -792px -24px;
-            }
-            span.icon.hands
-            {
-                width: 66px;
-                background-position: -871px -24px;
-            }
-            span.icon.delivery
-            {
-                width: 66px;
-                background-position: -954px -24px;
-            }
-            span.icon.hands-money
-            {
-                width: 66px;
-                background-position: -1026px -24px;
-            }
-            span.icon.call-back
-            {
-                width: 66px;
-                background-position: -1102px -24px;
-            }
-            span.icon.help
-            {
-                width: 66px;
-                background-position: -1176px -24px;
-            }
-			p.text
-			{
-				display: block;
-				position: absolute;
-				left:0px;
-				top:0px;
-				right:12px;
-				bottom:12px;
-				margin: 0px;
-				padding: 128px 24px 0px 24px;
-				font-size: @fontSizeOrder;
-				line-height: @lineHeightPrice;
-				color: @colorLighterBlack;
-				background-color: @colorLightGrey;
-				border:0px;
-				overflow: hidden;
-				z-index: 1;
-				span
-				{
-					color: @colorDarkBlue;
-				}
-			}
-		}
-		.feature.one,     .feature.three, .feature.four,  .feature.six, .feature.seven, .feature.nine	{	p.text { right:0px; }	}
-		.feature.two,     .feature.five,  .feature.eight  { width: 34%; p.text { left:12px; }	}
-		.feature.one,     .feature.two,   .feature.three  {	height: 246px;	}
-		.feature.four,    .feature.five,  .feature.six    {	height: 257px;	}
-		.feature.seven,   .feature.eight, .feature.nine   {	height: 258px;	}
-        .feature.one,     .feature.two,   .feature.three  { top: 30px; }
-        .feature.four,    .feature.five,  .feature.six    { top: 276px; }
-        .feature.seven,   .feature.eight, .feature.nine   { top: 533px; }
-        .feature.one,     .feature.four,  .feature.seven  { left: 0px; }
-        .feature.two,     .feature.five,  .feature.eight  { left: 33%; }
-		.feature.three,   .feature.six,   .feature.nine   { right: 0px; }
 	}
 }

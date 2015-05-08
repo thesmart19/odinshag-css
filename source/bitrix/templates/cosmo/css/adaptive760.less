@@ -175,6 +175,13 @@
 						.span { white-space: nowrap; }
 					}
 				}
+                .item.new.receipt-and-payment
+                {
+                    .question
+                    {
+                        top: 59px;
+                    }
+                }
 			}
 		}
 		form.search
@@ -512,14 +519,16 @@
             margin-left: auto;
             margin-right: auto;
             width: @pageWrapWidth760;
-            height: 38px;
             a
             {
-                height: 38px;
-                img
+                .text
                 {
-                    width: @pageWrapWidth760;
-                    height: 38px;
+                    left: 66px;
+                    margin: 0px;
+                }
+                .show
+                {
+                    display: none;
                 }
             }
         }
@@ -2052,6 +2061,25 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    /*------------------------------------*/
+    /* # Бесплатная доставка */
+    /*------------------------------------*/
+    body #total_wrapper #main_wrapper
+    {
+        .discounts.actions.dostavka
+        {
+            .delivery
+            {
+                .banner
+                {
+                    img
+                    {
+                        max-width: 100%;
                     }
                 }
             }

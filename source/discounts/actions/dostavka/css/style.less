@@ -5,7 +5,7 @@
 
 .delivery
 {
-	padding: 12px 12px 48px 12px;
+	padding: 12px;
 	border:1px solid @colorDrakerGrey;
 	background-color: @colorWhite;
 	h3
@@ -30,10 +30,23 @@
 			span { color: @colorLighterBlack; }
 		}
 	}
+    ul.conditions
+    {
+        margin: 0px;
+        li:last-child
+        {
+            margin: 0px;
+        }
+    }
 	.banner
 	{
-        display: block;
-        margin: 0px auto 0px auto;
-		width: 934px;
+        background-color: @colorGreenDeliveryBanner;
+        img
+        {
+            display: block;
+            margin: 0px auto 0px auto;
+            width: 736px;
+            height: 247px;
+        }
 	}
 }
