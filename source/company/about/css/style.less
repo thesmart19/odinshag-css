@@ -5,7 +5,16 @@
 
 .no-svg
 {
-    .box .text .media.image .house { .mixin-image-house-png; }
+    .box .text .media.image .house              { .mixin-image-house-png; }
+    .box .features .feature .icon.new           { .mixin-icon-big-new-product-png }
+    .box .features .feature .icon.brand         { .mixin-icon-big-brand-png; }
+    .box .features .feature .icon.action        { .mixin-icon-big-action-png; }
+    .box .features .feature .icon.best-price    { .mixin-icon-big-best-price-png; }
+    .box .features .feature .icon.delivery      { .mixin-icon-big-delivery-png; }
+    .box .features .feature .icon.payment       { .mixin-icon-big-payment-png; }
+    .box .features .feature .icon.bonus         { .mixin-icon-big-bonus-png; }
+    .box .features .feature .icon.order         { .mixin-icon-big-order-png; }
+    .box .features .feature .icon.callback      { .mixin-icon-big-callback-png; }
 }
 
 .box
@@ -22,7 +31,7 @@
     }
 	.text
 	{
-		margin:0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
 		padding: 14px 24px 18px 24px;
         color: @colorLightBlack;
         font-size: @fontSizeBasketTotal;
@@ -237,12 +246,185 @@
 	.features
 	{
 		position: relative;
-		margin: 0px 0px 18px 0px;
-		border:0px;
-		border-bottom: 1px solid @colorDrakerGrey;
+		margin: 59px 0px 24px 0px;
         h2
         {
-            margin: 24px 0px 12px 0px;
+            margin: 0px 0px 24px 0px;
+        }
+        .feature
+        {
+            position: relative;
+            float: left;
+            margin: 0px 0px 12px 0px;
+            width: 33%;
+            height: 310px;
+            .bg
+            {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                padding: 12px 12px 12px 24px;
+                width: auto;
+                height: auto;
+                background-color: @colorLightGrey;
+                .title
+                {
+                    position: relative;
+                    white-space: nowrap;
+                    margin: 0px 0px 12px 0px;
+                    padding: 0px 0px 0px 80px;
+                    height: 73px;
+                    h2, .helper
+                    {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 0px;
+                    }
+                    .helper
+                    {
+                        width: 0px;
+                        height: 100%;
+                        font-size: 0px;
+                        line-height: 0px;
+                    }
+                    h2
+                    {
+                        margin: 0px;
+                        white-space: normal;
+                    }
+                }
+            }
+            span
+            {
+                display: block;
+            }
+            ul
+            {
+                list-style-type: disc;
+                list-style-position: inside;
+                color: @colorRed;
+                li
+                {
+                    span
+                    {
+                        display: inline;
+                        color: @colorLighterBlack;
+                    }
+                }
+            }
+            .icon
+            {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 65px;
+                height: 73px;
+            }
+            .icon.new
+            {
+                .mixin-icon-big-new-product-svg;
+            }
+            .icon.brand
+            {
+                .mixin-icon-big-brand-svg;
+            }
+            .icon.action
+            {
+                .mixin-icon-big-action-svg;
+            }
+            .icon.best-price
+            {
+                .mixin-icon-big-best-price-svg;
+            }
+            .icon.delivery
+            {
+                .mixin-icon-big-delivery-svg;
+            }
+            .icon.payment
+            {
+                .mixin-icon-big-payment-svg;
+            }
+            .icon.bonus
+            {
+                .mixin-icon-big-bonus-svg;
+            }
+            .icon.order
+            {
+                .mixin-icon-big-order-svg;
+            }
+            .icon.callback
+            {
+                .mixin-icon-big-callback-svg;
+            }
+            .text
+            {
+                padding: 0px;
+                color: @colorLighterBlack;
+                font-size: @fontSizeOrder;
+                line-height: @lineHeightPrice;
+                background-color: transparent;
+            }
+        }
+        .feature.one, .feature.four, .feature.seven
+        {
+            .bg
+            {
+                right: 6px;
+            }
+        }
+        .feature.two, .feature.five, .feature.eight
+        {
+            .bg
+            {
+                left: 6px;
+                right: 6px;
+            }
+        }
+        .feature.three, .feature.six, .feature.nine
+        {
+            .bg
+            {
+                left: 6px;
+            }
         }
 	}
+    .feedback
+    {
+        margin: 0px auto 0px auto;
+        width: 505px;
+        .title
+        {
+            text-align: center;
+            font-weight: bold;
+            font-size: @fontSizeBig;
+            line-height: @lineHeightBig;
+            color: @colorLightBlack;
+        }
+        .arrows
+        {
+            .mixin-image-three-arrow-png;
+            position: relative;
+            height: 160px;
+            background-position: center center;
+        }
+        .contacts
+        {
+            padding: 24px;
+            border: 1px solid @colorRed;
+            h2
+            {
+                margin: 0px 0px 6px 0px;
+                padding: 0px;
+            }
+            .button
+            {
+                height: 41px;
+                width: 250px;
+                font-size: @fontSizeBasketTotal;
+                line-height: @lineHeightCalendarTitle !important;
+            }
+        }
+    }
 }

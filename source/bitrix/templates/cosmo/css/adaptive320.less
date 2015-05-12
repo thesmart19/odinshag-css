@@ -366,6 +366,7 @@
                 }
 				input.button
 				{
+                    right: 0px;
 					width: 42px;
 				}
 				label.icon
@@ -3029,7 +3030,7 @@
                         }
                         .house
                         {
-                            .counter { display: none; }
+                            .counter, .counter-bg { display: none; }
                             .text
                             {
                                 border-bottom: 0px;
@@ -3044,37 +3045,58 @@
                 .features
                 {
                     height: auto;
-                    padding-bottom: 12px;
+                    margin: 12px 0px 0px 0px;
+                    padding: 0px 10px 12px 10px;
                     h2
                     {
                         margin: 0px 0px 12px 0px;
+                        padding: 0px;
                     }
                     .feature
                     {
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                        right: auto;
-                        margin: 0px 10px 6px 10px;
+                        float: none;
                         width: auto;
                         height: auto;
-                        p.text
+                        .bg
                         {
                             position: relative;
                             top: auto;
                             left: auto;
-                            right: auto;
                             bottom: auto;
-                            margin: 0px;
-                            padding: 120px 10px 12px 10px;
+                            right: auto;
+                            .title
+                            {
+                                h2
+                                {
+                                    margin: 0px;
+                                }
+                            }
                         }
-                        span.icon
+                        .text
                         {
-                            position: absolute;
                             margin: 0px;
-                            top: 12px;
-                            left: 50%;
-                            margin-left: -33px;
+                            padding: 0px;
+                        }
+                    }
+                }
+                .feedback
+                {
+                    margin: 0px 10px 0px 10px;
+                    width: auto;
+                    .title
+                    {
+                        font-size: @fontSizeH3;
+                    }
+                    .arrows
+                    {
+                        height: 100px;
+                    }
+                    .contacts
+                    {
+                        padding: 12px;
+                        .button
+                        {
+                            margin: 0px auto 0px auto;
                         }
                     }
                 }
