@@ -1283,6 +1283,10 @@ iframe[name="google_conversion_frame"]
 		width: 21.7%;
         min-width: 205px;
 		z-index:2;
+        .button.about
+        {
+            display: none !important;
+        }
 		.catalog
 		{
 			margin: 0px;
@@ -4308,8 +4312,11 @@ iframe[name="google_conversion_frame"]
 	.pager	
 	{
 		position: relative;
+        left: -261px;
+        width: 1193px;
 		height: 42px;
 		border: 1px solid @colorDrakerGrey;
+        background-color: @colorWhite;
 		z-index:2;
 		.pages, .view-modes, .drop-down-list, .select
 		{
@@ -4578,7 +4585,10 @@ iframe[name="google_conversion_frame"]
 	}
 	.pager.pager-bottom
 	{
+        left: auto;
+        width: auto;
         margin-top: 6px;
+        background-color: transparent;
 		z-index:0;
 	}
     .pager.pager-bottom.one-page-products
@@ -4812,7 +4822,7 @@ iframe[name="google_conversion_frame"]
         .block.frame.news, .block.frame.articles
         {
             border: 0px;
-            background-color: @colorBackground;
+            /*background-color: @colorBackground;*/
             .title
             {
                 border: 1px solid @colorDrakerGrey;
@@ -4968,9 +4978,11 @@ iframe[name="google_conversion_frame"]
 	{
 		position: relative;
 		height: 234px; /*273px*/
+        /*
         border-left: 1px solid @colorDrakerGrey;
         border-right: 1px solid @colorDrakerGrey;
         border-bottom: 1px solid @colorDrakerGrey;
+        */
 		background-color: @colorWhite;
 		ul
 		{
@@ -4988,11 +5000,14 @@ iframe[name="google_conversion_frame"]
 				position: relative;
 				margin: 0px;
 				padding: 0px;
-				width: 247px;
+				width: auto; /* 247px */
 				height: auto; /* 14px */
 				color: @colorRed;
                 border: 0px;
-                border-bottom: 1px solid @colorDrakerGrey;
+                border-top: 1px solid @colorDrakerGrey;
+                border-left: 1px solid @colorDrakerGrey;
+                border-bottom: 0px;
+                border-right: 1px solid @colorDrakerGrey;
                 a, span
                 {
                     display: block;
@@ -5023,6 +5038,14 @@ iframe[name="google_conversion_frame"]
 				}
 				span.icon:hover { .mixin-icon-delete-hover; }
 			}
+            li:hover
+            {
+                -webkit-box-shadow: inset 0px 0px 0px 1px @colorRed;
+                -moz-box-shadow:    inset 0px 0px 0px 1px @colorRed;
+                box-shadow:         inset 0px 0px 0px 1px @colorRed;
+            }
+            li:last-child { border-bottom: 0px; }
+            /*
 			li:after
 			{
 				content: " ";
@@ -5041,13 +5064,7 @@ iframe[name="google_conversion_frame"]
 			{
                 display: none;
 			}
-            li:hover
-            {
-                -webkit-box-shadow: inset 0px 0px 0px 1px @colorRed;
-                -moz-box-shadow:    inset 0px 0px 0px 1px @colorRed;
-                box-shadow:         inset 0px 0px 0px 1px @colorRed;
-            }
-            li:last-child { border-bottom: 0px; }
+            */
             /*
 			li.active
 			{
@@ -5095,12 +5112,46 @@ iframe[name="google_conversion_frame"]
 	}
 	.categories.subcats
 	{
-		height: 388px;
-		ul { height: 388px; }
+        padding: 0px 0px 29px 0px;
+        height: auto;
+		ul
+        {
+            height: auto; /* 362px */
+            border-bottom: 1px solid @colorDrakerGrey;
+            overflow: hidden;
+        }
+        .button
+        {
+            left: 0px;
+            right: 0px;
+            top: auto;
+            bottom: 0px;
+            width: auto;
+            height: 28px;
+            color: @colorLighterBlack;
+            font-size: @fontSizeOrder;
+            line-height: @lineHeightH1 !important;
+			span.icon
+			{
+                .mixin-icon;
+                .mixin-arrow-small;
+                .mixin-arrow-grey-small-down;
+				display:inline-block;
+				position: relative;
+				vertical-align: middle;
+				margin: 0px 0px 0px 5px;
+			}
+            span.icon.close { .mixin-arrow-grey-small-up; }
+        }
 	}
+    .categories.subcats.no-button
+    {
+        padding: 0px;
+        .button { display: none !important; }
+    }
     .section_subcats
     {
-        border-top: 1px solid @colorDrakerGrey;
+        /*border-top: 1px solid @colorDrakerGrey;*/
     }
 	.description
 	{
@@ -5172,6 +5223,7 @@ iframe[name="google_conversion_frame"]
 		a.show-more:hover
 		{
 			color: @colorLighterBlack !important;
+            /*
 			span.icon:before
 			{
 				top: 0px;
@@ -5200,6 +5252,7 @@ iframe[name="google_conversion_frame"]
 				border-bottom-color: @colorGreyHover;
 				border-width: 5px;
 			}
+            */
 		}
 	}
 	.description.no-padding
@@ -6748,6 +6801,7 @@ iframe[name="google_conversion_frame"]
         .column.left
         {
             margin: 0px;
+            padding: 0px;
             border-right: 0px;
             .block
             {
@@ -6825,6 +6879,11 @@ iframe[name="google_conversion_frame"]
                 }
             }
         }
+    }
+    .pager
+    {
+        left: auto;
+        width: auto !important;
     }
 }
 .box.personal.views, .box.personal.favorites
@@ -6966,6 +7025,9 @@ iframe[name="google_conversion_frame"]
 	{
 		margin:0px;
 		width: 249px;
+        /* # костыль */
+        padding: 50px 0px 0px 0px;
+        /* / костыль */
 		form#filter_param_form
 		{
 			border:0px;
@@ -6979,7 +7041,7 @@ iframe[name="google_conversion_frame"]
 		width: 934px;
         min-width: 934px;
         /* clearing bug fix */
-        overflow: hidden;
+        /*overflow: hidden;*/
 	}
 	.content, .newsletter
 	{
@@ -7865,6 +7927,7 @@ iframe[name="google_conversion_frame"]
 				float: left;
 				width: 224px;
 				height: 367px;
+                border: 0px;
 				overflow:hidden;
                 .labels, .delivery { display: none; }
                 a.img, .parameters
@@ -11814,14 +11877,14 @@ body
                 }
                 span.full-size
                 {
-                    .mixin-icon-full-size-grey-svg;
+                    .mixin-icon-full-size-svg(@colorGreyInputFocusMixin);
                     right: 46px;
                     width: 23px;
                     height: 19px;
                 }
                 span.full-size:hover
                 {
-                    .mixin-icon-full-size-red-svg
+                    .mixin-icon-full-size-svg(@colorRedMixin)
                 }
 			}
 			a.zoom:hover

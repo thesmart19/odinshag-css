@@ -296,13 +296,32 @@
 			float: none;
 			width: 100%;
             min-width: 0px;
+            .odinshag-logo, .button.about
+            {
+                position: absolute;
+                margin: 0px;
+            }
 			.odinshag-logo
 			{
-				position: absolute;
 				top: 54px;
-				left: 50%;
-				margin: 0px 0px 0px -84px;
+                left: 50%;
+                margin-left: -146px;
 			}
+            .button.about
+            {
+                display: block !important;
+                top: 58px;
+                right: 12px;
+                width: 115px;
+                height: 38px;
+                font-size: @fontSizeBasketTotal;
+                font-weight: bold;
+                line-height: @lineHeightButtonAbout !important;
+            }
+            .button.about:hover
+            {
+                color: @colorLightBlack !important;
+            }
 			/*------------------------------------*/
 			/* # Меню каталога товаров */
 			/*------------------------------------*/
@@ -577,7 +596,7 @@
                     display: block;
 					left: 0px;
 					top: 0px;
-                    margin: 0px 163px 0px 0px;
+                    margin: 0px 135px 0px 0px; /* 163 */
                     padding: 0px;
 					width: auto;
 					/*max-width: 100%;*/
@@ -777,7 +796,12 @@
             {
                 display: block !important;
                 top: -109px;
-                width: 127px;
+                padding: 0 0 0 30px !important;
+                width: 105px; /* 127px */
+                span.icon
+                {
+                    margin-left: -58px;
+                }
                 /*
                 span.icon
                 {
@@ -1429,6 +1453,8 @@
         }
 		.pager
 		{
+            left: auto;
+            width: auto !important;
 			.view-modes { display: none; }
 			.drop-down-list
 			{

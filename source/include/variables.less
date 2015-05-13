@@ -41,9 +41,15 @@
 /* ------------------------------------------------------------------------- */
 /* Цвета */
 /* ------------------------------------------------------------------------- */
+/*
+    коды некоторых цветов представлены без #
+    это сделано для корректного использования в миксинах с URL кодированием
+    символ # уже включается в миксинах в правильной кодировке
+*/
 @colorBackground: 				#fafafa;
 
 @colorWhite:					#ffffff;
+@colorWhiteMixin:               ffffff;
 
 @colorBlue:						#4590FE;
 @colorLightBlue:				#dee8fc; /* #EBF3FE */
@@ -65,6 +71,7 @@
 @colorGreyFormInput:			#808080;
 @colorGrey:						#9d9d9d;
 @colorGreyInputFocus:			#999999;
+@colorGreyInputFocusMixin:      999999;
 @colorGreyOneMore4:				#a9a9a9;
 @colorGreyHover3:				#b3b3b3;
 @colorDrakerGrey:				#cccccc;
@@ -84,6 +91,7 @@
 @colorGreyLighterLandingAds:    #fbfbfb;
 
 @colorRed:						#f24942;
+@colorRedMixin:                 f24942;
 @colorRed2:						#b32b2b;
 @colorDarkRed:					#bf1616;
 @colorDarkRed2:					#a22727;
@@ -186,6 +194,7 @@
 @lineHeightButtonDelete:		35px;
 @lineHeight404Title:            36px;
 @lineHeightButtonJobs:			37px;
+@lineHeightButtonAbout:         38px;
 @lineHeightCalendarTitle:       39px;
 @lineHeightShowMore:			40px;
 @lineHeightButtonCallback:      43px;
