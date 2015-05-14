@@ -7,34 +7,28 @@
 
 @media screen and (max-width: 1360px)
 {
-    body #total_wrapper.wide
+    .header
     {
-        #main_wrapper
+        .column.right
         {
-            .header
+            .menu
             {
-                .column.right
+                .item.new.info
                 {
-                    .menu
+                    .phone
                     {
-                        .item.new.info
+                        div.icon
                         {
-                            .phone
+                            .message
                             {
-                                div.icon
+                                left: auto;
+                                right: 0px;
+                                margin-left: 0px;
+                                span.arrow
                                 {
-                                    .message
-                                    {
-                                        left: auto;
-                                        right: 0px;
-                                        margin-left: 0px;
-                                        span.arrow
-                                        {
-                                            left: auto;
-                                            right: 3px;
-                                            margin-left: 0px;
-                                        }
-                                    }
+                                    left: auto;
+                                    right: 3px;
+                                    margin-left: 0px;
                                 }
                             }
                         }
@@ -51,226 +45,208 @@
     {
         min-width: 0px !important;
     }
-    body #total_wrapper.wide
+
+    body #main_wrapper
     {
-		#main_wrapper
-		{
-			width: 100%;
-			min-width: 100%;
-            
-            /*------------------------------------*/
-            /* # Фиксированная шапка */
-            /*------------------------------------*/
-            .header.fixed
+		width: 100%;
+		min-width: 100%;
+    }
+    /*------------------------------------*/
+    /* # Фиксированная шапка */
+    /*------------------------------------*/
+    .header.fixed
+    {
+        width: 100%;
+        .wrap
+        {
+            width: auto;
+        }
+    }
+    /*------------------------------------*/
+    /* # Шапка сайта */
+    /*------------------------------------*/
+    .header
+    {
+        form.search
+        {
+            right: 0px;
+        }
+        .column.right
+        {
+            .button.feedback { display: none !important; }
+            .menu
             {
-                width: 100%;
-                .wrap
+                .item.new.info
                 {
-                    width: auto;
-                }
-            }
-
-            /*------------------------------------*/
-            /* # Шапка сайта */
-            /*------------------------------------*/
-            .header
-            {
-                form.search
-                {
-                    right: 0px;
-                }
-                .column.right
-                {
-                    .button.feedback { display: none !important; }
-                    .menu
-                    {
-                        .item.new.info
-                        {
-                            .feedback { display: inline-block; }
-                        }
-                    }
-                }
-            }
-
-            .box
-            {
-                .pager
-                {
-                    left: -263px;
-                }
-                .pager.pager-bottom
-                {
-                    left: auto;
-                    width: auto;
-                }
-                .banner.index-page
-                {
-                    display: none;
-                }
-            }
-
-            /*------------------------------------*/
-            /* # Главная страница */
-            /*------------------------------------*/
-            .slider
-            {
-                position: absolute;
-                right: 0px;
-                top: 0px;
-                left: 0px;
-                width: auto;
-                overflow: hidden;
-                .wrap
-                {
-                    margin: 0px auto 0px auto;
-                    width: 741px;
-                    overflow: visible;
-                }
-                .wrap:before, .wrap:after
-                {
-                    content: " ";
-                    display: block;
-                    position: absolute;
-                    top: 0px;
-                    bottom: 0px;
-                    width: 90px;
-                    background-color: @colorBackground;
-                    opacity: 1;
-                    z-index: 2;
-                }
-                .wrap:before
-                {
-                    left: -90px;
-                }
-                .wrap:after
-                {
-                    right: -90px;
-                }
-            }
-            .box
-            {
-                .content.index-page
-                {
-                    .column.left
-                    {
-                    }
-                    .column.right
-                    {
-                    }
-                }
-            }
-            /*------------------------------------*/
-            /* # Сквозные баннеры */
-            /*------------------------------------*/
-            .banner-ext.banner-wide
-            {
-                img
-                {
-                    width: 100%;
-                }
-            }
-            /*------------------------------------*/
-            /* # Остальные страницы */
-            /*------------------------------------*/
-            .box
-            {
-                .drop-down
-                {
-                    .content
-                    {
-                        .range
-                        {
-                            .slider
-                            {
-                                position: relative;
-                                top: auto;
-                                left: auto;
-                                right: auto;
-                                overflow: visible;
-                            }
-                        }
-                    }
-                }
-                .subscections
-                {
-                    .subsection
-                    {
-                        margin-right: 1.2%;
-                        width: 15.6%;
-                    }
-                    .subsection:nth-child(6), .subsection:nth-child(12), .subsection:nth-child(18), .subsection:nth-child(24)
-                    {
-                        margin-right: 0px;
-                    }
-                }
-            }
-            .main_content
-            {
-                .column.right
-                {
-                    margin-left: 22%;
-                    width: 78%;
-                    min-width: 0px;
-                }
-                .newsletter
-                {
-                    .column.right
-                    {
-                        margin: 0px;
-                        width: 445px;
-                    }
-                }
-            }
-            ul.product-list.vertical
-            {
-                li.item, li.item:nth-child(4), li.item:nth-child(8), li.item:nth-child(12), li.item:nth-child(16), li.item:nth-child(20)
-                {
-                    margin-right: 6px;
-                }
-            }
-            ul.product-list.vertical.scroll
-            {
-                li.item
-                {
-                    margin: 0px;
-                }
-            }
-            .newsletter.product-select
-            {
-                form
-                {
-                    textarea
-                    {
-                        width: 65%;
-                    }
+                    .feedback { display: inline-block; }
                 }
             }
         }
-        /*------------------------------------*/
-        /* # Фиксированный футер */
-        /*------------------------------------*/
-        .footer.fixed
+    }
+    .box
+    {
+        .pager
+        {
+            left: -263px;
+        }
+        .pager.pager-bottom
+        {
+            left: auto;
+            width: auto;
+        }
+        .banner.index-page
+        {
+            display: none;
+        }
+    }
+    /*------------------------------------*/
+    /* # Главная страница */
+    /*------------------------------------*/
+    .slider
+    {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        left: 0px;
+        width: auto;
+        overflow: hidden;
+        .wrap
+        {
+            margin: 0px auto 0px auto;
+            width: 741px;
+            overflow: visible;
+        }
+        .wrap:before, .wrap:after
+        {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            width: 90px;
+            background-color: @colorBackground;
+            opacity: 1;
+            z-index: 2;
+        }
+        .wrap:before
+        {
+            left: -90px;
+        }
+        .wrap:after
+        {
+            right: -90px;
+        }
+    }
+    /*------------------------------------*/
+    /* # Сквозные баннеры */
+    /*------------------------------------*/
+    .banner-ext.banner-wide
+    {
+        img
         {
             width: 100%;
-            .wrap
+        }
+    }
+    /*------------------------------------*/
+    /* # Остальные страницы */
+    /*------------------------------------*/
+    .box
+    {
+        .drop-down
+        {
+            .content
             {
-                width: auto;
+                .range
+                {
+                    .slider
+                    {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        right: auto;
+                        overflow: visible;
+                    }
+                }
             }
         }
-        /*------------------------------------*/
-        /* # Футер */
-        /*------------------------------------*/
-        .footer
+        .subscections
         {
-            .wrap
+            .subsection
             {
-                width: auto;
-                .block.social
+                margin-right: 1.2%;
+                width: 15.6%;
+            }
+            .subsection:nth-child(6), .subsection:nth-child(12), .subsection:nth-child(18), .subsection:nth-child(24)
+            {
+                margin-right: 0px;
+            }
+        }
+    }
+    .main_content
+    {
+        .column.right
+        {
+            margin-left: 22%;
+            width: 78%;
+            min-width: 0px;
+        }
+        .newsletter
+        {
+            .column.right
+            {
+                margin: 0px;
+                width: 445px;
+            }
+        }
+    }
+    ul.product-list.vertical
+    {
+        li.item, li.item:nth-child(4), li.item:nth-child(8), li.item:nth-child(12), li.item:nth-child(16), li.item:nth-child(20)
+        {
+            margin-right: 6px;
+        }
+    }
+    ul.product-list.vertical.scroll
+    {
+        li.item
+        {
+            margin: 0px;
+        }
+    }
+    .newsletter.product-select
+    {
+        form
+        {
+            textarea
+            {
+                width: 65%;
+            }
+        }
+    }
+    /*------------------------------------*/
+    /* # Фиксированный футер */
+    /*------------------------------------*/
+    .footer.fixed
+    {
+        width: 100%;
+        .wrap
+        {
+            width: auto;
+        }
+    }
+    /*------------------------------------*/
+    /* # Футер */
+    /*------------------------------------*/
+    .footer
+    {
+        .wrap
+        {
+            width: auto;
+            .block.social
+            {
+                .wrap
                 {
-                    .wrap
-                    {
-                        padding-left: 0px;
-                    }
+                    padding-left: 0px;
                 }
             }
         }
@@ -279,276 +255,228 @@
 
 @media screen and (max-width: 1180px)
 {
-    body #total_wrapper.wide
+    .main_content
     {
-		#main_wrapper
-		{
-            .main_content
-            {
-                .column.right
-                {
-                    margin-left: 22.5%;
-                    width: 77.5%;
-                }
-            }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
-            {
-                .card-product-image
-                {
-                    width: 66%;
-                }
-            }
+        .column.right
+        {
+            margin-left: 22.5%;
+            width: 77.5%;
+        }
+    }
+    /*---------------------------------------------------------------------------*\
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 66%;
         }
     }
 }
 
 @media screen and (max-width: 1160px)
 {
-    body #total_wrapper.wide
+    .main_content
     {
-        #main_wrapper
+        .column.right
         {
-            .main_content
-            {
-                .column.right
-                {
-                    margin-left: 23%;
-                    width: 77%;
-                }
-            }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
-            {
-                .card-product-image
-                {
-                    width: 65.5%;
-                }
-            }
+            margin-left: 23%;
+            width: 77%;
+        }
+    }
+    /*---------------------------------------------------------------------------*\
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 65.5%;
         }
     }
 }
 
 @media screen and (max-width: 1140px)
 {
-    body #total_wrapper.wide
+    /*------------------------------------*/
+    /* # Главная страница */
+    /*------------------------------------*/
+    .box
     {
-        #main_wrapper
+        .content.index-page
         {
-            /*------------------------------------*/
-            /* # Главная страница */
-            /*------------------------------------*/
-            .box
+            .column.left
             {
-                .content.index-page
-                {
-                    .column.left
-                    {
-                        width: 43%;
-                    }
-                    .column.right
-                    {
-                        width: 57%;
-                    }
-                }
+                width: 43%;
             }
-            .main_content
+            .column.right
             {
-                .column.right
-                {
-                    margin-left: 23.5%;
-                    width: 76.5%;
-                }
+                width: 57%;
             }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
-            {
-                .card-product-image
-                {
-                    width: 65%;
-                }
-            }
+        }
+    }
+    .main_content
+    {
+        .column.right
+        {
+            margin-left: 23.5%;
+            width: 76.5%;
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 65%;
         }
     }
 }
 
 @media screen and (max-width: 1115px)
 {
-    body #total_wrapper.wide
+    .main_content
     {
-        #main_wrapper
+        .column.right
         {
-            .main_content
-            {
-                .column.right
-                {
-                    margin-left: 24%;
-                    width: 76%;
-                }
-            }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
-            {
-                .card-product-image
-                {
-                    width: 64%;
-                }
-            }
+            margin-left: 24%;
+            width: 76%;
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 64%;
         }
     }
 }
 
 @media screen and (max-width: 1100px)
 {
-    body #total_wrapper.wide
+    /*------------------------------------*/
+    /* # Главная страница */
+    /*------------------------------------*/
+    .box
     {
-        #main_wrapper
+        .content.index-page
         {
-            /*------------------------------------*/
-            /* # Главная страница */
-            /*------------------------------------*/
-            .box
+            .column.left
             {
-                .content.index-page
-                {
-                    .column.left
-                    {
-                        width: 46%;
-                    }
-                    .column.right
-                    {
-                        width: 54%;
-                    }
-                }
+                width: 46%;
             }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
+            .column.right
             {
-                .card-product-image
-                {
-                    width: 63.5%;
-                }
+                width: 54%;
             }
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 63.5%;
         }
     }
 }
 
 @media screen and (max-width: 1080px)
 {
-    body #total_wrapper.wide
+    .main_content
     {
-        #main_wrapper
+        .column.right
         {
-            .main_content
-            {
-                .column.right
-                {
-                    margin-left: 24.5%;
-                    width: 75.5%;
-                }
-            }
+            margin-left: 24.5%;
+            width: 75.5%;
         }
     }
 }
 
 @media screen and (max-width: 1065px)
 {
-    body #total_wrapper.wide
+    .header
     {
-        #main_wrapper
+        .column.right
         {
-            .header
+            .menu
             {
-                .column.right
-                {
-                    .menu
-                    {
-                        .item.new.wholesale { display: none; }
-                    }
-                }
+                .item.new.wholesale { display: none; }
             }
-            .main_content
-            {
-                .column.right
-                {
-                    margin-left: 25%;
-                    width: 75%;
-                }
-            }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
-            {
-                .card-product-image
-                {
-                    width: 62.5%;
-                }
-            }
+        }
+    }
+    .main_content
+    {
+        .column.right
+        {
+            margin-left: 25%;
+            width: 75%;
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 62.5%;
         }
     }
 }
 
 @media screen and (max-width: 1045px)
 {
-    body #total_wrapper.wide
+    /*------------------------------------*/
+    /* # Главная страница */
+    /*------------------------------------*/
+    .box
     {
-        #main_wrapper
+        .content.index-page
         {
-            /*------------------------------------*/
-            /* # Главная страница */
-            /*------------------------------------*/
-            .box
+            .column.left
             {
-                .content.index-page
-                {
-                    .column.left
-                    {
-                        width: 48%;
-                    }
-                    .column.right
-                    {
-                        width: 52%;
-                    }
-                }
+                width: 48%;
             }
-            .main_content
+            .column.right
             {
-                .column.right
-                {
-                    margin-left: 25.5%;
-                    width: 74.5%;
-                }
+                width: 52%;
             }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
+        }
+    }
+    .main_content
+    {
+        .column.right
+        {
+            margin-left: 25.5%;
+            width: 74.5%;
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 62%;
+        }
+    }
+    .newsletter.product-select
+    {
+        form
+        {
+            textarea
             {
-                .card-product-image
-                {
-                    width: 62%;
-                }
-            }
-            .newsletter.product-select
-            {
-                form
-                {
-                    textarea
-                    {
-                        width: 60%;
-                    }
-                }
+                width: 60%;
             }
         }
     }
@@ -556,265 +484,225 @@
 
 @media screen and (max-width: 1025px)
 {
-    body #total_wrapper.wide
+    .main_content
     {
-        #main_wrapper
+        .column.right
         {
-            .main_content
-            {
-                .column.right
-                {
-                    margin-left: 26%;
-                    width: 74%;
-                }
-            }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
-            {
-                .card-product-image
-                {
-                    width: 61%;
-                }
-            }
+            margin-left: 26%;
+            width: 74%;
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 61%;
         }
     }
 }
 
 @media screen and (max-width: 1000px)
 {
-    body #total_wrapper.wide
+    .main_content
     {
-        #main_wrapper
+        .column.right
         {
-            .main_content
+            margin-left: 26.5%;
+            width: 73.5%;
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* # Баннер про Оферту на Главной странице */
+    /*---------------------------------------------------------------------------*/
+    .offer-banner.index-page
+    {
+        a
+        {
+            .text
             {
-                .column.right
-                {
-                    margin-left: 26.5%;
-                    width: 73.5%;
-                }
+                left: 44%;
             }
-            /*---------------------------------------------------------------------------*\
-                # Баннер про Оферту на Главной странице
-            \*---------------------------------------------------------------------------*/
-            .offer-banner.index-page
-            {
-                a
-                {
-                    .text
-                    {
-                        left: 44%;
-                    }
-                }
-            }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
-            {
-                .card-product-image
-                {
-                    width: 60%;
-                }
-            }
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 60%;
         }
     }
 }
 
 @media screen and (max-width: 990px)
 {
-    body #total_wrapper.wide
+    .header
     {
-        #main_wrapper
+        form.authorization
         {
-            .header
+            input
             {
-                form.authorization
+                width: 189px;
+            }
+            .submit-wrap
+            {
+                .button
                 {
-                    input
-                    {
-                        width: 189px;
-                    }
-                    .submit-wrap
-                    {
-                        .button
-                        {
-                            width: 93px;
-                        }
-                    }
+                    width: 93px;
                 }
             }
-
-            .header.fixed
+        }
+    }
+    .header.fixed
+    {
+        .wrap
+        {
+            .user
             {
-                .wrap
+                width: 240px;                
+            }
+            .user.authorized
+            {
+                a.title
                 {
-                    .user
-                    {
-                        width: 240px;                
-                    }
-                    .user.authorized
-                    {
-                        a.title
-                        {
-                            width: 191px;
-                        }
-                    }
+                    width: 191px;
                 }
             }
-
-            /*------------------------------------*/
-            /* # Главная страница */
-            /*------------------------------------*/
-            .box
+        }
+    }
+    /*------------------------------------*/
+    /* # Главная страница */
+    /*------------------------------------*/
+    .box
+    {
+        .content.index-page
+        {
+            .column.left
             {
-                .content.index-page
-                {
-                    .column.left
-                    {
-                        width: 50%;
-                    }
-                    .column.right
-                    {
-                        width: 50%;
-                    }
-                }
+                width: 50%;
             }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
+            .column.right
             {
-                .card-product-image
-                {
-                    width: 59.5%;
-                }
+                width: 50%;
             }
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 59.5%;
         }
     }
 }
 
 @media screen and (max-width: 985px)
 {
-    body #total_wrapper.wide
+    .main_content
     {
-        #main_wrapper
+        .column.right
         {
-            .main_content
-            {
-                .column.right
-                {
-                    margin-left: 27%;
-                    width: 73%;
-                }
-            }
+            margin-left: 27%;
+            width: 73%;
         }
     }
 }
 
 @media screen and (max-width: 970px)
 {
-    body #total_wrapper.wide
+    ul.product-list.vertical
     {
-        #main_wrapper
+        li.item:nth-child(3), li.item:nth-child(6), li.item:nth-child(9), li.item:nth-child(12), li.item:nth-child(15), li.item:nth-child(18), li.item:nth-child(21), li.item:nth-child(24)
         {
-            ul.product-list.vertical
-            {
-                li.item:nth-child(3), li.item:nth-child(6), li.item:nth-child(9), li.item:nth-child(12), li.item:nth-child(15), li.item:nth-child(18), li.item:nth-child(21), li.item:nth-child(24)
-                {
-                    margin-right: 0px;
-                }
-            }
+            margin-right: 0px;
         }
     }
 }
 
 @media screen and (max-width: 960px)
 {
-    body #total_wrapper.wide
+    /*------------------------------------*/
+    /* # Шапка сайта */
+    /*------------------------------------*/
+    .header
     {
-        #main_wrapper
+        .column.left
         {
-            /*------------------------------------*/
-            /* # Шапка сайта */
-            /*------------------------------------*/
-            .header
+            width: 205px;
+        }
+        .column.right
+        {
+            width: 755px;
+        }
+    }
+    .box
+    {
+        .column.left
+        {
+            width: 205px;
+        }
+    }
+    /*------------------------------------*/
+    /* # Главная страница */
+    /*------------------------------------*/
+    .slider
+    {
+        position: relative;
+        right: auto;
+        top: auto;
+        left: auto;
+        width: 741px;
+    }    
+    /*------------------------------------*/
+    /* # Остальные страницы */
+    /*------------------------------------*/
+    .box
+    {
+        .subscections
+        {
+            .subsection
             {
-                .column.left
-                {
-                    width: 205px;
-                }
-                .column.right
-                {
-                    width: 755px;
-                }
+                margin-right: 12px;
+                width: 182px;
             }
-            .box
+            .subsection:nth-child(6), .subsection:nth-child(12), .subsection:nth-child(18), .subsection:nth-child(24)
             {
-                .column.left
-                {
-                    width: 205px;
-                }
+                margin-right: 12px;
             }
-
-            /*------------------------------------*/
-            /* # Главная страница */
-            /*------------------------------------*/
-            .slider
+            .subsection:nth-child(5), .subsection:nth-child(10), .subsection:nth-child(15), .subsection:nth-child(20), .subsection:nth-child(25)
             {
-                position: relative;
-                right: auto;
-                top: auto;
-                left: auto;
-                width: 741px;
+                margin-right: 0px;
             }
-            
-            /*------------------------------------*/
-            /* # Остальные страницы */
-            /*------------------------------------*/
-            .box
-            {
-                .subscections
-                {
-                    .subsection
-                    {
-                        margin-right: 12px;
-                        width: 182px;
-                    }
-                    .subsection:nth-child(6), .subsection:nth-child(12), .subsection:nth-child(18), .subsection:nth-child(24)
-                    {
-                        margin-right: 12px;
-                    }
-                    .subsection:nth-child(5), .subsection:nth-child(10), .subsection:nth-child(15), .subsection:nth-child(20), .subsection:nth-child(25)
-                    {
-                        margin-right: 0px;
-                    }
-                }
-            }
-            .main_content
-            {
-                .column.left
-                {
-                    width: 249px;
-                }
-                .column.right
-                {
-                    margin-left: 261px;
-                    width: 699px;
-                }
-            }
-            /*---------------------------------------------------------------------------*\
-                #Карточка товара
-            \*---------------------------------------------------------------------------*/
-            .card-product
-            {
-                .card-product-image
-                {
-                    width: 561px;
-                }
-            }
+        }
+    }
+    .main_content
+    {
+        .column.left
+        {
+            width: 249px;
+        }
+        .column.right
+        {
+            margin-left: 261px;
+            width: 699px;
+        }
+    }
+    /*---------------------------------------------------------------------------*/
+    /* #Карточка товара */
+    /*---------------------------------------------------------------------------*/
+    .card-product
+    {
+        .card-product-image
+        {
+            width: 561px;
         }
     }
 }

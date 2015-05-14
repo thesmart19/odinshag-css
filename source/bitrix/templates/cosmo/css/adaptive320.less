@@ -51,34 +51,6 @@
 	/*------------------------------------*/
 	/* # Фиксированная шапка */
 	/*------------------------------------*/
-    body #total_wrapper.wide #main_wrapper .header.fixed
-    {
-        .wrap
-        {
-            width: auto;
-            .user
-            {
-                width: 72px;
-                .message
-                {
-					form.authorization
-					{
-						input
-						{
-							width: 268px;
-						}
-                        .submit-wrap
-                        {
-                            .button
-                            {
-                                width: 93px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 	.header.fixed
 	{
 		display: block;
@@ -250,37 +222,6 @@
 	/*------------------------------------*/
 	/* # Шапка сайта */
 	/*------------------------------------*/
-    body #total_wrapper.wide #main_wrapper .header
-    {
-        .column.left
-        {
-            width: 100%;
-        }
-        .column.right
-        {
-            .menu
-            {
-                .item.new.info
-                {
-                    .feedback
-                    {
-                        display: none;
-                    }
-                }
-                .item.new.receipt-and-payment
-                {
-                    .question
-                    {
-                        display: none;
-                    }
-                }
-            }
-            .button.feedback
-            {
-                display: block !important;
-            }
-        }
-    }
 	.header
 	{
 		padding-top: 43px;
@@ -329,7 +270,7 @@
 			{
 				position: absolute;
 				top: -42px;
-				width: 177px;
+				width: 187px;
 				.content
 				{
 					top: 42px;
@@ -340,7 +281,9 @@
 			{
                 span.name
                 {
-                    
+                    left: 38px;
+                    right: 6px;
+                    padding-right: 12px;
                 }
 				span.name:after
 				{
@@ -433,7 +376,7 @@
 					height: 0px;
 					a.title
 					{
-						min-width: 190px;
+						min-width: 180px;
 					}
 					.item.new
 					{
@@ -442,16 +385,40 @@
 				}
 				.items-aggregator.hover
 				{
+                    /* ряд костылей в стилях */
+                    /* появились после скрытия блоков .item.new.about, .item.new.action */
 					.item.new
 					{
 						display: block;
+                        a.title
+                        {
+                            /* костыль */
+                            display: none;
+                        }
+                        .fixed-wrap, .content
+                        {
+                            display: block;
+                        }
+                        .content
+                        {
+                            a:first-child, span:first-child
+                            {
+                                /* костыль */
+                                border-top: 0px;
+                            }
+                        }
 					}
+                    .item.new.about, .item.new.action
+                    {
+                        /* костыль */
+                        display: none;
+                    }
 				}
 				.items-aggregator > a.title
 				{
 					display: block;
 					position: absolute;
-					left: 183px;
+					left: 193px;
 					right: 0px;
 					top: 0px;
 					width: auto;
@@ -568,12 +535,18 @@
 						z-index: 2;
 						a, span /* span для эксперимента */
 						{
-							padding: 12px 0px 12px 6px;
+							padding: 12px 0px 12px 18px;
 							font-size: @fontSizeB;
 							color: @colorLighterBlack;
 							border-bottom: 1px solid @colorDrakerGrey;
 						}
-						a:before, span:before /* span для эксперимента */ { display: none; }
+						a:before, span:before /* span для эксперимента */
+                        {
+                            /* display: none; */
+                            left: 6px;
+                            top: 50%;
+                            margin-top: -3px;
+                        }
 						a:first-child, span:first-child /* span для эксперимента */ { border-top: 1px solid @colorDrakerGrey; }
 						a:last-child, span:last-child /* span для эксперимента */ { border-bottom: 0px; }
 					}
@@ -791,6 +764,13 @@
                         }
                     }
                 }
+                .item.new.receipt-and-payment
+                {
+                    .question
+                    {
+                        display: none;
+                    }
+                }
 			}
             .button.feedback
             {
@@ -864,13 +844,6 @@
 	/*------------------------------------*/
 	/* # Футер */
 	/*------------------------------------*/
-    body #total_wrapper.wide .footer
-    {
-		.wrap
-		{
-			width: auto;
-        }
-    }
 	.footer
 	{
 		height: 156px;
@@ -949,19 +922,6 @@
 	/*------------------------------------*/
 	/* # Меню каталога товаров */
 	/*------------------------------------*/
-    body #total_wrapper.wide #main_wrapper
-    {
-        .catalog
-        {
-            .content
-            {
-                .item:hover
-                {
-                    a.title { width: auto; }
-                }
-            }
-        }
-    }
 	.catalog
 	{
 		.content
@@ -1031,6 +991,10 @@
 					display: none !important;
 				}
 			}
+            .item:hover
+            {
+                a.title { width: auto; }
+            }
 			.item.empty-item
 			{
 				a.title, a.title:hover
@@ -1051,7 +1015,11 @@
 	.catalog > .button
 	{
 		height: 42px;
-		span.icon { display: none; }
+		span.icon
+        {
+            left: 10px;
+            margin-left: 0px;
+        }
 		span.name
 		{
             left: 20px;
@@ -1424,6 +1392,8 @@
             }
             .column.left
             {
+                margin: 0px;
+                padding: 0px;
                 .block
                 {
                     left: auto;
@@ -1583,33 +1553,39 @@
 		}
         .drop-down.aggregate
         {
-            .content
+            border-bottom: 0px;
+            .show-more
             {
-                padding: 3px 6px 3px 6px;
-                overflow: visible;
-                .drop-down
+                position: relative;
+                top: auto;
+                bottom: auto;
+                right: auto;
+                width: auto;
+                height: 28px;
+                font-size: @fontSizeOrder;
+                line-height: @lineHeightH1 !important;
+                span.icon
                 {
-                    .title, .content
-                    {
-                        border-left: 1px solid @colorDrakerGrey;
-                        border-right: 1px solid @colorDrakerGrey;
-                    }
-                    .content { padding: 0px; }
+                    .mixin-icon;
+                    .mixin-arrow-small;
+                    .mixin-arrow-grey-small-down;
+                    display:inline-block;
+                    position: relative;
+                    vertical-align: middle;
+                    margin: 0px 0px 0px 5px;
                 }
-                .drop-down:last-child { border-bottom: 1px solid @colorDrakerGrey; }
+                span.icon.close { .mixin-arrow-grey-small-up; }
             }
         }
-        .drop-down.aggregate > .title
+        .drop-down.aggregate > .content
         {
-            a { background-color: @colorWhite; }
+            display: block;
+            height: 0px;
+            overflow: hidden;
         }
-        .drop-down.aggregate.open > .title
+        .drop-down.aggregate > .content.open
         {
-            a
-            {
-                background-color: @colorLightGrey;
-                border-bottom: 1px solid @colorDrakerGrey;
-            }
+            height: auto !important;
         }
 		/*------------------------------------*/
 		/* # Список товаров - вертикальный */
@@ -5067,7 +5043,7 @@
             .catalog
             {
                 left: 0px;
-                right: 198px;
+                right: 190px;
                 width: auto;
             }
         }
@@ -5078,7 +5054,7 @@
                 .items-aggregator > a.title
                 {
                     left: auto;
-                    width: 192px;
+                    width: 180px;
                 }
             }
         }
