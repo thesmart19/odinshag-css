@@ -871,8 +871,11 @@
 			{
 				a
 				{
+                    width: 16.4%;
+                    /*
 					padding-left: 17px;
 					padding-right: 18px;
+                    */
 				}
 				a:nth-child(5) { border-right: 0px; }
 			}
@@ -914,81 +917,18 @@
 			}
 			.invoice
 			{
-				.title
-				{
-					.name { width: 310px; }
-					.price
-					{
-						left: 331px;
-						width: 115px;
-					}
-					.count
-					{
-						left: 466px;
-						width: 119px;						
-					}
-					.total { width: 132px; }
-					.reason { width: 268px; }
-					.bonus-count { left: 436px; }
-				}
-				.row
-				{
-					.name
-					{
-						padding-left: 10px;
-						width: 310px;
-					}
-					.price
-					{
-						left: 331px;
-						width: 115px;
-					}
-					.count
-					{
-						left: 466px;
-						width: 119px;						
-					}
-					.total { width: 132px; }
-					.reason { width: 268px; }
-					.bonus-count { left: 436px; }
-				}
-				.row.special.reform
-				{
-					.reason { width: 494px; }
-				}
-				.footer
-				{
-					.details
-					{
-						padding-left: 10px;
-						padding-right: 10px;
-						width: 446px;
-						.parameter
-						{
-							.amount
-							{
-								width: 270px;
-							}
-						}
-					}
-					.total
-					{
-						width: 292px;
-						.type	{ width: 175px; }
-						.amount	{ width: 80px; }
-						.submit
-						{
-                            form
-                            {
-                                width: 290px;
-                            }
-							.amount
-							{
-								width: 90px;
-							}
-						}
-					}
-				}
+                .footer
+                {
+                    .total
+                    {
+                        .type
+                        {
+                            width: 50%;
+                        }
+                        .button { width: 91px; }
+                        .button.cancel { width: 122px; }
+                    }
+                }
 			}
             .bonus-history
             {
@@ -1556,7 +1496,8 @@
 		{
 			.column.left, .column.right
 			{
-				width: 50%;
+                margin: 0px !important;
+				width: 50% !important;
                 min-width: 0px;
 			}
 			.column.left
@@ -1570,7 +1511,6 @@
 			}
 			.column.right
 			{
-                margin: 0px;
 				.social
 				{
 					padding: 12px 180px 12px 12px;
@@ -1843,6 +1783,11 @@
                     }
                 }
             }
+            .pager
+            {
+                left: auto !important;
+                width: auto !important;
+            }
 		}
 	}
 	/*------------------------------------*/
@@ -1998,8 +1943,13 @@
                     .media.image
                     {
                         height: 423px;
+                        .house, .man
+                        {
+                            margin: 0px;
+                        }
                         .house
                         {
+                            left: 312px;
                             .text.age
                             {
                                 top: -69px;
@@ -2031,6 +1981,10 @@
                                     height: 2px;
                                 }
                             }
+                        }
+                        .man
+                        {
+                            left: 57px;
                         }
                     }
                 }

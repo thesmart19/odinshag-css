@@ -2444,7 +2444,7 @@
             }
 			.column.left, .column.right
             {
-                width: auto;
+                width: auto !important;
             }
             .column.left
 			{
@@ -3820,6 +3820,7 @@
                         float: none;
                         padding-left: 6px;
                         padding-right: 12px;
+                        width: auto;
                         text-align: left;
                         font-size: @fontSizeB;
                         border-right: 0px;
@@ -3914,7 +3915,6 @@
                         font-size: @fontSizeDefault;
                         .name
                         {
-                            padding: 6px 6px 8px 12px;
                             width: 50%;
                             min-height: 48px;
                         }
@@ -3927,7 +3927,7 @@
                         .price, .count
                         {
                             bottom: auto;
-                            width: 20%;
+                            width: 25%;
                             height: 22px;
                         }
                         .price
@@ -3937,7 +3937,7 @@
                         }
                         .count
                         {
-                            right: 20%;
+                            right: 25%;
                             color: @colorLighterBlack;
                         }
                         .total
@@ -3945,7 +3945,7 @@
                             right: 0px;
                             bottom: 0px;
                             top: 30px;
-                            width: 44%;
+                            width: 50%;
                             border: 0px;
                             border-top: 1px solid @colorDrakerGrey;
                         }

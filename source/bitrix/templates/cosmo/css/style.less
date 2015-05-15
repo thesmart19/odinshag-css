@@ -3218,7 +3218,7 @@ iframe[name="google_conversion_frame"]
 		.block.copyright
 		{
 			left: 0px;
-			width: 33%;
+			width: 35%;
             .wrap
             {
                 margin: 0px 12px 0px 12px;
@@ -3414,7 +3414,7 @@ iframe[name="google_conversion_frame"]
 	{
 		position: relative;
 		margin: 0px auto 0px auto;
-		width: @pageWrapWidth;
+		width: @pageWrapWidth1195;
 		height: 29px;
 		line-height: @lineHeightBasketTitle !important;
 		background-color: @colorFixedPanelBg;
@@ -5470,6 +5470,11 @@ iframe[name="google_conversion_frame"]
 	/* стили для списка товаров, размещенного в одином широком столбце*/
 	.wide-catalog
 	{
+        .pager
+        {
+            left: auto;
+            width: auto;
+        }
         .pager.one-page-products
         {
             display: none;
@@ -5890,7 +5895,7 @@ iframe[name="google_conversion_frame"]
 				{
 					position: absolute;
 					top: 0px;
-					padding: 12px 10px 0px 10px;
+					padding: 12px 0px 0px 0px;
 					height: 33px;
 					border: 0px;
 					border-right: 1px solid @colorDrakerGrey;
@@ -5899,38 +5904,38 @@ iframe[name="google_conversion_frame"]
 				.name
 				{
 					left: 0px;
-					width: 342px;
+					width: 40%;
 				}
 				.price
 				{
-					left: 363px;
-					width: 194px;
+					left: 40%;
+					width: 20%;
 				}
 				.count
 				{
-					left: 578px;
-					width: 151px;
+					left: 60%;
+					width: 20%;
 				}
 				.total
 				{
 					right: 0px;
-					width: 189px;
+					width: 20%;
 					border-right: 0px;
 				}
 				.date
 				{
 					left: 0px;
-					width: 126px;
+					width: 10%;
 				}
 				.reason
 				{
-					left: 147px;
-					width: 300px;
+					left: 10%;
+					width: 50%;
 				}
 				.bonus-count
 				{
-					left: 468px;
-					width: 185px;
+					left: 60%;
+					width: 20%;
 				}
 			}
 			.row
@@ -5944,7 +5949,7 @@ iframe[name="google_conversion_frame"]
 					position: absolute;
 					top: 0px;
 					bottom: 0px;
-					padding: 14px 10px 14px 10px;
+					padding: 14px 0px 14px 0px;
 					border: 0px;
 					border-right: 1px solid @colorDrakerGrey;
 					overflow: hidden;
@@ -5952,42 +5957,46 @@ iframe[name="google_conversion_frame"]
 				.name
 				{
 					position: relative;
-					padding-left: 24px;
-					width: 328px;
+					/* padding-left: 24px; */
+					width: 40%;
 					text-align: left;
+                    a
+                    {
+                        display: inline-block;
+                        margin: 0px 24px 0px 24px;
+                    }
 				}
 				.price
 				{
-					left: 363px;
-					width: 194px;
+					left: 40%;
+					width: 20%;
 				}
 				.count
 				{
-					left: 578px;
-					width: 151px;
+					left: 60%;
+					width: 20%;
 				}
 				.total
 				{
 					right: 0px;
-					width: 189px;
+					width: 20%;
 					border-right: 0px;
 				}
 				.date
 				{
 					/*position: relative;*/
-					padding-left: 24px;
-					width: 112px;
+					width: 10%;
 				}
 				.reason
 				{
 					position: relative;
-					left: 147px;
-					width: 300px;
+					left: 10%;
+					width: 50%;
 				}
 				.bonus-count
 				{
-					left: 468px;
-					width: 185px;
+					left: 60%;
+					width: 20%;
 				}
 			}
 			.row:last-child { /*border-bottom: 0px;*/ }
@@ -6007,7 +6016,7 @@ iframe[name="google_conversion_frame"]
 				{
 					padding-left: 0px;
 					padding-right: 0px;
-					width: 526px;
+					width: 70%;
 				}
 			}
 			.row.history
@@ -6077,13 +6086,13 @@ iframe[name="google_conversion_frame"]
 				{
 					position: relative;
 					float: left;
-					padding: 27px 40px 0px 24px;
-					width: 513px;
+					padding: 27px 0px 0px 0px;
+					width: 60%;
 					border: 0px;
 					border-right: 1px solid @colorDrakerGrey;
 					.parameter
 					{
-						margin: 0px 0px 25px 0px;
+						margin: 0px 0px 25px 24px;
 						div
 						{
 							position: relative;
@@ -6115,7 +6124,7 @@ iframe[name="google_conversion_frame"]
 					position: absolute;
 					right:0px;
 					top: 0px;
-					width: 380px;
+					width: 40%;
 					.cost, .submit, .bonus
 					{
 						padding: 15px 0px 0px 0px;
@@ -6837,6 +6846,7 @@ iframe[name="google_conversion_frame"]
                         width: 100%;
                         li
                         {
+                            width: 100%;
                             border-left: 0px;
                             border-right: 0px;
                             a, span
@@ -6862,6 +6872,10 @@ iframe[name="google_conversion_frame"]
                             }
                         }
                         li:after { display: none; }
+                    }
+                    .overview
+                    {
+                        width: 100%;
                     }
                 }
             }
@@ -7228,7 +7242,7 @@ iframe[name="google_conversion_frame"]
         }
         form
         {
-            padding: 12px 24px 12px 24px;
+            padding: 12px 12px 12px 24px;
             input[type="submit"]
             {
                 width: 92px;
@@ -7238,7 +7252,7 @@ iframe[name="google_conversion_frame"]
             {
                 margin: 0px 0px 12px 326px;
                 padding: 0px 10px 0px 10px;
-                width: 797px;
+                width: 62%;
                 height: 97px;
                 font-size: @fontSizeDefault;
             }
@@ -7482,7 +7496,7 @@ iframe[name="google_conversion_frame"]
 		position: relative;
 		.column.left
 		{
-			width: 766px;
+			width: 84%;
             margin: 0px;
 		}
 		.column.right
@@ -10986,8 +11000,11 @@ ul.product-list.one-page-products
 		{
 			position: relative;
 			float: left;
+            width: 16.5%;
+            /*
 			padding-left: 34px;
 			padding-right: 35px;
+            */
 			border-right: 1px solid @colorDrakerGrey;
 		}
 		a:last-child
@@ -10997,7 +11014,7 @@ ul.product-list.one-page-products
 			top: 0px;
 			float: none;
 			background-color: @colorLightGrey; /* @colorDarkGrey */
-			border-left: 1px solid @colorDrakerGrey;
+			/*border-left: 1px solid @colorDrakerGrey;*/
 			border-right:0px;
 		}
 		a:last-child:hover { background-color: @colorDarkGrey; /* @colorGreyHover */ }
@@ -12553,8 +12570,7 @@ body
         position: absolute;
         right: 0px;
         top: auto;
-        /*float: right;*/
-		width: 563px;
+		width: 66.9%; /* 563px */
 		height: 428px;
 		border: 1px solid @colorDrakerGrey;
 	}
@@ -14630,6 +14646,7 @@ body
         background-color: @colorWhite;
         .column.left
         {
+            margin: 0px;
             width: 290px;
             height: 179px;
             font-size: 0.1px;
@@ -14654,8 +14671,8 @@ body
         .column.right
         {
             margin-left: 290px;
-            padding-right: 48px;
-            width: 620px;
+            /* padding-right: 48px; */
+            width: 69%;
             min-width: 0px;
             .title
             {
@@ -14679,12 +14696,14 @@ body
     border: 0px;
     .column.left
     {
-        width: 208px;
+        margin: 0px;
+        width: 21.7%;
+        min-width: 205px;
     }
     .column.right
     {
-        margin-left: 217px;
-        width: 743px;
+        margin-left: 22.7%;
+        width: 77.3%;
         min-width: 0px;
         .description
         {

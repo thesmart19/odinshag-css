@@ -31,6 +31,10 @@
         {
             display: none;
         }
+        .button.feedback
+        {
+            display: none !important;
+        }
     }
 }
 
@@ -232,20 +236,21 @@
 			.column.left, .column.right
 			{
 				margin: 0px;
+                padding: 0px;
 				width: auto;
 				border: 0px;
 			}
 			.column.left
 			{
-				margin-right: 12px;
-				width: 788px;
+				margin-right: 1%;
+				width: 84%;
                 color: @colorLighterBlack;
                 font-size: @fontSizeOrder;
 			}
 			.column.right
 			{
 				float: left;
-				width: 124px;
+				width: 15%;
                 min-width: 0px;
                 overflow: visible;
 			}
@@ -327,29 +332,29 @@
 				.name
 				{
 					left: 0px;
-					width: 407px;
+					width: 40%;
 				}
 				.count
 				{
-					left: 408px;
-					width: 166px;
+					left: 40.5%;
+					width: 19.5%;
 				}
 				.price
 				{
-					left: 575px;
-					width: 131px;
+					left: 60.5%;
+					width: 14.5%;
 				}
 				.total
 				{
-					left: 707px;
-					width: 142px;
+					left: 75.5%;
+					width: 14.5%;
                     height: 31px;
                     background-color: @colorDarkGrey;
 				}
 				.delete
 				{
 					right: 0px;
-					width: 108px;
+					width: 10%;
 					border-right: 0px;
 				}
 			}
@@ -371,7 +376,8 @@
 				.name
 				{
 					position: relative;
-					width: 407px;
+					left: 0px;
+					width: 40%;
 					min-height: 96px;
 					a.img
 					{
@@ -433,8 +439,8 @@
 				}
 				.count
 				{
-					left: 408px;
-					width: 166px;
+					left: 40.5%;
+					width: 19.5%;
 					.counter
 					{
 						position: relative;
@@ -495,13 +501,13 @@
 				}
 				.price
 				{
-					left: 575px;
-					width: 131px;
+					left: 60.5%;
+					width: 14.5%;
 				}
 				.total
 				{
-					left: 707px;
-					width: 142px;
+					left: 75.5%;
+					width: 14.5%;
 					height: auto;
 					font-weight: bold;
                     background-color: @colorWhite;
@@ -509,7 +515,7 @@
 				.delete
 				{
 					right: 0px;
-					width: 108px;
+					width: 10%;
 					border-right: 0px;
 					a
 					{
@@ -1175,7 +1181,7 @@
 				border-bottom: 1px solid @colorDrakerGrey;
                 .items-block
                 {
-                    width: 886px;
+                    width: 1117px;
                     ul.items
                     {
                         li.item
@@ -1586,7 +1592,7 @@
 				border-top: 0px;
 				border-right: 0px;
 				border-bottom: 0px;
-				border-left: 1px solid @colorDrakerGrey;
+				border-left: 0px; /* 1px solid @colorDrakerGrey; */
                 .text
                 {
                     margin: 6px 0px 15px 0px;

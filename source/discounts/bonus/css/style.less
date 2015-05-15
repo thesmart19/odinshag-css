@@ -3,94 +3,129 @@
 @import (reference)	"source/include/variables.less";
 @import (reference)	"source/include/mixins.less";
 
-.no-svg
-{
-	.bonuses-header:before,
-	.extra-bonuses li span
-	{ background-image: url(@imageIconsBigPNG); }
+.no-svg {
+    .bonuses-header:before, .extra-bonuses li span
+    {
+        background-image: url(@imageIconsBigPNG);
+    }
 }
 
-.bonuses-header, .bonuses-text
+ul
 {
-	position: relative;
+    li.bonuses-text-column
+    {
+        width: 50%;
+        height: 245px;
+        float: left;
+        margin: 0 0px 24px 0;
+        .bonuses-text
+        {
+            margin-right: 6px;
+            height: 205px;
+            ul
+            {
+                margin: 12px 0;
+            }
+
+        }
+    }
+    li.bonuses-text-column:last-child
+    {
+        .bonuses-text
+        {
+            margin-right: 0px;
+            margin-left: 6px;
+        }
+    }
 }
 
-.bonuses-header
-{
-	margin: 0px 0px 30px 0px;
-	padding: 0px 0px 0px 82px;
-	h2
-	{
-		margin: 0px 0px 9px 0px;
-		padding: 0px;
-	}
-	p { margin-bottom: 17px; }
-	p:last-child { color: @colorLightBlack; }
+ul li.bonuses-text-column .bonuses-text ul li {
+    margin: 12px 0
 }
 
-.bonuses-header:before
-{
-	content: " ";
-	display: block;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-
-	width: 60px;
-	height: 68px;
-	background-image: url("img/icons.png");
-	background-repeat: no-repeat;
-	background-position: -124px 0px;
+ul li.bonuses-text-column .bonuses-text ul li span {
+    padding-right: 15px;
+    color: #f24942;
+    font-size: 22px;
+    line-height: 18px;
+    float: left
 }
 
-.bonuses-text
-{
-	margin: 0px 0px 12px 82px;
-	padding: 17px 24px 6px 47px;
-	margin-bottom: 15px;
-	background-color: @colorLightGrey;
-	h2
-	{
-		margin-bottom: 18px;
-		padding: 0px;
-		text-transform: uppercase;
-	}
-	ul
-	{
-		color: @colorRed;
-		list-style-type: disc;
-		list-style-position: outside;
-		font-size: @fontSizeH3;
-		li
-		{
-			margin: 0px 0px 16px 0px;
-			span
-			{
-				color: @colorLighterBlack;
-				font-size: @fontSizeBasketTotal;
-				line-height: @lineHeightDefault;
-			}
-		}
-	}
-	.info-message
-	{
-		margin: 7px 0px 12px 0px !important;
-	}
+.bonuses-header {
+    position: relative;
+    height: 70px;
+    padding: 18px 0 0 90px
 }
 
-.get-roubles:before, .sell-roubles:before
-{
-	content: " ";
-	display: block;
-	position: absolute;
-	left: -82px;
-	top: 0px;
-	width: 62px;
-	height: 69px;
-	background-image: url("img/icons.png");
-	background-repeat: no-repeat;
+.bonuses-header:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 6px;
+    top: 0;
+    width: 72px;
+    height: 80px;
+    background-image: url("/bitrix/templates/cosmo/css/img/icons-big.svg?version=2014.09.02");
+    background-repeat: no-repeat;
+    background-position: -1202px -116px
 }
 
-.get-roubles:before { background-position: 0px 0px; }
+.bonuses-text {
+    background: #f1f1f1;
+    padding: 20px 24px;
+    margin-bottom: 15px
+}
 
-.sell-roubles:before { background-position: -62px 0px; }
+.bonuses-text h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 12px;
+    text-transform: uppercase
+}
+
+.extra-bonuses {
+    display: block
+}
+
+.extra-bonuses li {
+    display: block
+}
+
+.extra-bonuses li span {
+    width: 72px;
+    height: 80px;
+    display: block;
+    float: left;
+    margin: 10px 30px 0 8px;
+    background-image: url("/bitrix/templates/cosmo/css/img/icons-big.svg?version=2014.09.02");
+    background-repeat: no-repeat
+}
+
+.extra-bonuses li span.yandex {
+    background-position: -844px -116px
+}
+
+.extra-bonuses li span.reviews {
+    background-position: -944px -116px
+}
+
+.extra-bonuses li span.questions {
+    background-position: -16px -212px
+}
+
+.extra-bonuses li span.mistakes {
+    background-position: -96px -212px
+}
+
+.extra-bonuses li .bonuses-text {
+    background: #fafafa;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    width: 845px;
+    padding: 10px 0 20px
+}
+
+.extra-bonuses li .bonuses-text .info-message span.icon {
+    background-image: none
+}
