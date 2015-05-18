@@ -6,6 +6,7 @@
 .no-svg
 {
     .box .text .media.image .house              { .mixin-image-house-png; }
+    .box .text .media.image .man                { .mixin-image-man-png; }
     .box .features .feature .icon.new           { .mixin-icon-big-new-product-png }
     .box .features .feature .icon.brand         { .mixin-icon-big-brand-png; }
     .box .features .feature .icon.action        { .mixin-icon-big-action-png; }
@@ -48,7 +49,6 @@
             }
             .man, .house
             {
-                bottom: 8px;
                 background-image: url(@imageCompanyAbout);
                 background-repeat: no-repeat;
             }
@@ -63,11 +63,54 @@
             }
             .man
             {
+                bottom: 9px;
                 left: 50%; /* 57px */
-                margin-left: -439px;
-                width: 102px;
-                height: 93px;
-                background-position: 0px 0px;
+                margin-left: -401px;
+                width: 100px;
+                height: 90px;
+                background-image: none;
+                .hand
+                {
+                    -moz-animation-delay: 5s;
+                    -moz-animation-duration: 5s;
+                    -moz-animation-iteration-count: infinite;
+                    -moz-animation-timing-function: ease;
+                    -moz-animation-name: to-wave-hand;
+                    -moz-transform-origin: 80px 30px;
+
+                    -webkit-animation-delay: 5s;
+                    -webkit-animation-duration: 5s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-animation-timing-function: ease;
+                    -webkit-animation-name: to-wave-hand;
+                    -webkit-transform-origin: 80px 30px;
+
+                    animation-delay: 5s;
+                    animation-duration: 5s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease;
+                    animation-name: to-wave-hand;
+                    transform-origin: 80px 30px;
+                }
+                .eyes
+                {
+                    fill: @colorBrownEyes;
+
+                    -moz-animation-delay: 1s;
+                    -moz-animation-duration: 2s;
+                    -moz-animation-iteration-count: infinite;
+                    -moz-animation-name: close-eyes;
+
+                    -webkit-animation-delay: 1s;
+                    -webkit-animation-duration: 2s;
+                    -webkit-animation-iteration-count: infinite;
+                    -webkit-animation-name: close-eyes;
+
+                    animation-delay: 1s;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-name: close-eyes;
+                }
                 .text
                 {
                     .mixin-box-shadow;
@@ -79,6 +122,27 @@
                     width: 198px;
                     height: 106px;
                     background-color: @colorWhite;
+                    
+                    -moz-transform: scale(1);
+                    -moz-transform-origin: 105px 150px;
+                    -moz-animation-delay: 0s;
+                    -moz-animation-duration: 8s;
+                    -moz-animation-iteration-count: 1;
+                    -moz-animation-name: show-baloon;
+                    
+                    -webkit-transform: scale(1);
+                    -webkit-transform-origin: 105px 150px;
+                    -webkit-animation-delay: 0s;
+                    -webkit-animation-duration: 8s;
+                    -webkit-animation-iteration-count: 1;
+                    -webkit-animation-name: show-baloon;
+                    
+                    transform: scale(1);
+                    transform-origin: 105px 150px;
+                    animation-delay: 0s;
+                    animation-duration: 8s;
+                    animation-iteration-count: 1;
+                    animation-name: show-baloon;
                 }
                 .text:after
                 {
@@ -97,11 +161,12 @@
             .house
             {
                 .mixin-image-house-svg;
+                bottom: 8px;
                 left: 50%; /* 312px */
                 margin-left: -184px;
                 width: 369px;
                 height: 339px;
-                .counter, .counter-bg, .text
+                .counter, .counter-bg, .counter-roller, .text
                 {
                     position: absolute;
                     z-index: 1;
@@ -147,13 +212,42 @@
                     background-position: -220px -176px;
                 }
                 .counter:after { display: none; }
+                .counter-roller
+                {
+                    left: 229px;
+                    top: 180px;
+                    width: 19px;
+                    height: 27px;
+                    color: @colorWhite;
+                    font-size: @fontSizeIconArrow;
+                    font-weight: bold;
+                    line-height: 26px;
+                    text-align: center;
+                    overflow: hidden;
+                    span
+                    {
+                        display: block;
+                        position: absolute;
+                        left: 0px;
+                        top: auto;
+                        right: 0px;
+                        bottom: 0px;
+                        width: auto;
+                        height: auto;
+                    }
+                }
                 .text
                 {
                     margin: 0px;
-                    padding: 9px 12px 12px 12px;
-                    background-color: @colorWhite;
-                    border: 2px solid @colorRed;
+                    padding: 0px;
                     z-index: 2;
+                    .description
+                    {
+                        margin: 0px;
+                        padding: 9px 12px 12px 12px;
+                        background-color: @colorWhite;
+                        border: 2px solid @colorRed;
+                    }
                     .line
                     {
                         position: absolute;
@@ -164,82 +258,233 @@
                             background-color: @colorRed;
                         }
                     }
-                    .line:before, .line:after
-                    {
-                        content: " ";
-                        display: block;
-                        position: absolute;
-                        background-color: @colorRed;
-                    }
                 }
                 .text.age
                 {
-                    left: -310px;
+                    left: -272px;
                     top: 0px;
-                    width: 200px;
+                    width: 228px;
+                    .description
+                    {
+                        -moz-transform-origin: 228px 40px;
+                        -moz-animation-delay: 0s;
+                        -moz-animation-duration: 4s;
+                        -moz-animation-iteration-count: 1;
+                        -moz-animation-name: show-baloon;
+                        
+                        -webkit-transform-origin: 228px 40px;
+                        -webkit-animation-delay: 0s;
+                        -webkit-animation-duration: 4s;
+                        -webkit-animation-iteration-count: 1;
+                        -webkit-animation-name: show-baloon;
+                        
+                        transform-origin: 228px 40px;
+                        animation-delay: 0s;
+                        animation-duration: 4s;
+                        animation-iteration-count: 1;
+                        animation-name: show-baloon;
+                    }
                     .line
                     {
-                        right: -151px;
+                        right: -110px;
                         top: 37px;
-                        width: 149px;
+                        width: 110px;
                         height: 215px;
-                        span
+                        span.first
                         {
-                            left: 41px;
+                            left: 25px;
+                            right: 0px;
+                            bottom: 0px;
+                            width: 85px;
+                            height: 2px;
+                            
+                            -moz-transform: scale(1);
+                            -moz-transform-origin: 106px 0px;
+                            -moz-animation-delay: 0s;
+                            -moz-animation-duration: 1s;
+                            -moz-animation-iteration-count: 1;
+                            -moz-animation-name: show-baloon;
+
+                            -webkit-transform: scale(1);
+                            -webkit-transform-origin: 106px 0px;
+                            -webkit-animation-delay: 0s;
+                            -webkit-animation-duration: 1s;
+                            -webkit-animation-iteration-count: 1;
+                            -webkit-animation-name: show-baloon;
+
+                            transform: scale(1);
+                            transform-origin: 106px 0px;
+                            animation-delay: 0s;
+                            animation-duration: 1s;
+                            animation-iteration-count: 1;
+                            animation-name: show-baloon;
+                        }
+                        span.second
+                        {
+                            left: 25px;
                             top: 0px;
                             bottom: 0px;
                             width: 2px;
-                            height: auto;
+                            height: 215px;
+                            
+                            -moz-transform: scale(1);
+                            -moz-transform-origin: 0px 215px;
+                            -moz-animation-delay: 0s;
+                            -moz-animation-duration: 2s;
+                            -moz-animation-iteration-count: 1;
+                            -moz-animation-name: show-baloon;
+
+                            -webkit-transform: scale(1);
+                            -webkit-transform-origin: 0px 215px;
+                            -webkit-animation-delay: 0s;
+                            -webkit-animation-duration: 2s;
+                            -webkit-animation-iteration-count: 1;
+                            -webkit-animation-name: show-baloon;
+
+                            transform: scale(1);
+                            transform-origin: 0px 215px;
+                            animation-delay: 0s;
+                            animation-duration: 2s;
+                            animation-iteration-count: 1;
+                            animation-name: show-baloon;
                         }
-                    }
-                    .line:before, .line:after
-                    {
-                        height: 2px;
-                    }
-                    .line:before
-                    {
-                        left: 0px;
-                        top: 0px;
-                        width: 41px;
-                    }
-                    .line:after
-                    {
-                        right: 0px;
-                        bottom: 0px;
-                        width: 106px;
+                        span.third
+                        {
+                            left: 0px;
+                            top: 0px;
+                            width: 25px;
+                            height: 2px;
+                            
+                            -moz-transform: scale(1);
+                            -moz-transform-origin: 25px 0px;
+                            -moz-animation-delay: 0s;
+                            -moz-animation-duration: 3s;
+                            -moz-animation-iteration-count: 1;
+                            -moz-animation-name: show-baloon;
+
+                            -webkit-transform: scale(1);
+                            -webkit-transform-origin: 25px 0px;
+                            -webkit-animation-delay: 0s;
+                            -webkit-animation-duration: 3s;
+                            -webkit-animation-iteration-count: 1;
+                            -webkit-animation-name: show-baloon;
+
+                            transform: scale(1);
+                            transform-origin: 25px 0px;
+                            animation-delay: 0s;
+                            animation-duration: 3s;
+                            animation-iteration-count: 1;
+                            animation-name: show-baloon;
+                        }
                     }
                 }
                 .text.clients
                 {
                     right: -231px;
                     top: 87px;
-                    width: 180px;
+                    width: 208px;
+                    .description
+                    {
+                        -moz-transform-origin: 105px 78px;
+                        -moz-animation-delay: 0s;
+                        -moz-animation-duration: 7s;
+                        -moz-animation-iteration-count: 1;
+                        -moz-animation-name: show-baloon;
+                        
+                        -webkit-transform-origin: 105px 78px;
+                        -webkit-animation-delay: 0s;
+                        -webkit-animation-duration: 7s;
+                        -webkit-animation-iteration-count: 1;
+                        -webkit-animation-name: show-baloon;
+                        
+                        transform-origin: 105px 78px;
+                        animation-delay: 0s;
+                        animation-duration: 7s;
+                        animation-iteration-count: 1;
+                        animation-name: show-baloon;
+                    }
                     .line
                     {
                         left: -140px;
-                        bottom: -31px;
+                        bottom: -29px;
                         width: 244px;
                         height: 29px;
-                        span
+                        span.first
                         {
                             left: 0px;
                             right: 0px;
                             bottom: 0px;
                             width: auto;
                             height: 2px;
+                            
+                            -moz-transform-origin: 0px 0px;
+                            -moz-animation-delay: 0s;
+                            -moz-animation-duration: 5s;
+                            -moz-animation-iteration-count: 1;
+                            -moz-animation-name: show-baloon;
+
+                            -webkit-transform-origin: 0px 0px;
+                            -webkit-animation-delay: 0s;
+                            -webkit-animation-duration: 5s;
+                            -webkit-animation-iteration-count: 1;
+                            -webkit-animation-name: show-baloon;
+
+                            transform-origin: 0px 0px;
+                            animation-delay: 0s;
+                            animation-duration: 5s;
+                            animation-iteration-count: 1;
+                            animation-name: show-baloon;
                         }
-                    }
-                    .line:before
-                    {
-                        right: 0px;
-                        top: 0px;
-                        bottom: 0px;
-                        width: 2px;
-                        height: auto;
-                    }
-                    .line:after
-                    {
-                        display: none;
+                        span.second
+                        {
+                            right: 0px;
+                            top: 0px;
+                            bottom: 0px;
+                            width: 2px;
+                            height: auto;
+                            
+                            -moz-transform-origin: 0px 29px;
+                            -moz-animation-delay: 0s;
+                            -moz-animation-duration: 6s;
+                            -moz-animation-iteration-count: 1;
+                            -moz-animation-name: show-baloon;
+
+                            -webkit-transform-origin: 0px 29px;
+                            -webkit-animation-delay: 0s;
+                            -webkit-animation-duration: 6s;
+                            -webkit-animation-iteration-count: 1;
+                            -webkit-animation-name: show-baloon;
+
+                            transform-origin: 0px 29px;
+                            animation-delay: 0s;
+                            animation-duration: 6s;
+                            animation-iteration-count: 1;
+                            animation-name: show-baloon;
+                        }
+                        span.third
+                        {
+                            display: none;
+                            -moz-transform: scale(1);
+                            -moz-transform-origin: 25px 0px;
+                            -moz-animation-delay: 0s;
+                            -moz-animation-duration: 7s;
+                            -moz-animation-iteration-count: 1;
+                            -moz-animation-name: show-baloon;
+
+                            -webkit-transform: scale(1);
+                            -webkit-transform-origin: 25px 0px;
+                            -webkit-animation-delay: 0s;
+                            -webkit-animation-duration: 7s;
+                            -webkit-animation-iteration-count: 1;
+                            -webkit-animation-name: show-baloon;
+
+                            transform: scale(1);
+                            transform-origin: 25px 0px;
+                            animation-delay: 0s;
+                            animation-duration: 7s;
+                            animation-iteration-count: 1;
+                            animation-name: show-baloon;
+                        }
                     }
                 }
             }
@@ -430,3 +675,149 @@
         }
     }
 }
+
+/* анимация */
+
+/* # взмах рукой */
+@-moz-keyframes to-wave-hand
+{
+    0%, 40%
+    {
+        -moz-transform: rotate(0deg) translate(0px, 0px);
+    }
+    45%
+    {
+        -moz-transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    50%
+    {
+        -moz-transform: rotate(0deg) translate(0px, 0px);
+    }
+    55%
+    {
+        -moz-transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    60%, 100%
+    {
+        -moz-transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+@-webkit-keyframes to-wave-hand
+{
+    0%, 40%
+    {
+        -webkit-transform: rotate(0deg) translate(0px, 0px);
+    }
+    45%
+    {
+        -webkit-transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    50%
+    {
+        -webkit-transform: rotate(0deg) translate(0px, 0px);
+    }
+    55%
+    {
+        -webkit-transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    60%, 100%
+    {
+        -webkit-transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+@keyframes to-wave-hand
+{
+    0%, 40%
+    {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    45%
+    {
+        transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    50%
+    {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    55%
+    {
+        transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    60%, 100%
+    {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+/* / взмах рукой */
+
+/* # движения глаз */
+@-moz-keyframes close-eyes
+{
+    0%, 90%
+    {
+        fill: @colorBrownEyes;
+    }
+    100%
+    {
+        fill: @colorManSkin;
+    }
+}
+@-webkit-keyframes close-eyes
+{
+    0%, 90%
+    {
+        fill: @colorBrownEyes;
+    }
+    100%
+    {
+        fill: @colorManSkin;
+    }
+}
+@keyframes close-eyes
+{
+    0%, 90%
+    {
+        fill: @colorBrownEyes;
+    }
+    100%
+    {
+        fill: @colorManSkin;
+    }
+}
+/* / движения глаз */
+
+/* # анимация подсказок */
+@-moz-keyframes show-baloon
+{
+    0%, 90%
+    {
+        -moz-transform: scale(0);
+    }
+    100%
+    {
+        -moz-transform: scale(1);
+    }
+}
+@-webkit-keyframes show-baloon
+{
+    0%, 90%
+    {
+        -webkit-transform: scale(0);
+    }
+    100%
+    {
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes show-baloon
+{
+    0%, 90%
+    {
+        transform: scale(0);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+/* / анимация подсказок */

@@ -3012,6 +3012,12 @@
                                 padding: 9px 12px 12px 12px;
                                 width: auto;
                                 height: auto;
+                                .description
+                                {
+                                    -moz-animation-name: none;
+                                    -webkit-animation-name: none;
+                                    animation-name: none;
+                                }
                                 .line
                                 {
                                     display: none;
@@ -3020,6 +3026,7 @@
                         }
                         .man
                         {
+                            svg { display: none; }
                             .text
                             {
                                 border-top: 0px;
@@ -3027,19 +3034,32 @@
                                 border-bottom: 2px solid @colorRed;
                                 border-right: 2px solid @colorRed;
                                 box-shadow: none;
+                                
+                                -moz-animation-name: none;
+                                -webkit-animation-name: none;
+                                animation-name: none;
                             }
                             .text:after { display: none; }
                         }
                         .house
                         {
-                            .counter, .counter-bg { display: none; }
+                            .counter, .counter-bg, .counter-roller { display: none; }
                             .text
                             {
+                                padding: 0px;
                                 border-bottom: 0px;
+                                .description
+                                {
+                                    border-bottom: 0px;
+                                }
                             }
                             .text.clients
                             {
                                 border-top: 0px;
+                                .description
+                                {
+                                    border-top: 0px;
+                                }
                             }
                         }
                     }
