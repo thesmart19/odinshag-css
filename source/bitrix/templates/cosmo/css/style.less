@@ -5,6 +5,7 @@
 @import (once)		"source/include/base.less";
 @import (once)		"source/include/no-svg.less";
 @import (once)		"source/include/spikes.less";
+@import (once)		"source/include/animation.less";
 @import (inline)	"build/bitrix/templates/cosmo/css/___jquery.custom-scrollbar.css";
 
 a
@@ -4983,6 +4984,149 @@ iframe[name="google_conversion_frame"]
             }
         }
     }
+    .content.index-page.news-articles
+    {
+        .column.left
+        {
+            width: 233px;
+        }
+        .column.right
+        {
+            float: none;
+            margin-left: 245px;
+            width: 950px;
+        }
+        .block.frame.news, .block.frame.articles
+        {
+            margin: 0px;
+            background-color: transparent;
+            .title
+            {
+                margin-bottom: 6px;
+                background-color: @colorWhite;
+            }
+            ul.product-list.horizontal.frame
+            {
+                li.item
+                {
+                    a.img
+                    {
+                        display: none;
+                    }
+                    .parameters
+                    {
+                        margin: 0px;
+                    }
+                }
+                li.item.hover
+                {
+                    -moz-box-shadow: none;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                    .parameters
+                    {
+                        .date
+                        {
+                            -moz-box-shadow: none;
+                            -webkit-box-shadow: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+        .block.frame.news
+        {
+            ul.product-list.horizontal.frame
+            {
+                background-color: @colorWhite;
+                border: 1px solid @colorDrakerGrey;
+                li.item
+                {
+                    margin: 0px 3px 0px 3px;
+                    border: 0px;
+                    border-bottom: 1px solid @colorDrakerGrey;
+                    .parameters
+                    {
+                        font-size: @fontSizeDefault;
+                        .date
+                        {
+                            left: 6px;
+                            padding: 0px;
+                            height: 25px;
+                            font-size: @fontSizeDefault;
+                            line-height: @lineHeightBasketTitle;
+                            background-color: transparent;
+                            border: 0px;
+                        }
+                        .announce
+                        {
+                            padding-top: 26px;
+                            a.title
+                            {
+                                margin: 0px;
+                                font-size: @fontSizeDefault;
+                                h3
+                                {
+                                    font-size: @fontSizeDefault;
+                                    line-height: @lineHeightDefault;
+                                }
+                            }
+                            .preview
+                            {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                li.item:last-child
+                {
+                    border: 0px;
+                }
+            }
+        }
+        .block.frame.articles
+        {
+            ul.product-list.horizontal.frame
+            {
+                li.item
+                {
+                    float: left;
+                    margin: 0px;
+                    width: 25%;
+                    height: 185px;
+                    border: 0px;
+                    .parameters
+                    {
+                        margin: 0px 6px 0px 0px;
+                        height: 183px;
+                        border: 1px solid @colorDrakerGrey;
+                        .date
+                        {
+                            display: none;
+                        }
+                        .announce
+                        {
+                            padding: 6px 12px 0px 12px;
+                            height: 140px;
+                            overflow: hidden;
+                            .preview
+                            {
+                                line-height: @lineHeightDefault;
+                            }
+                        }
+                    }
+                }
+                li.item:nth-child(4), li.item:last-child
+                {
+                    .parameters
+                    {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
 	.categories
 	{
 		position: relative;
@@ -5049,9 +5193,7 @@ iframe[name="google_conversion_frame"]
 			}
             li:hover
             {
-                -webkit-box-shadow: inset 0px 0px 0px 1px @colorRed;
-                -moz-box-shadow:    inset 0px 0px 0px 1px @colorRed;
-                box-shadow:         inset 0px 0px 0px 1px @colorRed;
+                .mixin-box-shadow-inset-red-product-horizontal;
             }
             li:last-child { border-bottom: 0px; }
             /*
@@ -7085,9 +7227,9 @@ iframe[name="google_conversion_frame"]
 		h3
 		{
 			display: block;
-			padding: 12px 0px 0px 0px;
+			padding: 12px 12px 0px 12px;
 			height: 33px;
-			text-align: center;
+			text-align: left;
 			border-bottom: 1px solid @colorRed;
 		}
 		.column.left
@@ -9884,6 +10026,98 @@ ul.product-list.horizontal.frame
 \*---------------------------------------------------------------------------*/
 ul.product-list.horizontal.news
 {
+    margin: 12px 0px 6px 0px;
+    .item
+    {
+        float: left;
+        margin: 0px 0px 6px 0px;
+        width: 25%;
+        height: 169px;
+        font-size: @fontSizeDefault;
+        line-height: @lineHeightDefault;
+        border: 0px;
+        a.img
+        {
+            display: none;
+        }
+        .parameters
+        {
+            margin: 0px 6px 0px 0px;
+            padding: 0px 12px 0px 12px;
+            height: 167px;
+            border: 1px solid @colorDrakerGrey;
+            .comments
+            {
+                display: none;
+            }
+            .announce
+            {
+                height: 105px;
+                overflow: hidden;
+                a.title
+                {
+                    margin: 2px 0px 6px 0px;
+                    height: auto;
+                    color: @colorDarkBlue;
+                    font-size: @fontSizeBasketTotal;
+                    font-weight: normal;
+                    h3
+                    {
+                        color: @colorDarkBlue;
+                        font-size: @fontSizeBasketTotal;
+                        font-weight: normal;
+                        line-height: @lineHeightDefault;
+                    }
+                }
+            }
+			a.read-all
+			{
+				display: block;
+				position: absolute;
+				left: 12px;
+				bottom: 6px;
+                padding: 0px 22px 0px 16px;
+                height: 27px;
+                color: @colorLighterBlack;
+                line-height: @lineHeightH1;
+                background-color: @colorDarkGrey;
+                span.icon
+                {
+                    display: block;
+                    position: absolute;
+                    right: 11px;
+                    top: 50%;
+                    margin-top: -6px;
+                    width: 7px;
+                    height: 12px;
+                    background-position: -955px -75px;
+                }
+			}
+            a.read-all:hover
+            {
+                color: @colorLighterBlack !important;
+                background-color: @colorGreyHover;
+            }
+            .date
+            {
+                margin: 6px 0px 0px 0px;
+            }
+        }
+    }
+    .item.hover
+    {
+	   -webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .item:nth-child(4), .item:nth-child(8)
+    {
+        .parameters
+        {
+            margin-right: 0px;
+        }
+    }
+    /*
     margin-bottom: 6px;
 	.item
 	{
@@ -10032,31 +10266,11 @@ ul.product-list.horizontal.news
                     background-color: @colorGreyHover3;
                 }
             }
-            /*
-			a.read-all
-			{
-				display: block;
-				position: absolute;
-				left: 12px;
-				bottom: 6px;
-				height: 12px;
-				font-style: italic;
-				text-transform: lowercase;
-				line-height: @lineHeightSmallest;
-			}
-            */
 		}
 	}
-	/*.item:first-child	{ border-top:0px; }*/
     .item.hover
     {
         .mixin-box-shadow-inset-red-product-horizontal;
-        /*
-        a.img
-        {
-            border-right: 1px solid @colorWhite;
-        }
-        */
         .parameters
         {
             .date { .mixin-box-shadow-inset-red-product-image-top; }
@@ -10070,12 +10284,83 @@ ul.product-list.horizontal.news
             }
         }
     }
-    /*
-	.item:last-child	{ margin-bottom:0px; }
     */
 }
 /*---------------------------------------------------------------------------*\
     /Список товаров - горизонтальный - новости
+\*---------------------------------------------------------------------------*/
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+    # Список товаров - горизонтальный - статьи
+\*---------------------------------------------------------------------------*/
+.category.box.main_content.articles
+{
+    ul.product-list.horizontal.news
+    {
+        .item
+        {
+            height: 341px;
+            a.img
+            {
+                display: block;
+                position: relative;
+                left: auto;
+                top: auto;
+                margin: 0px 6px 0px 0px;
+                width: auto;
+                height: 154px;
+                border-top: 1px solid @colorDrakerGrey;
+                border-right: 1px solid @colorDrakerGrey;
+                border-bottom: 0px;
+                border-left: 1px solid @colorDrakerGrey;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                img
+                {
+                    max-width: 100%;
+                    max-height: 154px;
+                }
+            }
+            .parameters
+            {
+                height: 184px;
+                .date
+                {
+                    display: none;
+                }
+                .announce
+                {
+                    height: 133px;
+                    a.title
+                    {
+                        margin: 4px 0px 4px 0px;
+                        font-size: @fontSizeH3;
+                        line-height: @lineHeightLandingAds;
+                        h3
+                        {
+                            font-size: @fontSizeH3;
+                            line-height: @lineHeightLandingAds;
+                        }
+                    }
+                }
+            }
+        }
+        .item:nth-child(4), .item:nth-child(8)
+        {
+            a.img
+            {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+/*---------------------------------------------------------------------------*\
+    / Список товаров - горизонтальный - статьи
 \*---------------------------------------------------------------------------*/
 
 

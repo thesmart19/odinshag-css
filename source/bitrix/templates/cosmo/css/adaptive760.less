@@ -1706,8 +1706,23 @@
 	/*------------------------------------*/
 	body #total_wrapper #main_wrapper
 	{
-		.category.box.main_content.news, .category.box.main_content.articles
-		{
+        .category.box.main_content.news, .category.box.main_content.articles
+        {
+            ul.product-list.horizontal.news
+            {
+                .item
+                {
+                    width: 33.3%;
+                }
+                .item:nth-child(4), .item:nth-child(8)
+                {
+                    .parameters { margin-right: 6px; }
+                }
+                .item:nth-child(3), .item:nth-child(6), .item:nth-child(9)
+                {
+                    .parameters { margin-right: 0px; }
+                }
+            }
 			.column.left
 			{
 				width: 566px;
@@ -1764,31 +1779,62 @@
 					}
 				}
 			}
-            ul.product-list.horizontal.news
-            {
-                li.item
-                {
-                    .parameters
-                    {
-                        .announce
-                        {
-                            a.title
-                            {
-                                h3
-                                {
-                                    line-height: @lineHeightPrice;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
             .pager
             {
                 left: auto !important;
                 width: auto !important;
             }
+        }
+        /* новости */
+		.category.box.main_content.news
+		{
+            ul.product-list.horizontal.news
+            {
+            }
 		}
+        /* статьи */
+        .category.box.main_content.articles
+        {
+            ul.product-list.horizontal.news
+            {
+                .item
+                {
+                    a.img
+                    {
+                        img
+                        {
+                            max-width: 100%;
+                            max-height: 154px;
+                        }
+                    }
+                    .parameters
+                    {
+                        .announce
+                        {
+                            height: 135px;
+                            a.title
+                            {
+                                font-size: @fontSizeBasketTotal;
+                                line-height: @lineHeightDefault;
+                                h3
+                                {
+                                    font-size: @fontSizeBasketTotal;
+                                    line-height: @lineHeightDefault;
+                                }
+                            }
+                        }
+                    }
+                }
+                .item:nth-child(4), .item:nth-child(8)
+                {
+                    a.img { margin-right: 6px; }
+                }
+                .item:nth-child(3), .item:nth-child(6), .item:nth-child(9)
+                {
+                    a.img { margin-right: 0px; }
+                }
+            }
+        }
 	}
 	/*------------------------------------*/
 	/* # Акции */
@@ -2014,6 +2060,22 @@
                         .man
                         {
                             left: 57px;
+                        }
+                    }
+                }
+                .features
+                {
+                    .feature
+                    {
+                        .bg
+                        {
+                            .title
+                            {
+                                h2
+                                {
+                                    line-height: @lineHeightH2;
+                                }
+                            }
                         }
                     }
                 }

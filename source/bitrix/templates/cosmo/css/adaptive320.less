@@ -2673,6 +2673,112 @@
         /*------------------------------------*/
 		.category.box.main_content.news, .category.box.main_content.articles
 		{
+            ul.product-list.horizontal.news
+            {
+                .item
+                {
+                    float: none;
+                    margin: 0px 0px 3px 0px;
+                    width: auto;
+                    height: auto;
+                    min-height: 110px;
+                    .parameters
+                    {
+                        margin: 0px;
+                        height: auto;
+                        min-height: 108px;
+                        .announce
+                        {
+                            margin: 0px 0px 39px 0px;
+                            height: auto;
+                            a.title
+                            {
+                                margin: 3px 0px 3px 0px;
+                            }
+                            .preview
+                            {
+                                p { margin: 0px; }
+                            }
+                        }
+                    }
+                }
+                .item:nth-child(4), .item:nth-child(8)
+                {
+                    a.img, .parameters { margin-right: 0px; }
+                }
+                /*
+                margin-bottom: 3px;
+                li.item
+                {
+                    margin-right: 0px;
+                    margin-bottom: 3px;
+                    height: 110px;
+                    a.img
+                    {
+                        width: 110px;
+                        height: 110px;
+                        img
+                        {
+                            max-width: 108px;
+                            max-height: 108px;
+                        }
+                    }
+                    .parameters
+                    {
+                        height: 110px;
+                        margin-left: 111px;
+                        a.read-all, .date
+                        {
+                            left: -1px;
+                        }
+                        a.read-all
+                        {
+                            padding-left: 8px;
+                            padding-right: 22px;
+                            width: 110px;
+                            height: 22px;
+                            font-size: @fontSizeDefault;
+                            line-height: 19px;
+                            white-space: nowrap;
+                            span.icon
+                            {
+                                background-position: -950px -117px;
+                            }
+                        }
+                        .announce
+                        {
+                            padding-top: 26px;
+                            padding-right: 6px;
+                            height: 84px;
+                            .preview { display: none; }
+                            a.title
+                            {
+                                max-height: 54px;
+                                font-size: @fontSizeBasketTotal;
+                                h3
+                                {
+                                    font-size: @fontSizeBasketTotal;
+                                }
+                            }
+                        }
+                        .comments
+                        {
+                            top: 6px;
+                        }
+                        .date
+                        {
+                            padding-top: 3px;
+                            height: 18px;
+                            font-size: @fontSizeSmall;
+                        }
+                    }
+                }
+                li.item:last-child
+                {
+                    margin-bottom: 0px;
+                }
+                */
+            }
 			.content
             {
                 padding: 0px 0px 0px 0px;
@@ -2773,79 +2879,6 @@
                     }
                 }
             }
-            ul.product-list.horizontal.news
-            {
-                margin-bottom: 3px;
-                li.item
-                {
-                    margin-right: 0px;
-                    margin-bottom: 3px;
-                    height: 110px;
-                    a.img
-                    {
-                        width: 110px;
-                        height: 110px;
-                        img
-                        {
-                            max-width: 108px;
-                            max-height: 108px;
-                        }
-                    }
-                    .parameters
-                    {
-                        height: 110px;
-                        margin-left: 111px;
-                        a.read-all, .date
-                        {
-                            left: -1px;
-                        }
-                        a.read-all
-                        {
-                            padding-left: 8px;
-                            padding-right: 22px;
-                            width: 110px;
-                            height: 22px;
-                            font-size: @fontSizeDefault;
-                            line-height: 19px;
-                            white-space: nowrap;
-                            span.icon
-                            {
-                                background-position: -950px -117px;
-                            }
-                        }
-                        .announce
-                        {
-                            padding-top: 26px;
-                            padding-right: 6px;
-                            height: 84px;
-                            .preview { display: none; }
-                            a.title
-                            {
-                                max-height: 54px;
-                                font-size: @fontSizeBasketTotal;
-                                h3
-                                {
-                                    font-size: @fontSizeBasketTotal;
-                                }
-                            }
-                        }
-                        .comments
-                        {
-                            top: 6px;
-                        }
-                        .date
-                        {
-                            padding-top: 3px;
-                            height: 18px;
-                            font-size: @fontSizeSmall;
-                        }
-                    }
-                }
-                li.item:last-child
-                {
-                    margin-bottom: 0px;
-                }
-            }
             .commenting
             {
                 form
@@ -2911,6 +2944,22 @@
                 }
             }
 		}
+        .category.box.main_content.articles
+        {
+            ul.product-list.horizontal.news
+            {
+                .item
+                {
+                    a.img
+                    {
+                        margin: 0px;
+                        width: auto;
+                        height: 154px;
+                        
+                    }
+                }
+            }
+        }
         /*------------------------------------*/
         /* # Способы оплаты */
         /*------------------------------------*/
