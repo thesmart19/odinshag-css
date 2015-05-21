@@ -820,6 +820,7 @@
     }
 	.header.catalog-search
 	{
+        margin-bottom: 190px;
 		z-index: 3;
 		.column.left
 		{
@@ -836,7 +837,11 @@
             z-index: 2;
 		}
 	}
-    .info { display: none; }
+    .info
+    {
+        width: auto;
+        height: 0px;
+    }
 	/*------------------------------------*/
 	/* # Фиксированный футер */
 	/*------------------------------------*/
@@ -1177,6 +1182,45 @@
             .column.left, .column.right
             {
                 width: auto;
+            }
+        }
+        .content.index-page.news-articles
+        {
+            .column.right
+            {
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+            }
+            .block.frame.articles
+            {
+                .content
+                {
+                    height: auto;
+                }
+                ul.product-list.horizontal.frame
+                {
+                    height: auto;
+                    li.item
+                    {
+                        margin: 0px 0px 3px 0px;
+                        float: none;
+                        width: auto;
+                        height: auto;
+                        .parameters
+                        {
+                            margin: 0px;
+                            height: auto;
+                            .announce
+                            {
+                                margin-bottom: 33px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
             }
         }
         /*

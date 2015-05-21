@@ -4992,9 +4992,14 @@ iframe[name="google_conversion_frame"]
         }
         .column.right
         {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            left: 245px;
             float: none;
-            margin-left: 245px;
-            width: 950px;
+            width: auto; /* 950px */
+            height: auto;
         }
         .block.frame.news, .block.frame.articles
         {
@@ -5049,6 +5054,7 @@ iframe[name="google_conversion_frame"]
                     .parameters
                     {
                         font-size: @fontSizeDefault;
+                        a.read-all { display: none; }
                         .date
                         {
                             left: 6px;
@@ -5087,8 +5093,14 @@ iframe[name="google_conversion_frame"]
         }
         .block.frame.articles
         {
+            .content
+            {
+                height: 185px;
+            }
             ul.product-list.horizontal.frame
             {
+                height: 185px;
+                overflow: hidden;
                 li.item
                 {
                     float: left;
@@ -5101,9 +5113,35 @@ iframe[name="google_conversion_frame"]
                         margin: 0px 6px 0px 0px;
                         height: 183px;
                         border: 1px solid @colorDrakerGrey;
-                        .date
+                        .date { display: none; }
+                        a.read-all
                         {
-                            display: none;
+                            display: block;
+                            position: absolute;
+                            left: 12px;
+                            bottom: 6px;
+                            padding: 0px 20px 0px 12px;
+                            width: 118px;
+                            height: 27px;
+                            color: @colorLighterBlack;
+                            font-size: @fontSizeDefault;
+                            line-height: @lineHeightH1; /* @lineHeightButton */
+                            background-color: @colorDarkGrey;
+                            span.icon
+                            {
+                                .mixin-icon-arrow-small-right-grey-svg;
+                                top: 50%;
+                                right: 12px;
+                                margin-top: -6px;
+                                width: 7px;
+                                height: 11px;
+                                background-position: 0px 0px;
+                            }
+                        }
+                        a.read-all:hover
+                        {
+                            color: @colorLighterBlack !important;
+                            background-color: @colorGreyHover;
                         }
                         .announce
                         {
@@ -10076,21 +10114,24 @@ ul.product-list.horizontal.news
 				position: absolute;
 				left: 12px;
 				bottom: 6px;
-                padding: 0px 22px 0px 16px;
+                padding: 0px 20px 0px 12px;
+                width: 118px;
                 height: 27px;
                 color: @colorLighterBlack;
                 line-height: @lineHeightH1;
                 background-color: @colorDarkGrey;
                 span.icon
                 {
+                    .mixin-icon-arrow-small-right-grey-svg;
                     display: block;
                     position: absolute;
                     right: 11px;
                     top: 50%;
                     margin-top: -6px;
                     width: 7px;
-                    height: 12px;
-                    background-position: -955px -75px;
+                    height: 11px;
+                    background-position: 0px 0px;
+                    /*background-position: -955px -75px;*/
                 }
 			}
             a.read-all:hover

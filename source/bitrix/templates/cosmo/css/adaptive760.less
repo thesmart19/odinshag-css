@@ -481,6 +481,74 @@
                 */
             }
         }
+        .content.index-page.news-articles
+        {
+            .column.left
+            {
+                width: 233px;
+            }
+            .column.right
+            {
+                float: none;
+                width: auto;
+            }
+            .block.frame.news
+            {
+                ul.product-list.horizontal.frame
+                {
+                    li.item
+                    {
+                        .parameters
+                        {
+                            .date
+                            {
+                                left: 3px;
+                            }
+                            .announce
+                            {
+                                padding-left: 3px;
+                                padding-right: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            .block.frame.articles
+            {
+                ul.product-list.horizontal.frame
+                {
+                    li.item
+                    {
+                        width: 33.3%;
+                        .parameters
+                        {
+                            a.read-all
+                            {
+                                left: 6px;
+                                bottom: 3px;
+                            }
+                            .announce
+                            {
+                                padding-left: 6px;
+                                padding-right: 6px;
+                                height: 145px;
+                                .preview
+                                {
+                                    line-height: @lineHeightPrice;
+                                }
+                            }
+                        }
+                    }
+                    li.item:nth-child(3)
+                    {
+                        .parameters
+                        {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
         .offer-banner.index-page
         {
             margin-left: auto;
