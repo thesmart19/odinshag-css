@@ -109,3 +109,147 @@
     }
 }
 /* / сообщения в шапке сайта */
+
+/* # взмах рукой */
+@-moz-keyframes to-wave-hand
+{
+    0%, 40%
+    {
+        -moz-transform: rotate(0deg) translate(0px, 0px);
+    }
+    45%
+    {
+        -moz-transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    50%
+    {
+        -moz-transform: rotate(0deg) translate(0px, 0px);
+    }
+    55%
+    {
+        -moz-transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    60%, 100%
+    {
+        -moz-transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+@-webkit-keyframes to-wave-hand
+{
+    0%, 40%
+    {
+        -webkit-transform: rotate(0deg) translate(0px, 0px);
+    }
+    45%
+    {
+        -webkit-transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    50%
+    {
+        -webkit-transform: rotate(0deg) translate(0px, 0px);
+    }
+    55%
+    {
+        -webkit-transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    60%, 100%
+    {
+        -webkit-transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+@keyframes to-wave-hand
+{
+    0%, 40%
+    {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    45%
+    {
+        transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    50%
+    {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+    55%
+    {
+        transform: rotate(-30deg) translate(-2px, 0px);
+    }
+    60%, 100%
+    {
+        transform: rotate(0deg) translate(0px, 0px);
+    }
+}
+/* / взмах рукой */
+
+/* # движения глаз */
+@-moz-keyframes close-eyes
+{
+    0%, 90%
+    {
+        fill: @colorBrownEyes;
+    }
+    100%
+    {
+        fill: @colorManSkin;
+    }
+}
+@-webkit-keyframes close-eyes
+{
+    0%, 90%
+    {
+        fill: @colorBrownEyes;
+    }
+    100%
+    {
+        fill: @colorManSkin;
+    }
+}
+@keyframes close-eyes
+{
+    0%, 90%
+    {
+        fill: @colorBrownEyes;
+    }
+    100%
+    {
+        fill: @colorManSkin;
+    }
+}
+/* / движения глаз */
+
+/* # анимация подсказок */
+@-moz-keyframes show-baloon
+{
+    0%, 90%
+    {
+        -moz-transform: scale(0);
+    }
+    100%
+    {
+        -moz-transform: scale(1);
+    }
+}
+@-webkit-keyframes show-baloon
+{
+    0%, 90%
+    {
+        -webkit-transform: scale(0);
+    }
+    100%
+    {
+        -webkit-transform: scale(1);
+    }
+}
+@keyframes show-baloon
+{
+    0%, 90%
+    {
+        transform: scale(0);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+/* / анимация подсказок */

@@ -1797,6 +1797,46 @@
         {
             li.item
             {
+                float: none;
+                margin: 0px 0px 6px 0px;
+                padding: 0px;
+                width: auto;
+                height: auto;
+                .banner
+                {
+                    display: block;
+                    margin: 0px;
+                    img
+                    {
+                        width: auto !important;
+                    }
+                }
+                .parameters
+                {
+                    margin: 0px;
+                    padding: 6px 10px 0px 10px;
+                    height: auto;
+                    .announce
+                    {
+                        margin: 0px 0px 39px 0px;
+                        height: auto;
+                        a.title
+                        {
+                            margin-bottom: 8px;
+                            font-size: @fontSizeLandingAds;
+                            line-height: @lineHeightDefault;
+                            h2
+                            {
+                                font-size: @fontSizeLandingAds;
+                                line-height: @lineHeightDefault;
+                            }
+                        }
+                    }
+                }
+            }
+            /*
+            li.item
+            {
                 height: auto;
                 a.banner, .date, .announce
                 {
@@ -1877,6 +1917,7 @@
                     .read-all:after { display: none; }
                 }
             }
+            */
         }
 		/*------------------------------------*/
 		/* # Страница товара */
@@ -3084,7 +3125,7 @@
                     .media.image
                     {
                         height: auto;
-                        .ground
+                        .ground, .tree.one, .tree.two
                         {
                             display: none;
                         }

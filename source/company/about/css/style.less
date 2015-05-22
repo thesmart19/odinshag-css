@@ -7,6 +7,9 @@
 {
     .box .text .media.image .house              { .mixin-image-house-png; }
     .box .text .media.image .man                { .mixin-image-man-png; }
+    .box .text .media.image .lamp               { .mixin-image-lamp-png; }
+    .box .text .media.image .trash              { .mixin-image-trash-png; }
+    .box .text .media.image .tree               { .mixin-image-tree-png; }
     .box .features .feature .icon.new           { .mixin-icon-big-new-product-png }
     .box .features .feature .icon.brand         { .mixin-icon-big-brand-png; }
     .box .features .feature .icon.action        { .mixin-icon-big-action-png; }
@@ -43,7 +46,7 @@
             position: relative;
             margin: 0px 0px 12px 0px;
             height: 348px;
-            .ground, .man, .house
+            .ground, .man, .house, .lamp, .trash, .tree
             {
                 position: absolute;
             }
@@ -60,6 +63,7 @@
                 width: auto;
                 height: 9px;
                 background-color: @colorGround;
+                z-index: 1;
             }
             .man
             {
@@ -69,6 +73,7 @@
                 width: 100px;
                 height: 90px;
                 background-image: none;
+                z-index: 2;
                 .hand
                 {
                     -moz-animation-delay: 5s;
@@ -166,6 +171,7 @@
                 margin-left: -184px;
                 width: 369px;
                 height: 339px;
+                z-index: 3;
                 .counter, .counter-bg, .counter-roller, .text
                 {
                     position: absolute;
@@ -488,6 +494,47 @@
                     }
                 }
             }
+            .lamp
+            {
+                .mixin-image-lamp-svg;
+                left: 50%;
+                bottom: 9px;
+                margin: 0px 0px 0px 200px;
+                width: 49px;
+                height: 172px;
+                z-index: 2;
+            }
+            .trash
+            {
+                .mixin-image-trash-svg;
+                left: 50%;
+                bottom: 9px;
+                margin: 0px 0px 0px 236px;
+                width: 29px;
+                height: 32px;
+                z-index: 2;
+            }
+            .tree
+            {
+                .mixin-image-tree-svg;
+                left: 50%;
+                bottom: 9px;
+                width: 57px;
+                height: 150px;
+                z-index: 1;
+            }
+            .tree.one
+            {
+                margin: 0px 0px 0px -250px;   
+            }
+            .tree.two
+            {
+                margin: 0px 0px 0px -290px;
+            }
+            .tree.three
+            {
+                margin: 0px 0px 0px 350px;
+            }
         }
 	}
 	.features
@@ -677,149 +724,3 @@
         }
     }
 }
-
-/* анимация */
-
-/* # взмах рукой */
-@-moz-keyframes to-wave-hand
-{
-    0%, 40%
-    {
-        -moz-transform: rotate(0deg) translate(0px, 0px);
-    }
-    45%
-    {
-        -moz-transform: rotate(-30deg) translate(-2px, 0px);
-    }
-    50%
-    {
-        -moz-transform: rotate(0deg) translate(0px, 0px);
-    }
-    55%
-    {
-        -moz-transform: rotate(-30deg) translate(-2px, 0px);
-    }
-    60%, 100%
-    {
-        -moz-transform: rotate(0deg) translate(0px, 0px);
-    }
-}
-@-webkit-keyframes to-wave-hand
-{
-    0%, 40%
-    {
-        -webkit-transform: rotate(0deg) translate(0px, 0px);
-    }
-    45%
-    {
-        -webkit-transform: rotate(-30deg) translate(-2px, 0px);
-    }
-    50%
-    {
-        -webkit-transform: rotate(0deg) translate(0px, 0px);
-    }
-    55%
-    {
-        -webkit-transform: rotate(-30deg) translate(-2px, 0px);
-    }
-    60%, 100%
-    {
-        -webkit-transform: rotate(0deg) translate(0px, 0px);
-    }
-}
-@keyframes to-wave-hand
-{
-    0%, 40%
-    {
-        transform: rotate(0deg) translate(0px, 0px);
-    }
-    45%
-    {
-        transform: rotate(-30deg) translate(-2px, 0px);
-    }
-    50%
-    {
-        transform: rotate(0deg) translate(0px, 0px);
-    }
-    55%
-    {
-        transform: rotate(-30deg) translate(-2px, 0px);
-    }
-    60%, 100%
-    {
-        transform: rotate(0deg) translate(0px, 0px);
-    }
-}
-/* / взмах рукой */
-
-/* # движения глаз */
-@-moz-keyframes close-eyes
-{
-    0%, 90%
-    {
-        fill: @colorBrownEyes;
-    }
-    100%
-    {
-        fill: @colorManSkin;
-    }
-}
-@-webkit-keyframes close-eyes
-{
-    0%, 90%
-    {
-        fill: @colorBrownEyes;
-    }
-    100%
-    {
-        fill: @colorManSkin;
-    }
-}
-@keyframes close-eyes
-{
-    0%, 90%
-    {
-        fill: @colorBrownEyes;
-    }
-    100%
-    {
-        fill: @colorManSkin;
-    }
-}
-/* / движения глаз */
-
-/* # анимация подсказок */
-@-moz-keyframes show-baloon
-{
-    0%, 90%
-    {
-        -moz-transform: scale(0);
-    }
-    100%
-    {
-        -moz-transform: scale(1);
-    }
-}
-@-webkit-keyframes show-baloon
-{
-    0%, 90%
-    {
-        -webkit-transform: scale(0);
-    }
-    100%
-    {
-        -webkit-transform: scale(1);
-    }
-}
-@keyframes show-baloon
-{
-    0%, 90%
-    {
-        transform: scale(0);
-    }
-    100%
-    {
-        transform: scale(1);
-    }
-}
-/* / анимация подсказок */

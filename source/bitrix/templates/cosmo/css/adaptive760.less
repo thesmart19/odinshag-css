@@ -1941,13 +1941,34 @@
 	}
 	ul.product-list.horizontal.actions
 	{
-		li.item
-		{
-			.announce
-			{
-				width: 480px;
-			}
-		}
+        li.item
+        {
+            width: 33.3%;
+            a.banner
+            {
+                width: auto;
+                height: 134px;
+                img
+                {
+                    width: 100% !important;
+                    height: 134px !important;
+                }
+            }
+        }
+        li.item:nth-child(4), li.item:nth-child(8), li.item:nth-child(12)
+        {
+            .banner, .parameters
+            {
+                margin-right: 6px;
+            }
+        }
+        li.item:nth-child(3), li.item:nth-child(6), li.item:nth-child(9)
+        {
+            .banner, .parameters
+            {
+                margin-right: 0px;
+            }
+        }
 	}
 	/*------------------------------------*/
 	/* # Сравнение */
@@ -2057,6 +2078,18 @@
                     .media.image
                     {
                         height: 423px;
+                        .lamp, .trash, .tree.three
+                        {
+                            display: none;
+                        }
+                        .tree.one
+                        {
+                            margin: 0 0 0 -110px;
+                        }
+                        .tree.two
+                        {
+                            margin: 0 0 0 -150px;
+                        }
                         .house, .man
                         {
                             margin: 0px;
