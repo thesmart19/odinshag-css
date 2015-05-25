@@ -606,7 +606,7 @@ iframe[name="google_conversion_frame"]
 			{
 				position: relative;
                 width: 100%;
-				height: 43.5px; /* 39px при 10 категориях */
+				height: 49px; /* 39px при 10 категориях */
 				color: @colorLightBlack !important;
 				font-size: @fontSizeBasketTotal;
 				font-weight: normal;
@@ -11258,40 +11258,6 @@ ul.product-list.one-page-products
 
 
 /*------------------------------------*\
-    #Вкладки с широкими заголовками
-\*------------------------------------*/
-.tabs.wide-titles
-{
-    .titles
-    {
-        a.active
-        {
-            position: absolute;
-			padding-left:20px;
-			padding-right:20px;
-            float: none;
-            left: 0;
-            top: 0;
-            right: 0;
-            text-align: left;
-            width: auto;
-            min-width: 0px;
-        }
-    }
-	.pages, .product-carousel
-	{
-		border: 0px;
-	}
-}
-/*------------------------------------*\
-    /Вкладки с широкими заголовками
-\*------------------------------------*/
-
-
-
-
-
-/*------------------------------------*\
     #Вкладки с красной рамкой
 \*------------------------------------*/
 .tabs.red
@@ -11411,19 +11377,22 @@ ul.product-list.one-page-products
 /*---------------------------------------------------------------------------*\
     #Вкладки на главной странице
 \*---------------------------------------------------------------------------*/
-.tabs.index-page
+.tabs.wide-titles
 {
-	margin: 0px 0px 12px 0px;
+	margin: 12px 0px 12px 0px;
 	.titles
 	{
 		height: 46px;
 		a.active
 		{
 			position: absolute;
+            float: none;
 			left: 0px;
 			top: 0px;
 			right: 0px;
-			padding: 15px 12px 0px 48px;
+			padding: 15px 20px 0px 20px;
+            width: auto;
+            min-width: 0px;
 			height: 30px;
 			text-align: left;
 			span.icon
@@ -11446,30 +11415,40 @@ ul.product-list.one-page-products
 				padding: 0px 17px 0px 0px;
 				height: 13px;
 				line-height:@lineHeightSmall;
+                color: @colorDarkBlue;
 				cursor: pointer;
 				font-weight: normal;
-				span.icon
-				{
-					display: block;
-					position: absolute;
-					right: 0px;
-					top: 4px;
-					left: auto;
-					width: 0;
-					height: 0;
-					border-style: solid;
-					border-width: 4px 0 4px 5px;
-					border-color: transparent transparent transparent @colorDarkBlue;
-					background: none;
-				}
 			}
 			span.more:hover
 			{
 				color: @colorRed !important;
 				span.icon { border-color: transparent transparent transparent @colorRed; }
 			}
+            span.more:after
+            {
+                content: " ";
+                display: block;
+                position: absolute;
+                right: 0px;
+                top: 4px;
+                left: auto;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 4px 0 4px 5px;
+                border-color: transparent transparent transparent @colorDarkBlue;
+                background: none;
+            }
+            span.more:hover:after
+            {
+                border-color: transparent transparent transparent @colorRed;
+            }
 		}
 	}
+    .pages, .product-carousel
+    {
+        border: 0px;
+    }
 }
 /*---------------------------------------------------------------------------*\
     /Вкладки на главной странице
@@ -11482,6 +11461,7 @@ ul.product-list.one-page-products
 /*---------------------------------------------------------------------------*\
     #Вкладки на детальной странице товара коллективной покупки
 \*---------------------------------------------------------------------------*/
+/*
 .tabs.index-page.collective
 {
 	margin: 24px 0px 0px 0px;
@@ -11494,6 +11474,7 @@ ul.product-list.one-page-products
 		}
 	}
 }
+*/
 /*---------------------------------------------------------------------------*\
     /Вкладки на детальной странице товара коллективной покупки
 \*---------------------------------------------------------------------------*/
@@ -12920,6 +12901,7 @@ body
 .pickpoints
 {
     position: relative;
+    min-height: 430px;
     /*
 	.pickpoint-list, .map.map_canvas
 	{
