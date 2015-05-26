@@ -3625,48 +3625,77 @@
         /*------------------------------------*/
         .category.box.main_content.discounts.bonus 
         {
-            .bonuses-box
+            h2.bonus-purchase, .text
             {
-                ul
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .text
+            {
+                ul.city
                 {
-                    li.bonuses-text-column
+                    float: none;
+                    padding: 0px;
+                }
+            }
+            .bonus-accumulate
+            {
+                padding: 0px 10px 0px 10px;
+                .way
+                {
+                    background-color: @colorLightGrey;
+                    .arrows
                     {
-                        margin-right: 0px;
-                        float: none;
-                        width: auto;
+                        display: none;
+                    }
+                    .step
+                    {
+                        width: 50%;
                         height: auto;
-                        .bonuses-text
-                        {
-                            height: auto;
-                        }
+                        padding-left: 0px;
+                        padding-right: 0px;
                     }
                 }
-                ul.extra-bonuses
+                .way.arrow
                 {
-                    li
-                    {
-                        span
-                        {
-                            margin-bottom: 10px;
-                        }
-                        .bonuses-text
-                        {
-                            width: auto;
-                            float: none;
-                        }
-                    }
+                    padding: 0px;
+                    width: auto;
+                    background-color: transparent;
                 }
-                .bonuses-header
+            }
+            .features
+            {
+                padding: 0px 10px 0px 10px;
+                .feature
                 {
-                    margin-bottom: 12px;
-                    padding-right: 10px;
+                    margin: 0px 0px 12px 0px;
+                    float: none;
+                    width: auto;
                     height: auto;
+                    .bg
+                    {
+                        position: relative;
+                        top: auto;
+                        bottom: auto;
+                        left: auto;
+                        right: auto;
+                        .title
+                        {
+                            h3
+                            {
+                                font-size: @fontSizeLandingAds;
+                                font-weight: normal;
+                                line-height: @lineHeightH2;
+                            }
+                        }
+                    }
                 }
-                .bonuses-text
-                {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
+            }
+            .info-message
+            {
+                margin-left: 10px !important;
+                margin-right: 10px !important;
+                width: auto !important;
             }
         }
         /*------------------------------------*/

@@ -3,129 +3,353 @@
 @import (reference)	"source/include/variables.less";
 @import (reference)	"source/include/mixins.less";
 
-.no-svg {
-    .bonuses-header:before, .extra-bonuses li span
-    {
-        background-image: url(@imageIconsBigPNG);
-    }
-}
-
-ul
+.box
 {
-    li.bonuses-text-column
+    h2
     {
-        width: 50%;
+        margin: 12px 0px 9px 0px;
+    }
+    h2.bonus-purchase
+    {
+        position: relative;
+        margin: 0px 0px 22px 0px;
+        padding: 26px 0px 0px 80px;
+        height: 47px;
+    }
+
+    h2.bonus-purchase:before
+    {
+        .mixin-icon-big-bonus-letter-png;
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 1px;
+        width: 66px;
+        height: 73px;
+    }
+    h3
+    {
+        margin: 20px 0px 16px 0px;
+        padding: 0px 0px 0px 10px;
+        font-size: @fontSizeDiscounts;
+        font-weight: normal;
+    }
+    .text
+    {
+        margin: 0px 0px 12px 0px;
+        padding: 6px 10px 12px 10px;
+        line-height: @lineHeightPrice;
+        background-color: @colorLightGrey;
+        h3
+        {
+            margin: 9px 0px 6px 0px;
+            padding: 0px;
+        }
+        p
+        {
+            margin: 0px;
+        }
+        ul
+        {
+            list-style: disc;
+            list-style-position: inside;
+            color: @colorLightBlack;
+            span { color: @colorLighterBlack; }
+        }
+        ul.city
+        {
+            position: relative;
+            float: left;
+            margin: 0px;
+            width: 50%;
+            height: auto;
+        }
+    }
+}
+
+.info-message
+{
+    margin-bottom: 38px !important;
+    width: 612px !important;
+    p.text
+    {
+        background-color: transparent;
+    }
+}
+
+.bonus-accumulate
+{
+    margin: 0px 0px 45px 0px;
+    .arrows, .step
+    {
+        position: relative;
+        float: left;   
+    }
+    .arrows
+    {
+        width: 75px;
         height: 245px;
-        float: left;
-        margin: 0 0px 24px 0;
-        .bonuses-text
-        {
-            margin-right: 6px;
-            height: 205px;
-            ul
-            {
-                margin: 12px 0;
-            }
-
-        }
     }
-    li.bonuses-text-column:last-child
+    .step
     {
-        .bonuses-text
+        padding: 160px 24px 0px 24px;
+        width: 282px;
+        height: 96px;
+        background-color: @colorLightGrey;
+        .icon, .image
         {
-            margin-right: 0px;
-            margin-left: 6px;
+            position: absolute;
+            left: 50%;
+        }
+        .icon
+        {
+            top: 24px;
+            margin-left: -56px;
+            width: 111px;
+            height: 125px;
+        }
+    }
+    .step.one
+    {
+        .icon
+        {
+            .mixin-icon-big-bonus-bg-yellow-png;
+        }
+    }
+    .step.two
+    {
+        .icon
+        {
+            .mixin-icon-big-bonus-bg-red-png;
+        }
+    }
+    .text
+    {
+        padding: 0px;
+        color: @colorLightBlack;
+        background-color: transparent;
+    }
+    .way
+    {
+        .arrows
+        {
+            text-align: center;
+            font-size: 0px;
+            line-height: 0px;
+            white-space: nowrap;
+            .helper, .data
+            {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .helper
+            {
+                width: 0px;
+                height: 100%;
+            }
+            .data
+            {
+                width: 55px;
+                height: 136px;
+                span
+                {
+                    display: block;
+                    height: 37px;
+                }
+                .one, .three
+                {
+                    .mixin-image-bonus-arrow-grey-right-png;
+                    width: 39px;
+                }
+                .one
+                {
+                    margin-bottom: 12px;
+                }
+                .two
+                {
+                    .mixin-image-bonus-arrow-dark-grey-right-png;
+                    margin-bottom: 12px;
+                    width: 55px;
+                    background-position: right center;
+                }
+            }
+        }
+    }
+    .way.arrow
+    {
+        position: relative;
+        width: 330px;
+        height: 58px;
+    }
+    .way.arrow:before
+    {
+        .mixin-image-bonus-arrow-dark-grey-bottom-png;
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -19px 0px 0px -19px;
+        width: 37px;
+        height: 39px;
+    }
+    .way.one
+    {
+        .step.one
+        {
+            .image
+            {
+                .mixin-image-bonus-cart-png;
+                top: 36px;
+                margin-left: -36px;
+                width: 71px;
+                height: 99px;
+            }
+        }
+        .step.two
+        {
+            .image
+            {
+                .mixin-image-bonus-50-procent-png;
+                top: 67px;
+                margin-left: -47px;
+                width: 94px;
+                height: 39px;
+            }
+        }
+    }
+    .way.two
+    {
+        .step.one
+        {
+            .image
+            {
+                .mixin-image-bonus-chainsaw-png;
+                top: 46px;
+                margin-left: -93px;
+                width: 186px;
+                height: 69px;
+            }
+        }
+        .step.two
+        {
+            .image
+            {
+                .mixin-image-bonus-100-procent-png;
+                top: 71px;
+                margin-left: -46px;
+                width: 91px;
+                height: 30px;
+            }
         }
     }
 }
 
-ul li.bonuses-text-column .bonuses-text ul li {
-    margin: 12px 0
-}
-
-ul li.bonuses-text-column .bonuses-text ul li span {
-    padding-right: 15px;
-    color: #f24942;
-    font-size: 22px;
-    line-height: 18px;
-    float: left
-}
-
-.bonuses-header {
+.features
+{
     position: relative;
-    height: 70px;
-    padding: 18px 0 0 90px
-}
-
-.bonuses-header:before {
-    content: " ";
-    display: block;
-    position: absolute;
-    left: 6px;
-    top: 0;
-    width: 72px;
-    height: 80px;
-    background-image: url("/bitrix/templates/cosmo/css/img/icons-big.svg?version=2014.09.02");
-    background-repeat: no-repeat;
-    background-position: -1202px -116px
-}
-
-.bonuses-text {
-    background: #f1f1f1;
-    padding: 20px 24px;
-    margin-bottom: 15px
-}
-
-.bonuses-text h3 {
-    color: #333;
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 12px;
-    text-transform: uppercase
-}
-
-.extra-bonuses {
-    display: block
-}
-
-.extra-bonuses li {
-    display: block
-}
-
-.extra-bonuses li span {
-    width: 72px;
-    height: 80px;
-    display: block;
-    float: left;
-    margin: 10px 30px 0 8px;
-    background-image: url("/bitrix/templates/cosmo/css/img/icons-big.svg?version=2014.09.02");
-    background-repeat: no-repeat
-}
-
-.extra-bonuses li span.yandex {
-    background-position: -844px -116px
-}
-
-.extra-bonuses li span.reviews {
-    background-position: -944px -116px
-}
-
-.extra-bonuses li span.questions {
-    background-position: -16px -212px
-}
-
-.extra-bonuses li span.mistakes {
-    background-position: -96px -212px
-}
-
-.extra-bonuses li .bonuses-text {
-    background: #fafafa;
-    border-bottom: 1px solid #ccc;
-    float: left;
-    width: 845px;
-    padding: 10px 0 20px
-}
-
-.extra-bonuses li .bonuses-text .info-message span.icon {
-    background-image: none
+    .feature
+    {
+        position: relative;
+        float: left;
+        width: 33.3%;
+        height: 240px;
+        .bg
+        {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            padding: 12px 24px 12px 24px;
+            width: auto;
+            height: auto;
+            background-color: @colorLightGrey;
+            .title
+            {
+                position: relative;
+                white-space: nowrap;
+                margin: 0px;
+                padding: 0px 0px 0px 75px;
+                height: 73px;
+                h3, .helper
+                {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 0;
+                }
+                h3
+                {
+                    margin: 0px;
+                    line-height: 24px;
+                    white-space: normal;
+                }
+                .helper
+                {
+                    width: 0px;
+                    height: 100%;
+                    font-size: 0px;
+                    line-height: 0px;
+                }
+            }
+            .text
+            {
+                margin: 12px 0px 0px 0px;
+                padding: 0px;
+                background-color: transparent;
+            }
+        }
+        .icon
+        {
+            position: absolute;
+            left: 0px;
+            top: 2px;
+            width: 66px;
+            height: 72px;
+        }
+    }
+    .feature.one
+    {
+        .bg
+        {
+            right: 6px;
+            .title
+            {
+                .icon
+                {
+                    .mixin-icon-big-bonus-yandex-market-comment-png;
+                }
+            }
+        }
+    }
+    .feature.two
+    {
+        .bg
+        {
+            left: 6px;
+            right: 6px;
+            .title
+            {
+                .icon
+                {
+                    .mixin-icon-big-question-png;
+                }
+            }
+        }
+    }
+    .feature.three
+    {
+        .bg
+        {
+            left: 6px;
+            .title
+            {
+                .icon
+                {
+                    .mixin-icon-big-gift-png;
+                }
+            }
+        }
+    }
 }
