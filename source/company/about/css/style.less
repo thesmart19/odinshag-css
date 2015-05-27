@@ -5,6 +5,7 @@
 
 .no-svg
 {
+    .box .feedback .arrows .wrap                { .mixin-image-arrow-big-png; }
     .box .text .media.image .house              { .mixin-image-house-png; }
     .box .text .media.image .man                { .mixin-image-man-png; }
     .box .text .media.image .lamp               { .mixin-image-lamp-png; }
@@ -558,11 +559,12 @@
                 left: 0px;
                 top: 0px;
                 right: 0px;
-                bottom: 0px;
-                padding: 12px 24px 12px 24px;
+                bottom: auto;
+                padding: 0px 24px 0px 24px;
                 width: auto;
-                height: auto;
+                height: 0px;
                 background-color: @colorLightGrey;
+                overflow: hidden;
                 .title
                 {
                     position: relative;
@@ -685,6 +687,30 @@
                 left: 6px;
             }
         }
+        .animated
+        {   
+            .bg
+            {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                height: 286px;
+                
+                -moz-transition-delay: 0;
+                -moz-transition-duration: 0.5s;
+                -moz-transition-timing-function: ease-in-out;
+                -moz-transition-property: height, padding-top, padding-bottom;
+
+                -webkit-transition-delay: 0;
+                -webkit-transition-duration: 0.5s;
+                -webkit-transition-timing-function: ease-in-out;
+                -webkit-transition-property: height, padding-top, padding-bottom;
+
+                transition-delay: 0;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in-out;
+                transition-property: height, padding-top, padding-bottom;
+            }
+        }
 	}
     .feedback
     {
@@ -700,10 +726,36 @@
         }
         .arrows
         {
-            .mixin-image-three-arrow-png;
             position: relative;
-            height: 160px;
-            background-position: center center;
+            height: 140px;
+            overflow: hidden;
+            .wrap
+            {
+                .mixin-image-arrow-big-svg;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                right: 0px;
+                bottom: 24px;
+                width: auto;
+                height: auto;
+                background-position: center bottom;
+                
+                -moz-animation-delay: 0s;
+                -moz-animation-duration: 2s;
+                -moz-animation-iteration-count: infinite;
+                -moz-animation-name: arrow-bounce;
+
+                -webkit-animation-delay: 0s;
+                -webkit-animation-duration: 2s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-name: arrow-bounce;
+
+                animation-delay: 0s;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-name: arrow-bounce;
+            }
         }
         .contacts
         {

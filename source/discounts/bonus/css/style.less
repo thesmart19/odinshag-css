@@ -3,6 +3,13 @@
 @import (reference)	"source/include/variables.less";
 @import (reference)	"source/include/mixins.less";
 
+.no-svg
+{
+    .features .feature.one .bg .title .icon     { .mixin-icon-big-bonus-yandex-market-comment-png; }
+    .features .feature.two .bg .title .icon     { .mixin-icon-big-question-png; }
+    .features .feature.three .bg .title .icon   { .mixin-icon-big-gift-png; }
+}
+
 .box
 {
     h2
@@ -312,7 +319,7 @@
             left: 0px;
             top: 2px;
             width: 66px;
-            height: 72px;
+            height: 73px;
         }
     }
     .feature.one
@@ -324,7 +331,7 @@
             {
                 .icon
                 {
-                    .mixin-icon-big-bonus-yandex-market-comment-png;
+                    .mixin-icon-big-bonus-yandex-market-comment-svg;
                 }
             }
         }
@@ -339,7 +346,7 @@
             {
                 .icon
                 {
-                    .mixin-icon-big-question-png;
+                    .mixin-icon-big-question-svg;
                 }
             }
         }
@@ -353,7 +360,7 @@
             {
                 .icon
                 {
-                    .mixin-icon-big-gift-png;
+                    .mixin-icon-big-gift-svg;
                 }
             }
         }

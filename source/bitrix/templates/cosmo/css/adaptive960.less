@@ -69,8 +69,54 @@
     {
         form.search
         {
-            right: 0px;
+            right: 147px;
+            padding-right: 51px;
+            min-width: 0px;
+			input.button
+			{
+                padding: 0px !important;
+				width: 51px;
+                text-indent: 1000px;
+                text-overflow: clip;
+			}
+            label.icon
+            {
+                right: 15px;
+            }
+			.search-suggestions
+			{
+				right: 50px;
+				.suggestion-block
+				{
+					.suggestion-content
+					{
+						ul
+						{
+							li
+							{
+								a
+								{
+									span { span.name { width: 330px; } }
+								}
+							}
+						}
+					}
+				}
+			}
         }
+        .column.right
+        {
+            .button.feedback
+            {
+                padding-left: 35px !important;
+                width: 100px;
+                span.icon
+                {
+                    margin-left: -57px;
+                }
+            }
+        }
+        /*
         .column.right
         {
             .button.feedback { display: none !important; }
@@ -82,6 +128,7 @@
                 }
             }
         }
+        */
     }
     .box
     {

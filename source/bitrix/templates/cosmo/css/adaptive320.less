@@ -316,6 +316,7 @@
 			form.search
 			{
                 left: 0px;
+                right: 0px;
 				margin: 0px;
 				padding-left: 15px;
 				padding-right: 43px;
@@ -1660,6 +1661,7 @@
 				}
 				.parameters
 				{
+                    min-height: 0px;
 					.buttons
 					{
 						.button
@@ -3220,6 +3222,8 @@
                             left: auto;
                             bottom: auto;
                             right: auto;
+                            padding: 10px;
+                            height: auto;
                             .title
                             {
                                 h2
@@ -3246,6 +3250,13 @@
                     .arrows
                     {
                         height: 100px;
+                        .wrap
+                        {
+                            bottom: 12px;
+                            -moz-animation-name: none;
+                            -webkit-animation-name: none;
+                            animation-name: none;
+                        }
                     }
                     .contacts
                     {

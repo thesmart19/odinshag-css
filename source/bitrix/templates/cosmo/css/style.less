@@ -6817,11 +6817,9 @@ iframe[name="google_conversion_frame"]
 			color: @colorLightBlack;
 			margin: 5px 0 25px 0;
 		}
-		h2
+		h3
 		{
-			margin: 10px 0;
-			line-height: 25px;
-			padding: 0;
+            margin-bottom: 24px;
 		}
 		input
 		{
@@ -8877,7 +8875,6 @@ ul.product-list
 		.parameters
 		{
 			position: relative;
-			/*height: 175px;*/
 			border-bottom: 1px solid @colorDrakerGrey;
 			z-index:2;
 			.available               { .mixin-available; }
@@ -9288,7 +9285,7 @@ ul.product-list.vertical
 		}
 		.parameters
 		{
-			/*border-bottom: 1px solid @colorDrakerGrey;*/
+			min-height: 130px;
 			.article, .delivery, .icon, .labels{ display: none; }
             .available, .name, .price, .buttons
             {
@@ -10174,6 +10171,10 @@ ul.product-list.horizontal.news
                         font-weight: normal;
                         line-height: @lineHeightDefault;
                     }
+                }
+                a.title:hover
+                {
+                    h3 { color: @colorRed; }
                 }
             }
 			a.read-all

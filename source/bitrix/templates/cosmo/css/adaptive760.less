@@ -168,8 +168,28 @@
 		form.search
 		{
             left: 217px;
+			.search-suggestions
+			{
+				.suggestion-block
+				{
+					.suggestion-content
+					{
+						ul
+						{
+							li
+							{
+								a
+								{
+									span { span.name { width: 185px; } }
+								}
+							}
+						}
+					}
+				}
+			}
+			/*
             right: 0px;
-			padding-right: 51px;
+            padding-right: 51px;
             min-width: 0px;
 			input.button
 			{
@@ -202,6 +222,7 @@
 					}
 				}
 			}
+            */
 		}
 	}
     .info
@@ -1442,27 +1463,6 @@
 			}
 		}
 		/*------------------------------------*/
-		/* # Об интернет-магазине */
-		/*------------------------------------*/
-		.features
-		{
-            .feature
-            {
-                height: 373px;
-                .bg
-                {
-                    padding-left: 12px;
-                    .title
-                    {
-                        padding-left: 70px;
-                        h2
-                        {
-                        }
-                    }
-                }
-            }
-		}
-		/*------------------------------------*/
 		/* # Контакты */
 		/*------------------------------------*/
 		.contact-box
@@ -2066,7 +2066,7 @@
     }
     /*------------------------------------*/
     /* # Об интернет магазине */
-    /*------------------------------------*/
+    /*------------------------------------*/    
     body #total_wrapper #main_wrapper
     {
         .company.about
@@ -2168,15 +2168,25 @@
                 {
                     .feature
                     {
+                        height: 373px;
                         .bg
                         {
+                            padding-left: 12px;
                             .title
                             {
+                                padding-left: 70px;
                                 h2
                                 {
                                     line-height: @lineHeightH2;
                                 }
                             }
+                        }
+                    }
+                    .animated
+                    {   
+                        .bg
+                        {
+                            height: 349px;
                         }
                     }
                 }
