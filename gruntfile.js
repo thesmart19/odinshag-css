@@ -78,6 +78,9 @@ module.exports = function (grunt) {
                     
                     /* способы оплаты */
                     "build/services/payment/css/style.css": "source/services/payment/css/style.less",
+                    
+                    /* тестирование */
+                    "build/bitrix/templates/cosmo/css/testing.css": "source/bitrix/templates/cosmo/css/qunit.less"
                 }
             }
         },
