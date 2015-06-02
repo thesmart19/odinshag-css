@@ -10629,6 +10629,10 @@ ul.product-list.one-page-products
 				vertical-align: bottom;
 				margin: 0px 2px 1px 4px;
 			}
+            span.count
+            {
+                color: @colorRed;
+            }
             i { font-style: normal; }
 		}
 		a:hover
@@ -10663,10 +10667,12 @@ ul.product-list.one-page-products
 			border-left: 1px solid @colorDrakerGrey;
 			z-index:2;
 		}
+        /*
 		a.two.active , a.three.active
 		{
 			span { color: @colorLightBlack !important; }
 		}
+        */
 		a.active
 		{
 			font-weight: bold;
@@ -10827,18 +10833,29 @@ ul.product-list.one-page-products
 				text-decoration: underline;
 			}
 		}
-		.reviews
-		{
-		}
+        .reviews
+        {
+            position: relative;
+            overflow: hidden;
+        }
 		.review
 		{
+            position: relative;
 			padding: 15px 13px 20px 13px;
 			border: 0px;
-			border-bottom: 1px dashed @colorDrakerGrey;
+			border-bottom: 1px solid @colorDrakerGrey;
+            .yandex-label
+            {
+                display: none;
+            }
 			.name
 			{
 				font-size:12px;
 				line-height:18px;
+                .yandex-date
+                {
+                    display: none;
+                }
 			}
 			.description
 			{
@@ -10972,6 +10989,74 @@ ul.product-list.one-page-products
 		{
 			border-bottom: 1px solid @colorDrakerGrey;
 		}
+        .review.yandex-comment
+        {
+            .name
+            {
+                margin-right: 100px;
+            }
+            .rating
+            {
+                margin-bottom: 8px;
+                height: 13px;
+                span
+                {
+                    .mixin-icon-star-yandex-svg(@colorGreyYandexStarMixin);
+                    margin-right: 1px;
+                    width: 13px;
+                    height: 13px;
+                    background-position: 0px 0px;
+                }
+                span.active
+                {
+                    .mixin-icon-star-yandex-svg(@colorYellowYandexStarMixin);
+                }
+            }
+            .yandex-date
+            {
+                display: inline;
+                color: @colorGreyYandexDate;
+            }
+            .yandex-label
+            {
+                display: block;
+                position: absolute;
+                top: 12px;
+                right: 0px;
+                padding: 3px 0px 0px 6px;
+                width: 104px;
+                height: 35px;
+                line-height: @lineHeightActions;
+                background-color: @colorLightGrey;
+                overflow: hidden;
+                a, a:hover
+                {
+                    color: @colorLighterBlack !important;
+                }
+                span
+                {
+                    display: block;
+                    color: @colorLightBlack;
+                    span
+                    {
+                        display: inline;
+                        white-space: nowrap;
+                    }
+                }
+                .y
+                {
+                    i
+                    {
+                        color: @colorRed;
+                        font-style: normal;
+                    }
+                }
+                .m
+                {
+                    color: @colorOrange;
+                }
+            }
+        }
 		.questions
 		{
 		}
@@ -11197,6 +11282,31 @@ ul.product-list.one-page-products
 			border-left:0px;
 			overflow:hidden;
 		}
+        a.show-more
+        {
+            height: 28px;
+            font-size: @fontSizeOrder;
+            line-height: @lineHeightBasketTitle !important;
+            color: @colorLighterBlack;
+            span.icon
+            {
+                .mixin-icon;
+                .mixin-arrow-small;
+                .mixin-arrow-grey-small-down;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                margin: 0 0 0 5px;
+            }
+            span.icon.close
+            {
+                .mixin-arrow-grey-small-up;
+            }
+        }
+        a.show-more:hover
+        {
+            color: @colorLighterBlack !important;
+        }
 	}
 }
 /*------------------------------------*\
