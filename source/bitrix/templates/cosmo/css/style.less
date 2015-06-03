@@ -10718,6 +10718,10 @@ ul.product-list.one-page-products
 			text-align: justify;
 			h3 { color: @colorLightBlack; }
 		}
+        .content
+        {
+            border-bottom: 1px solid @colorDrakerGrey;
+        }
 		.documentation
 		{
 			padding: 10px 15px 0px 15px;
@@ -10836,6 +10840,7 @@ ul.product-list.one-page-products
         .reviews
         {
             position: relative;
+            border-bottom: 1px solid @colorDrakerGrey;
             overflow: hidden;
         }
 		.review
@@ -10879,6 +10884,10 @@ ul.product-list.one-page-products
 						margin: 0px 0px 0px 100px;
 					}
 				}
+                .parameter:last-child
+                {
+                    margin-bottom: 0px;
+                }
 			}
 			.vote
 			{
@@ -10987,7 +10996,7 @@ ul.product-list.one-page-products
 		}
 		.review:last-child
 		{
-			border-bottom: 1px solid @colorDrakerGrey;
+			border-bottom: 0px;
 		}
         .review.yandex-comment
         {
@@ -11124,7 +11133,7 @@ ul.product-list.one-page-products
 		}
 		.question:last-child
 		{
-			border-bottom: 1px solid @colorDrakerGrey;
+			border-bottom: 0px;
 		}
 		form
 		{
@@ -11284,6 +11293,8 @@ ul.product-list.one-page-products
 		}
         a.show-more
         {
+            margin: 1px auto 12px auto;
+            width: 208px;
             height: 28px;
             font-size: @fontSizeOrder;
             line-height: @lineHeightBasketTitle !important;
