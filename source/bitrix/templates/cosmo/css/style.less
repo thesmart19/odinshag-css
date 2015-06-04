@@ -11002,7 +11002,18 @@ ul.product-list.one-page-products
         {
             .name
             {
-                margin-right: 100px;
+                margin-right: 110px;
+                b, span
+                {
+                    display: block;
+                    position: relative;
+                    float: left;
+                    margin: 0px 6px 0px 0px;
+                }
+                b::first-letter
+                {
+                    color: @colorRed;
+                }
             }
             .rating
             {
@@ -11029,41 +11040,8 @@ ul.product-list.one-page-products
             .yandex-label
             {
                 display: block;
-                position: absolute;
+                bottom: auto;
                 top: 12px;
-                right: 0px;
-                padding: 3px 0px 0px 6px;
-                width: 104px;
-                height: 35px;
-                line-height: @lineHeightActions;
-                background-color: @colorLightGrey;
-                overflow: hidden;
-                a, a:hover
-                {
-                    color: @colorLighterBlack !important;
-                }
-                span
-                {
-                    display: block;
-                    color: @colorLightBlack;
-                    span
-                    {
-                        display: inline;
-                        white-space: nowrap;
-                    }
-                }
-                .y
-                {
-                    i
-                    {
-                        color: @colorRed;
-                        font-style: normal;
-                    }
-                }
-                .m
-                {
-                    color: @colorOrange;
-                }
             }
         }
 		.questions
@@ -11317,6 +11295,45 @@ ul.product-list.one-page-products
         a.show-more:hover
         {
             color: @colorLighterBlack !important;
+        }
+        .yandex-label
+        {
+            display: block;
+            position: absolute;
+            bottom: 2px;
+            right: 0px;
+            padding: 3px 12px 3px 6px;
+            width: auto; /* 104px */
+            height: 31px;
+            line-height: @lineHeightActions;
+            background-color: @colorLightGrey;
+            overflow: hidden;
+            a, a:hover
+            {
+                color: @colorLighterBlack !important;
+            }
+            span
+            {
+                display: block;
+                color: @colorLightBlack;
+                span
+                {
+                    display: inline;
+                    white-space: nowrap;
+                }
+            }
+            .y
+            {
+                i
+                {
+                    color: @colorRed;
+                    font-style: normal;
+                }
+            }
+            .m
+            {
+                color: @colorOrange;
+            }
         }
 	}
 }
