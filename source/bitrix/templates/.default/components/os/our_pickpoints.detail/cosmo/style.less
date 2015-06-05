@@ -23,39 +23,24 @@
 			position: relative;
 			.text
 			{
-				padding: 12px;
-				font-size: 14px;
+                margin: 0px;
+				padding: 12px 12px 0px 12px;
+                max-height: 483px;
+				font-size: @fontSizeOrder;
+                overflow-x: hidden;
+                overflow-y: auto;
 				p
 				{
-					margin: 6px 0px 12px 0px;
+					margin: 0px 0px 12px 0px;
 					line-height: @lineHeightOrder;
 				}
 			}
-			.notice
-			{
-				position: absolute;
-				left: 0px;
-				bottom: 0px;
-				margin: 0px 12px 0px 12px;
-				padding:12px 0px 0px 48px;
-				height: 74px;
-				font-size: @fontSizeOrder;
-				line-height: @lineHeightOrder;
-				border-top: 1px solid @colorDrakerGrey;
-				overflow: hidden;
-				p { margin: 0px; }
-				span.icon
-				{
-					.mixin-icon;
-					display: block;
-					position: absolute;
-					left: 0px;
-					top: 24px;
-					width: 31px;
-					height: 30px;
-					background-position: -492px 0px;
-				}
-			}
+            .page
+            {
+                position: relative;
+                height: 495px;
+                overflow: hidden;
+            }
 		}
 	}
     .tabs.one, .tabs.two
@@ -64,20 +49,44 @@
     }
 	.tabs.one
 	{
-		/*margin: 0px 12px 0px 0px;*/
-		/*width: 383px;*/
 		float: left;
 		.pages
-		{
-			.page
-			{
-				min-height: 495px;
-			}
+		{   
 			.page.one
 			{
-				padding-bottom: 87px;
-				min-height: 408px;
+                .text
+                {
+                    height: 396px;
+                }
+                .banner
+                {
+                    display: block;
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    margin: 0px;
+                    width: auto;
+                    height: 87px;
+                    img
+                    {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
 			}
+            .page.one.no-banner
+            {
+                .text
+                {
+                    height: 483px;
+                }
+                .banner
+                {
+                    display: none;
+                }
+            }
 		}
 	}
 	.tabs.two
@@ -85,27 +94,33 @@
         position: absolute;
         right: 0px;
         top: 0px;
-        /*margin-left: 397px;*/
-		/*width: 561px;*/
-		/*float: left;*/
 		.pages
 		{
 			.page
 			{
-                height: auto;
 				.map
 				{
-					width: 561px;
+					width: auto; /* 561px */
 					height: 495px;
 				}
 			}
-            .page.two
-            {
-                height: 495px;
-            }
 		}
 	}
 }
+.photo-slider
+{
+    ul.items
+    {
+        li a.zoom
+        {
+            img
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+/*
 .banner
 {
 	margin: 12px 0px 0px 0px;
@@ -120,10 +135,11 @@
 		}
 	}
 }
+*/
 /* ************************************************** */
 
 /* старые стили ---> */
-
+/*
 .contact-box ul {
 	border-left:1px solid #cccccc;
 	border-top:1px solid #cccccc;
@@ -432,6 +448,7 @@
 	background-position: -2px -267px;	
 }
 */
+/*
 .pickpoints 	.delivery  {
 	padding: 12px 0 0 58px;
 	margin: 16px 0;
@@ -468,3 +485,4 @@
 .pickpoint-item .map {
 	float:left;
 }
+*/

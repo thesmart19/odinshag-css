@@ -2182,6 +2182,39 @@
                             }
                         }
                     }
+                    a.show-more, .yandex-label
+                    {
+                        font-size: @fontSizeSlider;
+                    }
+                    .review.yandex-comment
+                    {
+                        .yandex-label
+                        {
+                            line-height: @lineHeightActions;
+                        }
+                    }
+                    .yandex-label
+                    {
+                        padding-left: 3px;
+                        padding-right: 3px;
+                        line-height: @lineHeightBasketTitle;
+                        a
+                        {
+                            display: inline;
+                        }
+                        a:after
+                        {
+                            display: none;
+                        }
+                    }
+                    .yandex-label:after
+                    {
+                        display: none;
+                    }
+                    a.show-more
+                    {
+                        width: 135px;
+                    }
                 }
             }
             /* Похожие товары */
@@ -2342,6 +2375,22 @@
                 position: relative;
                 top: auto !important;
             }
+            .tabs
+            {
+                .pages
+                {
+                    .page
+                    {
+                        height: auto;
+                        min-height: 0px;
+                    }
+                    .text
+                    {
+                        height: auto;
+                        max-height: none;
+                    }
+                }
+            }
             .tabs.one, .tabs.two
             {
                 float: none;
@@ -2355,13 +2404,6 @@
                     .notice
                     {
                         padding-bottom: 12px;
-                    }
-                    .page
-                    {
-                        min-height: 0px;
-                    }
-                    .page.two
-                    {
                     }
                 }
             }
@@ -5091,6 +5133,57 @@
 /* / Ширина экрана >= 320 и <= viewportMaxWidth */
 /*---------------------------------------------------------------------------*/
 
+/*---------------------------------------------------------------------------*/
+/* # Ширина экрана <= 510 */
+/*---------------------------------------------------------------------------*/
+@media screen and (max-width: 510px)
+{
+	body #total_wrapper #main_wrapper .category.box.main_content 
+	{
+		/*------------------------------------*/
+		/* # Страница товара */
+		/*------------------------------------*/
+        .card-product
+        {
+            .tabs
+            {
+                .pages
+                {
+                    .review.yandex-comment
+                    {
+                        .yandex-label
+                        {
+                            line-height: @lineHeightActions;
+                        }
+                    }
+                    .yandex-label
+                    {
+                        padding-left: 1px;
+                        padding-right: 1px;
+                        line-height: @lineHeightSmallest2;
+                        span
+                        {
+                            display: block;
+                            span
+                            {
+                                display: inline;
+                            }
+                        }
+                    }
+                    a.show-more
+                    {
+                        width: 130px;
+                        span.icon
+                        {
+                            margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 
@@ -5111,23 +5204,6 @@
             li.item
             {
                 border-top: 1px solid @colorDrakerGrey;
-            }
-        }
-		/*------------------------------------*/
-		/* # Страница товара */
-		/*------------------------------------*/
-        .tabs
-        {
-            .pages
-            {
-                .yandex-label:after
-                {
-                    display: none;
-                }
-                a.show-more
-                {
-                    width: 170px;
-                }
             }
         }
     }
@@ -5184,30 +5260,6 @@
 						{
 							max-width: 225px;
                         }
-                    }
-                }
-            }
-        }
-    }
-	/*------------------------------------*/
-	/* # Страница товара */
-	/*------------------------------------*/
-    body #total_wrapper #main_wrapper .category.box.main_content
-    {
-        .tabs
-        {
-            .pages
-            {
-                .yandex-label, a.show-more
-                {
-                    font-size: @fontSizeSlider;
-                }
-                a.show-more
-                {
-                    width: 140px;
-                    span.icon
-                    {
-                        margin-left: 0px;
                     }
                 }
             }
@@ -5382,31 +5434,6 @@
                                 width: 88px;
                             }
                         }
-                    }
-                }
-            }
-        }
-    }
-	/*------------------------------------*/
-	/* # Страница товара */
-	/*------------------------------------*/
-    body #total_wrapper #main_wrapper .category.box.main_content
-    {
-        .tabs
-        {
-            .pages
-            {
-                .yandex-label
-                {
-                    padding-left: 3px;
-                    padding-right: 3px;
-                }
-                a.show-more
-                {
-                    width: 110px;
-                    span.icon
-                    {
-                        display: none;
                     }
                 }
             }
